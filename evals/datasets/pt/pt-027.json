@@ -1,0 +1,113 @@
+{
+  "id": "pt-027",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-027.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-bebidas",
+  "template": "modern",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.3,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "PAGO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT DBT/26135",
+    "issueDate": "2026-10-15",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuidora de Bebidas Tejo, Lda.",
+      "taxId": "PT514283912",
+      "address": "Rua da Indústria 45 · 2690-353 Santa Iria de Azóia"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "Vinho tinto Alentejo 75cl",
+        "quantity": 24,
+        "unit": "gf",
+        "unitPrice": 4.6,
+        "discountPct": null,
+        "taxRate": 13,
+        "lineAmount": 110.4
+      },
+      {
+        "description": "Cerveja 33cl (x24)",
+        "quantity": 1,
+        "unit": "grade",
+        "unitPrice": 17.8,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 17.8
+      },
+      {
+        "description": "Água mineral 1,5L (x6)",
+        "quantity": 5,
+        "unit": "pack",
+        "unitPrice": 2.4,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 12
+      },
+      {
+        "description": "Aguardente velha 70cl",
+        "quantity": 2,
+        "unit": "gf",
+        "unitPrice": 16.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 33.8
+      },
+      {
+        "description": "Vinho verde 75cl",
+        "quantity": 21,
+        "unit": "gf",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 13,
+        "lineAmount": 81.9
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 12,
+        "tax": 0.72
+      },
+      {
+        "rate": 13,
+        "base": 192.3,
+        "tax": 25
+      },
+      {
+        "rate": 23,
+        "base": 51.6,
+        "tax": 11.87
+      }
+    ],
+    "printedTotal": 293.49,
+    "deliveryNoteRefs": [
+      "GR 2026/4351"
+    ],
+    "documentControlCode": "C61EA055-26135"
+  },
+  "planted": {
+    "type": "DELIVERY_SHORT",
+    "description": "\"Aguardente velha 70cl\": invoiced 2, delivered 1.5"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 10.39
+  }
+}

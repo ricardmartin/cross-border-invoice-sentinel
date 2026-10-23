@@ -1,0 +1,60 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      full:
+        description: Run the full eval suite (all countries) instead of the smoke subset
+        type: boolean
+        default: false
+
+jobs:
+  unit:
+    name: Typecheck + unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+
+  evals:
+    name: Evals gate (${{ inputs.full && 'full' || 'smoke' }})
+    needs: unit
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
+      LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}
+      LANGFUSE_BASE_URL: ${{ vars.LANGFUSE_BASE_URL }}
+      LANGFUSE_TRACING_ENVIRONMENT: ci
+      # Reproducible: evaluate the prompt committed in the repo, not whatever is labelled in Langfuse.
+      PROMPT_SOURCE: local
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Skip without an API key (forks)
+        if: env.ANTHROPIC_API_KEY == ''
+        run: echo "::notice::ANTHROPIC_API_KEY not available, evals skipped"
+      - name: Run evals (exit 1 if a threshold or the baseline is broken)
+        if: env.ANTHROPIC_API_KEY != ''
+        run: npm run evals -w @sentinel/evals -- ${{ inputs.full && '--country=all' || '--smoke' }}
+      - name: Publish report
+        if: always() && env.ANTHROPIC_API_KEY != ''
+        run: cat evals/reports/latest.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always() && env.ANTHROPIC_API_KEY != ''
+        with:
+          name: eval-report
+          path: evals/reports/latest.md

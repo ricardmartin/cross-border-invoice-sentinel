@@ -1,0 +1,100 @@
+{
+  "id": "fr-016",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-016.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "fr-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAYÉ",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "HPA-2660",
+    "issueDate": "2026-10-03",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hygiène Pro Atlantique SARL",
+      "taxId": "FR59429183726",
+      "address": "5 rue de la Garenne · 44300 Nantes"
+    },
+    "recipient": {
+      "name": "Bistrot du Canal SAS",
+      "taxId": "FR14882149073",
+      "address": "45 quai de Valmy · 75010 Paris"
+    },
+    "lines": [
+      {
+        "description": "Dégraissant cuisine 5L",
+        "quantity": 3,
+        "unit": "bidon",
+        "unitPrice": 12.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 37.5
+      },
+      {
+        "description": "Serviettes papier 40x40 (x1000)",
+        "quantity": 2,
+        "unit": "carton",
+        "unitPrice": 15.8,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 31.6
+      },
+      {
+        "description": "Détergent vaisselle machine 20L",
+        "quantity": 1,
+        "unit": "bidon",
+        "unitPrice": 34.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 34.9
+      },
+      {
+        "description": "Gants nitrile taille M (x100)",
+        "quantity": 6,
+        "unit": "boîte",
+        "unitPrice": 6.4,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 39.6
+      },
+      {
+        "description": "Eau de Javel 5L",
+        "quantity": 5,
+        "unit": "bidon",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 19.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 20,
+        "base": 163.1,
+        "tax": 32.62
+      }
+    ],
+    "printedTotal": 195.72,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "LINE_MATH",
+    "description": "Line 4 amount off by 1.20 vs quantity × price"
+  },
+  "expected": {
+    "issueCodes": [
+      "LINE_MATH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

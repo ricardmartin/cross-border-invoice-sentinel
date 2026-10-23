@@ -1,0 +1,91 @@
+{
+  "id": "fr-022",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-022.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "fr-lemoine",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.6,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "F26/07289",
+    "issueDate": "2026-10-08",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Boucherie Charcuterie Lemoine SAS",
+      "taxId": "FR68492837166",
+      "address": "18 rue des Abattoirs · 69007 Lyon"
+    },
+    "recipient": {
+      "name": "Brasserie des Halles SARL",
+      "taxId": "FR21790552137",
+      "address": "12 rue Montorgueil · 75001 Paris"
+    },
+    "lines": [
+      {
+        "description": "FILM ETIRABLE 300M",
+        "quantity": 2,
+        "unit": "RLX",
+        "unitPrice": 11.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 23.8
+      },
+      {
+        "description": "JAMBON BLANC SUPERIEUR",
+        "quantity": 1.049,
+        "unit": "KG",
+        "unitPrice": 14.8,
+        "discountPct": 10,
+        "taxRate": 5.5,
+        "lineAmount": 13.97
+      },
+      {
+        "description": "BAVETTE D ALOYAU",
+        "quantity": 4.377,
+        "unit": "KG",
+        "unitPrice": 21.5,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 94.11
+      },
+      {
+        "description": "ENTRECOTE BOEUF CHAROLAIS",
+        "quantity": 7.091,
+        "unit": "KG",
+        "unitPrice": 32.9,
+        "discountPct": 5,
+        "taxRate": 5.5,
+        "lineAmount": 221.63
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 329.71,
+        "tax": 18.13
+      },
+      {
+        "rate": 20,
+        "base": 23.8,
+        "tax": 4.76
+      }
+    ],
+    "printedTotal": 376.4,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

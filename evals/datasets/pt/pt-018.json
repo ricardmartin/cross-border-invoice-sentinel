@@ -1,0 +1,78 @@
+{
+  "id": "pt-018",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-018.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-talho",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "CONTABILIZADO",
+    "handwrittenNote": "Ligar à Inês"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT CM26/008219",
+    "issueDate": "2026-10-05",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Carnes e Charcutaria Minhota, S.A.",
+      "taxId": "PT509182739",
+      "address": "Zona Industrial de Lousado, Lote 12 · 4760-469 Vila Nova de Famalicão"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "FRANGO DO CAMPO",
+        "quantity": 4.327,
+        "unit": "KG",
+        "unitPrice": 4.2,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 18.17
+      },
+      {
+        "description": "LOMBO DE PORCO",
+        "quantity": 9.18,
+        "unit": "KG",
+        "unitPrice": 6.4,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 58.75
+      },
+      {
+        "description": "VITELA PARA BIFES",
+        "quantity": 6.636,
+        "unit": "KG",
+        "unitPrice": 14.9,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 98.88
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 175.8,
+        "tax": 10.55
+      }
+    ],
+    "printedTotal": 186.35,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "16C12A1E-8219"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

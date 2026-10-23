@@ -1,0 +1,91 @@
+{
+  "id": "dk-004",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-004.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "dk-rengoring",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "BETALT",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "NRH-7712",
+    "issueDate": "2026-10-14",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Nordisk Rengøring & Hygiejne ApS",
+      "taxId": "DK40128568",
+      "address": "Hjulmagervej 15 · 5000 Odense C"
+    },
+    "recipient": {
+      "name": "Restaurant Havnefronten ApS",
+      "taxId": "DK36271809",
+      "address": "Nyhavn 31 · 1051 København K"
+    },
+    "lines": [
+      {
+        "description": "Groft salt 1kg",
+        "quantity": 13,
+        "unit": "pk",
+        "unitPrice": 12.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 162.5
+      },
+      {
+        "description": "Opvaskemiddel maskine 20L",
+        "quantity": 2,
+        "unit": "dunk",
+        "unitPrice": 389,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 778
+      },
+      {
+        "description": "Servietter 40x40 (x1000)",
+        "quantity": 4,
+        "unit": "kasse",
+        "unitPrice": 159,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 636
+      },
+      {
+        "description": "Nitrilhandsker M (x100)",
+        "quantity": 1,
+        "unit": "æske",
+        "unitPrice": 69,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 69
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 1645.5,
+        "tax": 411.38
+      }
+    ],
+    "printedTotal": 2056.88,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TAX_ID_CHECKSUM",
+    "description": "Issuer tax id DK40128568 has a wrong control (valid: DK40128565)"
+  },
+  "expected": {
+    "issueCodes": [
+      "INVALID_TAX_ID"
+    ],
+    "finalStatus": "INVALID_TAX_ID"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "id": "ie-027",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-027.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "ie-drinks",
+  "template": "modern",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.5,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "SBD26189",
+    "issueDate": "2026-09-05",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Shannon Beverage Distributors Ltd",
+      "taxId": "IE9512376GW",
+      "address": "Smithstown Industrial Estate · Shannon, Co. Clare, V14 K2C9"
+    },
+    "recipient": {
+      "name": "The Quay Kitchen Ltd",
+      "taxId": "IE6729034J",
+      "address": "14 Wellington Quay · Dublin 2, D02 X524"
+    },
+    "lines": [
+      {
+        "description": "Fruit scones (x12)",
+        "quantity": 2,
+        "unit": "tray",
+        "unitPrice": 6.9,
+        "discountPct": null,
+        "taxRate": 13.5,
+        "lineAmount": 13.8
+      },
+      {
+        "description": "Stout keg 50L",
+        "quantity": 3,
+        "unit": "keg",
+        "unitPrice": 189,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 567
+      },
+      {
+        "description": "Irish whiskey 70cl",
+        "quantity": 2,
+        "unit": "btl",
+        "unitPrice": 27.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 55.8
+      },
+      {
+        "description": "Still water 500ml (x24)",
+        "quantity": 3,
+        "unit": "case",
+        "unitPrice": 7.8,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 23.4
+      },
+      {
+        "description": "Lager 33cl (x24)",
+        "quantity": 2,
+        "unit": "case",
+        "unitPrice": 32.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 65
+      },
+      {
+        "description": "Red wine, Rioja 75cl",
+        "quantity": 10,
+        "unit": "btl",
+        "unitPrice": 8.4,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 84
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 13.5,
+        "base": 13.8,
+        "tax": 1.86
+      },
+      {
+        "rate": 23,
+        "base": 795.2,
+        "tax": 182.9
+      }
+    ],
+    "printedTotal": 993.76,
+    "deliveryNoteRefs": [
+      "DD-46351"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_SHORT",
+    "description": "\"Stout keg 50L\": invoiced 3, delivered 2"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 232.47
+  }
+}

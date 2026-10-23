@@ -1,0 +1,91 @@
+{
+  "id": "es-008",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-008.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "es-ebro",
+  "template": "moderna",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAGADO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "EB-20262321",
+    "issueDate": "2026-09-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuciones de Bebidas Ebro S.L.",
+      "taxId": "B50274430",
+      "address": "Av. de Cataluña 301 · 50014 Zaragoza"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Agua mineral 1,5L (6 ud)",
+        "quantity": 27,
+        "unit": "pack",
+        "unitPrice": 2.1,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 56.7
+      },
+      {
+        "description": "Vermut rojo 1L",
+        "quantity": 3,
+        "unit": "botella",
+        "unitPrice": 8.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 25.8
+      },
+      {
+        "description": "Tónica premium 20cl (24 ud)",
+        "quantity": 3,
+        "unit": "caja",
+        "unitPrice": 15.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 46.8
+      },
+      {
+        "description": "Zumo de naranja 1L",
+        "quantity": 9,
+        "unit": "brik",
+        "unitPrice": 1.45,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 13.05
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 69.75,
+        "tax": 6.98
+      },
+      {
+        "rate": 21,
+        "base": 72.6,
+        "tax": 15.25
+      }
+    ],
+    "printedTotal": 164.58,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

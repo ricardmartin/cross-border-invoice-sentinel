@@ -1,0 +1,91 @@
+{
+  "id": "es-048",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-048.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-canarias-frutas",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.6,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "FV-26/01944",
+    "issueDate": "2026-10-10",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Frutas y Verduras del Atlántico, S.L.",
+      "taxId": "B35821461",
+      "address": "Mercalaspalmas, Nave 14 · 35229 Las Palmas de Gran Canaria"
+    },
+    "recipient": {
+      "name": "Restaurante La Puntilla, S.L.",
+      "taxId": "B35619485",
+      "address": "C/ Prudencio Morales 20 · 35009 Las Palmas de Gran Canaria"
+    },
+    "lines": [
+      {
+        "description": "Plátano de Canarias",
+        "quantity": 18.9,
+        "unit": "kg",
+        "unitPrice": 1.35,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 25.52
+      },
+      {
+        "description": "Agua mineral 1,5L (x6)",
+        "quantity": 17,
+        "unit": "pack",
+        "unitPrice": 2.6,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 44.2
+      },
+      {
+        "description": "Papas negras",
+        "quantity": 7.3,
+        "unit": "kg",
+        "unitPrice": 2.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 21.17
+      },
+      {
+        "description": "Mojo picón 1L",
+        "quantity": 6,
+        "unit": "bote",
+        "unitPrice": 4.8,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 28.8
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 46.69,
+        "tax": 0
+      },
+      {
+        "rate": 7,
+        "base": 73,
+        "tax": 5.11
+      }
+    ],
+    "printedTotal": 124.8,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

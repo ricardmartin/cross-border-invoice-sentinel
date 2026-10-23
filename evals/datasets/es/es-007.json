@@ -1,0 +1,127 @@
+{
+  "id": "es-007",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-007.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-montes",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": -1.1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "FV26-000854",
+    "issueDate": "2026-09-16",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cárnicas Montes de Toledo S.A.",
+      "taxId": "A45182060",
+      "address": "Polígono Industrial Santa María de Benquerencia, C/ Río Jarama 52 · 45007 Toledo"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "CHORIZO SARTA PICANTE",
+        "quantity": 3.953,
+        "unit": "KG",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 35.18
+      },
+      {
+        "description": "POLLO CAMPERO ENTERO",
+        "quantity": 13.454,
+        "unit": "KG",
+        "unitPrice": 4.35,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 58.52
+      },
+      {
+        "description": "HAMBURGUESA VACUNO 180G",
+        "quantity": 65,
+        "unit": "UD",
+        "unitPrice": 1.38,
+        "discountPct": 5,
+        "taxRate": 10,
+        "lineAmount": 85.22
+      },
+      {
+        "description": "TERNERA LOMO BAJO EXTRA",
+        "quantity": 3.185,
+        "unit": "KG",
+        "unitPrice": 24.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 79.31
+      },
+      {
+        "description": "JAMON CEBO IBERICO LONCHEADO 100G",
+        "quantity": 22,
+        "unit": "UD",
+        "unitPrice": 6.45,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 141.9
+      },
+      {
+        "description": "BOLSA VACIO 30X40 (100 UD)",
+        "quantity": 3,
+        "unit": "CAJA",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 37.8
+      },
+      {
+        "description": "SOLOMILLO CERDO IBERICO",
+        "quantity": 4.158,
+        "unit": "KG",
+        "unitPrice": 15.75,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 65.49
+      },
+      {
+        "description": "CHULETILLA CORDERO LECHAL",
+        "quantity": 4.412,
+        "unit": "KG",
+        "unitPrice": 19.8,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 87.36
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 552.98,
+        "tax": 55.3
+      },
+      {
+        "rate": 21,
+        "base": 37.8,
+        "tax": 7.94
+      }
+    ],
+    "printedTotal": 654.02,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

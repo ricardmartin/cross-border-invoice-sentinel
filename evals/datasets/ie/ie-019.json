@@ -1,0 +1,82 @@
+{
+  "id": "ie-019",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-019.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "ie-drinks",
+  "template": "modern",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.9,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "SBD26126",
+    "issueDate": "2026-09-23",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Shannon Beverage Distributors Ltd",
+      "taxId": "IE9512376GA",
+      "address": "Smithstown Industrial Estate · Shannon, Co. Clare, V14 K2C9"
+    },
+    "recipient": {
+      "name": "The Quay Kitchen Ltd",
+      "taxId": "IE6729034J",
+      "address": "14 Wellington Quay · Dublin 2, D02 X524"
+    },
+    "lines": [
+      {
+        "description": "Stout keg 50L",
+        "quantity": 3,
+        "unit": "keg",
+        "unitPrice": 189,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 567
+      },
+      {
+        "description": "Still water 500ml (x24)",
+        "quantity": 3,
+        "unit": "case",
+        "unitPrice": 7.8,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 23.4
+      },
+      {
+        "description": "Irish whiskey 70cl",
+        "quantity": 2,
+        "unit": "btl",
+        "unitPrice": 27.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 55.8
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 23,
+        "base": 646.2,
+        "tax": 148.63
+      }
+    ],
+    "printedTotal": 794.83,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TAX_ID_CHECKSUM",
+    "description": "Issuer tax id IE9512376GA has a wrong control (valid: IE9512376GW)"
+  },
+  "expected": {
+    "issueCodes": [
+      "INVALID_TAX_ID"
+    ],
+    "finalStatus": "INVALID_TAX_ID"
+  }
+}

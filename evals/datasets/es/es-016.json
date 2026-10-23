@@ -1,0 +1,105 @@
+{
+  "id": "es-016",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-016.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-turia",
+  "template": "clasica",
+  "variant": {
+    "mode": "photo",
+    "rotation": -2.7,
+    "noise": true,
+    "lowRes": true,
+    "stamp": "RECIBIDO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "F-2026/04115",
+    "issueDate": "2026-09-20",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola del Turia S.L.",
+      "taxId": "B46391272",
+      "address": "Mercavalencia, Nave 14 · Ctra. en Corts 231 · 46013 Valencia"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "Champiñón laminado",
+        "quantity": 4.1,
+        "unit": "kg",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 15.99
+      },
+      {
+        "description": "Aceituna gordal",
+        "quantity": 2.5,
+        "unit": "kg",
+        "unitPrice": 5.4,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 13.5
+      },
+      {
+        "description": "Lechuga romana",
+        "quantity": 9,
+        "unit": "ud",
+        "unitPrice": 0.65,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 5.85
+      },
+      {
+        "description": "Naranja zumo",
+        "quantity": 11.6,
+        "unit": "kg",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 11.02
+      },
+      {
+        "description": "Patata agria",
+        "quantity": 33.2,
+        "unit": "kg",
+        "unitPrice": 0.89,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 29.55
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 62.41,
+        "tax": 2.5
+      },
+      {
+        "rate": 10,
+        "base": 13.5,
+        "tax": 1.35
+      }
+    ],
+    "printedTotal": 82.86,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by 3.10"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

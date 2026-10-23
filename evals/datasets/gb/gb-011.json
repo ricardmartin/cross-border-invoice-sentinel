@@ -1,0 +1,100 @@
+{
+  "id": "gb-011",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-011.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "gb-drinks",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "TVD-26070",
+    "issueDate": "2026-10-06",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Thames Valley Drinks Wholesale Ltd",
+      "taxId": "GB904521748",
+      "address": "Unit 9, Suttons Business Park · Reading RG6 1AZ"
+    },
+    "recipient": {
+      "name": "The Anchor Dining Rooms Ltd",
+      "taxId": "GB286041557",
+      "address": "34 Bankside · London SE1 9DT"
+    },
+    "lines": [
+      {
+        "description": "Cola 330ml (x24)",
+        "quantity": 2,
+        "unit": "case",
+        "unitPrice": 13.2,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 26.4
+      },
+      {
+        "description": "London dry gin 70cl",
+        "quantity": 4,
+        "unit": "btl",
+        "unitPrice": 19.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 78
+      },
+      {
+        "description": "IPA cask 9 gal",
+        "quantity": 1,
+        "unit": "cask",
+        "unitPrice": 118,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 118
+      },
+      {
+        "description": "Semi-skimmed milk 2L",
+        "quantity": 7,
+        "unit": "btl",
+        "unitPrice": 1.65,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 11.55
+      },
+      {
+        "description": "Lager 330ml (x24)",
+        "quantity": 3,
+        "unit": "case",
+        "unitPrice": 26.4,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 79.2
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 11.55,
+        "tax": 0
+      },
+      {
+        "rate": 20,
+        "base": 301.6,
+        "tax": 60.32
+      }
+    ],
+    "printedTotal": 373.47,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

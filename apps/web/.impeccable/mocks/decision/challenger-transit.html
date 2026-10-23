@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Invoice Sentinel — Diagrama de metro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--night:#14213d;--porc:#f5f1e8;--paper:#fffdf8;--ink:#14213d;--mute:#5d6478;--rule:#e2dccd;--red:#e63946;--blue:#1d70b8;--amber:#f4a300;--green:#2a9d8f}
+*{box-sizing:border-box}
+html,body{width:1440px;height:900px;overflow:hidden;margin:0}
+body{background:var(--porc);color:var(--ink);font:14px/1.4 "Hanken Grotesk",system-ui,sans-serif;font-variant-numeric:tabular-nums}
+nav{height:56px;background:var(--night);display:flex;align-items:center;padding:0 24px;gap:28px;color:#fff}
+.brand{font-weight:800;font-size:16px;display:flex;align-items:center;gap:10px;letter-spacing:.01em}
+.brand i{width:22px;height:22px;border-radius:50%;border:4px solid var(--red);display:inline-block}
+nav a{color:#b9c1d6;text-decoration:none;font-weight:600;font-size:14px;height:56px;display:flex;align-items:center;border-bottom:3px solid transparent;padding-top:3px}
+nav a.on{color:#fff;border-color:var(--amber)}
+.sp{flex:1}
+.btn{font:inherit;font-weight:700;font-size:14px;border-radius:4px;padding:8px 14px;border:1px solid transparent;cursor:pointer}
+.btn.pri{background:var(--red);color:#fff}
+.btn.sec{background:transparent;border-color:#c9c1ae;color:var(--ink)}
+nav .btn.pri{background:var(--amber);color:var(--night)}
+main{display:grid;grid-template-columns:560px 1fr;height:844px}
+.doc{padding:20px 24px;border-right:1px solid var(--rule)}
+.doc .lbl{display:flex;justify-content:space-between;font-size:12px;color:var(--mute);font-weight:600;margin-bottom:10px}
+.sheet{background:#e9e6df;border:1px solid #d6d0c2;border-radius:3px;height:768px;padding:28px 28px;display:flex;flex-direction:column;gap:10px}
+.sheet b{display:block;background:#cfcabd;height:9px;border-radius:2px}
+.sheet .row{display:flex;justify-content:space-between;gap:16px}
+.r{padding:16px 28px 0;display:flex;flex-direction:column;gap:14px}
+.line{background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:6px 12px 2px}
+.line svg text{font-family:"Hanken Grotesk";font-size:12px;font-weight:700;fill:var(--ink)}
+.line svg text.s{font-weight:500;fill:var(--mute);font-size:11px}
+.vh{display:flex;align-items:flex-start;gap:14px}
+.bullet{width:34px;height:34px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px;flex:none;margin-top:2px}
+h1{margin:0;font-size:22px;font-weight:800;letter-spacing:-.01em}
+.vh p{margin:2px 0 0;color:var(--ink);font-size:14px}
+.meta{font-size:12px;color:var(--mute);margin-top:4px}
+.meta strong{color:var(--ink);font-weight:600}
+.ok{color:var(--green);font-weight:700}
+.claim{background:var(--paper);border:1px solid var(--rule);border-left:6px solid var(--red);border-radius:4px;padding:12px 16px;display:flex;align-items:center;gap:20px}
+.claim .amt{font-size:28px;font-weight:800;color:var(--red);letter-spacing:-.02em}
+.claim .t{flex:1;font-size:13px;color:var(--mute)}
+.claim .t div:first-child{color:var(--ink);font-weight:700;font-size:14px}
+.tag{display:inline-block;background:var(--amber);color:var(--night);font-size:11px;font-weight:800;padding:2px 7px;border-radius:3px;text-transform:uppercase;letter-spacing:.06em}
+table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--rule);border-radius:4px;font-size:13px}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--mute);font-weight:700;text-align:left;padding:7px 10px;border-bottom:2px solid var(--night)}
+td{padding:6px 10px;border-bottom:1px solid var(--rule)}
+tr:last-child td{border-bottom:0}
+.n{text-align:right}
+tr.flag td{background:#fdecec}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;border:2px solid var(--red);background:#fff;margin-right:6px;vertical-align:-1px}
+.flag .del{color:var(--red);font-weight:800}
+.two{display:grid;grid-template-columns:1fr 290px;gap:14px;align-items:start}
+.tot{background:var(--night);color:#fff;border-radius:4px;padding:12px 16px;font-size:13px}
+.tot div{display:flex;justify-content:space-between;padding:3px 0}
+.tot .d{border-top:1px solid #34446b;margin-top:4px;padding-top:7px;font-weight:800;font-size:16px;color:#ff8a93}
+.det{font-size:13px;color:var(--mute);border-top:1px solid var(--rule);padding-top:10px;font-weight:600}
+.det span{color:var(--ink)}
+</style></head><body>
+<nav><div class="brand"><i></i>Invoice Sentinel</div><a class="on" href="#">Bandeja</a><a href="#">Evals</a><div class="sp"></div><button class="btn pri">Procesar documento</button></nav>
+<main>
+<section class="doc"><div class="lbl"><span>factura F-2025/0387.pdf</span><span>Página 1 de 1</span></div>
+<div class="sheet">
+<div class="row"><b style="width:180px;height:16px"></b><b style="width:110px"></b></div>
+<b style="width:220px"></b><b style="width:160px"></b><div style="height:18px"></div>
+<div class="row"><b style="width:140px"></b><b style="width:120px"></b></div><b style="width:200px"></b><div style="height:22px"></div>
+<b style="height:12px;background:#bdb7a8"></b>
+<b></b><b></b><b></b><b></b><b></b><b></b><div style="height:24px"></div>
+<div class="row"><span></span><b style="width:170px"></b></div><div class="row"><span></span><b style="width:170px"></b></div><div class="row"><span></span><b style="width:170px;height:14px;background:#bdb7a8"></b></div>
+<div class="sp"></div><b style="width:260px;height:7px"></b><b style="width:200px;height:7px"></b></div></section>
+<section class="r">
+<div class="line"><svg width="848" height="100" viewBox="0 0 848 100">
+<g fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+<path d="M40 46H170" stroke="#2a9d8f"/><path d="M170 46H470" stroke="#1d70b8"/>
+<path d="M300 46L336 82H434L470 46" stroke="#f4a300"/>
+<path d="M470 46H800" stroke="#e63946"/></g>
+<g fill="#fff" stroke="#14213d" stroke-width="3"><circle cx="40" cy="46" r="7"/><circle cx="170" cy="46" r="7"/><circle cx="300" cy="46" r="9"/><circle cx="470" cy="46" r="9"/><circle cx="635" cy="46" r="7"/><circle cx="800" cy="46" r="10" stroke="#e63946" stroke-width="4"/></g>
+<text x="40" y="22" text-anchor="middle">Triage</text><text x="170" y="22" text-anchor="middle">Lectura 1</text><text x="300" y="22" text-anchor="middle">Validación</text><text x="470" y="22" text-anchor="middle">Lectura 2</text><text x="635" y="22" text-anchor="middle">Conciliación</text><text x="800" y="22" text-anchor="middle">Decisión</text>
+<text class="s" x="385" y="97" text-anchor="middle">bucle de relectura · 1 reintento</text>
+<text class="s" x="635" y="72" text-anchor="middle" style="fill:#e63946">faltan 2 kg</text><text class="s" x="800" y="72" text-anchor="middle" style="fill:#e63946;font-weight:700">proveedor</text>
+</svg></div>
+<div class="vh"><div class="bullet">!</div><div style="flex:1"><h1>Discrepancia del proveedor</h1>
+<p>Dos lecturas coinciden: el total impreso no cuadra y faltan 2 kg de gamba en el albarán.</p>
+<div class="meta"><strong>Distribuciones Hermanos García S.L.</strong> · CIF B-46123457 <span class="ok">válido</span> · para <strong>Restaurante La Barraca</strong> · Factura <strong>F-2025/0387</strong> · 14/10/2025 · albarán <strong>AL-5521</strong></div></div></div>
+<div class="claim"><div class="amt">48,62 €</div><div class="t"><div>Factura F-2025/0387: diferencia de 48,62 €</div><div><span class="tag">Pendiente de aprobación</span> &nbsp;Reclamación a Distribuciones Hermanos García</div></div>
+<button class="btn sec">Descartar…</button><button class="btn pri">Enviar reclamación de 48,62 €</button></div>
+<table><thead><tr><th>Descripción</th><th class="n">Cant.</th><th class="n">Precio</th><th class="n">IVA</th><th class="n">Impreso</th><th class="n">Calculado</th><th class="n">Albarán</th></tr></thead><tbody>
+<tr class="flag"><td><span class="dot"></span>Gamba roja de Dénia</td><td class="n">6 kg</td><td class="n">32,50</td><td class="n">10 %</td><td class="n">195,00</td><td class="n">195,00</td><td class="n del">4 kg</td></tr>
+<tr><td>Aceite de oliva virgen extra 5 L</td><td class="n">4 ud</td><td class="n">28,90</td><td class="n">10 %</td><td class="n">115,60</td><td class="n">115,60</td><td class="n">4</td></tr>
+<tr><td>Arroz bomba 1 kg</td><td class="n">10 ud</td><td class="n">3,85</td><td class="n">10 %</td><td class="n">38,50</td><td class="n">38,50</td><td class="n">10</td></tr>
+<tr><td>Limones malla 3 kg</td><td class="n">3 ud</td><td class="n">4,20</td><td class="n">10 %</td><td class="n">12,60</td><td class="n">12,60</td><td class="n">3</td></tr>
+<tr><td>Agua mineral 1,5 L (caja 6)</td><td class="n">8 ud</td><td class="n">3,10</td><td class="n">10 %</td><td class="n">24,80</td><td class="n">24,80</td><td class="n">8</td></tr>
+<tr><td>Servilletas 40x40 (paq. 100)</td><td class="n">5 ud</td><td class="n">6,40</td><td class="n">21 %</td><td class="n">32,00</td><td class="n">32,00</td><td class="n">5</td></tr></tbody></table>
+<div class="two"><table><thead><tr><th>Tipo</th><th class="n">Base impresa</th><th class="n">Base calc.</th><th class="n">Cuota impresa</th><th class="n">Cuota calc.</th></tr></thead><tbody>
+<tr><td>IVA 10 %</td><td class="n">386,50</td><td class="n">386,50</td><td class="n">38,65</td><td class="n">38,65</td></tr>
+<tr><td>IVA 21 %</td><td class="n">32,00</td><td class="n">32,00</td><td class="n">6,72</td><td class="n">6,72</td></tr></tbody></table>
+<div class="tot"><div><span>Total calculado</span><span>463,87 €</span></div><div><span>Total impreso</span><span>478,87 €</span></div><div class="d"><span>Δ</span><span>15,00 €</span></div></div></div>
+<div class="det">Detalles técnicos ▸ &nbsp;<span>2 lecturas · haiku-5-5 · 0,0042 $ · 8,4 s</span></div>
+</section></main></body></html>

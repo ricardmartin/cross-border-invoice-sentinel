@@ -1,0 +1,90 @@
+{
+  "id": "dk-030",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-030.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "dk-rengoring",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "MODTAGET",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "DK",
+    "documentNumber": "FS60377",
+    "issueDate": "2026-09-29",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Nordisk Rengøring & Hygiejne ApS",
+      "taxId": "DK40128565",
+      "address": "Hjulmagervej 15 · 5000 Odense C"
+    },
+    "recipient": {
+      "name": "Café Åboulevard I/S",
+      "taxId": "DK31956420",
+      "address": "Åboulevard 52 · 8000 Aarhus C"
+    },
+    "lines": [
+      {
+        "description": "Opvaskemiddel maskine 20L",
+        "quantity": 3,
+        "unit": "dunk",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Nitrilhandsker M (x100)",
+        "quantity": 5,
+        "unit": "æske",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Affedtning køkken 5L",
+        "quantity": 1,
+        "unit": "dunk",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Servietter 40x40 (x1000)",
+        "quantity": 4,
+        "unit": "kasse",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Groft salt 1kg",
+        "quantity": 20,
+        "unit": "pk",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "dk-029"
+}

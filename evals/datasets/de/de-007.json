@@ -1,0 +1,109 @@
+{
+  "id": "de-007",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-007.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-getraenke",
+  "template": "modern",
+  "variant": {
+    "mode": "photo",
+    "rotation": 2.4,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Fehlt 1 Kiste"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "GRV-26042",
+    "issueDate": "2026-09-15",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Getränke Rheinland Vertriebs GmbH",
+      "taxId": "DE125937412",
+      "address": "Industriestraße 77 · 50735 Köln"
+    },
+    "recipient": {
+      "name": "Wirtshaus am Viktualienmarkt GmbH",
+      "taxId": "DE273415862",
+      "address": "Frauenstraße 9 · 80469 München"
+    },
+    "lines": [
+      {
+        "description": "Vollmilch 3,5 % 1 l",
+        "quantity": 14,
+        "unit": "Pkg",
+        "unitPrice": 1.15,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 16.1
+      },
+      {
+        "description": "Weizenbier 0,5 l (Kasten 20)",
+        "quantity": 2,
+        "unit": "Kasten",
+        "unitPrice": 19.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 39.8
+      },
+      {
+        "description": "Riesling trocken 0,75 l",
+        "quantity": 14,
+        "unit": "Fl",
+        "unitPrice": 6.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 96.6
+      },
+      {
+        "description": "Apfelschorle 0,5 l (Kasten 20)",
+        "quantity": 3,
+        "unit": "Kasten",
+        "unitPrice": 14.8,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 44.4
+      },
+      {
+        "description": "Kölsch 0,33 l (Kasten 24)",
+        "quantity": 5,
+        "unit": "Kasten",
+        "unitPrice": 21.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 109.5
+      },
+      {
+        "description": "Mineralwasser 0,7 l (Kasten 12)",
+        "quantity": 6,
+        "unit": "Kasten",
+        "unitPrice": 7.2,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 43.2
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 16.1,
+        "tax": 1.13
+      },
+      {
+        "rate": 19,
+        "base": 333.5,
+        "tax": 63.37
+      }
+    ],
+    "printedTotal": 414.1,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

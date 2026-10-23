@@ -1,0 +1,90 @@
+{
+  "id": "gb-030",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-030.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "gb-hygiene",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "photo",
+    "rotation": -2.5,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "1 case short"
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "GB",
+    "documentNumber": "DN77377",
+    "issueDate": "2026-10-07",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Pennine Catering Supplies Ltd",
+      "taxId": "GB315904664",
+      "address": "Trafford Park Road 210 · Manchester M17 1HH"
+    },
+    "recipient": {
+      "name": "The Anchor Dining Rooms Ltd",
+      "taxId": "GB286041557",
+      "address": "34 Bankside · London SE1 9DT"
+    },
+    "lines": [
+      {
+        "description": "Nitrile gloves M (x100)",
+        "quantity": 2,
+        "unit": "box",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Thick bleach 5L",
+        "quantity": 6,
+        "unit": "drum",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Dishwasher detergent 20L",
+        "quantity": 1,
+        "unit": "drum",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Napkins 40x40 (x1000)",
+        "quantity": 5,
+        "unit": "case",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Kitchen degreaser 5L",
+        "quantity": 3,
+        "unit": "drum",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "gb-029"
+}

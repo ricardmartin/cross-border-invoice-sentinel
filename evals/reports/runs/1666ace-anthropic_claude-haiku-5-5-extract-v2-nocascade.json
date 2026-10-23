@@ -1,0 +1,4246 @@
+{
+  "runName": "1666ace-anthropic_claude-haiku-5-5-extract-v2-nocascade",
+  "createdAt": "2026-10-19T00:44:50+02:00",
+  "config": {
+    "model": "anthropic:claude-haiku-5-5",
+    "escalation": null,
+    "maxRetries": 0,
+    "promptVersion": "local:extract-v2",
+    "smoke": false
+  },
+  "summary": {
+    "docs": 30,
+    "headline": {
+      "Documents 100 % correct (final)": {
+        "value": 0.9333333333333333,
+        "kind": "pct"
+      },
+      "Documents 100 % correct (first read)": {
+        "value": 0.9333333333333333,
+        "kind": "pct"
+      },
+      "Line F1": {
+        "value": 0.99375,
+        "kind": "pct"
+      },
+      "Final status correct": {
+        "value": 0.7666666666666667,
+        "kind": "pct"
+      },
+      "Discrepancy precision": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Discrepancy recall": {
+        "value": 0.25,
+        "kind": "pct"
+      },
+      "Unfair claims (false positives on clean docs)": {
+        "value": 0,
+        "kind": "pct"
+      },
+      "EXTRACTION_UNCERTAIN rate": {
+        "value": 0.23333333333333334,
+        "kind": "pct"
+      },
+      "Mean extraction attempts": {
+        "value": 1,
+        "kind": "num"
+      },
+      "Escalated to stronger model": {
+        "value": 0,
+        "kind": "pct"
+      },
+      "Triage country accuracy": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Triage doc-type accuracy": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Reconciliation status correct": {
+        "value": 0.75,
+        "kind": "pct"
+      },
+      "Claims drafted for SUPPLIER_DISCREPANCY": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Claim amount correct": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Claim drafts passing guardrails": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Claim judge score (1-5)": {
+        "value": 5,
+        "kind": "num"
+      },
+      "Claims with invented data": {
+        "value": 0,
+        "kind": "pct"
+      },
+      "Cost / doc": {
+        "value": 0.0015304566666666667,
+        "kind": "usd"
+      },
+      "Latency p50": {
+        "value": 7041,
+        "kind": "ms"
+      },
+      "Latency p95": {
+        "value": 16056,
+        "kind": "ms"
+      },
+      "Failed runs": {
+        "value": 0,
+        "kind": "num"
+      }
+    },
+    "headerAcc": {
+      "docType": 1,
+      "documentNumber": 0.9666666666666667,
+      "issueDate": 1,
+      "currency": 1,
+      "issuer.name": 1,
+      "issuer.taxId": 1,
+      "recipient.name": 1,
+      "recipient.taxId": 1,
+      "printedTaxBreakdown": 0.9666666666666667,
+      "printedTotal": 1
+    },
+    "lineAcc": {
+      "description": 0.99375,
+      "quantity": 1,
+      "unitPrice": 1,
+      "discountPct": 1,
+      "taxRate": 1,
+      "lineAmount": 1
+    },
+    "confusion": [
+      {
+        "expected": "VALID",
+        "VALID": 21,
+        "SUPPLIER_DISCREPANCY": 0,
+        "INVALID_TAX_ID": 0,
+        "EXTRACTION_UNCERTAIN": 1
+      },
+      {
+        "expected": "SUPPLIER_DISCREPANCY",
+        "VALID": 0,
+        "SUPPLIER_DISCREPANCY": 2,
+        "INVALID_TAX_ID": 0,
+        "EXTRACTION_UNCERTAIN": 5
+      },
+      {
+        "expected": "INVALID_TAX_ID",
+        "VALID": 0,
+        "SUPPLIER_DISCREPANCY": 0,
+        "INVALID_TAX_ID": 0,
+        "EXTRACTION_UNCERTAIN": 1
+      },
+      {
+        "expected": "EXTRACTION_UNCERTAIN",
+        "VALID": 0,
+        "SUPPLIER_DISCREPANCY": 0,
+        "INVALID_TAX_ID": 0,
+        "EXTRACTION_UNCERTAIN": 0
+      }
+    ]
+  },
+  "byCountry": {
+    "FR": {
+      "docs": 30,
+      "headline": {
+        "Documents 100 % correct (final)": {
+          "value": 0.9333333333333333,
+          "kind": "pct"
+        },
+        "Documents 100 % correct (first read)": {
+          "value": 0.9333333333333333,
+          "kind": "pct"
+        },
+        "Line F1": {
+          "value": 0.99375,
+          "kind": "pct"
+        },
+        "Final status correct": {
+          "value": 0.7666666666666667,
+          "kind": "pct"
+        },
+        "Discrepancy precision": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Discrepancy recall": {
+          "value": 0.25,
+          "kind": "pct"
+        },
+        "Unfair claims (false positives on clean docs)": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "EXTRACTION_UNCERTAIN rate": {
+          "value": 0.23333333333333334,
+          "kind": "pct"
+        },
+        "Mean extraction attempts": {
+          "value": 1,
+          "kind": "num"
+        },
+        "Escalated to stronger model": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "Triage country accuracy": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Triage doc-type accuracy": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Reconciliation status correct": {
+          "value": 0.75,
+          "kind": "pct"
+        },
+        "Claims drafted for SUPPLIER_DISCREPANCY": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim amount correct": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim drafts passing guardrails": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim judge score (1-5)": {
+          "value": 5,
+          "kind": "num"
+        },
+        "Claims with invented data": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "Cost / doc": {
+          "value": 0.0015304566666666667,
+          "kind": "usd"
+        },
+        "Latency p50": {
+          "value": 7041,
+          "kind": "ms"
+        },
+        "Latency p95": {
+          "value": 16056,
+          "kind": "ms"
+        },
+        "Failed runs": {
+          "value": 0,
+          "kind": "num"
+        }
+      },
+      "headerAcc": {
+        "docType": 1,
+        "documentNumber": 0.9666666666666667,
+        "issueDate": 1,
+        "currency": 1,
+        "issuer.name": 1,
+        "issuer.taxId": 1,
+        "recipient.name": 1,
+        "recipient.taxId": 1,
+        "printedTaxBreakdown": 0.9666666666666667,
+        "printedTotal": 1
+      },
+      "lineAcc": {
+        "description": 0.99375,
+        "quantity": 1,
+        "unitPrice": 1,
+        "discountPct": 1,
+        "taxRate": 1,
+        "lineAmount": 1
+      },
+      "confusion": [
+        {
+          "expected": "VALID",
+          "VALID": 21,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 1
+        },
+        {
+          "expected": "SUPPLIER_DISCREPANCY",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 2,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 5
+        },
+        {
+          "expected": "INVALID_TAX_ID",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 1
+        },
+        {
+          "expected": "EXTRACTION_UNCERTAIN",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        }
+      ]
+    }
+  },
+  "checks": [
+    {
+      "country": "FR",
+      "metric": "Documents 100 % correct (final)",
+      "kind": "threshold",
+      "value": 0.9333333333333333,
+      "limit": "≥ 0.8",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Final status correct",
+      "kind": "threshold",
+      "value": 0.7666666666666667,
+      "limit": "≥ 0.9",
+      "passed": false
+    },
+    {
+      "country": "FR",
+      "metric": "Discrepancy recall",
+      "kind": "threshold",
+      "value": 0.25,
+      "limit": "≥ 0.85",
+      "passed": false
+    },
+    {
+      "country": "FR",
+      "metric": "Unfair claims (false positives on clean docs)",
+      "kind": "threshold",
+      "value": 0,
+      "limit": "≤ 0",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Reconciliation status correct",
+      "kind": "threshold",
+      "value": 0.75,
+      "limit": "≥ 0.75",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Claim judge score (1-5)",
+      "kind": "threshold",
+      "value": 5,
+      "limit": "≥ 3.5",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Claims with invented data",
+      "kind": "threshold",
+      "value": 0,
+      "limit": "≤ 0",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Cost / doc",
+      "kind": "threshold",
+      "value": 0.0015304566666666667,
+      "limit": "≤ 0.005",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Latency p95",
+      "kind": "threshold",
+      "value": 16056,
+      "limit": "≤ 30000",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Failed runs",
+      "kind": "threshold",
+      "value": 0,
+      "limit": "≤ 0",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Documents 100 % correct (final)",
+      "kind": "regression",
+      "value": 0.9333333333333333,
+      "limit": "≥ 88.3 % (baseline 93.3 %)",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Final status correct",
+      "kind": "regression",
+      "value": 0.7666666666666667,
+      "limit": "≥ 95.0 % (baseline 100.0 %)",
+      "passed": false
+    },
+    {
+      "country": "FR",
+      "metric": "Discrepancy recall",
+      "kind": "regression",
+      "value": 0.25,
+      "limit": "≥ 95.0 % (baseline 100.0 %)",
+      "passed": false
+    },
+    {
+      "country": "FR",
+      "metric": "Reconciliation status correct",
+      "kind": "regression",
+      "value": 0.75,
+      "limit": "≥ 95.0 % (baseline 100.0 %)",
+      "passed": false
+    },
+    {
+      "country": "FR",
+      "metric": "Line F1",
+      "kind": "regression",
+      "value": 0.99375,
+      "limit": "≥ 94.4 % (baseline 99.4 %)",
+      "passed": true
+    }
+  ],
+  "results": [
+    {
+      "id": "fr-001",
+      "country": "FR",
+      "template": "classic",
+      "mode": "photo",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": false,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": false,
+      "comparison": {
+        "exact": false,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": false,
+            "expected": "FA-2026-010400",
+            "got": "FA-2026-010490"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-03",
+            "got": "2026-10-03"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Primeurs du Val de Loire SARL",
+            "got": "Primeurs du Val de Loire SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR20817263544",
+            "got": "FR20817263544"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 57.69,
+                "tax": 3.17
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 57.69,
+                "tax": 3.17
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 60.86,
+            "got": 60.86
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": [
+          "documentNumber: expected \"FA-2026-010400\", got \"FA-2026-010490\""
+        ]
+      },
+      "costUsd": 0.0013993,
+      "latencyMs": 8206,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-002",
+      "country": "FR",
+      "template": "erp",
+      "mode": "pdf",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F26/07109",
+            "got": "F26/07109"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-13",
+            "got": "2026-10-13"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Boucherie Charcuterie Lemoine SAS",
+            "got": "BOUCHERIE CHARCUTERIE LEMOINE SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR68492837166",
+            "got": "FR68492837166"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "BRASSERIE DES HALLES SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 418.89,
+                "tax": 23.04
+              },
+              {
+                "rate": 20,
+                "base": 11.9,
+                "tax": 2.38
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 418.89,
+                "tax": 23.04
+              },
+              {
+                "rate": 20,
+                "base": 11.9,
+                "tax": 2.38
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 456.21,
+            "got": 456.21
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0015883,
+      "latencyMs": 6813,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-003",
+      "country": "FR",
+      "template": "modern",
+      "mode": "pdf",
+      "planted": "RATE_NOT_ALLOWED",
+      "expectedStatus": "SUPPLIER_DISCREPANCY",
+      "status": "EXTRACTION_UNCERTAIN",
+      "reason": "1 reads never passed nor agreed on the same errors: needs human review",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "RATE_NOT_ALLOWED"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "CB26014",
+            "got": "CB26014"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-16",
+            "got": "2026-09-16"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cave & Boissons Rhône-Alpes SAS",
+            "got": "Cave & Boissons Rhône-Alpes SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR07530192848",
+            "got": "FR07530192848"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 41.9,
+                "tax": 2.3
+              },
+              {
+                "rate": 7,
+                "base": 46.5,
+                "tax": 3.26
+              },
+              {
+                "rate": 20,
+                "base": 69.8,
+                "tax": 13.96
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 41.9,
+                "tax": 2.3
+              },
+              {
+                "rate": 7,
+                "base": 46.5,
+                "tax": 3.26
+              },
+              {
+                "rate": 20,
+                "base": 69.8,
+                "tax": 13.96
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 177.72,
+            "got": 177.72
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0016072999999999999,
+      "latencyMs": 7464,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-004",
+      "country": "FR",
+      "template": "classic",
+      "mode": "pdf",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "HPA-2612",
+            "got": "HPA-2612"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-11",
+            "got": "2026-09-11"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hygiène Pro Atlantique SARL",
+            "got": "Hygiène Pro Atlantique SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR59429183726",
+            "got": "FR59429183726"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 9.35,
+                "tax": 0.51
+              },
+              {
+                "rate": 20,
+                "base": 152.1,
+                "tax": 30.42
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 9.35,
+                "tax": 0.51
+              },
+              {
+                "rate": 20,
+                "base": 152.1,
+                "tax": 30.42
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 192.38,
+            "got": 192.38
+          }
+        ],
+        "lines": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 3,
+            "quantity": 3,
+            "unitPrice": 3,
+            "discountPct": 3,
+            "taxRate": 3,
+            "lineAmount": 3
+          },
+          "gtLines": 3
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0012545,
+      "latencyMs": 5342,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-005",
+      "country": "FR",
+      "template": "classic",
+      "mode": "pdf",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FA-2026-010412",
+            "got": "FA-2026-010412"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-22",
+            "got": "2026-09-22"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Primeurs du Val de Loire SARL",
+            "got": "Primeurs du Val de Loire SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR20817263544",
+            "got": "FR20817263544"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 40.94,
+                "tax": 2.25
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 40.94,
+                "tax": 2.25
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 43.19,
+            "got": 43.19
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0013084,
+      "latencyMs": 5234,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-006",
+      "country": "FR",
+      "template": "erp",
+      "mode": "photo",
+      "planted": "TOTAL_OFFSET",
+      "expectedStatus": "SUPPLIER_DISCREPANCY",
+      "status": "EXTRACTION_UNCERTAIN",
+      "reason": "1 reads never passed nor agreed on the same errors: needs human review",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "TOTAL_MISMATCH"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F26/07145",
+            "got": "F26/07145"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-15",
+            "got": "2026-10-15"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Boucherie Charcuterie Lemoine SAS",
+            "got": "BOUCHERIE CHARCUTERIE LEMOINE SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR68492837166",
+            "got": "FR68492837166"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "BRASSERIE DES HALLES SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 212.84,
+                "tax": 11.71
+              },
+              {
+                "rate": 20,
+                "base": 23.8,
+                "tax": 4.76
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 212.84,
+                "tax": 11.71
+              },
+              {
+                "rate": 20,
+                "base": 23.8,
+                "tax": 4.76
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 254.61,
+            "got": 254.61
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0015929,
+      "latencyMs": 8767,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-007",
+      "country": "FR",
+      "template": "modern",
+      "mode": "pdf",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "CREDIT_NOTE",
+            "got": "CREDIT_NOTE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "CB26042",
+            "got": "CB26042"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-30",
+            "got": "2026-09-30"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cave & Boissons Rhône-Alpes SAS",
+            "got": "Cave & Boissons Rhône-Alpes SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR07530192848",
+            "got": "FR07530192848"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": -23.85,
+                "tax": -1.31
+              },
+              {
+                "rate": 20,
+                "base": -431,
+                "tax": -86.2
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": -23.85,
+                "tax": -1.31
+              },
+              {
+                "rate": 20,
+                "base": -431,
+                "tax": -86.2
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": -542.36,
+            "got": -542.36
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0015298,
+      "latencyMs": 6677,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-008",
+      "country": "FR",
+      "template": "classic",
+      "mode": "photo",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "HPA-2628",
+            "got": "HPA-2628"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-14",
+            "got": "2026-09-14"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hygiène Pro Atlantique SARL",
+            "got": "Hygiène Pro Atlantique SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR59429183726",
+            "got": "FR59429183726"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 8.25,
+                "tax": 0.45
+              },
+              {
+                "rate": 20,
+                "base": 138.9,
+                "tax": 27.78
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 8.25,
+                "tax": 0.45
+              },
+              {
+                "rate": 20,
+                "base": 138.9,
+                "tax": 27.78
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 175.38,
+            "got": 175.38
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0014047999999999999,
+      "latencyMs": 6836,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-009",
+      "country": "FR",
+      "template": "classic",
+      "mode": "photo",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FA-2026-010424",
+            "got": "FA-2026-010424"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-13",
+            "got": "2026-09-13"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Primeurs du Val de Loire SARL",
+            "got": "Primeurs du Val de Loire SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR20817263544",
+            "got": "FR20817263544"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 119,
+                "tax": 6.55
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 119,
+                "tax": 6.55
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 125.55,
+            "got": 125.55
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0014190000000000001,
+      "latencyMs": 6900,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-010",
+      "country": "FR",
+      "template": "erp",
+      "mode": "scan",
+      "planted": "LINE_MATH",
+      "expectedStatus": "SUPPLIER_DISCREPANCY",
+      "status": "EXTRACTION_UNCERTAIN",
+      "reason": "1 reads never passed nor agreed on the same errors: needs human review",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "LINE_MATH"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F26/07181",
+            "got": "F26/07181"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-21",
+            "got": "2026-09-21"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Boucherie Charcuterie Lemoine SAS",
+            "got": "BOUCHERIE CHARCUTERIE LEMOINE SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR68492837166",
+            "got": "FR68492837166"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "BISTROT DU CANAL SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 176.08,
+                "tax": 9.68
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 176.08,
+                "tax": 9.68
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 185.76,
+            "got": 185.76
+          }
+        ],
+        "lines": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 3,
+            "quantity": 3,
+            "unitPrice": 3,
+            "discountPct": 3,
+            "taxRate": 3,
+            "lineAmount": 3
+          },
+          "gtLines": 3
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0013655000000000002,
+      "latencyMs": 8060,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-011",
+      "country": "FR",
+      "template": "modern",
+      "mode": "scan",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "CB26070",
+            "got": "CB26070"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-14",
+            "got": "2026-09-14"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cave & Boissons Rhône-Alpes SAS",
+            "got": "Cave & Boissons Rhône-Alpes SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR07530192848",
+            "got": "FR07530192848"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 86.35,
+                "tax": 4.75
+              },
+              {
+                "rate": 20,
+                "base": 445.9,
+                "tax": 89.18
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 86.35,
+                "tax": 4.75
+              },
+              {
+                "rate": 20,
+                "base": 445.9,
+                "tax": 89.18
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 626.18,
+            "got": 626.18
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0014084,
+      "latencyMs": 6456,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-012",
+      "country": "FR",
+      "template": "classic",
+      "mode": "pdf",
+      "planted": "TAX_ID_CHECKSUM",
+      "expectedStatus": "INVALID_TAX_ID",
+      "status": "EXTRACTION_UNCERTAIN",
+      "reason": "1 reads never passed nor agreed on the same errors: needs human review",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "INVALID_TAX_ID"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "HPA-2644",
+            "got": "HPA-2644"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-08",
+            "got": "2026-09-08"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hygiène Pro Atlantique SARL",
+            "got": "Hygiène Pro Atlantique SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR66429183726",
+            "got": "FR66429183726"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 10.45,
+                "tax": 0.57
+              },
+              {
+                "rate": 20,
+                "base": 163.5,
+                "tax": 32.7
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 10.45,
+                "tax": 0.57
+              },
+              {
+                "rate": 20,
+                "base": 163.5,
+                "tax": 32.7
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 207.22,
+            "got": 207.22
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0013273,
+      "latencyMs": 5462,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-013",
+      "country": "FR",
+      "template": "classic",
+      "mode": "photo",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FA-2026-010436",
+            "got": "FA-2026-010436"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-29",
+            "got": "2026-09-29"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Primeurs du Val de Loire SARL",
+            "got": "Primeurs du Val de Loire SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR20817263544",
+            "got": "FR20817263544"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 101.3,
+                "tax": 5.57
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 101.3,
+                "tax": 5.57
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 106.87,
+            "got": 106.87
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0013272999999999998,
+      "latencyMs": 8666,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-014",
+      "country": "FR",
+      "template": "erp",
+      "mode": "pdf",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F26/07217",
+            "got": "F26/07217"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-22",
+            "got": "2026-09-22"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Boucherie Charcuterie Lemoine SAS",
+            "got": "BOUCHERIE CHARCUTERIE LEMOINE SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR68492837166",
+            "got": "FR68492837166"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "BRASSERIE DES HALLES SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 428.57,
+                "tax": 23.57
+              },
+              {
+                "rate": 20,
+                "base": 23.8,
+                "tax": 4.76
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 428.57,
+                "tax": 23.57
+              },
+              {
+                "rate": 20,
+                "base": 23.8,
+                "tax": 4.76
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 480.7,
+            "got": 480.7
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0016576000000000002,
+      "latencyMs": 7940,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-015",
+      "country": "FR",
+      "template": "modern",
+      "mode": "pdf",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "CB26098",
+            "got": "CB26098"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-02",
+            "got": "2026-09-02"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cave & Boissons Rhône-Alpes SAS",
+            "got": "Cave & Boissons Rhône-Alpes SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR07530192848",
+            "got": "FR07530192848"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 58.25,
+                "tax": 3.2
+              },
+              {
+                "rate": 20,
+                "base": 346.6,
+                "tax": 69.32
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 58.25,
+                "tax": 3.2
+              },
+              {
+                "rate": 20,
+                "base": 346.6,
+                "tax": 69.32
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 477.37,
+            "got": 477.37
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0016341000000000003,
+      "latencyMs": 7331,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-016",
+      "country": "FR",
+      "template": "classic",
+      "mode": "pdf",
+      "planted": "LINE_MATH",
+      "expectedStatus": "SUPPLIER_DISCREPANCY",
+      "status": "EXTRACTION_UNCERTAIN",
+      "reason": "1 reads never passed nor agreed on the same errors: needs human review",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "LINE_MATH"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "HPA-2660",
+            "got": "HPA-2660"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-03",
+            "got": "2026-10-03"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hygiène Pro Atlantique SARL",
+            "got": "Hygiène Pro Atlantique SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR59429183726",
+            "got": "FR59429183726"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 20,
+                "base": 163.1,
+                "tax": 32.62
+              }
+            ],
+            "got": [
+              {
+                "rate": 20,
+                "base": 163.1,
+                "tax": 32.62
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 195.72,
+            "got": 195.72
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0015403,
+      "latencyMs": 6966,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-017",
+      "country": "FR",
+      "template": "classic",
+      "mode": "scan",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FA-2026-010448",
+            "got": "FA-2026-010448"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-18",
+            "got": "2026-09-18"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Primeurs du Val de Loire SARL",
+            "got": "Primeurs du Val de Loire SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR20817263544",
+            "got": "FR20817263544"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 56.87,
+                "tax": 3.13
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 56.87,
+                "tax": 3.13
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 60,
+            "got": 60
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0012132,
+      "latencyMs": 7041,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-018",
+      "country": "FR",
+      "template": "erp",
+      "mode": "scan",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F26/07253",
+            "got": "F26/07253"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-06",
+            "got": "2026-09-06"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Boucherie Charcuterie Lemoine SAS",
+            "got": "BOUCHERIE CHARCUTERIE LEMOINE SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR68492837166",
+            "got": "FR68492837166"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "BISTROT DU CANAL SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 294.08,
+                "tax": 16.17
+              },
+              {
+                "rate": 20,
+                "base": 11.9,
+                "tax": 2.38
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 294.08,
+                "tax": 16.17
+              },
+              {
+                "rate": 20,
+                "base": 11.9,
+                "tax": 2.38
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 324.53,
+            "got": 324.53
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0012082,
+      "latencyMs": 5861,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-019",
+      "country": "FR",
+      "template": "modern",
+      "mode": "photo",
+      "planted": "TOTAL_OFFSET",
+      "expectedStatus": "SUPPLIER_DISCREPANCY",
+      "status": "EXTRACTION_UNCERTAIN",
+      "reason": "1 reads never passed nor agreed on the same errors: needs human review",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "TOTAL_MISMATCH"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "CB26126",
+            "got": "CB26126"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-26",
+            "got": "2026-09-26"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cave & Boissons Rhône-Alpes SAS",
+            "got": "Cave & Boissons Rhône-Alpes SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR07530192848",
+            "got": "FR07530192848"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 44.2,
+                "tax": 2.43
+              },
+              {
+                "rate": 20,
+                "base": 237,
+                "tax": 47.4
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 44.2,
+                "tax": 2.43
+              },
+              {
+                "rate": 20,
+                "base": 237,
+                "tax": 47.4
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 332.53,
+            "got": 332.53
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0012583,
+      "latencyMs": 6567,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-020",
+      "country": "FR",
+      "template": "classic",
+      "mode": "pdf",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "HPA-2676",
+            "got": "HPA-2676"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-11",
+            "got": "2026-10-11"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hygiène Pro Atlantique SARL",
+            "got": "Hygiène Pro Atlantique SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR59429183726",
+            "got": "FR59429183726"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 2.75,
+                "tax": 0.15
+              },
+              {
+                "rate": 20,
+                "base": 189.6,
+                "tax": 37.92
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 2.75,
+                "tax": 0.15
+              },
+              {
+                "rate": 20,
+                "base": 189.6,
+                "tax": 37.92
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 230.42,
+            "got": 230.42
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0014724,
+      "latencyMs": 6588,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-021",
+      "country": "FR",
+      "template": "classic",
+      "mode": "pdf",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FA-2026-010460",
+            "got": "FA-2026-010460"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-17",
+            "got": "2026-09-17"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Primeurs du Val de Loire SARL",
+            "got": "Primeurs du Val de Loire SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR20817263544",
+            "got": "FR20817263544"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 94.46,
+                "tax": 5.2
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 94.46,
+                "tax": 5.2
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 99.66,
+            "got": 99.66
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0012828,
+      "latencyMs": 5670,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-022",
+      "country": "FR",
+      "template": "erp",
+      "mode": "scan",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F26/07289",
+            "got": "F26/07289"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-08",
+            "got": "2026-10-08"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Boucherie Charcuterie Lemoine SAS",
+            "got": "BOUCHERIE CHARCUTERIE LEMOINE SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR68492837166",
+            "got": "FR68492837166"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "BRASSERIE DES HALLES SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 329.71,
+                "tax": 18.13
+              },
+              {
+                "rate": 20,
+                "base": 23.8,
+                "tax": 4.76
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 329.71,
+                "tax": 18.13
+              },
+              {
+                "rate": 20,
+                "base": 23.8,
+                "tax": 4.76
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 376.4,
+            "got": 376.4
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0011971,
+      "latencyMs": 6678,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-023",
+      "country": "FR",
+      "template": "classic",
+      "mode": "pdf",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FA-2026-010469",
+            "got": "FA-2026-010469"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-17",
+            "got": "2026-09-17"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Primeurs du Val de Loire SARL",
+            "got": "Primeurs du Val de Loire SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR20817263544",
+            "got": "FR20817263544"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 117.99,
+                "tax": 6.49
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 117.99,
+                "tax": 6.49
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 124.48,
+            "got": 124.48
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0016132,
+      "latencyMs": 7048,
+      "allCached": true,
+      "reconciliation": "SIN_DISCREPANCIA",
+      "expectedReconciliation": "SIN_DISCREPANCIA",
+      "claim": null
+    },
+    {
+      "id": "fr-024",
+      "country": "FR",
+      "template": "delivery-note",
+      "mode": "pdf",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "DELIVERY_NOTE",
+            "got": "DELIVERY_NOTE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "BL-2604299",
+            "got": "BL-2604299"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-15",
+            "got": "2026-09-15"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Primeurs du Val de Loire SARL",
+            "got": "Primeurs du Val de Loire SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR20817263544",
+            "got": "FR20817263544"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "Brasserie des Halles SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [],
+            "got": []
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": null,
+            "got": null
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0016861,
+      "latencyMs": 9867,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-025",
+      "country": "FR",
+      "template": "erp",
+      "mode": "photo",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "EXTRACTION_UNCERTAIN",
+      "reason": "1 reads never passed nor agreed on the same errors: needs human review",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": false,
+          "errors": [
+            "BRACKET_BASE_MISMATCH"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": false,
+      "comparison": {
+        "exact": false,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F26/07325",
+            "got": "F26/07325"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-20",
+            "got": "2026-09-20"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Boucherie Charcuterie Lemoine SAS",
+            "got": "BOUCHERIE CHARCUTERIE LEMOINE SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR68492837166",
+            "got": "FR68492837166"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "BISTROT DU CANAL SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": false,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 446.68,
+                "tax": 24.57
+              },
+              {
+                "rate": 20,
+                "base": 33.92,
+                "tax": 6.78
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 466.68,
+                "tax": 24.57
+              },
+              {
+                "rate": 20,
+                "base": 33.92,
+                "tax": 6.78
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 511.95,
+            "got": 511.95
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 1,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": [
+          "printedTaxBreakdown: expected [{\"rate\":5.5,\"base\":446.68,\"tax\":24.57},{\"rate\":20,\"base\":33.92,\"tax\":6.78}], got [{\"rate\":5.5,\"base\":466.68,\"tax\":24.57},{\"rate\":20,\"base\":33.92,\"tax\":6.78}]",
+          "lines[2].description: expected \"ENTRECOTE BOEUF CHAROLAIS\", got \"ENTRECOTE CHAROLAIS\""
+        ]
+      },
+      "costUsd": 0.0017378,
+      "latencyMs": 11691,
+      "allCached": true,
+      "reconciliation": null,
+      "expectedReconciliation": "SIN_DISCREPANCIA",
+      "claim": null
+    },
+    {
+      "id": "fr-026",
+      "country": "FR",
+      "template": "delivery-note",
+      "mode": "photo",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "DELIVERY_NOTE",
+            "got": "DELIVERY_NOTE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "BL-2604325",
+            "got": "BL-2604325"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-17",
+            "got": "2026-09-17"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Boucherie Charcuterie Lemoine SAS",
+            "got": "Boucherie Charcuterie Lemoine SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR68492837166",
+            "got": "FR68492837166"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [],
+            "got": []
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": null,
+            "got": null
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0015027999999999999,
+      "latencyMs": 9706,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-027",
+      "country": "FR",
+      "template": "modern",
+      "mode": "scan",
+      "planted": "DELIVERY_SHORT",
+      "expectedStatus": "SUPPLIER_DISCREPANCY",
+      "status": "SUPPLIER_DISCREPANCY",
+      "reason": "billed goods not delivered (25.92 incl. VAT, confirmed by a re-read of the delivery note)",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "CB26189",
+            "got": "CB26189"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-16",
+            "got": "2026-09-16"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cave & Boissons Rhône-Alpes SAS",
+            "got": "Cave & Boissons Rhône-Alpes SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR07530192848",
+            "got": "FR07530192848"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 81.6,
+                "tax": 4.49
+              },
+              {
+                "rate": 20,
+                "base": 494.5,
+                "tax": 98.9
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 81.6,
+                "tax": 4.49
+              },
+              {
+                "rate": 20,
+                "base": 494.5,
+                "tax": 98.9
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 679.49,
+            "got": 679.49
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0029012,
+      "latencyMs": 16056,
+      "allCached": true,
+      "reconciliation": "DISCREPANCIA",
+      "expectedReconciliation": "DISCREPANCIA",
+      "claim": {
+        "mode": "llm",
+        "amount": 25.92,
+        "expectedAmount": 25.92,
+        "judge": 5,
+        "justification": "The e-mail cites invoice CB26189 dated 16/09/2026, names the affected line with the invoiced and delivered quantities, and states 25,92 EUR TVA incluse exactly as in the facts. It is written entirely in French, in a formal and courteous tone, and requests a credit note or corrective invoice without inventing any data or commitments. It is ready to send unchanged.",
+        "invented": false,
+        "approved": true,
+        "subject": "Réclamation concernant la facture CB26189 du 16/09/2026"
+      }
+    },
+    {
+      "id": "fr-028",
+      "country": "FR",
+      "template": "delivery-note",
+      "mode": "photo",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "DELIVERY_NOTE",
+            "got": "DELIVERY_NOTE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "BL-2604351",
+            "got": "BL-2604351"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-13",
+            "got": "2026-09-13"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cave & Boissons Rhône-Alpes SAS",
+            "got": "Cave & Boissons Rhône-Alpes SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR07530192848",
+            "got": "FR07530192848"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [],
+            "got": []
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": null,
+            "got": null
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0014163,
+      "latencyMs": 9102,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-029",
+      "country": "FR",
+      "template": "classic",
+      "mode": "photo",
+      "planted": "DELIVERY_MISSING_PRODUCT",
+      "expectedStatus": "SUPPLIER_DISCREPANCY",
+      "status": "SUPPLIER_DISCREPANCY",
+      "reason": "billed goods not delivered (94.80 incl. VAT, confirmed by a re-read of the delivery note)",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "HPA-2716",
+            "got": "HPA-2716"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-20",
+            "got": "2026-09-20"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hygiène Pro Atlantique SARL",
+            "got": "Hygiène Pro Atlantique SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR59429183726",
+            "got": "FR59429183726"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 20,
+                "base": 227.1,
+                "tax": 45.42
+              }
+            ],
+            "got": [
+              {
+                "rate": 20,
+                "base": 227.1,
+                "tax": 45.42
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 272.52,
+            "got": 272.52
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0028654999999999996,
+      "latencyMs": 18358,
+      "allCached": true,
+      "reconciliation": "DISCREPANCIA",
+      "expectedReconciliation": "DISCREPANCIA",
+      "claim": {
+        "mode": "llm",
+        "amount": 94.8,
+        "expectedAmount": 94.8,
+        "judge": 5,
+        "justification": "The e-mail cites invoice HPA-2716 dated 20/09/2026 and the single affected line (5 cartons of paper napkins not on the delivery note) with the exact amount of 94,80 EUR incl. VAT. It is written in formal, courteous French, requests a corrective invoice or credit note, and adds no invented data, so it is ready to send as is.",
+        "invented": false,
+        "approved": true,
+        "subject": "Réclamation concernant la facture n° HPA-2716 du 20/09/2026"
+      }
+    },
+    {
+      "id": "fr-030",
+      "country": "FR",
+      "template": "delivery-note",
+      "mode": "scan",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "DELIVERY_NOTE",
+            "got": "DELIVERY_NOTE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "BL-2604377",
+            "got": "BL-2604377"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-18",
+            "got": "2026-09-18"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hygiène Pro Atlantique SARL",
+            "got": "Hygiène Pro Atlantique SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR59429183726",
+            "got": "FR59429183726"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [],
+            "got": []
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": null,
+            "got": null
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0011940000000000002,
+      "latencyMs": 7096,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    }
+  ]
+}

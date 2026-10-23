@@ -1,0 +1,96 @@
+{
+  "id": "ie-016",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-016.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "ie-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": -1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "ACS-5260",
+    "issueDate": "2026-09-26",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Atlantic Catering Supplies Ltd",
+      "taxId": "IE8204715A",
+      "address": "Ballybrit Business Park · Galway, H91 R2T6"
+    },
+    "recipient": {
+      "name": "Corrib Bistro Ltd",
+      "taxId": "IE4120876DH",
+      "address": "3 Quay Street · Galway, H91 C9P2"
+    },
+    "lines": [
+      {
+        "description": "Thick bleach 5L",
+        "quantity": 7,
+        "unit": "drum",
+        "unitPrice": 4.6,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 32.2
+      },
+      {
+        "description": "Plain flour 16kg",
+        "quantity": 2,
+        "unit": "sack",
+        "unitPrice": 14.8,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 29.6
+      },
+      {
+        "description": "Kitchen degreaser 5L",
+        "quantity": 3,
+        "unit": "drum",
+        "unitPrice": 13.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 41.7
+      },
+      {
+        "description": "Napkins 40x40 (x1000)",
+        "quantity": 3,
+        "unit": "case",
+        "unitPrice": 16.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 49.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 21,
+        "base": 29.6,
+        "tax": 6.22
+      },
+      {
+        "rate": 23,
+        "base": 123.4,
+        "tax": 28.38
+      }
+    ],
+    "printedTotal": 187.6,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "RATE_NOT_ALLOWED",
+    "description": "Line 2 billed at stale rate 21 % instead of 0 %"
+  },
+  "expected": {
+    "issueCodes": [
+      "RATE_NOT_ALLOWED"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

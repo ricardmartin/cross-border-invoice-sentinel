@@ -1,0 +1,93 @@
+{
+  "id": "es-041",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-041.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-montes",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.8,
+    "noise": true,
+    "lowRes": true,
+    "stamp": "CONTABILIZADO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "FV26-001099",
+    "issueDate": "2026-09-24",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cárnicas Montes de Toledo S.A.",
+      "taxId": "A45182060",
+      "address": "Polígono Industrial Santa María de Benquerencia, C/ Río Jarama 52 · 45007 Toledo"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "JAMON CEBO IBERICO LONCHEADO 100G",
+        "quantity": 26,
+        "unit": "UD",
+        "unitPrice": 6.45,
+        "discountPct": 5,
+        "taxRate": 10,
+        "lineAmount": 159.32
+      },
+      {
+        "description": "CHORIZO SARTA PICANTE",
+        "quantity": 2.646,
+        "unit": "KG",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 23.55
+      },
+      {
+        "description": "SOLOMILLO CERDO IBERICO",
+        "quantity": 3.01,
+        "unit": "KG",
+        "unitPrice": 15.75,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 47.41
+      },
+      {
+        "description": "POLLO CAMPERO ENTERO",
+        "quantity": 14.62,
+        "unit": "KG",
+        "unitPrice": 4.35,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 63.6
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 293.88,
+        "tax": 29.39
+      }
+    ],
+    "printedTotal": 323.27,
+    "deliveryNoteRefs": [
+      "ALB-2603387"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_SHORT",
+    "description": "Line 1 \"JAMON CEBO IBERICO LONCHEADO 100G\": invoiced 26, delivered 14"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 80.88
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "pt-038",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-038.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-acores-dist",
+  "template": "modern",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.6,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "PAGO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT AA26/7390",
+    "issueDate": "2026-09-22",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Abastecedora Açoriana, S.A.",
+      "taxId": "PT512084726",
+      "address": "Rua do Paim 40 · 9500-095 Ponta Delgada"
+    },
+    "recipient": {
+      "name": "Tasca do Porto, Lda.",
+      "taxId": "PT517554089",
+      "address": "Largo da Matriz 5 · 9500-094 Ponta Delgada"
+    },
+    "lines": [
+      {
+        "description": "Ananás dos Açores",
+        "quantity": 11.7,
+        "unit": "kg",
+        "unitPrice": 4.2,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 49.14
+      },
+      {
+        "description": "Cerveja Especial 33cl (x24)",
+        "quantity": 3,
+        "unit": "grade",
+        "unitPrice": 15.8,
+        "discountPct": null,
+        "taxRate": 16,
+        "lineAmount": 47.4
+      },
+      {
+        "description": "Vinho verdelho 75cl",
+        "quantity": 10,
+        "unit": "gf",
+        "unitPrice": 9.5,
+        "discountPct": null,
+        "taxRate": 9,
+        "lineAmount": 95
+      },
+      {
+        "description": "Queijo de São Jorge",
+        "quantity": 2.2,
+        "unit": "kg",
+        "unitPrice": 12.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 28.38
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 77.52,
+        "tax": 3.1
+      },
+      {
+        "rate": 9,
+        "base": 95,
+        "tax": 8.55
+      },
+      {
+        "rate": 16,
+        "base": 47.4,
+        "tax": 7.58
+      }
+    ],
+    "printedTotal": 239.15,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "AA58B98B-7390"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

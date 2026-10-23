@@ -1,0 +1,114 @@
+{
+  "id": "gb-009",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-009.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "gb-greengrocer",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "INV204024",
+    "issueDate": "2026-09-03",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Covent Garden Fresh Ltd",
+      "taxId": "GB241735866",
+      "address": "New Covent Garden Market, Nine Elms Lane · London SW8 5LL"
+    },
+    "recipient": {
+      "name": "The Anchor Dining Rooms Ltd",
+      "taxId": "GB286041557",
+      "address": "34 Bankside · London SE1 9DT"
+    },
+    "lines": [
+      {
+        "description": "Tomatoes, vine",
+        "quantity": 10.4,
+        "unit": "kg",
+        "unitPrice": 2.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 30.16
+      },
+      {
+        "description": "Onions, brown",
+        "quantity": 8.3,
+        "unit": "kg",
+        "unitPrice": 0.8,
+        "discountPct": null,
+        "taxRate": 17.5,
+        "lineAmount": 6.64
+      },
+      {
+        "description": "Apples, Cox",
+        "quantity": 3.2,
+        "unit": "kg",
+        "unitPrice": 2.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 7.04
+      },
+      {
+        "description": "Carrots",
+        "quantity": 10.8,
+        "unit": "kg",
+        "unitPrice": 0.72,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 7.78
+      },
+      {
+        "description": "Lettuce, little gem",
+        "quantity": 13,
+        "unit": "each",
+        "unitPrice": 0.55,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 7.15
+      },
+      {
+        "description": "Potatoes, Maris Piper",
+        "quantity": 39.6,
+        "unit": "kg",
+        "unitPrice": 0.78,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 30.89
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 83.02,
+        "tax": 0
+      },
+      {
+        "rate": 17.5,
+        "base": 6.64,
+        "tax": 1.16
+      }
+    ],
+    "printedTotal": 90.82,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "RATE_NOT_ALLOWED",
+    "description": "Line 2 billed at stale rate 17.5 % instead of 0 %"
+  },
+  "expected": {
+    "issueCodes": [
+      "RATE_NOT_ALLOWED"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

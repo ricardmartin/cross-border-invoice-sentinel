@@ -1,0 +1,99 @@
+{
+  "id": "dk-026",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-026.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-slagter",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.3,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "DK",
+    "documentNumber": "FS60325",
+    "issueDate": "2026-09-23",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Jysk Kød & Pålæg A/S",
+      "taxId": "DK27164935",
+      "address": "Industrivej 41 · 8600 Silkeborg"
+    },
+    "recipient": {
+      "name": "Restaurant Havnefronten ApS",
+      "taxId": "DK36271809",
+      "address": "Nyhavn 31 · 1051 København K"
+    },
+    "lines": [
+      {
+        "description": "LEVERPOSTEJ",
+        "quantity": 2.389,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "HUSHOLDNINGSFILM 300M",
+        "quantity": 2,
+        "unit": "RL",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "OKSEMØRBRAD",
+        "quantity": 4.723,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "RUGBRØD, SKIVESKÅRET",
+        "quantity": 9,
+        "unit": "STK",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "KYLLINGEBRYST",
+        "quantity": 5.749,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "SVINEKAM M/SVÆR",
+        "quantity": 9.377,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "dk-025"
+}

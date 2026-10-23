@@ -1,0 +1,81 @@
+{
+  "id": "it-030",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-030.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "it-pastificio",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "IT",
+    "documentNumber": "2187/D",
+    "issueDate": "2026-09-16",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Pastificio e Panificio Emiliano S.r.l.",
+      "taxId": "02876543105",
+      "address": "Via Emilia Est 412 · 41122 Modena (MO)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "Detersivo piatti 5L",
+        "quantity": 3,
+        "unit": "tanica",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Tagliatelle fresche all’uovo",
+        "quantity": 5.4,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Grissini torinesi (conf.)",
+        "quantity": 11,
+        "unit": "conf",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Farina tipo 00",
+        "quantity": 43,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "it-029"
+}

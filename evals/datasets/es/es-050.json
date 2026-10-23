@@ -1,0 +1,91 @@
+{
+  "id": "es-050",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-050.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-canarias-frutas",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.4,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "CONTABILIZADO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "FV-26/01950",
+    "issueDate": "2026-10-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Frutas y Verduras del Atlántico, S.L.",
+      "taxId": "B35821461",
+      "address": "Mercalaspalmas, Nave 14 · 35229 Las Palmas de Gran Canaria"
+    },
+    "recipient": {
+      "name": "Restaurante La Puntilla, S.L.",
+      "taxId": "B35619485",
+      "address": "C/ Prudencio Morales 20 · 35009 Las Palmas de Gran Canaria"
+    },
+    "lines": [
+      {
+        "description": "Papas negras",
+        "quantity": 8.7,
+        "unit": "kg",
+        "unitPrice": 2.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 25.23
+      },
+      {
+        "description": "Tomate canario",
+        "quantity": 6.5,
+        "unit": "kg",
+        "unitPrice": 1.85,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 12.03
+      },
+      {
+        "description": "Mojo picón 1L",
+        "quantity": 5,
+        "unit": "bote",
+        "unitPrice": 4.8,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 24
+      },
+      {
+        "description": "Plátano de Canarias",
+        "quantity": 15.2,
+        "unit": "kg",
+        "unitPrice": 1.35,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 20.52
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 57.78,
+        "tax": 0
+      },
+      {
+        "rate": 7,
+        "base": 24,
+        "tax": 1.68
+      }
+    ],
+    "printedTotal": 83.46,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

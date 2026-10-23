@@ -1,0 +1,787 @@
+{
+  "country": "IT",
+  "generator": "gen@2.0.0",
+  "seed": 42,
+  "generatedAt": "2026-10-18",
+  "entries": [
+    {
+      "id": "it-001",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-001.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-ortofrutta",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Pagare il 15"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-002",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-002.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-valtellina",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 2 amount off by 1.20 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "it-003",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-003.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-enoteca",
+      "template": "modern",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAGATO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-004",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-004.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-pastificio",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Chiamare Giulia"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-005",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-005.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-ortofrutta",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 4,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-006",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-006.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-valtellina",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.8,
+        "noise": true,
+        "lowRes": true,
+        "stamp": "PAGATO",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by 3.10"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "it-007",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-007.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-enoteca",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 2 amount off by 1.00 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "it-008",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-008.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-pastificio",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": 1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-009",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-009.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-ortofrutta",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": -1.6,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-010",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-010.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-valtellina",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.5,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAGATO",
+        "handwrittenNote": "Controllato - Luca"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-011",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-011.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-enoteca",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Pagare il 15"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-012",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-012.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-pastificio",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": -1.5,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-013",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-013.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-ortofrutta",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAGATO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-014",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-014.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-valtellina",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-015",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-015.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-enoteca",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAGATO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-016",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-016.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-pastificio",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Controllato - Luca"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-017",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-017.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-ortofrutta",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TAX_ID_CHECKSUM",
+        "description": "Issuer tax id 04512387908 has a wrong control (valid: 04512387905)"
+      },
+      "expected": {
+        "issueCodes": [
+          "INVALID_TAX_ID"
+        ],
+        "finalStatus": "INVALID_TAX_ID"
+      }
+    },
+    {
+      "id": "it-018",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-018.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-valtellina",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.2,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": "Controllato - Luca"
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 2 billed at stale rate 21 % instead of 22 %"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "it-019",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-019.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-enoteca",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "PAGATO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-020",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-020.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-pastificio",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.1,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-021",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-021.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-ortofrutta",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "PAGATO",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by -2.00"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "it-022",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-022.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-valtellina",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-023",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-023.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-ortofrutta",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "it-024",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-024.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-ortofrutta",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "scan",
+        "rotation": -1.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAGATO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "it-023"
+    },
+    {
+      "id": "it-025",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-025.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-valtellina",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.6,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": "Controllato - Luca"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "it-026",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-026.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-valtellina",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3,
+        "noise": true,
+        "lowRes": true,
+        "stamp": "RICEVUTO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "it-025"
+    },
+    {
+      "id": "it-027",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-027.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-enoteca",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "CONTABILIZZATO",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "DELIVERY_SHORT",
+        "description": "\"Acqua minerale 1L (x6)\": invoiced 13, delivered 10"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 10.25
+      }
+    },
+    {
+      "id": "it-028",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-028.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-enoteca",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "RICEVUTO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "it-027"
+    },
+    {
+      "id": "it-029",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-029.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-pastificio",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "PAGATO",
+        "handwrittenNote": "Manca 1 cassa"
+      },
+      "planted": {
+        "type": "DELIVERY_MISSING_PRODUCT",
+        "description": "\"Olio extravergine di oliva 5L\" invoiced but not delivered"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 46.28
+      }
+    },
+    {
+      "id": "it-030",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-030.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-pastificio",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "it-029"
+    },
+    {
+      "id": "it-031",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-031.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "it-studio-haccp",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "PAGATO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "it-032",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-032.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-studio-haccp",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": -1.7,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by 1.50"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "it-033",
+      "country": "IT",
+      "source": "synthetic",
+      "file": "it-033.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "it-pastificio",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.9,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "pt-024",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-024.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-hortofruticola",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "PT",
+    "documentNumber": "GR 2026/4299",
+    "issueDate": "2026-09-19",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola do Oeste, Lda.",
+      "taxId": "PT507318420",
+      "address": "MARL, Pavilhão B3 · 2660-421 São Julião do Tojal"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "Tomate chucha",
+        "quantity": 7.7,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Cebola",
+        "quantity": 18.7,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Coentros (molho)",
+        "quantity": 10,
+        "unit": "molho",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Laranja do Algarve",
+        "quantity": 16.3,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Batata branca",
+        "quantity": 19.2,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "pt-023"
+}

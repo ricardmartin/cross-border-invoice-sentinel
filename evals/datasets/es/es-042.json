@@ -1,0 +1,81 @@
+{
+  "id": "es-042",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-042.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-montes",
+  "template": "albaran",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "ES",
+    "documentNumber": "ALB-2603387",
+    "issueDate": "2026-09-23",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cárnicas Montes de Toledo S.A.",
+      "taxId": "A45182060",
+      "address": "Polígono Industrial Santa María de Benquerencia, C/ Río Jarama 52 · 45007 Toledo"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "JAMON CEBO IBERICO LONCHEADO 100G",
+        "quantity": 14,
+        "unit": "UD",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "CHORIZO SARTA PICANTE",
+        "quantity": 2.646,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "SOLOMILLO CERDO IBERICO",
+        "quantity": 3.01,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "POLLO CAMPERO ENTERO",
+        "quantity": 14.62,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "es-041"
+}

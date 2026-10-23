@@ -1,0 +1,716 @@
+{
+  "country": "DK",
+  "generator": "gen@2.0.0",
+  "seed": 42,
+  "generatedAt": "2026-10-18",
+  "entries": [
+    {
+      "id": "dk-001",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-001.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-gront",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Ring til Freja"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-002",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-002.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-slagter",
+      "template": "erp",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by 0.90"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "dk-003",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-003.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-drikke",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.4,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": "Mangler 1 kasse"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-004",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-004.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "dk-rengoring",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "BETALT",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TAX_ID_CHECKSUM",
+        "description": "Issuer tax id DK40128568 has a wrong control (valid: DK40128565)"
+      },
+      "expected": {
+        "issueCodes": [
+          "INVALID_TAX_ID"
+        ],
+        "finalStatus": "INVALID_TAX_ID"
+      }
+    },
+    {
+      "id": "dk-005",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-005.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "dk-gront",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Tjekket - Mads"
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 3 billed at stale rate 22 % instead of 25 %"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "dk-006",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-006.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "dk-slagter",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-007",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-007.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "dk-drikke",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "OK køkken"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-008",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-008.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-rengoring",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-009",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-009.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "dk-gront",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "BETALT",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 6 amount off by -0.80 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "dk-010",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-010.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-slagter",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": -2.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "BOGFØRT",
+        "handwrittenNote": "Ring til Freja"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-011",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-011.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-drikke",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.8,
+        "noise": true,
+        "lowRes": true,
+        "stamp": "BOGFØRT",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-012",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-012.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-rengoring",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.9,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": "Tjekket - Mads"
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by -2.00"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "dk-013",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-013.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-gront",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.9,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-014",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-014.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-slagter",
+      "template": "erp",
+      "variant": {
+        "mode": "scan",
+        "rotation": -1.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Mangler 1 kasse"
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 5 amount off by 1.00 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "dk-015",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-015.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "dk-drikke",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Ring til Freja"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-016",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-016.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-rengoring",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": 1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-017",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-017.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "dk-gront",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "BETALT",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-018",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-018.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-slagter",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": -1.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-019",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-019.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "dk-drikke",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Betal d. 15"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-020",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-020.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "dk-rengoring",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "BOGFØRT",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-021",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-021.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-gront",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Tjekket - Mads"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-022",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-022.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-slagter",
+      "template": "erp",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.4,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "dk-023",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-023.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-gront",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.6,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "dk-024",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-024.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-gront",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "dk-023"
+    },
+    {
+      "id": "dk-025",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-025.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "dk-slagter",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "dk-026",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-026.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-slagter",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.3,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "dk-025"
+    },
+    {
+      "id": "dk-027",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-027.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-drikke",
+      "template": "modern",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "MODTAGET",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "DELIVERY_SHORT",
+        "description": "\"Akvavit 70cl\": invoiced 3, delivered 2"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 211.25
+      }
+    },
+    {
+      "id": "dk-028",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-028.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-drikke",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.9,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Tjekket - Mads"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "dk-027"
+    },
+    {
+      "id": "dk-029",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-029.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "dk-rengoring",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "MODTAGET",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "DELIVERY_MISSING_PRODUCT",
+        "description": "\"Klorin 5L\" invoiced but not delivered"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 225
+      }
+    },
+    {
+      "id": "dk-030",
+      "country": "DK",
+      "source": "synthetic",
+      "file": "dk-030.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "dk-rengoring",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "MODTAGET",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "dk-029"
+    }
+  ]
+}

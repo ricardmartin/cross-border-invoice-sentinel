@@ -1,0 +1,100 @@
+{
+  "id": "de-017",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-017.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-frische",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.3,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "RE-2026-40448",
+    "issueDate": "2026-09-23",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Frischeparadies Großmarkt Süd GmbH",
+      "taxId": "DE247183658",
+      "address": "Schäftlarnstraße 10 · 81371 München"
+    },
+    "recipient": {
+      "name": "Wirtshaus am Viktualienmarkt GmbH",
+      "taxId": "DE273415862",
+      "address": "Frauenstraße 9 · 80469 München"
+    },
+    "lines": [
+      {
+        "description": "Kopfsalat",
+        "quantity": 11,
+        "unit": "Stk",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 9.65
+      },
+      {
+        "description": "Zwiebeln gelb",
+        "quantity": 17.9,
+        "unit": "kg",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 15.22
+      },
+      {
+        "description": "Tomaten Strauch",
+        "quantity": 9.6,
+        "unit": "kg",
+        "unitPrice": 3.4,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 32.64
+      },
+      {
+        "description": "Kartoffeln festkochend",
+        "quantity": 34.7,
+        "unit": "kg",
+        "unitPrice": 0.98,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 34.01
+      },
+      {
+        "description": "Äpfel Elstar",
+        "quantity": 6.5,
+        "unit": "kg",
+        "unitPrice": 2.1,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 13.65
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 105.17,
+        "tax": 7.36
+      }
+    ],
+    "printedTotal": 112.53,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "LINE_MATH",
+    "description": "Line 1 amount off by -0.80 vs quantity × price"
+  },
+  "expected": {
+    "issueCodes": [
+      "LINE_MATH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

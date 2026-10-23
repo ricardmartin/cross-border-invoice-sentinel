@@ -1,0 +1,100 @@
+{
+  "id": "it-014",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-014.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "it-valtellina",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "SV/26/005265",
+    "issueDate": "2026-09-08",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Salumificio Valtellina S.p.A.",
+      "taxId": "07123456787",
+      "address": "Via Stelvio 9 · 23100 Sondrio (SO)"
+    },
+    "recipient": {
+      "name": "Osteria del Ponte S.n.c.",
+      "taxId": "02567812348",
+      "address": "Via Garibaldi 21 · 37121 Verona"
+    },
+    "lines": [
+      {
+        "description": "SALAME MILANO",
+        "quantity": 1.105,
+        "unit": "KG",
+        "unitPrice": 16.4,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 18.12
+      },
+      {
+        "description": "BRESAOLA DELLA VALTELLINA IGP",
+        "quantity": 4.851,
+        "unit": "KG",
+        "unitPrice": 29.5,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 143.1
+      },
+      {
+        "description": "MOZZARELLA FIOR DI LATTE",
+        "quantity": 8.447,
+        "unit": "KG",
+        "unitPrice": 9.4,
+        "discountPct": 5,
+        "taxRate": 4,
+        "lineAmount": 75.43
+      },
+      {
+        "description": "BURRO DI MONTAGNA",
+        "quantity": 4.753,
+        "unit": "KG",
+        "unitPrice": 11.6,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 55.13
+      },
+      {
+        "description": "PROSCIUTTO CRUDO STAGIONATO",
+        "quantity": 4.815,
+        "unit": "KG",
+        "unitPrice": 21.9,
+        "discountPct": 5,
+        "taxRate": 10,
+        "lineAmount": 100.18
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 130.56,
+        "tax": 5.22
+      },
+      {
+        "rate": 10,
+        "base": 261.4,
+        "tax": 26.14
+      }
+    ],
+    "printedTotal": 423.32,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "dk-006",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-006.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "dk-slagter",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "JKP-091045",
+    "issueDate": "2026-10-09",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Jysk Kød & Pålæg A/S",
+      "taxId": "DK27164935",
+      "address": "Industrivej 41 · 8600 Silkeborg"
+    },
+    "recipient": {
+      "name": "Restaurant Havnefronten ApS",
+      "taxId": "DK36271809",
+      "address": "Nyhavn 31 · 1051 København K"
+    },
+    "lines": [
+      {
+        "description": "LEVERPOSTEJ",
+        "quantity": 3.606,
+        "unit": "KG",
+        "unitPrice": 54,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 194.72
+      },
+      {
+        "description": "SVINEKAM M/SVÆR",
+        "quantity": 7.925,
+        "unit": "KG",
+        "unitPrice": 64.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 511.16
+      },
+      {
+        "description": "HUSHOLDNINGSFILM 300M",
+        "quantity": 3,
+        "unit": "RL",
+        "unitPrice": 79,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 237
+      },
+      {
+        "description": "OKSEMØRBRAD",
+        "quantity": 4.175,
+        "unit": "KG",
+        "unitPrice": 289,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 1206.58
+      },
+      {
+        "description": "RUGBRØD, SKIVESKÅRET",
+        "quantity": 5,
+        "unit": "STK",
+        "unitPrice": 18.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 92.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 2241.96,
+        "tax": 560.49
+      }
+    ],
+    "printedTotal": 2802.45,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

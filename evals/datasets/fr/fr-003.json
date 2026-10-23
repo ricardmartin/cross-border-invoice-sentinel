@@ -1,0 +1,101 @@
+{
+  "id": "fr-003",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-003.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "fr-cave",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "CB26014",
+    "issueDate": "2026-09-16",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cave & Boissons Rhône-Alpes SAS",
+      "taxId": "FR07530192848",
+      "address": "230 avenue Jean Jaurès · 69007 Lyon"
+    },
+    "recipient": {
+      "name": "Brasserie des Halles SARL",
+      "taxId": "FR21790552137",
+      "address": "12 rue Montorgueil · 75001 Paris"
+    },
+    "lines": [
+      {
+        "description": "Jus d'orange 1L",
+        "quantity": 18,
+        "unit": "bouteille",
+        "unitPrice": 1.95,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 35.1
+      },
+      {
+        "description": "Sirop de grenadine 1L",
+        "quantity": 2,
+        "unit": "bouteille",
+        "unitPrice": 3.4,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 6.8
+      },
+      {
+        "description": "Cognac VSOP 70cl",
+        "quantity": 2,
+        "unit": "bouteille",
+        "unitPrice": 34.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 69.8
+      },
+      {
+        "description": "Eau minérale 1L (x6)",
+        "quantity": 15,
+        "unit": "pack",
+        "unitPrice": 3.1,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 46.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 41.9,
+        "tax": 2.3
+      },
+      {
+        "rate": 7,
+        "base": 46.5,
+        "tax": 3.26
+      },
+      {
+        "rate": 20,
+        "base": 69.8,
+        "tax": 13.96
+      }
+    ],
+    "printedTotal": 177.72,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "RATE_NOT_ALLOWED",
+    "description": "Line 4 billed at stale rate 7 % instead of 5.5 %"
+  },
+  "expected": {
+    "issueCodes": [
+      "RATE_NOT_ALLOWED"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

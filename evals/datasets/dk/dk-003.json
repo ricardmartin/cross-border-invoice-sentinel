@@ -1,0 +1,86 @@
+{
+  "id": "dk-003",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-003.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-drikke",
+  "template": "modern",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.4,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": "Mangler 1 kasse"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "ØD26014",
+    "issueDate": "2026-10-11",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Øresund Drikkevarer A/S",
+      "taxId": "DK33940173",
+      "address": "Amager Strandvej 120 · 2300 København S"
+    },
+    "recipient": {
+      "name": "Restaurant Havnefronten ApS",
+      "taxId": "DK36271809",
+      "address": "Nyhavn 31 · 1051 København K"
+    },
+    "lines": [
+      {
+        "description": "Æblemost 1L",
+        "quantity": 16,
+        "unit": "fl",
+        "unitPrice": 22.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 360
+      },
+      {
+        "description": "Pilsner 33cl (x30)",
+        "quantity": 4,
+        "unit": "ramme",
+        "unitPrice": 189,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 756
+      },
+      {
+        "description": "Danskvand 50cl (x24)",
+        "quantity": 3,
+        "unit": "kasse",
+        "unitPrice": 96,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 288
+      },
+      {
+        "description": "Rødvin, Côtes du Rhône 75cl",
+        "quantity": 17,
+        "unit": "fl",
+        "unitPrice": 59,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 1003
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 2407,
+        "tax": 601.75
+      }
+    ],
+    "printedTotal": 3008.75,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

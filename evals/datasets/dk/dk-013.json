@@ -1,0 +1,86 @@
+{
+  "id": "dk-013",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-013.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-gront",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.9,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "52036",
+    "issueDate": "2026-09-04",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Grønttorvet Engros ApS",
+      "taxId": "DK38512749",
+      "address": "Grønttorvet 8 · 2500 Valby"
+    },
+    "recipient": {
+      "name": "Café Åboulevard I/S",
+      "taxId": "DK31956420",
+      "address": "Åboulevard 52 · 8000 Aarhus C"
+    },
+    "lines": [
+      {
+        "description": "Tomater, stilk",
+        "quantity": 4.8,
+        "unit": "kg",
+        "unitPrice": 24.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 117.6
+      },
+      {
+        "description": "Salat, iceberg",
+        "quantity": 24,
+        "unit": "stk",
+        "unitPrice": 9.95,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 238.8
+      },
+      {
+        "description": "Kartofler, nye",
+        "quantity": 21.1,
+        "unit": "kg",
+        "unitPrice": 9.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 200.45
+      },
+      {
+        "description": "Gulerødder",
+        "quantity": 16.2,
+        "unit": "kg",
+        "unitPrice": 7.25,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 117.45
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 674.3,
+        "tax": 168.58
+      }
+    ],
+    "printedTotal": 842.88,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

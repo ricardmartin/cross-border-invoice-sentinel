@@ -1,0 +1,87 @@
+{
+  "id": "it-002",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-002.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "it-valtellina",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "SV/26/005205",
+    "issueDate": "2026-10-05",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Salumificio Valtellina S.p.A.",
+      "taxId": "07123456787",
+      "address": "Via Stelvio 9 · 23100 Sondrio (SO)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "BURRO DI MONTAGNA",
+        "quantity": 2.858,
+        "unit": "KG",
+        "unitPrice": 11.6,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 33.15
+      },
+      {
+        "description": "MOZZARELLA FIOR DI LATTE",
+        "quantity": 4.705,
+        "unit": "KG",
+        "unitPrice": 9.4,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 45.43
+      },
+      {
+        "description": "SALAME MILANO",
+        "quantity": 1.338,
+        "unit": "KG",
+        "unitPrice": 16.4,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 21.94
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 78.58,
+        "tax": 3.14
+      },
+      {
+        "rate": 10,
+        "base": 21.94,
+        "tax": 2.19
+      }
+    ],
+    "printedTotal": 105.85,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "LINE_MATH",
+    "description": "Line 2 amount off by 1.20 vs quantity × price"
+  },
+  "expected": {
+    "issueCodes": [
+      "LINE_MATH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

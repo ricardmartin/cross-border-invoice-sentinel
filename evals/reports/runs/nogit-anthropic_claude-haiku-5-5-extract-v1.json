@@ -1,0 +1,3700 @@
+{
+  "runName": "nogit-anthropic_claude-haiku-5-5-extract-v1",
+  "createdAt": "2026-10-19T00:44:49+02:00",
+  "model": "anthropic:claude-haiku-5-5",
+  "promptVersion": "extract-v1",
+  "summary": {
+    "docs": 30,
+    "failed": 0,
+    "exactRate": 0.8333333333333334,
+    "lineF1": 1,
+    "headerAcc": {
+      "docType": 1,
+      "documentNumber": 0.9333333333333333,
+      "issueDate": 1,
+      "currency": 1,
+      "issuer.name": 1,
+      "issuer.taxId": 0.9,
+      "recipient.name": 1,
+      "recipient.taxId": 0.9,
+      "printedTaxBreakdown": 1,
+      "printedTotal": 1
+    },
+    "lineAcc": {
+      "description": 1,
+      "quantity": 1,
+      "unitPrice": 1,
+      "discountPct": 1,
+      "taxRate": 1,
+      "lineAmount": 1
+    },
+    "validator": {
+      "cleanFlagRate": 0.045454545454545456,
+      "catchRateOnWrongExtractions": 0.3333333333333333,
+      "flaggedButExact": 0,
+      "plantedRecall": 1
+    },
+    "latencyMs": {
+      "p50": 5077,
+      "p95": 8286
+    },
+    "costUsd": {
+      "perDoc": 0.00103335,
+      "total": 0.031000499999999997
+    },
+    "tokens": {
+      "input": 121395,
+      "output": 37722
+    }
+  },
+  "results": [
+    {
+      "id": "es-001",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "photo",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": true,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3320,
+          "outputTokens": 1347
+        },
+        "costUsd": 0.0010055,
+        "latencyMs": 8286,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F-2026/04100",
+            "got": "F-2026/04100"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-20",
+            "got": "2026-09-20"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hortofrutícola del Turia S.L.",
+            "got": "Hortofrutícola del Turia S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B46391272",
+            "got": "B46391272"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 99.29,
+                "tax": 3.97
+              },
+              {
+                "rate": 10,
+                "base": 7.02,
+                "tax": 0.7
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 99.29,
+                "tax": 3.97
+              },
+              {
+                "rate": 10,
+                "base": 7.02,
+                "tax": 0.7
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 110.98,
+            "got": 110.98
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-002",
+      "country": "ES",
+      "template": "erp",
+      "mode": "pdf",
+      "planted": "LINE_MATH",
+      "expectedCodes": [
+        "LINE_MATH"
+      ],
+      "cached": false,
+      "validatorErrors": [
+        "LINE_MATH"
+      ],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4973,
+          "outputTokens": 1650
+        },
+        "costUsd": 0.0013223,
+        "latencyMs": 5835,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FV26-000819",
+            "got": "FV26-000819"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-20",
+            "got": "2026-09-20"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cárnicas Montes de Toledo S.A.",
+            "got": "CÁRNICAS MONTES DE TOLEDO S.A."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "A45182060",
+            "got": "A45182060"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "TABERNA EL PÓSITO S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 583.08,
+                "tax": 58.31
+              },
+              {
+                "rate": 21,
+                "base": 25.2,
+                "tax": 5.29
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 583.08,
+                "tax": 58.31
+              },
+              {
+                "rate": 21,
+                "base": 25.2,
+                "tax": 5.29
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 671.88,
+            "got": 671.88
+          }
+        ],
+        "lines": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 8,
+            "quantity": 8,
+            "unitPrice": 8,
+            "discountPct": 8,
+            "taxRate": 8,
+            "lineAmount": 8
+          },
+          "gtLines": 8
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-003",
+      "country": "ES",
+      "template": "moderna",
+      "mode": "pdf",
+      "planted": "RATE_NOT_ALLOWED",
+      "expectedCodes": [
+        "RATE_NOT_ALLOWED"
+      ],
+      "cached": false,
+      "validatorErrors": [
+        "RATE_NOT_ALLOWED"
+      ],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4905,
+          "outputTokens": 1591
+        },
+        "costUsd": 0.001286,
+        "latencyMs": 5890,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "EB-20262306",
+            "got": "EB-20262306"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-15",
+            "got": "2026-09-15"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Distribuciones de Bebidas Ebro S.L.",
+            "got": "Distribuciones de Bebidas Ebro S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B50274430",
+            "got": "B50274430"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 8,
+                "base": 39.2,
+                "tax": 3.14
+              },
+              {
+                "rate": 10,
+                "base": 53.4,
+                "tax": 5.34
+              },
+              {
+                "rate": 21,
+                "base": 222.3,
+                "tax": 46.68
+              }
+            ],
+            "got": [
+              {
+                "rate": 8,
+                "base": 39.2,
+                "tax": 3.14
+              },
+              {
+                "rate": 10,
+                "base": 53.4,
+                "tax": 5.34
+              },
+              {
+                "rate": 21,
+                "base": 222.3,
+                "tax": 46.68
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 370.06,
+            "got": 370.06
+          }
+        ],
+        "lines": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 8,
+            "quantity": 8,
+            "unitPrice": 8,
+            "discountPct": 8,
+            "taxRate": 8,
+            "lineAmount": 8
+          },
+          "gtLines": 8
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-004",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "pdf",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4874,
+          "outputTokens": 1233
+        },
+        "costUsd": 0.0011039,
+        "latencyMs": 6426,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "LMC/2026/0336",
+            "got": "LMC/2026/0336"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-02",
+            "got": "2026-09-02"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Limpiezas y Menaje Cantábrico S.L.",
+            "got": "Limpiezas y Menaje Cantábrico S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B39156088",
+            "got": "B39156088"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "Restaurante La Barra S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 4.2,
+                "tax": 0.42
+              },
+              {
+                "rate": 21,
+                "base": 207.85,
+                "tax": 43.65
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 4.2,
+                "tax": 0.42
+              },
+              {
+                "rate": 21,
+                "base": 207.85,
+                "tax": 43.65
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 256.12,
+            "got": 256.12
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-005",
+      "country": "ES",
+      "template": "ticket",
+      "mode": "photo",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 2927,
+          "outputTokens": 1372
+        },
+        "costUsd": 0.0009787,
+        "latencyMs": 5965,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": false,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": false,
+            "expected": "T-77172",
+            "got": "9-77172"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-18",
+            "got": "2026-09-18"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Obrador San Ginés",
+            "got": "OBRADOR SAN GINÉS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "50731846X",
+            "got": "50731846X"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 41.8,
+                "tax": 1.67
+              },
+              {
+                "rate": 10,
+                "base": 17.5,
+                "tax": 1.75
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 41.8,
+                "tax": 1.67
+              },
+              {
+                "rate": 10,
+                "base": 17.5,
+                "tax": 1.75
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 62.72,
+            "got": 62.72
+          }
+        ],
+        "lines": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 2,
+            "quantity": 2,
+            "unitPrice": 2,
+            "discountPct": 2,
+            "taxRate": 2,
+            "lineAmount": 2
+          },
+          "gtLines": 2
+        },
+        "mismatches": [
+          "documentNumber: expected \"T-77172\", got \"9-77172\""
+        ]
+      }
+    },
+    {
+      "id": "es-006",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "photo",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3270,
+          "outputTokens": 1435
+        },
+        "costUsd": 0.0010445,
+        "latencyMs": 5607,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "CREDIT_NOTE",
+            "got": "CREDIT_NOTE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "R-F-2026/04105",
+            "got": "R-F-2026/04105"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-03",
+            "got": "2026-10-03"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hortofrutícola del Turia S.L.",
+            "got": "Hortofrutícola del Turia S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B46391272",
+            "got": "B46391272"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": -58.49,
+                "tax": -2.34
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": -58.49,
+                "tax": -2.34
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": -60.83,
+            "got": -60.83
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-007",
+      "country": "ES",
+      "template": "erp",
+      "mode": "scan",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": true,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3809,
+          "outputTokens": 1605
+        },
+        "costUsd": 0.0011834,
+        "latencyMs": 8617,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FV26-000854",
+            "got": "FV26-000854"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-16",
+            "got": "2026-09-16"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cárnicas Montes de Toledo S.A.",
+            "got": "CÁRNICAS MONTES DE TOLEDO S.A."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "A45182060",
+            "got": "A45182060"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "TABERNA EL PÓSITO S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 552.98,
+                "tax": 55.3
+              },
+              {
+                "rate": 21,
+                "base": 37.8,
+                "tax": 7.94
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 552.98,
+                "tax": 55.3
+              },
+              {
+                "rate": 21,
+                "base": 37.8,
+                "tax": 7.94
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 654.02,
+            "got": 654.02
+          }
+        ],
+        "lines": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 8,
+            "quantity": 8,
+            "unitPrice": 8,
+            "discountPct": 8,
+            "taxRate": 8,
+            "lineAmount": 8
+          },
+          "gtLines": 8
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-008",
+      "country": "ES",
+      "template": "moderna",
+      "mode": "pdf",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4725,
+          "outputTokens": 990
+        },
+        "costUsd": 0.0009675,
+        "latencyMs": 7201,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "EB-20262321",
+            "got": "EB-20262321"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-13",
+            "got": "2026-09-13"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Distribuciones de Bebidas Ebro S.L.",
+            "got": "Distribuciones de Bebidas Ebro S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B50274430",
+            "got": "B50274430"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 69.75,
+                "tax": 6.98
+              },
+              {
+                "rate": 21,
+                "base": 72.6,
+                "tax": 15.25
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 69.75,
+                "tax": 6.98
+              },
+              {
+                "rate": 21,
+                "base": 72.6,
+                "tax": 15.25
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 164.58,
+            "got": 164.58
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-009",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "scan",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3999,
+          "outputTokens": 1212
+        },
+        "costUsd": 0.0010059000000000001,
+        "latencyMs": 4468,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "LMC/2026/0346",
+            "got": "LMC/2026/0346"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-13",
+            "got": "2026-09-13"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Limpiezas y Menaje Cantábrico S.L.",
+            "got": "Limpiezas y Menaje Cantábrico S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B39156088",
+            "got": "B39156088"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 4.2,
+                "tax": 0.42
+              },
+              {
+                "rate": 21,
+                "base": 220.45,
+                "tax": 46.29
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 4.2,
+                "tax": 0.42
+              },
+              {
+                "rate": 21,
+                "base": 220.45,
+                "tax": 46.29
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 271.36,
+            "got": 271.36
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-010",
+      "country": "ES",
+      "template": "ticket",
+      "mode": "photo",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3312,
+          "outputTokens": 1318
+        },
+        "costUsd": 0.0009902,
+        "latencyMs": 4977,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "T-77237",
+            "got": "T-77237"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-26",
+            "got": "2026-09-26"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Obrador San Ginés",
+            "got": "OBRADOR SAN GINÉS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "50731846X",
+            "got": "50731846X"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "Restaurante La Barra S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 25.05,
+                "tax": 1
+              },
+              {
+                "rate": 10,
+                "base": 51.15,
+                "tax": 5.12
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 25.05,
+                "tax": 1
+              },
+              {
+                "rate": 10,
+                "base": 51.15,
+                "tax": 5.12
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 82.32,
+            "got": 82.32
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-011",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "scan",
+      "planted": "TOTAL_OFFSET",
+      "expectedCodes": [
+        "TOTAL_MISMATCH"
+      ],
+      "cached": false,
+      "validatorErrors": [
+        "INVALID_TAX_ID",
+        "TOTAL_MISMATCH"
+      ],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3999,
+          "outputTokens": 1279
+        },
+        "costUsd": 0.0010394,
+        "latencyMs": 5077,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": false,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F-2026/04110",
+            "got": "F-2026/04110"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-13",
+            "got": "2026-10-13"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hortofrutícola del Turia S.L.",
+            "got": "Hortofrutícola del Turia S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": false,
+            "expected": "B46391272",
+            "got": "CIF B46391272"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": false,
+            "expected": "B27543107",
+            "got": "CIF B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 126.08,
+                "tax": 5.04
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 126.08,
+                "tax": 5.04
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 129.12,
+            "got": 129.12
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": [
+          "issuer.taxId: expected \"B46391272\", got \"CIF B46391272\"",
+          "recipient.taxId: expected \"B27543107\", got \"CIF B27543107\""
+        ]
+      }
+    },
+    {
+      "id": "es-012",
+      "country": "ES",
+      "template": "erp",
+      "mode": "photo",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3852,
+          "outputTokens": 1219
+        },
+        "costUsd": 0.0009947,
+        "latencyMs": 4718,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FV26-000889",
+            "got": "FV26-000889"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-15",
+            "got": "2026-09-15"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cárnicas Montes de Toledo S.A.",
+            "got": "CÁRNICAS MONTES DE TOLEDO S.A."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "A45182060",
+            "got": "A45182060"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "TABERNA EL PÓSITO S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 409.48,
+                "tax": 40.95
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 409.48,
+                "tax": 40.95
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 450.43,
+            "got": 450.43
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-013",
+      "country": "ES",
+      "template": "moderna",
+      "mode": "scan",
+      "planted": "RATE_NOT_ALLOWED",
+      "expectedCodes": [
+        "RATE_NOT_ALLOWED"
+      ],
+      "cached": false,
+      "validatorErrors": [
+        "RATE_NOT_ALLOWED"
+      ],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4189,
+          "outputTokens": 1432
+        },
+        "costUsd": 0.0011349,
+        "latencyMs": 5071,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "EB-20262336",
+            "got": "EB-20262336"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-23",
+            "got": "2026-09-23"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Distribuciones de Bebidas Ebro S.L.",
+            "got": "Distribuciones de Bebidas Ebro S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B50274430",
+            "got": "B50274430"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 8,
+                "base": 10.15,
+                "tax": 0.81
+              },
+              {
+                "rate": 10,
+                "base": 79.8,
+                "tax": 7.98
+              },
+              {
+                "rate": 21,
+                "base": 333.05,
+                "tax": 69.94
+              }
+            ],
+            "got": [
+              {
+                "rate": 8,
+                "base": 10.15,
+                "tax": 0.81
+              },
+              {
+                "rate": 10,
+                "base": 79.8,
+                "tax": 7.98
+              },
+              {
+                "rate": 21,
+                "base": 333.05,
+                "tax": 69.94
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 501.73,
+            "got": 501.73
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-014",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "pdf",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4748,
+          "outputTokens": 468
+        },
+        "costUsd": 0.0007088,
+        "latencyMs": 2636,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "LMC/2026/0356",
+            "got": "LMC/2026/0356"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-02",
+            "got": "2026-10-02"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Limpiezas y Menaje Cantábrico S.L.",
+            "got": "Limpiezas y Menaje Cantábrico S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B39156088",
+            "got": "B39156088"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 21,
+                "base": 51.75,
+                "tax": 10.87
+              }
+            ],
+            "got": [
+              {
+                "rate": 21,
+                "base": 51.75,
+                "tax": 10.87
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 62.62,
+            "got": 62.62
+          }
+        ],
+        "lines": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 3,
+            "quantity": 3,
+            "unitPrice": 3,
+            "discountPct": 3,
+            "taxRate": 3,
+            "lineAmount": 3
+          },
+          "gtLines": 3
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-015",
+      "country": "ES",
+      "template": "ticket",
+      "mode": "photo",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3375,
+          "outputTokens": 1172
+        },
+        "costUsd": 0.0009235,
+        "latencyMs": 4786,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "T-77302",
+            "got": "T-77302"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-27",
+            "got": "2026-09-27"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Obrador San Ginés",
+            "got": "OBRADOR SAN GINÉS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "50731846X",
+            "got": "50731846X"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 45.1,
+                "tax": 1.8
+              },
+              {
+                "rate": 10,
+                "base": 53.25,
+                "tax": 5.33
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 45.1,
+                "tax": 1.8
+              },
+              {
+                "rate": 10,
+                "base": 53.25,
+                "tax": 5.33
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 105.48,
+            "got": 105.48
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-016",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "photo",
+      "planted": "TOTAL_OFFSET",
+      "expectedCodes": [
+        "TOTAL_MISMATCH"
+      ],
+      "cached": false,
+      "validatorErrors": [
+        "TOTAL_MISMATCH"
+      ],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3270,
+          "outputTokens": 1446
+        },
+        "costUsd": 0.00105,
+        "latencyMs": 6091,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F-2026/04115",
+            "got": "F-2026/04115"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-20",
+            "got": "2026-09-20"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hortofrutícola del Turia S.L.",
+            "got": "Hortofruticola del Turia S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B46391272",
+            "got": "B46391272"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "Restaurante La Barra S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 62.41,
+                "tax": 2.5
+              },
+              {
+                "rate": 10,
+                "base": 13.5,
+                "tax": 1.35
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 62.41,
+                "tax": 2.5
+              },
+              {
+                "rate": 10,
+                "base": 13.5,
+                "tax": 1.35
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 82.86,
+            "got": 82.86
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-017",
+      "country": "ES",
+      "template": "erp",
+      "mode": "pdf",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4943,
+          "outputTokens": 1372
+        },
+        "costUsd": 0.0011803,
+        "latencyMs": 5432,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FV26-000924",
+            "got": "FV26-000924"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-23",
+            "got": "2026-09-23"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cárnicas Montes de Toledo S.A.",
+            "got": "CÁRNICAS MONTES DE TOLEDO S.A."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "A45182060",
+            "got": "A45182060"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "RESTAURANTE LA BARRA S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 395.57,
+                "tax": 39.56
+              },
+              {
+                "rate": 21,
+                "base": 12.6,
+                "tax": 2.65
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 395.57,
+                "tax": 39.56
+              },
+              {
+                "rate": 21,
+                "base": 12.6,
+                "tax": 2.65
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 450.38,
+            "got": 450.38
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-018",
+      "country": "ES",
+      "template": "moderna",
+      "mode": "scan",
+      "planted": "TAX_ID_CHECKSUM",
+      "expectedCodes": [
+        "INVALID_TAX_ID"
+      ],
+      "cached": false,
+      "validatorErrors": [
+        "INVALID_TAX_ID"
+      ],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3961,
+          "outputTokens": 1062
+        },
+        "costUsd": 0.0009271,
+        "latencyMs": 4123,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": false,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "EB-20262351",
+            "got": "EB-20262351"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-21",
+            "got": "2026-09-21"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Distribuciones de Bebidas Ebro S.L.",
+            "got": "Distribuciones de Bebidas Ebro S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": false,
+            "expected": "B50274433",
+            "got": "NIF B50274433"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": false,
+            "expected": "B27543107",
+            "got": "NIF B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 56.6,
+                "tax": 5.66
+              },
+              {
+                "rate": 21,
+                "base": 278.4,
+                "tax": 58.46
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 56.6,
+                "tax": 5.66
+              },
+              {
+                "rate": 21,
+                "base": 278.4,
+                "tax": 58.46
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 399.12,
+            "got": 399.12
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": [
+          "issuer.taxId: expected \"B50274433\", got \"NIF B50274433\"",
+          "recipient.taxId: expected \"B27543107\", got \"NIF B27543107\""
+        ]
+      }
+    },
+    {
+      "id": "es-019",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "scan",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3923,
+          "outputTokens": 995
+        },
+        "costUsd": 0.0008897999999999999,
+        "latencyMs": 5304,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "LMC/2026/0366",
+            "got": "LMC/2026/0366"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-22",
+            "got": "2026-09-22"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Limpiezas y Menaje Cantábrico S.L.",
+            "got": "Limpiezas y Menaje Cantábrico S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B39156088",
+            "got": "B39156088"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "Restaurante La Barra S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 7.14,
+                "tax": 0.71
+              },
+              {
+                "rate": 21,
+                "base": 102.05,
+                "tax": 21.43
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 7.14,
+                "tax": 0.71
+              },
+              {
+                "rate": 21,
+                "base": 102.05,
+                "tax": 21.43
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 131.33,
+            "got": 131.33
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-020",
+      "country": "ES",
+      "template": "ticket",
+      "mode": "photo",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3354,
+          "outputTokens": 1330
+        },
+        "costUsd": 0.0010004,
+        "latencyMs": 6039,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "T-77367",
+            "got": "T-77367"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-26",
+            "got": "2026-09-26"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Obrador San Ginés",
+            "got": "OBRADOR SAN GINÉS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "50731846X",
+            "got": "50731846X"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "Restaurante La Barra S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 54.7,
+                "tax": 2.19
+              },
+              {
+                "rate": 10,
+                "base": 45.45,
+                "tax": 4.55
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 54.7,
+                "tax": 2.19
+              },
+              {
+                "rate": 10,
+                "base": 45.45,
+                "tax": 4.55
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 106.89,
+            "got": 106.89
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-021",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "photo",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4344,
+          "outputTokens": 1398
+        },
+        "costUsd": 0.0011334000000000001,
+        "latencyMs": 4825,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F-2026/04120",
+            "got": "F-2026/04120"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-05",
+            "got": "2026-09-05"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hortofrutícola del Turia S.L.",
+            "got": "Hortofrutícola del Turia S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B46391272",
+            "got": "B46391272"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 175.41,
+                "tax": 7.02
+              },
+              {
+                "rate": 10,
+                "base": 8.1,
+                "tax": 0.81
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 175.41,
+                "tax": 7.02
+              },
+              {
+                "rate": 10,
+                "base": 8.1,
+                "tax": 0.81
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 191.34,
+            "got": 191.34
+          }
+        ],
+        "lines": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 8,
+            "quantity": 8,
+            "unitPrice": 8,
+            "discountPct": 8,
+            "taxRate": 8,
+            "lineAmount": 8
+          },
+          "gtLines": 8
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-022",
+      "country": "ES",
+      "template": "erp",
+      "mode": "scan",
+      "planted": "TAX_ID_CHECKSUM",
+      "expectedCodes": [
+        "INVALID_TAX_ID"
+      ],
+      "cached": false,
+      "validatorErrors": [
+        "INVALID_TAX_ID"
+      ],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3809,
+          "outputTokens": 1653
+        },
+        "costUsd": 0.0012074000000000002,
+        "latencyMs": 5729,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FV26-000959",
+            "got": "FV26-000959"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-08",
+            "got": "2026-10-08"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cárnicas Montes de Toledo S.A.",
+            "got": "CÁRNICAS MONTES DE TOLEDO S.A."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "A45182063",
+            "got": "A45182063"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "RESTAURANTE LA BARRA S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 514.13,
+                "tax": 51.41
+              },
+              {
+                "rate": 21,
+                "base": 37.8,
+                "tax": 7.94
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 514.13,
+                "tax": 51.41
+              },
+              {
+                "rate": 21,
+                "base": 37.8,
+                "tax": 7.94
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 611.28,
+            "got": 611.28
+          }
+        ],
+        "lines": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 8,
+            "quantity": 8,
+            "unitPrice": 8,
+            "discountPct": 8,
+            "taxRate": 8,
+            "lineAmount": 8
+          },
+          "gtLines": 8
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-023",
+      "country": "ES",
+      "template": "moderna",
+      "mode": "scan",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4075,
+          "outputTokens": 1296
+        },
+        "costUsd": 0.0010555,
+        "latencyMs": 4481,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "EB-20262366",
+            "got": "EB-20262366"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-25",
+            "got": "2026-09-25"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Distribuciones de Bebidas Ebro S.L.",
+            "got": "Distribuciones de Bebidas Ebro S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B50274430",
+            "got": "B50274430"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "Restaurante La Barra S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 88.45,
+                "tax": 8.85
+              },
+              {
+                "rate": 21,
+                "base": 171.8,
+                "tax": 36.08
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 88.45,
+                "tax": 8.85
+              },
+              {
+                "rate": 21,
+                "base": 171.8,
+                "tax": 36.08
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 305.18,
+            "got": 305.18
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-024",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "pdf",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4777,
+          "outputTokens": 483
+        },
+        "costUsd": 0.0007192,
+        "latencyMs": 2091,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "CREDIT_NOTE",
+            "got": "CREDIT_NOTE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "R-LMC/2026/0376",
+            "got": "R-LMC/2026/0376"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-30",
+            "got": "2026-09-30"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Limpiezas y Menaje Cantábrico S.L.",
+            "got": "Limpiezas y Menaje Cantábrico S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B39156088",
+            "got": "B39156088"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "Restaurante La Barra S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 21,
+                "base": -107.75,
+                "tax": -22.63
+              }
+            ],
+            "got": [
+              {
+                "rate": 21,
+                "base": -107.75,
+                "tax": -22.63
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": -130.38,
+            "got": -130.38
+          }
+        ],
+        "lines": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 3,
+            "quantity": 3,
+            "unitPrice": 3,
+            "discountPct": 3,
+            "taxRate": 3,
+            "lineAmount": 3
+          },
+          "gtLines": 3
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-025",
+      "country": "ES",
+      "template": "ticket",
+      "mode": "scan",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [
+        "INVALID_TAX_ID"
+      ],
+      "extraction": {
+        "usage": {
+          "inputTokens": 3141,
+          "outputTokens": 940
+        },
+        "costUsd": 0.0007841,
+        "latencyMs": 3747,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": false,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "T-77432",
+            "got": "T-77432"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-12",
+            "got": "2026-10-12"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Obrador San Ginés",
+            "got": "OBRADOR SAN GINÉS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": false,
+            "expected": "50731846X",
+            "got": "NIF 50731846X"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": false,
+            "expected": "B27543107",
+            "got": "NIF CLIENTE: B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 55.55,
+                "tax": 2.22
+              },
+              {
+                "rate": 10,
+                "base": 44.1,
+                "tax": 4.41
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 55.55,
+                "tax": 2.22
+              },
+              {
+                "rate": 10,
+                "base": 44.1,
+                "tax": 4.41
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 106.28,
+            "got": 106.28
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": [
+          "issuer.taxId: expected \"50731846X\", got \"NIF 50731846X\"",
+          "recipient.taxId: expected \"B27543107\", got \"NIF CLIENTE: B27543107\""
+        ]
+      }
+    },
+    {
+      "id": "es-026",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "scan",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4151,
+          "outputTokens": 1492
+        },
+        "costUsd": 0.0011611,
+        "latencyMs": 5203,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F-2026/04125",
+            "got": "F-2026/04125"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-14",
+            "got": "2026-09-14"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hortofrutícola del Turia S.L.",
+            "got": "Hortofrutícola del Turia S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B46391272",
+            "got": "B46391272"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 171.36,
+                "tax": 6.85
+              },
+              {
+                "rate": 10,
+                "base": 5.94,
+                "tax": 0.59
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 171.36,
+                "tax": 6.85
+              },
+              {
+                "rate": 10,
+                "base": 5.94,
+                "tax": 0.59
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 184.74,
+            "got": 184.74
+          }
+        ],
+        "lines": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 9,
+            "quantity": 9,
+            "unitPrice": 9,
+            "discountPct": 9,
+            "taxRate": 9,
+            "lineAmount": 9
+          },
+          "gtLines": 9
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-027",
+      "country": "ES",
+      "template": "erp",
+      "mode": "pdf",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4904,
+          "outputTokens": 1387
+        },
+        "costUsd": 0.0011839,
+        "latencyMs": 5045,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FV26-000994",
+            "got": "FV26-000994"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-18",
+            "got": "2026-09-18"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cárnicas Montes de Toledo S.A.",
+            "got": "CÁRNICAS MONTES DE TOLEDO S.A."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "A45182060",
+            "got": "A45182060"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "RESTAURANTE LA BARRA S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 500.47,
+                "tax": 50.05
+              },
+              {
+                "rate": 21,
+                "base": 25.2,
+                "tax": 5.29
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 500.47,
+                "tax": 50.05
+              },
+              {
+                "rate": 21,
+                "base": 25.2,
+                "tax": 5.29
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 581.01,
+            "got": 581.01
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-028",
+      "country": "ES",
+      "template": "moderna",
+      "mode": "pdf",
+      "planted": "LINE_MATH",
+      "expectedCodes": [
+        "LINE_MATH"
+      ],
+      "cached": false,
+      "validatorErrors": [
+        "LINE_MATH"
+      ],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4687,
+          "outputTokens": 1017
+        },
+        "costUsd": 0.0009772000000000001,
+        "latencyMs": 3755,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "EB-20262381",
+            "got": "EB-20262381"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-07",
+            "got": "2026-10-07"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Distribuciones de Bebidas Ebro S.L.",
+            "got": "Distribuciones de Bebidas Ebro S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B50274430",
+            "got": "B50274430"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "Restaurante La Barra S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 24.65,
+                "tax": 2.47
+              },
+              {
+                "rate": 21,
+                "base": 73.9,
+                "tax": 15.52
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 24.65,
+                "tax": 2.47
+              },
+              {
+                "rate": 21,
+                "base": 73.9,
+                "tax": 15.52
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 116.54,
+            "got": 116.54
+          }
+        ],
+        "lines": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 3,
+            "quantity": 3,
+            "unitPrice": 3,
+            "discountPct": 3,
+            "taxRate": 3,
+            "lineAmount": 3
+          },
+          "gtLines": 3
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-029",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "pdf",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 4826,
+          "outputTokens": 1102
+        },
+        "costUsd": 0.0010336,
+        "latencyMs": 4069,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "LMC/2026/0386",
+            "got": "LMC/2026/0386"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-09",
+            "got": "2026-10-09"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Limpiezas y Menaje Cantábrico S.L.",
+            "got": "Limpiezas y Menaje Cantábrico S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B39156088",
+            "got": "B39156088"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 5.88,
+                "tax": 0.59
+              },
+              {
+                "rate": 21,
+                "base": 150.75,
+                "tax": 31.66
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 5.88,
+                "tax": 0.59
+              },
+              {
+                "rate": 21,
+                "base": 150.75,
+                "tax": 31.66
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 188.88,
+            "got": 188.88
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "id": "es-030",
+      "country": "ES",
+      "template": "ticket",
+      "mode": "photo",
+      "planted": null,
+      "expectedCodes": [],
+      "cached": false,
+      "validatorErrors": [],
+      "extraction": {
+        "usage": {
+          "inputTokens": 2953,
+          "outputTokens": 1426
+        },
+        "costUsd": 0.0010083,
+        "latencyMs": 5732,
+        "schemaErrors": []
+      },
+      "comparison": {
+        "exact": false,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": false,
+            "expected": "T-77497",
+            "got": "T-7749"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-25",
+            "got": "2026-09-25"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Obrador San Ginés",
+            "got": "OBRADOR SAN GINÉS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "50731846X",
+            "got": "50731846X"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 33.45,
+                "tax": 1.34
+              },
+              {
+                "rate": 10,
+                "base": 41.75,
+                "tax": 4.18
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 33.45,
+                "tax": 1.34
+              },
+              {
+                "rate": 10,
+                "base": 41.75,
+                "tax": 4.18
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 80.72,
+            "got": 80.72
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": [
+          "documentNumber: expected \"T-77497\", got \"T-7749\""
+        ]
+      }
+    }
+  ]
+}

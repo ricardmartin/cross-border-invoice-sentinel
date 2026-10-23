@@ -1,0 +1,105 @@
+{
+  "id": "pt-013",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-013.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-hortofruticola",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.5,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Falta 1 caixa"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT 2026A/1536",
+    "issueDate": "2026-10-07",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola do Oeste, Lda.",
+      "taxId": "PT507318420",
+      "address": "MARL, Pavilhão B3 · 2660-421 São Julião do Tojal"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "Coentros (molho)",
+        "quantity": 7,
+        "unit": "molho",
+        "unitPrice": 0.6,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 4.2
+      },
+      {
+        "description": "Cebola",
+        "quantity": 18.6,
+        "unit": "kg",
+        "unitPrice": 0.82,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 15.25
+      },
+      {
+        "description": "Laranja do Algarve",
+        "quantity": 7,
+        "unit": "kg",
+        "unitPrice": 1.25,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 8.75
+      },
+      {
+        "description": "Batata branca",
+        "quantity": 39,
+        "unit": "kg",
+        "unitPrice": 0.68,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 26.52
+      },
+      {
+        "description": "Alface frisada",
+        "quantity": 8,
+        "unit": "un",
+        "unitPrice": 0.75,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 6
+      },
+      {
+        "description": "Tomate chucha",
+        "quantity": 12.9,
+        "unit": "kg",
+        "unitPrice": 1.95,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 25.16
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 85.88,
+        "tax": 5.15
+      }
+    ],
+    "printedTotal": 91.03,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "0C08C80E-1536"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "gb-007",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-007.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "gb-drinks",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAID",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "TVD-26042",
+    "issueDate": "2026-10-01",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Thames Valley Drinks Wholesale Ltd",
+      "taxId": "GB904521748",
+      "address": "Unit 9, Suttons Business Park · Reading RG6 1AZ"
+    },
+    "recipient": {
+      "name": "Northern Quarter Kitchen Ltd",
+      "taxId": "GB472013970",
+      "address": "61 Thomas Street · Manchester M4 1NA"
+    },
+    "lines": [
+      {
+        "description": "London dry gin 70cl",
+        "quantity": 3,
+        "unit": "btl",
+        "unitPrice": 19.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 58.5
+      },
+      {
+        "description": "IPA cask 9 gal",
+        "quantity": 1,
+        "unit": "cask",
+        "unitPrice": 118,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 118
+      },
+      {
+        "description": "Cola 330ml (x24)",
+        "quantity": 2,
+        "unit": "case",
+        "unitPrice": 13.2,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 26.4
+      },
+      {
+        "description": "Semi-skimmed milk 2L",
+        "quantity": 20,
+        "unit": "btl",
+        "unitPrice": 1.65,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 33
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 33,
+        "tax": 0
+      },
+      {
+        "rate": 20,
+        "base": 202.9,
+        "tax": 40.58
+      }
+    ],
+    "printedTotal": 276.48,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

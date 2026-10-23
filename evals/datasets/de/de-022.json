@@ -1,0 +1,100 @@
+{
+  "id": "de-022",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-022.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-metzgerei",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.2,
+    "noise": true,
+    "lowRes": true,
+    "stamp": "BEZAHLT",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "260189",
+    "issueDate": "2026-09-28",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Metzgerei Hofmann & Söhne GmbH",
+      "taxId": "DE812649307",
+      "address": "Schlachthofstraße 22 · 90443 Nürnberg"
+    },
+    "recipient": {
+      "name": "Wirtshaus am Viktualienmarkt GmbH",
+      "taxId": "DE273415862",
+      "address": "Frauenstraße 9 · 80469 München"
+    },
+    "lines": [
+      {
+        "description": "FRISCHHALTEFOLIE 300M",
+        "quantity": 3,
+        "unit": "RL",
+        "unitPrice": 11.5,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 34.5
+      },
+      {
+        "description": "RINDERHUEFTE",
+        "quantity": 7.61,
+        "unit": "KG",
+        "unitPrice": 26.9,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 204.71
+      },
+      {
+        "description": "SCHINKEN GEKOCHT",
+        "quantity": 1.88,
+        "unit": "KG",
+        "unitPrice": 14.5,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 27.26
+      },
+      {
+        "description": "HAEHNCHENBRUST",
+        "quantity": 4.822,
+        "unit": "KG",
+        "unitPrice": 11.2,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 54.01
+      },
+      {
+        "description": "NUERNBERGER BRATWURST",
+        "quantity": 2.357,
+        "unit": "KG",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 29.7
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 315.68,
+        "tax": 22.1
+      },
+      {
+        "rate": 19,
+        "base": 34.5,
+        "tax": 6.56
+      }
+    ],
+    "printedTotal": 378.84,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "de-010",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-010.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-metzgerei",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "260081",
+    "issueDate": "2026-10-11",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Metzgerei Hofmann & Söhne GmbH",
+      "taxId": "DE812649307",
+      "address": "Schlachthofstraße 22 · 90443 Nürnberg"
+    },
+    "recipient": {
+      "name": "Wirtshaus am Viktualienmarkt GmbH",
+      "taxId": "DE273415862",
+      "address": "Frauenstraße 9 · 80469 München"
+    },
+    "lines": [
+      {
+        "description": "HAEHNCHENBRUST",
+        "quantity": 5.326,
+        "unit": "KG",
+        "unitPrice": 11.2,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 59.65
+      },
+      {
+        "description": "NUERNBERGER BRATWURST",
+        "quantity": 4.294,
+        "unit": "KG",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 54.1
+      },
+      {
+        "description": "SCHWEINENACKEN",
+        "quantity": 9.822,
+        "unit": "KG",
+        "unitPrice": 8.4,
+        "discountPct": 5,
+        "taxRate": 7,
+        "lineAmount": 78.38
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 192.13,
+        "tax": 13.45
+      }
+    ],
+    "printedTotal": 205.58,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

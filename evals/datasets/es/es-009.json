@@ -1,0 +1,109 @@
+{
+  "id": "es-009",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-009.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-cantabrico",
+  "template": "clasica",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Revisado - Juan"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "LMC/2026/0346",
+    "issueDate": "2026-09-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Limpiezas y Menaje Cantábrico S.L.",
+      "taxId": "B39156088",
+      "address": "C/ Marqués de la Hermida 44 · 39009 Santander"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Servilleta papel 40x40 (1200 ud)",
+        "quantity": 3,
+        "unit": "caja",
+        "unitPrice": 18.2,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 54.6
+      },
+      {
+        "description": "Detergente lavavajillas industrial 20L",
+        "quantity": 2,
+        "unit": "garrafa",
+        "unitPrice": 38.5,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 77
+      },
+      {
+        "description": "Sal fina 1kg",
+        "quantity": 10,
+        "unit": "paquete",
+        "unitPrice": 0.42,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 4.2
+      },
+      {
+        "description": "Desengrasante cocina 5L",
+        "quantity": 2,
+        "unit": "garrafa",
+        "unitPrice": 11.9,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 23.8
+      },
+      {
+        "description": "Lejía apta uso alimentario 5L",
+        "quantity": 3,
+        "unit": "garrafa",
+        "unitPrice": 3.45,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 10.35
+      },
+      {
+        "description": "Abrillantador lavavajillas 10L",
+        "quantity": 2,
+        "unit": "garrafa",
+        "unitPrice": 27.35,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 54.7
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 4.2,
+        "tax": 0.42
+      },
+      {
+        "rate": 21,
+        "base": 220.45,
+        "tax": 46.29
+      }
+    ],
+    "printedTotal": 271.36,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

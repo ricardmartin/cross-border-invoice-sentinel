@@ -1,0 +1,716 @@
+{
+  "country": "GB",
+  "generator": "gen@2.0.0",
+  "seed": 42,
+  "generatedAt": "2026-10-18",
+  "entries": [
+    {
+      "id": "gb-001",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-001.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-greengrocer",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": -2.4,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 5 amount off by 1.00 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "gb-002",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-002.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-butcher",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 1 amount off by 2.50 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "gb-003",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-003.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-drinks",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "OK kitchen"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-004",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-004.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-005",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-005.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-greengrocer",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": -2.6,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-006",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-006.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-butcher",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "RECEIVED",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-007",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-007.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-drinks",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "PAID",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-008",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-008.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by 0.90"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "gb-009",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-009.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-greengrocer",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 2 billed at stale rate 17.5 % instead of 0 %"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "gb-010",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-010.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-butcher",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-011",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-011.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-drinks",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-012",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-012.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.4,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "POSTED",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-013",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-013.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-greengrocer",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Checked - Tom"
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by 3.10"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "gb-014",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-014.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-butcher",
+      "template": "erp",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Pay on 15th"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-015",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-015.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-drinks",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-016",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-016.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "RECEIVED",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TAX_ID_CHECKSUM",
+        "description": "Issuer tax id GB315904667 has a wrong control (valid: GB315904664)"
+      },
+      "expected": {
+        "issueCodes": [
+          "INVALID_TAX_ID"
+        ],
+        "finalStatus": "INVALID_TAX_ID"
+      }
+    },
+    {
+      "id": "gb-017",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-017.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-greengrocer",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-018",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-018.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-butcher",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-019",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-019.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-drinks",
+      "template": "modern",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.4,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "POSTED",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-020",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-020.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAID",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-021",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-021.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-greengrocer",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "POSTED",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-022",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-022.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-butcher",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "gb-023",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-023.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-greengrocer",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.2,
+        "noise": true,
+        "lowRes": true,
+        "stamp": "POSTED",
+        "handwrittenNote": "Call Emma"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "gb-024",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-024.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-greengrocer",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAID",
+        "handwrittenNote": "Pay on 15th"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "gb-023"
+    },
+    {
+      "id": "gb-025",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-025.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-butcher",
+      "template": "erp",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.5,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "gb-026",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-026.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-butcher",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "RECEIVED",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "gb-025"
+    },
+    {
+      "id": "gb-027",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-027.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "gb-drinks",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "DELIVERY_SHORT",
+        "description": "\"House red wine 75cl\": invoiced 17, delivered 14"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 21.24
+      }
+    },
+    {
+      "id": "gb-028",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-028.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-drinks",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.9,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "gb-027"
+    },
+    {
+      "id": "gb-029",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-029.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.9,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "DELIVERY_MISSING_PRODUCT",
+        "description": "\"Plain flour 16kg\" invoiced but not delivered"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 24.8
+      }
+    },
+    {
+      "id": "gb-030",
+      "country": "GB",
+      "source": "synthetic",
+      "file": "gb-030.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "gb-hygiene",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "photo",
+        "rotation": -2.5,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "1 case short"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "gb-029"
+    }
+  ]
+}

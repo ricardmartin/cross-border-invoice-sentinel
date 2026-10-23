@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Factura F-2025/0387 · Invoice Sentinel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--sheet:#f7f8f6;--cas:#dfe7ee;--blue:#1d3a5f;--red:#b3261e;--ink:#0f1720;--mut:#5b6672;--rule:#cfd6dc;--calc:#1d3a5f}
+*{box-sizing:border-box}
+html,body{width:1440px;height:900px;overflow:hidden;margin:0}
+body{background:var(--sheet);color:var(--ink);font:13px/1.4 "Public Sans",sans-serif;font-variant-numeric:tabular-nums}
+.mono{font-family:"Roboto Mono",monospace}
+.top{height:48px;background:var(--blue);color:#fff;display:flex;align-items:center;padding:0 20px;gap:28px}
+.brand{font-weight:700;letter-spacing:.01em;font-size:14px}.brand span{opacity:.6;font-weight:400}
+.nav{display:flex;height:100%}.nav a{color:#c9d6e4;text-decoration:none;padding:0 14px;display:flex;align-items:center;font-weight:500;border-bottom:2px solid transparent}
+.nav a.on{color:#fff;border-bottom-color:#fff}
+.nav a b{margin-left:6px;font:500 11px "Roboto Mono";background:rgba(255,255,255,.16);padding:1px 5px;border-radius:2px}
+.sp{flex:1}.who{color:#c9d6e4;font-size:12px}
+.btn{font:600 13px "Public Sans";border-radius:3px;padding:7px 14px;border:1px solid var(--blue);background:var(--blue);color:#fff;cursor:pointer}
+.top .btn{background:#fff;color:var(--blue);border-color:#fff}
+.btn.sec{background:transparent;color:var(--ink);border-color:#9aa5af}
+.wrap{display:grid;grid-template-columns:560px 1fr;height:852px}
+.doc{background:#e9ece8;border-right:1px solid var(--rule);padding:14px 24px;display:flex;flex-direction:column}
+.dochd{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-bottom:10px}
+.dochd b{color:var(--ink);font-weight:600}
+.paper{flex:1;background:#fff;box-shadow:0 0 0 1px #d6dad5;padding:34px 36px;position:relative}
+.l{height:7px;background:#d9ddd8;margin:0 0 9px;border-radius:1px}
+.blk{display:flex;justify-content:space-between;margin-bottom:26px}
+.row{display:grid;grid-template-columns:1fr 50px 60px 70px;gap:14px;margin-bottom:11px}.row i{height:6px;background:#e3e6e2;display:block}
+.hl{position:absolute;left:300px;right:30px;bottom:120px;height:22px;outline:1.5px solid var(--red);outline-offset:2px}
+.hl2{position:absolute;left:30px;width:200px;top:239px;height:18px;outline:1.5px dashed var(--red);outline-offset:2px}
+.pg{margin-top:8px;font-size:11px;color:var(--mut);display:flex;justify-content:space-between}
+.main{padding:18px 32px 0;overflow:hidden}
+.crumb{font-size:12px;color:var(--mut)}
+h1{font-size:24px;line-height:1.15;margin:4px 0 10px;font-weight:700;letter-spacing:-.01em}
+.cs{display:grid;gap:2px}
+.c{background:var(--cas);padding:15px 8px 5px;position:relative;min-height:44px}
+.c .n{position:absolute;top:2px;left:5px;font:500 9.5px "Roboto Mono";color:#4d6177}
+.c .k{position:absolute;top:2px;right:6px;font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.c .v{font-weight:500;font-size:13.5px}
+.c.r{text-align:right}.c.calc .v{color:var(--calc);font-weight:600}
+.verdict{display:flex;gap:14px;align-items:baseline;border-top:2px solid var(--ink);margin-top:14px;padding-top:9px}
+.verdict .st{color:var(--red);font-weight:700;font-size:15px;white-space:nowrap}
+.verdict p{margin:0;color:var(--ink)}
+.claim{display:grid;grid-template-columns:150px 1fr auto;gap:18px;align-items:center;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0;margin-top:9px}
+.claim .c .v{font-size:22px;font-weight:700;color:var(--red)}
+.claim .t{font-size:12px;color:var(--mut)}.claim .t b{display:block;color:var(--ink);font-size:13.5px;font-weight:600;margin:2px 0}
+.claim .acts{display:flex;gap:8px}
+h2{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut);margin:14px 0 5px;font-weight:600;display:flex;justify-content:space-between}
+h2 span{text-transform:none;letter-spacing:0;font-weight:400}
+table{width:100%;border-collapse:collapse}
+th{font-size:10.5px;font-weight:600;color:var(--mut);text-align:right;padding:4px 8px;border-bottom:1px solid var(--ink);white-space:nowrap}
+th:nth-child(2),td:nth-child(2){text-align:left}
+td{padding:5px 8px;text-align:right;border-bottom:1px solid var(--rule);white-space:nowrap}
+td.n,th.n{font:500 10px "Roboto Mono";color:#4d6177;text-align:left;width:34px}
+td.calc{color:var(--calc);font-weight:600;background:#eaf0f5}
+tr.bad td{background:#fbefee}tr.bad td.calc{background:#f2e6e8}
+.flag{color:var(--red);font-weight:600}
+.tax{display:grid;grid-template-columns:repeat(4,1fr) 1.15fr;gap:2px;margin-top:2px}
+.pv{font-size:11px;color:var(--mut);margin-top:1px}.pv.ok::before{content:"= ";}
+.f{font:400 10px "Roboto Mono";color:#4d6177;margin-top:2px}
+.tot{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:2px}
+.tot .c{min-height:58px}.tot .v{font-size:19px}
+.c.delta{background:#f6e3e1}.c.delta .v{color:var(--red);font-weight:700}.c.delta .n{color:var(--red)}
+.tech{margin-top:10px;border-top:1px solid var(--rule);padding:7px 0;font-size:12px;color:var(--mut);display:flex;gap:16px}
+.tech b{color:var(--ink);font-weight:600}
+</style></head><body>
+<header class="top">
+  <div class="brand">Invoice Sentinel <span>· La Barraca</span></div>
+  <nav class="nav"><a class="on" href="#">Bandeja<b>7</b></a><a href="#">Evals</a></nav>
+  <div class="sp"></div><span class="who">Ricard Martín · Revisor</span>
+  <button class="btn">+ Procesar documento</button>
+</header>
+<div class="wrap">
+<section class="doc">
+  <div class="dochd"><span>&#9638; <b>factura F-2025/0387.pdf</b> · escaneado 14/10/2025 09:12</span><span>Página 1 de 1 · 100 %</span></div>
+  <div class="paper">
+    <div class="blk"><div style="width:180px"><div class="l" style="width:150px;height:12px;background:#bfc5be"></div><div class="l" style="width:170px"></div><div class="l" style="width:120px"></div><div class="l" style="width:90px"></div></div>
+    <div style="width:140px"><div class="l" style="height:12px;background:#bfc5be"></div><div class="l" style="width:100px"></div><div class="l" style="width:110px"></div></div></div>
+    <div class="blk"><div style="width:200px"><div class="l" style="width:160px"></div><div class="l" style="width:130px"></div></div><div style="width:120px"><div class="l"></div><div class="l" style="width:80px"></div></div></div>
+    <div class="row" style="border-bottom:1px solid #c9cdc8;padding-bottom:6px"><i style="background:#c9cdc8"></i><i style="background:#c9cdc8"></i><i style="background:#c9cdc8"></i><i style="background:#c9cdc8"></i></div>
+    <div class="row"><i></i><i></i><i></i><i></i></div><div class="row"><i style="width:80%"></i><i></i><i></i><i></i></div><div class="row"><i style="width:55%"></i><i></i><i></i><i></i></div>
+    <div class="row"><i style="width:65%"></i><i></i><i></i><i></i></div><div class="row"><i style="width:75%"></i><i></i><i></i><i></i></div><div class="row"><i style="width:70%"></i><i></i><i></i><i></i></div>
+    <div style="position:absolute;left:300px;right:36px;bottom:170px"><div class="l"></div><div class="l"></div><div class="l" style="width:70%"></div></div>
+    <div style="position:absolute;left:304px;right:36px;bottom:124px"><div class="l" style="height:12px;background:#bfc5be;margin:0"></div></div>
+    <div class="hl"></div><div class="hl2"></div>
+    <div style="position:absolute;left:36px;right:36px;bottom:34px"><div class="l" style="width:60%"></div><div class="l" style="width:40%"></div></div>
+  </div>
+  <div class="pg"><span>Marcas en rojo: zonas citadas por las discrepancias</span><span>Albarán AL-5521 ▸</span></div>
+</section>
+<main class="main">
+  <div class="crumb">Bandeja › Facturas › F-2025/0387</div>
+  <h1>Distribuciones Hermanos García S.L.</h1>
+  <div class="cs" style="grid-template-columns:1.1fr 1.4fr 1fr .8fr .8fr">
+    <div class="c"><span class="n">[A1]</span><span class="k">CIF</span><div class="v">B-46123457 <span style="color:var(--mut);font-weight:400">✓ válido</span></div></div>
+    <div class="c"><span class="n">[A2]</span><span class="k">Destinatario</span><div class="v">Restaurante La Barraca</div></div>
+    <div class="c"><span class="n">[A3]</span><span class="k">Factura</span><div class="v">F-2025/0387</div></div>
+    <div class="c"><span class="n">[A4]</span><span class="k">Fecha</span><div class="v">14/10/2025</div></div>
+    <div class="c"><span class="n">[A5]</span><span class="k">Albarán</span><div class="v">AL-5521</div></div>
+  </div>
+  <div class="verdict"><span class="st">✕ Discrepancia del proveedor</span><p>Dos lecturas coinciden: el total impreso no cuadra y faltan 2 kg de gamba en el albarán.</p></div>
+  <div class="claim">
+    <div class="c r delta"><span class="n">[31]</span><span class="k" style="right:auto;left:40px">Reclamar</span><div class="v">48,62 €</div></div>
+    <div class="t">Reclamación pendiente de su aprobación · a Distribuciones Hermanos García<b>Factura F-2025/0387: diferencia de 48,62 €</b>Cita [29] y línea 01 · nada se envía sin su aprobación</div>
+    <div class="acts"><button class="btn sec">Descartar…</button><button class="btn">Enviar reclamación de 48,62 €</button></div>
+  </div>
+  <h2>Líneas <span>impreso en tinta negra · <b style="color:var(--calc)">calculado en azul</b> · entregado según AL-5521</span></h2>
+  <table>
+    <tr><th class="n">Nº</th><th>Descripción</th><th>Cant.</th><th>Precio</th><th>IVA</th><th>Impreso</th><th>Calculado</th><th>Entregado</th></tr>
+    <tr class="bad"><td class="n">[01]</td><td>Gamba roja de Dénia</td><td>6 kg</td><td>32,50</td><td>10 %</td><td>195,00</td><td class="calc">195,00</td><td class="flag">4 kg · ▲ 2 kg no entregados</td></tr>
+    <tr><td class="n">[02]</td><td>Aceite de oliva virgen extra 5 L</td><td>4 ud</td><td>28,90</td><td>10 %</td><td>115,60</td><td class="calc">115,60</td><td>4 ud</td></tr>
+    <tr><td class="n">[03]</td><td>Arroz bomba 1 kg</td><td>10 ud</td><td>3,85</td><td>10 %</td><td>38,50</td><td class="calc">38,50</td><td>10 ud</td></tr>
+    <tr><td class="n">[04]</td><td>Limones malla 3 kg</td><td>3 ud</td><td>4,20</td><td>10 %</td><td>12,60</td><td class="calc">12,60</td><td>3 ud</td></tr>
+    <tr><td class="n">[05]</td><td>Agua mineral 1,5 L (caja 6)</td><td>8 ud</td><td>3,10</td><td>10 %</td><td>24,80</td><td class="calc">24,80</td><td>8 ud</td></tr>
+    <tr><td class="n">[06]</td><td>Servilletas 40x40 (paq. 100)</td><td>5 ud</td><td>6,40</td><td>21 %</td><td>32,00</td><td class="calc">32,00</td><td>5 ud</td></tr>
+  </table>
+  <h2>Impuestos y total <span>cada casilla calculada cita sus fuentes</span></h2>
+  <div class="tax">
+    <div class="c r calc"><span class="n">[21]</span><span class="k" style="right:auto;left:40px">Base 10 %</span><div class="v">386,50</div><div class="pv ok">impresa 386,50</div><div class="f">=[01]+…+[05]</div></div>
+    <div class="c r calc"><span class="n">[22]</span><span class="k" style="right:auto;left:40px">Cuota 10 %</span><div class="v">38,65</div><div class="pv ok">impresa 38,65</div><div class="f">=[21]×10 %</div></div>
+    <div class="c r calc"><span class="n">[23]</span><span class="k" style="right:auto;left:40px">Base 21 %</span><div class="v">32,00</div><div class="pv ok">impresa 32,00</div><div class="f">=[06]</div></div>
+    <div class="c r calc"><span class="n">[24]</span><span class="k" style="right:auto;left:40px">Cuota 21 %</span><div class="v">6,72</div><div class="pv ok">impresa 6,72</div><div class="f">=[23]×21 %</div></div>
+    <div></div>
+  </div>
+  <div class="tot">
+    <div class="c r calc"><span class="n">[27]</span><span class="k" style="right:auto;left:40px">Total calculado</span><div class="v">463,87 €</div><div class="f">=[21]+[22]+[23]+[24]</div></div>
+    <div class="c r"><span class="n">[28]</span><span class="k" style="right:auto;left:40px">Total impreso</span><div class="v">478,87 €</div><div class="f">leído del documento</div></div>
+    <div class="c r delta"><span class="n">[29]</span><span class="k" style="right:auto;left:40px">Δ ▲ no cuadra</span><div class="v">+15,00 €</div><div class="f" style="color:var(--red)">=[28]−[27]</div></div>
+  </div>
+  <div class="tech"><b>Detalles técnicos ▸</b><span>2 lecturas</span><span>haiku-5-5</span><span>0,0042 $</span><span>8,4 s</span></div>
+</main>
+</div>
+</body></html>

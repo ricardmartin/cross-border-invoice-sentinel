@@ -1,0 +1,81 @@
+{
+  "id": "gb-024",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-024.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "gb-greengrocer",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "PAID",
+    "handwrittenNote": "Pay on 15th"
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "GB",
+    "documentNumber": "DN77299",
+    "issueDate": "2026-09-22",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Covent Garden Fresh Ltd",
+      "taxId": "GB241735866",
+      "address": "New Covent Garden Market, Nine Elms Lane · London SW8 5LL"
+    },
+    "recipient": {
+      "name": "Northern Quarter Kitchen Ltd",
+      "taxId": "GB472013970",
+      "address": "61 Thomas Street · Manchester M4 1NA"
+    },
+    "lines": [
+      {
+        "description": "Lettuce, little gem",
+        "quantity": 6,
+        "unit": "each",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Apples, Cox",
+        "quantity": 5.9,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Potatoes, Maris Piper",
+        "quantity": 22.8,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Onions, brown",
+        "quantity": 17.5,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "gb-023"
+}

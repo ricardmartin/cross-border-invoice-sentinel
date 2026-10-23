@@ -1,0 +1,95 @@
+{
+  "id": "de-009",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-009.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-frische",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "RE-2026-40424",
+    "issueDate": "2026-10-08",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Frischeparadies Großmarkt Süd GmbH",
+      "taxId": "DE247183658",
+      "address": "Schäftlarnstraße 10 · 81371 München"
+    },
+    "recipient": {
+      "name": "Wirtshaus am Viktualienmarkt GmbH",
+      "taxId": "DE273415862",
+      "address": "Frauenstraße 9 · 80469 München"
+    },
+    "lines": [
+      {
+        "description": "Zwiebeln gelb",
+        "quantity": 5.2,
+        "unit": "kg",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 4.42
+      },
+      {
+        "description": "Spargel weiß Kl. I",
+        "quantity": 5,
+        "unit": "kg",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 49
+      },
+      {
+        "description": "Tomaten Strauch",
+        "quantity": 11.6,
+        "unit": "kg",
+        "unitPrice": 3.4,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 39.44
+      },
+      {
+        "description": "Kartoffeln festkochend",
+        "quantity": 27.6,
+        "unit": "kg",
+        "unitPrice": 0.98,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 27.05
+      },
+      {
+        "description": "Äpfel Elstar",
+        "quantity": 4.3,
+        "unit": "kg",
+        "unitPrice": 2.1,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 9.03
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 128.94,
+        "tax": 9.03
+      }
+    ],
+    "printedTotal": 137.97,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

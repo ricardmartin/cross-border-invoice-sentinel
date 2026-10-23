@@ -1,0 +1,109 @@
+{
+  "id": "es-004",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-004.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "es-cantabrico",
+  "template": "clasica",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "LMC/2026/0336",
+    "issueDate": "2026-09-02",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Limpiezas y Menaje Cantábrico S.L.",
+      "taxId": "B39156088",
+      "address": "C/ Marqués de la Hermida 44 · 39009 Santander"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "Lejía apta uso alimentario 5L",
+        "quantity": 2,
+        "unit": "garrafa",
+        "unitPrice": 3.45,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 6.9
+      },
+      {
+        "description": "Detergente lavavajillas industrial 20L",
+        "quantity": 2,
+        "unit": "garrafa",
+        "unitPrice": 38.5,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 77
+      },
+      {
+        "description": "Servilleta papel 40x40 (1200 ud)",
+        "quantity": 4,
+        "unit": "caja",
+        "unitPrice": 18.2,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 72.8
+      },
+      {
+        "description": "Desengrasante cocina 5L",
+        "quantity": 2,
+        "unit": "garrafa",
+        "unitPrice": 11.9,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 23.8
+      },
+      {
+        "description": "Abrillantador lavavajillas 10L",
+        "quantity": 1,
+        "unit": "garrafa",
+        "unitPrice": 27.35,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 27.35
+      },
+      {
+        "description": "Sal fina 1kg",
+        "quantity": 10,
+        "unit": "paquete",
+        "unitPrice": 0.42,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 4.2
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 4.2,
+        "tax": 0.42
+      },
+      {
+        "rate": 21,
+        "base": 207.85,
+        "tax": 43.65
+      }
+    ],
+    "printedTotal": 256.12,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

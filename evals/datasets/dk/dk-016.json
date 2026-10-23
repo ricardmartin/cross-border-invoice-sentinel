@@ -1,0 +1,104 @@
+{
+  "id": "dk-016",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-016.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-rengoring",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": 1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "NRH-7760",
+    "issueDate": "2026-10-12",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Nordisk Rengøring & Hygiejne ApS",
+      "taxId": "DK40128565",
+      "address": "Hjulmagervej 15 · 5000 Odense C"
+    },
+    "recipient": {
+      "name": "Café Åboulevard I/S",
+      "taxId": "DK31956420",
+      "address": "Åboulevard 52 · 8000 Aarhus C"
+    },
+    "lines": [
+      {
+        "description": "Opvaskemiddel maskine 20L",
+        "quantity": 2,
+        "unit": "dunk",
+        "unitPrice": 389,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 778
+      },
+      {
+        "description": "Nitrilhandsker M (x100)",
+        "quantity": 4,
+        "unit": "æske",
+        "unitPrice": 69,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 276
+      },
+      {
+        "description": "Klorin 5L",
+        "quantity": 6,
+        "unit": "dunk",
+        "unitPrice": 45,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 270
+      },
+      {
+        "description": "Groft salt 1kg",
+        "quantity": 9,
+        "unit": "pk",
+        "unitPrice": 12.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 112.5
+      },
+      {
+        "description": "Affedtning køkken 5L",
+        "quantity": 3,
+        "unit": "dunk",
+        "unitPrice": 129,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 387
+      },
+      {
+        "description": "Servietter 40x40 (x1000)",
+        "quantity": 2,
+        "unit": "kasse",
+        "unitPrice": 159,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 318
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 2141.5,
+        "tax": 535.38
+      }
+    ],
+    "printedTotal": 2676.88,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "pt-040",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-040.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-acores-dist",
+  "template": "modern",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.4,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT AA26/7400",
+    "issueDate": "2026-09-15",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Abastecedora Açoriana, S.A.",
+      "taxId": "PT512084726",
+      "address": "Rua do Paim 40 · 9500-095 Ponta Delgada"
+    },
+    "recipient": {
+      "name": "Tasca do Porto, Lda.",
+      "taxId": "PT517554089",
+      "address": "Largo da Matriz 5 · 9500-094 Ponta Delgada"
+    },
+    "lines": [
+      {
+        "description": "Cerveja Especial 33cl (x24)",
+        "quantity": 1,
+        "unit": "grade",
+        "unitPrice": 15.8,
+        "discountPct": null,
+        "taxRate": 16,
+        "lineAmount": 15.8
+      },
+      {
+        "description": "Queijo de São Jorge",
+        "quantity": 1.4,
+        "unit": "kg",
+        "unitPrice": 12.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 18.06
+      },
+      {
+        "description": "Carne dos Açores (vazia)",
+        "quantity": 4.8,
+        "unit": "kg",
+        "unitPrice": 16.5,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 79.2
+      },
+      {
+        "description": "Guardanapos papel (x1000)",
+        "quantity": 2,
+        "unit": "cx",
+        "unitPrice": 13.9,
+        "discountPct": null,
+        "taxRate": 16,
+        "lineAmount": 27.8
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 97.26,
+        "tax": 3.89
+      },
+      {
+        "rate": 16,
+        "base": 43.6,
+        "tax": 6.98
+      }
+    ],
+    "printedTotal": 151.73,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "AA58B98B-7400"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

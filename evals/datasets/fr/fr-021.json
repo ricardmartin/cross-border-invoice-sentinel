@@ -1,0 +1,95 @@
+{
+  "id": "fr-021",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-021.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "fr-primeurs",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "FA-2026-010460",
+    "issueDate": "2026-09-17",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Primeurs du Val de Loire SARL",
+      "taxId": "FR20817263544",
+      "address": "MIN de Rungis, Bât. D4 · 94150 Rungis"
+    },
+    "recipient": {
+      "name": "Brasserie des Halles SARL",
+      "taxId": "FR21790552137",
+      "address": "12 rue Montorgueil · 75001 Paris"
+    },
+    "lines": [
+      {
+        "description": "Carottes des sables",
+        "quantity": 11.1,
+        "unit": "kg",
+        "unitPrice": 1.1,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 12.21
+      },
+      {
+        "description": "Oignons jaunes",
+        "quantity": 18.3,
+        "unit": "kg",
+        "unitPrice": 1.05,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 19.22
+      },
+      {
+        "description": "Tomates grappe",
+        "quantity": 8.7,
+        "unit": "kg",
+        "unitPrice": 2.85,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 24.8
+      },
+      {
+        "description": "Salade batavia",
+        "quantity": 15,
+        "unit": "pièce",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 14.25
+      },
+      {
+        "description": "Pommes Golden",
+        "quantity": 10.9,
+        "unit": "kg",
+        "unitPrice": 2.2,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 23.98
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 94.46,
+        "tax": 5.2
+      }
+    ],
+    "printedTotal": 99.66,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

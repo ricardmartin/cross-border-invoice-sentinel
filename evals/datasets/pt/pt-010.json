@@ -1,0 +1,92 @@
+{
+  "id": "pt-010",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-010.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-talho",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT CM26/008163",
+    "issueDate": "2026-09-17",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Carnes e Charcutaria Minhota, S.A.",
+      "taxId": "PT509182739",
+      "address": "Zona Industrial de Lousado, Lote 12 · 4760-469 Vila Nova de Famalicão"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "CHOURICO DE CARNE",
+        "quantity": 3.21,
+        "unit": "KG",
+        "unitPrice": 9.8,
+        "discountPct": 10,
+        "taxRate": 6,
+        "lineAmount": 28.31
+      },
+      {
+        "description": "PELICULA ADERENTE 300M",
+        "quantity": 1,
+        "unit": "UN",
+        "unitPrice": 9.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 9.9
+      },
+      {
+        "description": "LOMBO DE PORCO",
+        "quantity": 5.736,
+        "unit": "KG",
+        "unitPrice": 6.4,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 36.71
+      },
+      {
+        "description": "VITELA PARA BIFES",
+        "quantity": 7.347,
+        "unit": "KG",
+        "unitPrice": 14.9,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 109.47
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 174.49,
+        "tax": 10.47
+      },
+      {
+        "rate": 23,
+        "base": 9.9,
+        "tax": 2.28
+      }
+    ],
+    "printedTotal": 197.14,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "16C12A1E-8163"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

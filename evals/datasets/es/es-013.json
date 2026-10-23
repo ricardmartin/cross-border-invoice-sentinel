@@ -1,0 +1,128 @@
+{
+  "id": "es-013",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-013.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-ebro",
+  "template": "moderna",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "EB-20262336",
+    "issueDate": "2026-09-23",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuciones de Bebidas Ebro S.L.",
+      "taxId": "B50274430",
+      "address": "Av. de Cataluña 301 · 50014 Zaragoza"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Vino tinto Somontano crianza 75cl",
+        "quantity": 27,
+        "unit": "botella",
+        "unitPrice": 7.2,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 194.4
+      },
+      {
+        "description": "Agua mineral 1,5L (6 ud)",
+        "quantity": 10,
+        "unit": "pack",
+        "unitPrice": 2.1,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 21
+      },
+      {
+        "description": "Tónica premium 20cl (24 ud)",
+        "quantity": 4,
+        "unit": "caja",
+        "unitPrice": 15.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 62.4
+      },
+      {
+        "description": "Agua con gas 50cl (24 ud)",
+        "quantity": 6,
+        "unit": "caja",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 58.8
+      },
+      {
+        "description": "Vermut rojo 1L",
+        "quantity": 4,
+        "unit": "botella",
+        "unitPrice": 8.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 34.4
+      },
+      {
+        "description": "Ginebra London Dry 70cl",
+        "quantity": 3,
+        "unit": "botella",
+        "unitPrice": 13.95,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 41.85
+      },
+      {
+        "description": "Zumo de naranja 1L",
+        "quantity": 7,
+        "unit": "brik",
+        "unitPrice": 1.45,
+        "discountPct": null,
+        "taxRate": 8,
+        "lineAmount": 10.15
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 8,
+        "base": 10.15,
+        "tax": 0.81
+      },
+      {
+        "rate": 10,
+        "base": 79.8,
+        "tax": 7.98
+      },
+      {
+        "rate": 21,
+        "base": 333.05,
+        "tax": 69.94
+      }
+    ],
+    "printedTotal": 501.73,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "RATE_NOT_ALLOWED",
+    "description": "Line 7 billed at 8 % instead of 10 %"
+  },
+  "expected": {
+    "issueCodes": [
+      "RATE_NOT_ALLOWED"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

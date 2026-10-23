@@ -1,0 +1,72 @@
+{
+  "id": "de-030",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-030.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-hygiene",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "DE",
+    "documentNumber": "LS-26-5377",
+    "issueDate": "2026-09-01",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Gastro Hygiene Nord GmbH",
+      "taxId": "DE304728168",
+      "address": "Billbrookdeich 112 · 22113 Hamburg"
+    },
+    "recipient": {
+      "name": "Brauhaus Altstadt GmbH & Co. KG",
+      "taxId": "DE215903744",
+      "address": "Am Hof 18 · 50667 Köln"
+    },
+    "lines": [
+      {
+        "description": "Fettlöser Küche 5 l",
+        "quantity": 3,
+        "unit": "Kanister",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Desinfektionsreiniger 5 l",
+        "quantity": 3,
+        "unit": "Kanister",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Servietten 40x40 (1000 Stk)",
+        "quantity": 3,
+        "unit": "Karton",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "de-029"
+}

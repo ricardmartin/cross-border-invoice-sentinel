@@ -1,0 +1,110 @@
+{
+  "id": "pt-002",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-002.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-talho",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "CONTABILIZADO",
+    "handwrittenNote": "Falta 1 caixa"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT CM26/008107",
+    "issueDate": "2026-10-01",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Carnes e Charcutaria Minhota, S.A.",
+      "taxId": "PT509182739",
+      "address": "Zona Industrial de Lousado, Lote 12 · 4760-469 Vila Nova de Famalicão"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "VITELA PARA BIFES",
+        "quantity": 5.149,
+        "unit": "KG",
+        "unitPrice": 14.9,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 76.72
+      },
+      {
+        "description": "CHOURICO DE CARNE",
+        "quantity": 1.262,
+        "unit": "KG",
+        "unitPrice": 9.8,
+        "discountPct": 10,
+        "taxRate": 6,
+        "lineAmount": 11.13
+      },
+      {
+        "description": "LOMBO DE PORCO",
+        "quantity": 5.931,
+        "unit": "KG",
+        "unitPrice": 6.4,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 37.96
+      },
+      {
+        "description": "PELICULA ADERENTE 300M",
+        "quantity": 1,
+        "unit": "UN",
+        "unitPrice": 9.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 9.9
+      },
+      {
+        "description": "FRANGO DO CAMPO",
+        "quantity": 11.573,
+        "unit": "KG",
+        "unitPrice": 4.2,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 48.61
+      },
+      {
+        "description": "PRESUNTO FATIADO",
+        "quantity": 2.51,
+        "unit": "KG",
+        "unitPrice": 18.5,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 46.44
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 220.86,
+        "tax": 13.25
+      },
+      {
+        "rate": 23,
+        "base": 9.9,
+        "tax": 2.28
+      }
+    ],
+    "printedTotal": 246.29,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "16C12A1E-8107"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

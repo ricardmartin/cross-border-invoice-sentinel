@@ -1,0 +1,116 @@
+{
+  "id": "gb-029",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-029.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "gb-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.9,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "PCS6216",
+    "issueDate": "2026-10-09",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Pennine Catering Supplies Ltd",
+      "taxId": "GB315904664",
+      "address": "Trafford Park Road 210 · Manchester M17 1HH"
+    },
+    "recipient": {
+      "name": "The Anchor Dining Rooms Ltd",
+      "taxId": "GB286041557",
+      "address": "34 Bankside · London SE1 9DT"
+    },
+    "lines": [
+      {
+        "description": "Nitrile gloves M (x100)",
+        "quantity": 2,
+        "unit": "box",
+        "unitPrice": 5.6,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 11.2
+      },
+      {
+        "description": "Thick bleach 5L",
+        "quantity": 6,
+        "unit": "drum",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 23.4
+      },
+      {
+        "description": "Plain flour 16kg",
+        "quantity": 2,
+        "unit": "sack",
+        "unitPrice": 12.4,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 24.8
+      },
+      {
+        "description": "Dishwasher detergent 20L",
+        "quantity": 1,
+        "unit": "drum",
+        "unitPrice": 34.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 34.9
+      },
+      {
+        "description": "Napkins 40x40 (x1000)",
+        "quantity": 5,
+        "unit": "case",
+        "unitPrice": 13.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 69.5
+      },
+      {
+        "description": "Kitchen degreaser 5L",
+        "quantity": 3,
+        "unit": "drum",
+        "unitPrice": 11.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 34.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 24.8,
+        "tax": 0
+      },
+      {
+        "rate": 20,
+        "base": 173.5,
+        "tax": 34.7
+      }
+    ],
+    "printedTotal": 233,
+    "deliveryNoteRefs": [
+      "DN77377"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_MISSING_PRODUCT",
+    "description": "\"Plain flour 16kg\" invoiced but not delivered"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 24.8
+  }
+}

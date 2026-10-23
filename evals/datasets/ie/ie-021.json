@@ -1,0 +1,95 @@
+{
+  "id": "ie-021",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-021.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "ie-greengrocer",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "POSTED",
+    "handwrittenNote": "OK kitchen"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "INV-30460",
+    "issueDate": "2026-10-04",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Liffey Fresh Produce Ltd",
+      "taxId": "IE6431852L",
+      "address": "Unit 4, Dublin Food Market, Malahide Road · Dublin 17, D17 X2K4"
+    },
+    "recipient": {
+      "name": "The Quay Kitchen Ltd",
+      "taxId": "IE6729034J",
+      "address": "14 Wellington Quay · Dublin 2, D02 X524"
+    },
+    "lines": [
+      {
+        "description": "Carrots",
+        "quantity": 8.9,
+        "unit": "kg",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 7.57
+      },
+      {
+        "description": "Tomatoes, vine",
+        "quantity": 6.6,
+        "unit": "kg",
+        "unitPrice": 3.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 21.12
+      },
+      {
+        "description": "Apples, Bramley",
+        "quantity": 3.1,
+        "unit": "kg",
+        "unitPrice": 2.4,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 7.44
+      },
+      {
+        "description": "Onions, brown",
+        "quantity": 6.6,
+        "unit": "kg",
+        "unitPrice": 0.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 5.94
+      },
+      {
+        "description": "Potatoes, Rooster",
+        "quantity": 31.1,
+        "unit": "kg",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 29.55
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 71.62,
+        "tax": 0
+      }
+    ],
+    "printedTotal": 71.62,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

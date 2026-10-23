@@ -1,0 +1,116 @@
+{
+  "id": "de-027",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-027.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-getraenke",
+  "template": "modern",
+  "variant": {
+    "mode": "photo",
+    "rotation": -1.7,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "GRV-26189",
+    "issueDate": "2026-09-12",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Getränke Rheinland Vertriebs GmbH",
+      "taxId": "DE125937412",
+      "address": "Industriestraße 77 · 50735 Köln"
+    },
+    "recipient": {
+      "name": "Wirtshaus am Viktualienmarkt GmbH",
+      "taxId": "DE273415862",
+      "address": "Frauenstraße 9 · 80469 München"
+    },
+    "lines": [
+      {
+        "description": "Riesling trocken 0,75 l",
+        "quantity": 7,
+        "unit": "Fl",
+        "unitPrice": 6.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 48.3
+      },
+      {
+        "description": "Mineralwasser 0,7 l (Kasten 12)",
+        "quantity": 7,
+        "unit": "Kasten",
+        "unitPrice": 7.2,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 50.4
+      },
+      {
+        "description": "Apfelschorle 0,5 l (Kasten 20)",
+        "quantity": 4,
+        "unit": "Kasten",
+        "unitPrice": 14.8,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 59.2
+      },
+      {
+        "description": "Vollmilch 3,5 % 1 l",
+        "quantity": 11,
+        "unit": "Pkg",
+        "unitPrice": 1.15,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 12.65
+      },
+      {
+        "description": "Weizenbier 0,5 l (Kasten 20)",
+        "quantity": 2,
+        "unit": "Kasten",
+        "unitPrice": 19.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 39.8
+      },
+      {
+        "description": "Kölsch 0,33 l (Kasten 24)",
+        "quantity": 5,
+        "unit": "Kasten",
+        "unitPrice": 21.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 109.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 12.65,
+        "tax": 0.89
+      },
+      {
+        "rate": 19,
+        "base": 307.2,
+        "tax": 58.37
+      }
+    ],
+    "printedTotal": 379.11,
+    "deliveryNoteRefs": [
+      "LS-26-5351"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_SHORT",
+    "description": "\"Mineralwasser 0,7 l (Kasten 12)\": invoiced 7, delivered 6"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 8.57
+  }
+}

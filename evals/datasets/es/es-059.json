@@ -1,0 +1,143 @@
+{
+  "id": "es-059",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-059.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-mayorista-sur",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.9,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "CMS81413",
+    "issueDate": "2026-09-17",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Comercial Mayorista del Sur, S.L.",
+      "taxId": "B41273905",
+      "address": "Polígono Store, Calle A 23 · 41008 Sevilla"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra, S.L.",
+      "taxId": "B87123451",
+      "address": "Calle de Ponzano 41 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "ACEITE OLIVA VIRGEN EXTRA 5L",
+        "quantity": 2,
+        "unit": "GARRAFA",
+        "unitPrice": 28.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 57.8
+      },
+      {
+        "description": "CERVEZA 33CL (X24)",
+        "quantity": 5,
+        "unit": "CJ",
+        "unitPrice": 15.9,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 79.5
+      },
+      {
+        "description": "ARROZ BOMBA 5KG",
+        "quantity": 4,
+        "unit": "SACO",
+        "unitPrice": 14.6,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 58.4
+      },
+      {
+        "description": "VINO TINTO RIOJA 75CL",
+        "quantity": 11,
+        "unit": "BOT",
+        "unitPrice": 5.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 61.6
+      },
+      {
+        "description": "LEJIA 5L",
+        "quantity": 3,
+        "unit": "GARRAFA",
+        "unitPrice": 2.4,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 7.2
+      },
+      {
+        "description": "ATUN CLARO ACEITE 1KG",
+        "quantity": 5,
+        "unit": "LATA",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 49
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 57.8,
+        "tax": 2.31
+      },
+      {
+        "rate": 10,
+        "base": 107.4,
+        "tax": 10.74
+      },
+      {
+        "rate": 21,
+        "base": 148.3,
+        "tax": 31.14
+      }
+    ],
+    "printedTotal": 368.19,
+    "deliveryNoteRefs": [],
+    "printedCharges": [
+      {
+        "kind": "SURCHARGE",
+        "label": "Recargo equivalencia 0,5 %",
+        "rate": 0.5,
+        "base": 57.8,
+        "amount": 1.29
+      },
+      {
+        "kind": "SURCHARGE",
+        "label": "Recargo equivalencia 1,4 %",
+        "rate": 1.4,
+        "base": 107.4,
+        "amount": 1.5
+      },
+      {
+        "kind": "SURCHARGE",
+        "label": "Recargo equivalencia 5,2 %",
+        "rate": 5.2,
+        "base": 148.3,
+        "amount": 7.71
+      }
+    ]
+  },
+  "planted": {
+    "type": "CHARGE_AMOUNT",
+    "description": "\"Recargo equivalencia 0,5 %\" printed 1.00 above rate × base"
+  },
+  "expected": {
+    "issueCodes": [
+      "CHARGE_MISMATCH",
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

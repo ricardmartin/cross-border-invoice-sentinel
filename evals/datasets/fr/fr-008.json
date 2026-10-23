@@ -1,0 +1,100 @@
+{
+  "id": "fr-008",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-008.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "fr-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 1.9,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "HPA-2628",
+    "issueDate": "2026-09-14",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hygiène Pro Atlantique SARL",
+      "taxId": "FR59429183726",
+      "address": "5 rue de la Garenne · 44300 Nantes"
+    },
+    "recipient": {
+      "name": "Brasserie des Halles SARL",
+      "taxId": "FR21790552137",
+      "address": "12 rue Montorgueil · 75001 Paris"
+    },
+    "lines": [
+      {
+        "description": "Sel fin 1kg",
+        "quantity": 15,
+        "unit": "paquet",
+        "unitPrice": 0.55,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 8.25
+      },
+      {
+        "description": "Détergent vaisselle machine 20L",
+        "quantity": 1,
+        "unit": "bidon",
+        "unitPrice": 34.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 34.9
+      },
+      {
+        "description": "Eau de Javel 5L",
+        "quantity": 4,
+        "unit": "bidon",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 15.6
+      },
+      {
+        "description": "Gants nitrile taille M (x100)",
+        "quantity": 6,
+        "unit": "boîte",
+        "unitPrice": 6.4,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 38.4
+      },
+      {
+        "description": "Dégraissant cuisine 5L",
+        "quantity": 4,
+        "unit": "bidon",
+        "unitPrice": 12.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 50
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 8.25,
+        "tax": 0.45
+      },
+      {
+        "rate": 20,
+        "base": 138.9,
+        "tax": 27.78
+      }
+    ],
+    "printedTotal": 175.38,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

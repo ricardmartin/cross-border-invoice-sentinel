@@ -1,0 +1,716 @@
+{
+  "country": "DE",
+  "generator": "gen@2.0.0",
+  "seed": 42,
+  "generatedAt": "2026-10-18",
+  "entries": [
+    {
+      "id": "de-001",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-001.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-frische",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 4,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-002",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-002.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "de-metzgerei",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "OK Küche"
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 2 billed at stale rate 5 % instead of 7 %"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "de-003",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-003.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-getraenke",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.1,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-004",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-004.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": 1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "OK Küche"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-005",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-005.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-frische",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 1.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 2 amount off by 1.00 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "de-006",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-006.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-metzgerei",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": -1.5,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": "Lena anrufen"
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by 3.10"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "de-007",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-007.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-getraenke",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.4,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Fehlt 1 Kiste"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-008",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-008.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "de-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "BEZAHLT",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-009",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-009.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-frische",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-010",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-010.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-metzgerei",
+      "template": "erp",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-011",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-011.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-getraenke",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.8,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": "Zahlen am 15."
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-012",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-012.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": 1.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "BEZAHLT",
+        "handwrittenNote": "Lena anrufen"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-013",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-013.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "de-frische",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "GEBUCHT",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by -2.00"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "de-014",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-014.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-metzgerei",
+      "template": "erp",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.4,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "BEZAHLT",
+        "handwrittenNote": "OK Küche"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-015",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-015.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-getraenke",
+      "template": "modern",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "BEZAHLT",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-016",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-016.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 1.9,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-017",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-017.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-frische",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 1 amount off by -0.80 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "de-018",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-018.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "de-metzgerei",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TAX_ID_CHECKSUM",
+        "description": "Issuer tax id DE812649300 has a wrong control (valid: DE812649307)"
+      },
+      "expected": {
+        "issueCodes": [
+          "INVALID_TAX_ID"
+        ],
+        "finalStatus": "INVALID_TAX_ID"
+      }
+    },
+    {
+      "id": "de-019",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-019.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-getraenke",
+      "template": "modern",
+      "variant": {
+        "mode": "scan",
+        "rotation": 1.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-020",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-020.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.6,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "BEZAHLT",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-021",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-021.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-frische",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 1.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Fehlt 1 Kiste"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-022",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-022.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-metzgerei",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.2,
+        "noise": true,
+        "lowRes": true,
+        "stamp": "BEZAHLT",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "de-023",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-023.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-frische",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.6,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "de-024",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-024.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-frische",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "photo",
+        "rotation": -1.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "OK Küche"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "de-023"
+    },
+    {
+      "id": "de-025",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-025.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "de-metzgerei",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "BEZAHLT",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "de-026",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-026.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-metzgerei",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "de-025"
+    },
+    {
+      "id": "de-027",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-027.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-getraenke",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": -1.7,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "DELIVERY_SHORT",
+        "description": "\"Mineralwasser 0,7 l (Kasten 12)\": invoiced 7, delivered 6"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 8.57
+      }
+    },
+    {
+      "id": "de-028",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-028.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-getraenke",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "de-027"
+    },
+    {
+      "id": "de-029",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-029.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-hygiene",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "DELIVERY_MISSING_PRODUCT",
+        "description": "\"Speisesalz 1 kg\" invoiced but not delivered"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 6.82
+      }
+    },
+    {
+      "id": "de-030",
+      "country": "DE",
+      "source": "synthetic",
+      "file": "de-030.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "de-hygiene",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "de-029"
+    }
+  ]
+}

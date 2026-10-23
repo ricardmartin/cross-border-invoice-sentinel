@@ -1,0 +1,86 @@
+{
+  "id": "it-013",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-013.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "it-ortofrutta",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "PAGATO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "1236/2026",
+    "issueDate": "2026-10-05",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Ortofrutta Lombarda S.r.l.",
+      "taxId": "04512387905",
+      "address": "Via Lodi 140 · 20139 Milano (MI)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "Carciofi romaneschi",
+        "quantity": 18,
+        "unit": "pz",
+        "unitPrice": 1.15,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 20.7
+      },
+      {
+        "description": "Patate novelle",
+        "quantity": 19.7,
+        "unit": "kg",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 16.75
+      },
+      {
+        "description": "Zucchine",
+        "quantity": 7.7,
+        "unit": "kg",
+        "unitPrice": 1.8,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 13.86
+      },
+      {
+        "description": "Insalata iceberg",
+        "quantity": 15,
+        "unit": "pz",
+        "unitPrice": 0.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 13.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 64.81,
+        "tax": 2.59
+      }
+    ],
+    "printedTotal": 67.4,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

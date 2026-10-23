@@ -1,0 +1,81 @@
+{
+  "id": "dk-024",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-024.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-gront",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.3,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "DK",
+    "documentNumber": "FS60299",
+    "issueDate": "2026-09-25",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Grønttorvet Engros ApS",
+      "taxId": "DK38512749",
+      "address": "Grønttorvet 8 · 2500 Valby"
+    },
+    "recipient": {
+      "name": "Café Åboulevard I/S",
+      "taxId": "DK31956420",
+      "address": "Åboulevard 52 · 8000 Aarhus C"
+    },
+    "lines": [
+      {
+        "description": "Salat, iceberg",
+        "quantity": 11,
+        "unit": "stk",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Æbler, Ingrid Marie",
+        "quantity": 4.7,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Løg, gule",
+        "quantity": 19.1,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Gulerødder",
+        "quantity": 13.1,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "dk-023"
+}

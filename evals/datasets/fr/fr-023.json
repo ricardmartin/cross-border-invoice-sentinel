@@ -1,0 +1,117 @@
+{
+  "id": "fr-023",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-023.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "fr-primeurs",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAYÉ",
+    "handwrittenNote": "OK cuisine"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "FA-2026-010469",
+    "issueDate": "2026-09-17",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Primeurs du Val de Loire SARL",
+      "taxId": "FR20817263544",
+      "address": "MIN de Rungis, Bât. D4 · 94150 Rungis"
+    },
+    "recipient": {
+      "name": "Brasserie des Halles SARL",
+      "taxId": "FR21790552137",
+      "address": "12 rue Montorgueil · 75001 Paris"
+    },
+    "lines": [
+      {
+        "description": "Pommes Golden",
+        "quantity": 4.1,
+        "unit": "kg",
+        "unitPrice": 2.2,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 9.02
+      },
+      {
+        "description": "Tomates grappe",
+        "quantity": 12.1,
+        "unit": "kg",
+        "unitPrice": 2.85,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 34.49
+      },
+      {
+        "description": "Carottes des sables",
+        "quantity": 11.9,
+        "unit": "kg",
+        "unitPrice": 1.1,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 13.09
+      },
+      {
+        "description": "Oignons jaunes",
+        "quantity": 13.4,
+        "unit": "kg",
+        "unitPrice": 1.05,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 14.07
+      },
+      {
+        "description": "Salade batavia",
+        "quantity": 16,
+        "unit": "pièce",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 15.2
+      },
+      {
+        "description": "Herbes fraîches (botte)",
+        "quantity": 11,
+        "unit": "botte",
+        "unitPrice": 1.2,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 13.2
+      },
+      {
+        "description": "Champignons de Paris",
+        "quantity": 4.4,
+        "unit": "kg",
+        "unitPrice": 4.3,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 18.92
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 117.99,
+        "tax": 6.49
+      }
+    ],
+    "printedTotal": 124.48,
+    "deliveryNoteRefs": [
+      "BL-2604299"
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

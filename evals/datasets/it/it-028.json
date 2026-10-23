@@ -1,0 +1,99 @@
+{
+  "id": "it-028",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-028.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "it-enoteca",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "RICEVUTO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "IT",
+    "documentNumber": "2181/D",
+    "issueDate": "2026-09-20",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Enoteca Distribuzione Veneto S.r.l.",
+      "taxId": "03987654328",
+      "address": "Viale della Repubblica 88 · 31100 Treviso (TV)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "Amaro alle erbe 70cl",
+        "quantity": 3,
+        "unit": "bt",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Valpolicella Classico DOC 75cl",
+        "quantity": 31,
+        "unit": "bt",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Acqua minerale 1L (x6)",
+        "quantity": 10,
+        "unit": "conf",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Birra artigianale 33cl (x24)",
+        "quantity": 2,
+        "unit": "cassa",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Grappa di Prosecco 70cl",
+        "quantity": 2,
+        "unit": "bt",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Prosecco DOC Treviso 75cl",
+        "quantity": 24,
+        "unit": "bt",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "it-027"
+}

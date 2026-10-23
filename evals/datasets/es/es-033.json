@@ -1,0 +1,122 @@
+{
+  "id": "es-033",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-033.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "es-montes",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "CONTABILIZADO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "FV26-001043",
+    "issueDate": "2026-09-25",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cárnicas Montes de Toledo S.A.",
+      "taxId": "A45182060",
+      "address": "Polígono Industrial Santa María de Benquerencia, C/ Río Jarama 52 · 45007 Toledo"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "BOLSA VACIO 30X40 (100 UD)",
+        "quantity": 2,
+        "unit": "CAJA",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 25.2
+      },
+      {
+        "description": "HAMBURGUESA VACUNO 180G",
+        "quantity": 42,
+        "unit": "UD",
+        "unitPrice": 1.38,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 57.96
+      },
+      {
+        "description": "CHORIZO SARTA PICANTE",
+        "quantity": 2.362,
+        "unit": "KG",
+        "unitPrice": 8.9,
+        "discountPct": 5,
+        "taxRate": 10,
+        "lineAmount": 19.97
+      },
+      {
+        "description": "SOLOMILLO CERDO IBERICO",
+        "quantity": 2.775,
+        "unit": "KG",
+        "unitPrice": 15.75,
+        "discountPct": 5,
+        "taxRate": 10,
+        "lineAmount": 41.52
+      },
+      {
+        "description": "CHULETILLA CORDERO LECHAL",
+        "quantity": 1.206,
+        "unit": "KG",
+        "unitPrice": 19.8,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 23.88
+      },
+      {
+        "description": "POLLO CAMPERO ENTERO",
+        "quantity": 10.195,
+        "unit": "KG",
+        "unitPrice": 4.35,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 44.35
+      },
+      {
+        "description": "JAMON CEBO IBERICO LONCHEADO 100G",
+        "quantity": 23,
+        "unit": "UD",
+        "unitPrice": 6.45,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 148.35
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 336.03,
+        "tax": 33.6
+      },
+      {
+        "rate": 21,
+        "base": 25.2,
+        "tax": 5.29
+      }
+    ],
+    "printedTotal": 400.12,
+    "deliveryNoteRefs": [
+      "ALB-2603331"
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

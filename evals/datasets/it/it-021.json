@@ -1,0 +1,109 @@
+{
+  "id": "it-021",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-021.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "it-ortofrutta",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAGATO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "1260/2026",
+    "issueDate": "2026-09-20",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Ortofrutta Lombarda S.r.l.",
+      "taxId": "04512387905",
+      "address": "Via Lodi 140 · 20139 Milano (MI)"
+    },
+    "recipient": {
+      "name": "Osteria del Ponte S.n.c.",
+      "taxId": "02567812348",
+      "address": "Via Garibaldi 21 · 37121 Verona"
+    },
+    "lines": [
+      {
+        "description": "Carciofi romaneschi",
+        "quantity": 19,
+        "unit": "pz",
+        "unitPrice": 1.15,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 21.85
+      },
+      {
+        "description": "Patate novelle",
+        "quantity": 13.5,
+        "unit": "kg",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 11.48
+      },
+      {
+        "description": "Limoni di Sicilia",
+        "quantity": 5,
+        "unit": "kg",
+        "unitPrice": 2.1,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 10.5
+      },
+      {
+        "description": "Pomodori ciliegini",
+        "quantity": 8.1,
+        "unit": "kg",
+        "unitPrice": 3.4,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 27.54
+      },
+      {
+        "description": "Zucchine",
+        "quantity": 3.6,
+        "unit": "kg",
+        "unitPrice": 1.8,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 6.48
+      },
+      {
+        "description": "Insalata iceberg",
+        "quantity": 16,
+        "unit": "pz",
+        "unitPrice": 0.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 14.4
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 92.25,
+        "tax": 3.69
+      }
+    ],
+    "printedTotal": 93.94,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by -2.00"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

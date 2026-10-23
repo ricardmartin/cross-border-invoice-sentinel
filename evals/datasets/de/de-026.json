@@ -1,0 +1,99 @@
+{
+  "id": "de-026",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-026.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-metzgerei",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "DE",
+    "documentNumber": "LS-26-5325",
+    "issueDate": "2026-09-16",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Metzgerei Hofmann & Söhne GmbH",
+      "taxId": "DE812649307",
+      "address": "Schlachthofstraße 22 · 90443 Nürnberg"
+    },
+    "recipient": {
+      "name": "Brauhaus Altstadt GmbH & Co. KG",
+      "taxId": "DE215903744",
+      "address": "Am Hof 18 · 50667 Köln"
+    },
+    "lines": [
+      {
+        "description": "SCHINKEN GEKOCHT",
+        "quantity": 1.063,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "SCHWEINENACKEN",
+        "quantity": 4.498,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "RINDERHUEFTE",
+        "quantity": 3.445,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "FRISCHHALTEFOLIE 300M",
+        "quantity": 3,
+        "unit": "RL",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "HAEHNCHENBRUST",
+        "quantity": 9.522,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "NUERNBERGER BRATWURST",
+        "quantity": 2.619,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "de-025"
+}

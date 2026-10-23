@@ -1,0 +1,77 @@
+{
+  "id": "ie-020",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-020.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "ie-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": -2.7,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "ACS-5276",
+    "issueDate": "2026-09-27",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Atlantic Catering Supplies Ltd",
+      "taxId": "IE8204715A",
+      "address": "Ballybrit Business Park · Galway, H91 R2T6"
+    },
+    "recipient": {
+      "name": "Corrib Bistro Ltd",
+      "taxId": "IE4120876DH",
+      "address": "3 Quay Street · Galway, H91 C9P2"
+    },
+    "lines": [
+      {
+        "description": "Thick bleach 5L",
+        "quantity": 3,
+        "unit": "drum",
+        "unitPrice": 4.6,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 13.8
+      },
+      {
+        "description": "Napkins 40x40 (x1000)",
+        "quantity": 4,
+        "unit": "case",
+        "unitPrice": 16.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 66
+      },
+      {
+        "description": "Kitchen degreaser 5L",
+        "quantity": 3,
+        "unit": "drum",
+        "unitPrice": 13.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 41.7
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 23,
+        "base": 121.5,
+        "tax": 27.95
+      }
+    ],
+    "printedTotal": 149.45,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "$comment": "Absolute floors/ceilings per country (headline metric names), the max allowed drop vs evals/baseline.json, and the CI smoke subset. A new country starts from 'default' and gets its own entry once it has a baseline.",
+  "default": {
+    "Documents 100 % correct (final)": { "min": 0.8 },
+    "Final status correct": { "min": 0.9 },
+    "Discrepancy recall": { "min": 0.85 },
+    "Unfair claims (false positives on clean docs)": { "max": 0 },
+    "Reconciliation status correct": { "min": 0.75 },
+    "Claim judge score (1-5)": { "min": 3.5 },
+    "Claims with invented data": { "max": 0 },
+    "Cost / doc": { "max": 0.005 },
+    "Latency p95": { "max": 30000 },
+    "Failed runs": { "max": 0 }
+  },
+  "countries": {
+    "ES": { "Documents 100 % correct (final)": { "min": 0.85 }, "Final status correct": { "min": 0.95 } },
+    "FR": {},
+    "IT": {},
+    "PT": {},
+    "IE": {},
+    "DK": {},
+    "DE": {},
+    "GB": {}
+  },
+  "regression": {
+    "maxDropPts": 5,
+    "metrics": ["Documents 100 % correct (final)", "Final status correct", "Discrepancy recall", "Reconciliation status correct", "Line F1"]
+  },
+  "smoke": {
+    "thresholds": {
+      "Final status correct": { "min": 1 },
+      "Unfair claims (false positives on clean docs)": { "max": 0 },
+      "Failed runs": { "max": 0 }
+    },
+    "ids": ["es-001", "es-011", "es-018", "es-041", "es-042", "fr-001", "fr-006", "fr-012", "it-001", "it-002", "it-017"]
+  }
+}

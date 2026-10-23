@@ -1,0 +1,99 @@
+{
+  "id": "fr-028",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-028.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "fr-cave",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "photo",
+    "rotation": 2.9,
+    "noise": true,
+    "lowRes": true,
+    "stamp": "REÇU",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "FR",
+    "documentNumber": "BL-2604351",
+    "issueDate": "2026-09-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cave & Boissons Rhône-Alpes SAS",
+      "taxId": "FR07530192848",
+      "address": "230 avenue Jean Jaurès · 69007 Lyon"
+    },
+    "recipient": {
+      "name": "Bistrot du Canal SAS",
+      "taxId": "FR14882149073",
+      "address": "45 quai de Valmy · 75010 Paris"
+    },
+    "lines": [
+      {
+        "description": "Cognac VSOP 70cl",
+        "quantity": 1,
+        "unit": "bouteille",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Vin rouge Côtes du Rhône 75cl",
+        "quantity": 28,
+        "unit": "bouteille",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Eau minérale 1L (x6)",
+        "quantity": 15,
+        "unit": "pack",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Champagne brut 75cl",
+        "quantity": 8,
+        "unit": "bouteille",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Bière blonde 33cl (x24)",
+        "quantity": 3,
+        "unit": "caisse",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Jus d'orange 1L",
+        "quantity": 18,
+        "unit": "bouteille",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "fr-027"
+}

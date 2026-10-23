@@ -1,0 +1,82 @@
+{
+  "id": "gb-019",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-019.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "gb-drinks",
+  "template": "modern",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.4,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "POSTED",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "TVD-26126",
+    "issueDate": "2026-10-10",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Thames Valley Drinks Wholesale Ltd",
+      "taxId": "GB904521748",
+      "address": "Unit 9, Suttons Business Park · Reading RG6 1AZ"
+    },
+    "recipient": {
+      "name": "Northern Quarter Kitchen Ltd",
+      "taxId": "GB472013970",
+      "address": "61 Thomas Street · Manchester M4 1NA"
+    },
+    "lines": [
+      {
+        "description": "Lager 330ml (x24)",
+        "quantity": 4,
+        "unit": "case",
+        "unitPrice": 26.4,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 105.6
+      },
+      {
+        "description": "Semi-skimmed milk 2L",
+        "quantity": 10,
+        "unit": "btl",
+        "unitPrice": 1.65,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 16.5
+      },
+      {
+        "description": "IPA cask 9 gal",
+        "quantity": 3,
+        "unit": "cask",
+        "unitPrice": 118,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 354
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 16.5,
+        "tax": 0
+      },
+      {
+        "rate": 20,
+        "base": 459.6,
+        "tax": 91.92
+      }
+    ],
+    "printedTotal": 568.02,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

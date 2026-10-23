@@ -1,0 +1,91 @@
+{
+  "id": "gb-022",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-022.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "gb-butcher",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "YDM/055189",
+    "issueDate": "2026-10-03",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Yorkshire Dales Meat Co. Ltd",
+      "taxId": "GB638210553",
+      "address": "Leyburn Business Park · Leyburn, North Yorkshire DL8 5QA"
+    },
+    "recipient": {
+      "name": "The Anchor Dining Rooms Ltd",
+      "taxId": "GB286041557",
+      "address": "34 Bankside · London SE1 9DT"
+    },
+    "lines": [
+      {
+        "description": "CHICKEN BREAST FILLET",
+        "quantity": 4.02,
+        "unit": "KG",
+        "unitPrice": 7.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 31.76
+      },
+      {
+        "description": "CUMBERLAND SAUSAGES",
+        "quantity": 5.665,
+        "unit": "KG",
+        "unitPrice": 6.8,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 38.52
+      },
+      {
+        "description": "BEEF SIRLOIN DRY AGED",
+        "quantity": 3.414,
+        "unit": "KG",
+        "unitPrice": 28.5,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 97.3
+      },
+      {
+        "description": "CLING FILM 300M",
+        "quantity": 1,
+        "unit": "ROLL",
+        "unitPrice": 9.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 9.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 167.58,
+        "tax": 0
+      },
+      {
+        "rate": 20,
+        "base": 9.5,
+        "tax": 1.9
+      }
+    ],
+    "printedTotal": 178.98,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

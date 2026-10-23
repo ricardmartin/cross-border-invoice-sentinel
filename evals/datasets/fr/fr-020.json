@@ -1,0 +1,91 @@
+{
+  "id": "fr-020",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-020.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "fr-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "HPA-2676",
+    "issueDate": "2026-10-11",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hygiène Pro Atlantique SARL",
+      "taxId": "FR59429183726",
+      "address": "5 rue de la Garenne · 44300 Nantes"
+    },
+    "recipient": {
+      "name": "Brasserie des Halles SARL",
+      "taxId": "FR21790552137",
+      "address": "12 rue Montorgueil · 75001 Paris"
+    },
+    "lines": [
+      {
+        "description": "Sel fin 1kg",
+        "quantity": 5,
+        "unit": "paquet",
+        "unitPrice": 0.55,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 2.75
+      },
+      {
+        "description": "Détergent vaisselle machine 20L",
+        "quantity": 3,
+        "unit": "bidon",
+        "unitPrice": 34.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 104.7
+      },
+      {
+        "description": "Dégraissant cuisine 5L",
+        "quantity": 3,
+        "unit": "bidon",
+        "unitPrice": 12.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 37.5
+      },
+      {
+        "description": "Serviettes papier 40x40 (x1000)",
+        "quantity": 3,
+        "unit": "carton",
+        "unitPrice": 15.8,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 47.4
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 2.75,
+        "tax": 0.15
+      },
+      {
+        "rate": 20,
+        "base": 189.6,
+        "tax": 37.92
+      }
+    ],
+    "printedTotal": 230.42,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

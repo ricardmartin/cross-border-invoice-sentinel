@@ -1,0 +1,82 @@
+{
+  "id": "fr-010",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-010.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "fr-lemoine",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": 1.1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "F26/07181",
+    "issueDate": "2026-09-21",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Boucherie Charcuterie Lemoine SAS",
+      "taxId": "FR68492837166",
+      "address": "18 rue des Abattoirs · 69007 Lyon"
+    },
+    "recipient": {
+      "name": "Bistrot du Canal SAS",
+      "taxId": "FR14882149073",
+      "address": "45 quai de Valmy · 75010 Paris"
+    },
+    "lines": [
+      {
+        "description": "BAVETTE D ALOYAU",
+        "quantity": 4.227,
+        "unit": "KG",
+        "unitPrice": 21.5,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 90.88
+      },
+      {
+        "description": "SAUCISSE DE TOULOUSE",
+        "quantity": 4.31,
+        "unit": "KG",
+        "unitPrice": 9.6,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 42.58
+      },
+      {
+        "description": "JAMBON BLANC SUPERIEUR",
+        "quantity": 2.88,
+        "unit": "KG",
+        "unitPrice": 14.8,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 42.62
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 176.08,
+        "tax": 9.68
+      }
+    ],
+    "printedTotal": 185.76,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "LINE_MATH",
+    "description": "Line 2 amount off by 1.20 vs quantity × price"
+  },
+  "expected": {
+    "issueCodes": [
+      "LINE_MATH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

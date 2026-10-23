@@ -1,0 +1,109 @@
+{
+  "id": "es-027",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-027.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "es-montes",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAGADO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "FV26-000994",
+    "issueDate": "2026-09-18",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cárnicas Montes de Toledo S.A.",
+      "taxId": "A45182060",
+      "address": "Polígono Industrial Santa María de Benquerencia, C/ Río Jarama 52 · 45007 Toledo"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "TERNERA LOMO BAJO EXTRA",
+        "quantity": 8.22,
+        "unit": "KG",
+        "unitPrice": 24.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 204.68
+      },
+      {
+        "description": "JAMON CEBO IBERICO LONCHEADO 100G",
+        "quantity": 26,
+        "unit": "UD",
+        "unitPrice": 6.45,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 167.7
+      },
+      {
+        "description": "CHORIZO SARTA PICANTE",
+        "quantity": 2.893,
+        "unit": "KG",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 25.75
+      },
+      {
+        "description": "HAMBURGUESA VACUNO 180G",
+        "quantity": 55,
+        "unit": "UD",
+        "unitPrice": 1.38,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 75.9
+      },
+      {
+        "description": "BOLSA VACIO 30X40 (100 UD)",
+        "quantity": 2,
+        "unit": "CAJA",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 25.2
+      },
+      {
+        "description": "SOLOMILLO CERDO IBERICO",
+        "quantity": 1.865,
+        "unit": "KG",
+        "unitPrice": 15.75,
+        "discountPct": 10,
+        "taxRate": 10,
+        "lineAmount": 26.44
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 500.47,
+        "tax": 50.05
+      },
+      {
+        "rate": 21,
+        "base": 25.2,
+        "tax": 5.29
+      }
+    ],
+    "printedTotal": 581.01,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

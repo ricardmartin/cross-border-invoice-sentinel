@@ -1,0 +1,90 @@
+{
+  "id": "gb-028",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-028.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "gb-drinks",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.9,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "GB",
+    "documentNumber": "DN77351",
+    "issueDate": "2026-10-13",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Thames Valley Drinks Wholesale Ltd",
+      "taxId": "GB904521748",
+      "address": "Unit 9, Suttons Business Park · Reading RG6 1AZ"
+    },
+    "recipient": {
+      "name": "Northern Quarter Kitchen Ltd",
+      "taxId": "GB472013970",
+      "address": "61 Thomas Street · Manchester M4 1NA"
+    },
+    "lines": [
+      {
+        "description": "House red wine 75cl",
+        "quantity": 14,
+        "unit": "btl",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Lager 330ml (x24)",
+        "quantity": 4,
+        "unit": "case",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Semi-skimmed milk 2L",
+        "quantity": 8,
+        "unit": "btl",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "London dry gin 70cl",
+        "quantity": 3,
+        "unit": "btl",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Cola 330ml (x24)",
+        "quantity": 1,
+        "unit": "case",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "gb-027"
+}

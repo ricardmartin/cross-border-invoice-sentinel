@@ -1,0 +1,150 @@
+@import 'tailwindcss';
+
+/* Dark follows the OS unless the header toggle forces one (data-theme on <html>); same rule as the tokens below. */
+@custom-variant dark {
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme='light']), :root:not([data-theme='light']) *) {
+      @slot;
+    }
+  }
+  &:where([data-theme='dark'], [data-theme='dark'] *) {
+    @slot;
+  }
+}
+
+/*
+ * Audit working papers: bone paper, graphite ink, and three pencil inks that only
+ * ever mean something (green = recalculated and adds up, red = does not add up,
+ * blue = confirmed by a second read). No other colour on the page.
+ */
+:root {
+  color-scheme: light;
+  --background: #f4f2ec;
+  --sheet: #fbfaf6;
+  --scan: #ebe8df;
+  --foreground: #2b2b29;
+  --muted-foreground: #5c5b55;
+  --faint: #8a887f;
+  --border: #d9d5c9;
+  --rule: #e7e4da;
+  --hover: #ece9e0;
+  --primary: #2b2b29;
+  --primary-foreground: #fbfaf6;
+  --ok: #26683f;
+  --danger: #b02828;
+  --danger-soft: #f6e3df;
+  --info: #1d559e;
+  --radius: 3px;
+}
+
+/* The dark tokens twice: when the OS asks for dark (unless light is forced), and when dark is forced. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --background: #1a1a18;
+    --sheet: #222220;
+    --scan: #131312;
+    --foreground: #ebeae4;
+    --muted-foreground: #b1afa6;
+    --faint: #85837b;
+    --border: #3b3a36;
+    --rule: #2d2c29;
+    --hover: #2a2a27;
+    --primary: #ebeae4;
+    --primary-foreground: #1a1a18;
+    --ok: #74c494;
+    --danger: #f2837a;
+    --danger-soft: #3a211e;
+    --info: #85b0f0;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --background: #1a1a18;
+  --sheet: #222220;
+  --scan: #131312;
+  --foreground: #ebeae4;
+  --muted-foreground: #b1afa6;
+  --faint: #85837b;
+  --border: #3b3a36;
+  --rule: #2d2c29;
+  --hover: #2a2a27;
+  --primary: #ebeae4;
+  --primary-foreground: #1a1a18;
+  --ok: #74c494;
+  --danger: #f2837a;
+  --danger-soft: #3a211e;
+  --info: #85b0f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-sheet: var(--sheet);
+  --color-scan: var(--scan);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-faint: var(--faint);
+  --color-border: var(--border);
+  --color-rule: var(--rule);
+  --color-hover: var(--hover);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-ok: var(--ok);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-info: var(--info);
+  --radius-sm: 2px;
+  --radius-md: var(--radius);
+  --font-sans: var(--font-public-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Mono', 'SF Mono', Menlo, Consolas, monospace;
+}
+
+/* In the base layer, so border-* colour utilities can override it (unlayered CSS beats every layer). */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+}
+
+html {
+  scrollbar-color: var(--border) transparent;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 13px;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--info) 25%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--info);
+  outline-offset: 2px;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+/* Disclosure triangles drawn by us, not the browser. */
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Hover glossary (components/glossary.tsx): terms with a card get a dotted underline, the open one a tint. */
+::highlight(glossary) {
+  text-decoration: underline dotted var(--faint);
+}
+::highlight(glossary-active) {
+  background-color: color-mix(in oklab, var(--info) 18%, transparent);
+}

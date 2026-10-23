@@ -1,0 +1,100 @@
+{
+  "id": "ie-014",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-014.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "ie-butcher",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "RECEIVED",
+    "handwrittenNote": "Call Aoife"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "MMP/071117",
+    "issueDate": "2026-09-14",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Midland Meats & Provisions Ltd",
+      "taxId": "IE3384120KH",
+      "address": "Clonminch Industrial Estate · Tullamore, Co. Offaly, R35 F2W8"
+    },
+    "recipient": {
+      "name": "Corrib Bistro Ltd",
+      "taxId": "IE4120876DH",
+      "address": "3 Quay Street · Galway, H91 C9P2"
+    },
+    "lines": [
+      {
+        "description": "CLING FILM 300M",
+        "quantity": 3,
+        "unit": "ROLL",
+        "unitPrice": 10.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 31.5
+      },
+      {
+        "description": "BEEF STRIPLOIN IRISH",
+        "quantity": 7.713,
+        "unit": "KG",
+        "unitPrice": 24.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 192.05
+      },
+      {
+        "description": "BACK RASHERS",
+        "quantity": 1.071,
+        "unit": "KG",
+        "unitPrice": 9.4,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 10.07
+      },
+      {
+        "description": "CHICKEN FILLETS",
+        "quantity": 7.393,
+        "unit": "KG",
+        "unitPrice": 8.6,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 63.58
+      },
+      {
+        "description": "LAMB RUMP",
+        "quantity": 3.753,
+        "unit": "KG",
+        "unitPrice": 17.5,
+        "discountPct": 10,
+        "taxRate": 0,
+        "lineAmount": 59.11
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 324.81,
+        "tax": 0
+      },
+      {
+        "rate": 23,
+        "base": 31.5,
+        "tax": 7.25
+      }
+    ],
+    "printedTotal": 363.56,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

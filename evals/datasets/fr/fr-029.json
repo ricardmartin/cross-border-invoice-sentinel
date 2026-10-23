@@ -1,0 +1,102 @@
+{
+  "id": "fr-029",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-029.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "fr-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 2.8,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "HPA-2716",
+    "issueDate": "2026-09-20",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hygiène Pro Atlantique SARL",
+      "taxId": "FR59429183726",
+      "address": "5 rue de la Garenne · 44300 Nantes"
+    },
+    "recipient": {
+      "name": "Bistrot du Canal SAS",
+      "taxId": "FR14882149073",
+      "address": "45 quai de Valmy · 75010 Paris"
+    },
+    "lines": [
+      {
+        "description": "Eau de Javel 5L",
+        "quantity": 3,
+        "unit": "bidon",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 11.7
+      },
+      {
+        "description": "Dégraissant cuisine 5L",
+        "quantity": 1,
+        "unit": "bidon",
+        "unitPrice": 12.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 12.5
+      },
+      {
+        "description": "Serviettes papier 40x40 (x1000)",
+        "quantity": 5,
+        "unit": "carton",
+        "unitPrice": 15.8,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 79
+      },
+      {
+        "description": "Détergent vaisselle machine 20L",
+        "quantity": 3,
+        "unit": "bidon",
+        "unitPrice": 34.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 104.7
+      },
+      {
+        "description": "Gants nitrile taille M (x100)",
+        "quantity": 3,
+        "unit": "boîte",
+        "unitPrice": 6.4,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 19.2
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 20,
+        "base": 227.1,
+        "tax": 45.42
+      }
+    ],
+    "printedTotal": 272.52,
+    "deliveryNoteRefs": [
+      "BL-2604377"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_MISSING_PRODUCT",
+    "description": "\"Serviettes papier 40x40 (x1000)\" invoiced but not delivered"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 94.8
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "es-025",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-025.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-sangines",
+  "template": "ticket",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "T-77432",
+    "issueDate": "2026-10-12",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Obrador San Ginés",
+      "taxId": "50731846X",
+      "address": "C/ Arenal 11 · 28013 Madrid"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Napolitana chocolate",
+        "quantity": 8,
+        "unit": "ud",
+        "unitPrice": 1.25,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 10
+      },
+      {
+        "description": "Barra de pan",
+        "quantity": 45,
+        "unit": "ud",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 42.75
+      },
+      {
+        "description": "Croissant mantequilla",
+        "quantity": 31,
+        "unit": "ud",
+        "unitPrice": 1.1,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 34.1
+      },
+      {
+        "description": "Pan de hogaza",
+        "quantity": 4,
+        "unit": "ud",
+        "unitPrice": 3.2,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 12.8
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 55.55,
+        "tax": 2.22
+      },
+      {
+        "rate": 10,
+        "base": 44.1,
+        "tax": 4.41
+      }
+    ],
+    "printedTotal": 106.28,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "id": "de-002",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-002.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "de-metzgerei",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "OK Küche"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "260009",
+    "issueDate": "2026-09-07",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Metzgerei Hofmann & Söhne GmbH",
+      "taxId": "DE812649307",
+      "address": "Schlachthofstraße 22 · 90443 Nürnberg"
+    },
+    "recipient": {
+      "name": "Wirtshaus am Viktualienmarkt GmbH",
+      "taxId": "DE273415862",
+      "address": "Frauenstraße 9 · 80469 München"
+    },
+    "lines": [
+      {
+        "description": "HAEHNCHENBRUST",
+        "quantity": 7.742,
+        "unit": "KG",
+        "unitPrice": 11.2,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 86.71
+      },
+      {
+        "description": "SCHINKEN GEKOCHT",
+        "quantity": 1.096,
+        "unit": "KG",
+        "unitPrice": 14.5,
+        "discountPct": null,
+        "taxRate": 5,
+        "lineAmount": 15.89
+      },
+      {
+        "description": "NUERNBERGER BRATWURST",
+        "quantity": 3.223,
+        "unit": "KG",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 40.61
+      },
+      {
+        "description": "FRISCHHALTEFOLIE 300M",
+        "quantity": 2,
+        "unit": "RL",
+        "unitPrice": 11.5,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 23
+      },
+      {
+        "description": "RINDERHUEFTE",
+        "quantity": 3.911,
+        "unit": "KG",
+        "unitPrice": 26.9,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 105.21
+      },
+      {
+        "description": "SCHWEINENACKEN",
+        "quantity": 7.873,
+        "unit": "KG",
+        "unitPrice": 8.4,
+        "discountPct": 5,
+        "taxRate": 7,
+        "lineAmount": 62.83
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5,
+        "base": 15.89,
+        "tax": 0.79
+      },
+      {
+        "rate": 7,
+        "base": 295.36,
+        "tax": 20.68
+      },
+      {
+        "rate": 19,
+        "base": 23,
+        "tax": 4.37
+      }
+    ],
+    "printedTotal": 360.09,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "RATE_NOT_ALLOWED",
+    "description": "Line 2 billed at stale rate 5 % instead of 7 %"
+  },
+  "expected": {
+    "issueCodes": [
+      "RATE_NOT_ALLOWED"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

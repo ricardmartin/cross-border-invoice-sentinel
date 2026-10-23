@@ -1,0 +1,114 @@
+{
+  "id": "es-047",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-047.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-canarias-bebidas",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": -2.9,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "RECIBIDO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "TB260329",
+    "issueDate": "2026-09-29",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuciones Teide Bebidas, S.A.",
+      "taxId": "A38741203",
+      "address": "Polígono El Mayorazgo, Parcela 9 · 38108 Santa Cruz de Tenerife"
+    },
+    "recipient": {
+      "name": "Guachinche El Lagar, S.L.",
+      "taxId": "B38420758",
+      "address": "Camino La Cruz 4 · 38300 La Orotava"
+    },
+    "lines": [
+      {
+        "description": "DETERGENTE LAVAVAJILLAS 20L",
+        "quantity": 2,
+        "unit": "GARRAFA",
+        "unitPrice": 33.5,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 67
+      },
+      {
+        "description": "LECHE ENTERA 1L (X6)",
+        "quantity": 4,
+        "unit": "PACK",
+        "unitPrice": 5.4,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 21.6
+      },
+      {
+        "description": "CAFE MOLIDO 1KG",
+        "quantity": 5,
+        "unit": "PAQ",
+        "unitPrice": 11.8,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 59
+      },
+      {
+        "description": "REFRESCO NARANJA 33CL (X24)",
+        "quantity": 2,
+        "unit": "CJ",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 25.2
+      },
+      {
+        "description": "CERVEZA DORADA 33CL (X24)",
+        "quantity": 2,
+        "unit": "CJ",
+        "unitPrice": 15.9,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 31.8
+      },
+      {
+        "description": "VINO MALVASIA LANZAROTE 75CL",
+        "quantity": 9,
+        "unit": "BOT",
+        "unitPrice": 9.4,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 84.6
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 21.6,
+        "tax": 0.86
+      },
+      {
+        "rate": 7,
+        "base": 267.6,
+        "tax": 18.73
+      }
+    ],
+    "printedTotal": 308.79,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "RATE_NOT_ALLOWED",
+    "description": "Line 2 billed at the mainland rate 4 % instead of 0 % (ES (Canarias, IGIC))"
+  },
+  "expected": {
+    "issueCodes": [
+      "RATE_NOT_ALLOWED"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

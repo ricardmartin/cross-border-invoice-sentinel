@@ -1,0 +1,124 @@
+{
+  "id": "es-053",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-053.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-ceuta-dist",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.8,
+    "noise": true,
+    "lowRes": true,
+    "stamp": "RECIBIDO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "DE-759",
+    "issueDate": "2026-09-08",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuciones del Estrecho, S.L.",
+      "taxId": "B51028462",
+      "address": "Polígono del Tarajal, Nave 6 · 51003 Ceuta"
+    },
+    "recipient": {
+      "name": "Restaurante El Desnarigado, S.L.",
+      "taxId": "B51041721",
+      "address": "Paseo de las Palmeras 14 · 51001 Ceuta"
+    },
+    "lines": [
+      {
+        "description": "Cerveza 33cl (x24)",
+        "quantity": 4,
+        "unit": "caja",
+        "unitPrice": 15.9,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 63.6
+      },
+      {
+        "description": "Leche entera 1L (x6)",
+        "quantity": 8,
+        "unit": "pack",
+        "unitPrice": 5.4,
+        "discountPct": null,
+        "taxRate": 0.5,
+        "lineAmount": 43.2
+      },
+      {
+        "description": "Pechuga de pollo",
+        "quantity": 4.4,
+        "unit": "kg",
+        "unitPrice": 6.8,
+        "discountPct": null,
+        "taxRate": 2,
+        "lineAmount": 29.92
+      },
+      {
+        "description": "Detergente lavavajillas 20L",
+        "quantity": 3,
+        "unit": "garrafa",
+        "unitPrice": 33.5,
+        "discountPct": null,
+        "taxRate": 8,
+        "lineAmount": 100.5
+      },
+      {
+        "description": "Pan de molde",
+        "quantity": 14,
+        "unit": "ud",
+        "unitPrice": 1.9,
+        "discountPct": null,
+        "taxRate": 0.5,
+        "lineAmount": 26.6
+      },
+      {
+        "description": "Agua mineral 1,5L (x6)",
+        "quantity": 7,
+        "unit": "pack",
+        "unitPrice": 2.6,
+        "discountPct": null,
+        "taxRate": 2,
+        "lineAmount": 18.2
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0.5,
+        "base": 69.8,
+        "tax": 0.35
+      },
+      {
+        "rate": 2,
+        "base": 48.12,
+        "tax": 0.96
+      },
+      {
+        "rate": 8,
+        "base": 100.5,
+        "tax": 8.04
+      },
+      {
+        "rate": 21,
+        "base": 63.6,
+        "tax": 13.36
+      }
+    ],
+    "printedTotal": 304.73,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "RATE_NOT_ALLOWED",
+    "description": "Line 1 billed at the mainland rate 21 % instead of 8 % (ES (Ceuta, IPSI))"
+  },
+  "expected": {
+    "issueCodes": [
+      "RATE_NOT_ALLOWED"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

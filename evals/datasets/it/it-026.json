@@ -1,0 +1,90 @@
+{
+  "id": "it-026",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-026.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "it-valtellina",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3,
+    "noise": true,
+    "lowRes": true,
+    "stamp": "RICEVUTO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "IT",
+    "documentNumber": "2175/D",
+    "issueDate": "2026-10-04",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Salumificio Valtellina S.p.A.",
+      "taxId": "07123456787",
+      "address": "Via Stelvio 9 · 23100 Sondrio (SO)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "PELLICOLA ALIMENTARE 300M",
+        "quantity": 3,
+        "unit": "PZ",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "PROSCIUTTO CRUDO STAGIONATO",
+        "quantity": 5.657,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "BURRO DI MONTAGNA",
+        "quantity": 4.713,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "MOZZARELLA FIOR DI LATTE",
+        "quantity": 6.344,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "BRESAOLA DELLA VALTELLINA IGP",
+        "quantity": 2.801,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "it-025"
+}

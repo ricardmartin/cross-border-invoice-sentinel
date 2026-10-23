@@ -1,0 +1,109 @@
+{
+  "id": "gb-001",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-001.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "gb-greengrocer",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": -2.4,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "INV204000",
+    "issueDate": "2026-09-08",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Covent Garden Fresh Ltd",
+      "taxId": "GB241735866",
+      "address": "New Covent Garden Market, Nine Elms Lane · London SW8 5LL"
+    },
+    "recipient": {
+      "name": "The Anchor Dining Rooms Ltd",
+      "taxId": "GB286041557",
+      "address": "34 Bankside · London SE1 9DT"
+    },
+    "lines": [
+      {
+        "description": "Carrots",
+        "quantity": 18,
+        "unit": "kg",
+        "unitPrice": 0.72,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 12.96
+      },
+      {
+        "description": "Tomatoes, vine",
+        "quantity": 6.3,
+        "unit": "kg",
+        "unitPrice": 2.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 18.27
+      },
+      {
+        "description": "Lettuce, little gem",
+        "quantity": 19,
+        "unit": "each",
+        "unitPrice": 0.55,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 10.45
+      },
+      {
+        "description": "Apples, Cox",
+        "quantity": 5.7,
+        "unit": "kg",
+        "unitPrice": 2.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 12.54
+      },
+      {
+        "description": "Onions, brown",
+        "quantity": 14,
+        "unit": "kg",
+        "unitPrice": 0.8,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 12.2
+      },
+      {
+        "description": "Potatoes, Maris Piper",
+        "quantity": 34,
+        "unit": "kg",
+        "unitPrice": 0.78,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 26.52
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 92.94,
+        "tax": 0
+      }
+    ],
+    "printedTotal": 92.94,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "LINE_MATH",
+    "description": "Line 5 amount off by 1.00 vs quantity × price"
+  },
+  "expected": {
+    "issueCodes": [
+      "LINE_MATH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

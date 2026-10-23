@@ -1,0 +1,91 @@
+{
+  "id": "dk-002",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-002.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-slagter",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "JKP-091009",
+    "issueDate": "2026-09-17",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Jysk Kød & Pålæg A/S",
+      "taxId": "DK27164935",
+      "address": "Industrivej 41 · 8600 Silkeborg"
+    },
+    "recipient": {
+      "name": "Café Åboulevard I/S",
+      "taxId": "DK31956420",
+      "address": "Åboulevard 52 · 8000 Aarhus C"
+    },
+    "lines": [
+      {
+        "description": "LEVERPOSTEJ",
+        "quantity": 1.57,
+        "unit": "KG",
+        "unitPrice": 54,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 84.78
+      },
+      {
+        "description": "RUGBRØD, SKIVESKÅRET",
+        "quantity": 12,
+        "unit": "STK",
+        "unitPrice": 18.5,
+        "discountPct": 5,
+        "taxRate": 25,
+        "lineAmount": 210.9
+      },
+      {
+        "description": "KYLLINGEBRYST",
+        "quantity": 5.105,
+        "unit": "KG",
+        "unitPrice": 79.9,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 407.89
+      },
+      {
+        "description": "OKSEMØRBRAD",
+        "quantity": 3.199,
+        "unit": "KG",
+        "unitPrice": 289,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 924.51
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 1628.08,
+        "tax": 407.02
+      }
+    ],
+    "printedTotal": 2036,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by 0.90"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

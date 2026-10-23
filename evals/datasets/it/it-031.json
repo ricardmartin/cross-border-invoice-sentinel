@@ -1,0 +1,77 @@
+{
+  "id": "it-031",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-031.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "it-studio-haccp",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAGATO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "71/2026",
+    "issueDate": "2026-10-14",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Dott. Marco Bellini · Studio Sicurezza Alimentare",
+      "taxId": "04512389075",
+      "address": "Via dei Mille 14 · 40121 Bologna (BO)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "Consulenza HACCP semestrale",
+        "quantity": 1,
+        "unit": "serv",
+        "unitPrice": 450,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 450
+      },
+      {
+        "description": "Analisi microbiologiche (campione)",
+        "quantity": 4,
+        "unit": "pz",
+        "unitPrice": 38,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 152
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 22,
+        "base": 602,
+        "tax": 132.44
+      }
+    ],
+    "printedTotal": 614.04,
+    "deliveryNoteRefs": [],
+    "printedCharges": [
+      {
+        "kind": "WITHHOLDING",
+        "label": "Ritenuta d'acconto 20 %",
+        "rate": 20,
+        "base": 602,
+        "amount": 120.4
+      }
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

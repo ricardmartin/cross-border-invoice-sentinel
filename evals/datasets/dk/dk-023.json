@@ -1,0 +1,90 @@
+{
+  "id": "dk-023",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-023.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-gront",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.6,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "52069",
+    "issueDate": "2026-09-27",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Grønttorvet Engros ApS",
+      "taxId": "DK38512749",
+      "address": "Grønttorvet 8 · 2500 Valby"
+    },
+    "recipient": {
+      "name": "Café Åboulevard I/S",
+      "taxId": "DK31956420",
+      "address": "Åboulevard 52 · 8000 Aarhus C"
+    },
+    "lines": [
+      {
+        "description": "Salat, iceberg",
+        "quantity": 11,
+        "unit": "stk",
+        "unitPrice": 9.95,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 109.45
+      },
+      {
+        "description": "Æbler, Ingrid Marie",
+        "quantity": 4.7,
+        "unit": "kg",
+        "unitPrice": 18.9,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 88.83
+      },
+      {
+        "description": "Løg, gule",
+        "quantity": 19.1,
+        "unit": "kg",
+        "unitPrice": 6.8,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 129.88
+      },
+      {
+        "description": "Gulerødder",
+        "quantity": 13.1,
+        "unit": "kg",
+        "unitPrice": 7.25,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 94.98
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 423.14,
+        "tax": 105.79
+      }
+    ],
+    "printedTotal": 528.93,
+    "deliveryNoteRefs": [
+      "FS60299"
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

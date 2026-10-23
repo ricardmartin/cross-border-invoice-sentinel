@@ -1,0 +1,114 @@
+{
+  "id": "ie-002",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-002.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "ie-butcher",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.5,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Pay on 15th"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "MMP/071009",
+    "issueDate": "2026-09-29",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Midland Meats & Provisions Ltd",
+      "taxId": "IE3384120KH",
+      "address": "Clonminch Industrial Estate · Tullamore, Co. Offaly, R35 F2W8"
+    },
+    "recipient": {
+      "name": "Corrib Bistro Ltd",
+      "taxId": "IE4120876DH",
+      "address": "3 Quay Street · Galway, H91 C9P2"
+    },
+    "lines": [
+      {
+        "description": "LAMB RUMP",
+        "quantity": 3.544,
+        "unit": "KG",
+        "unitPrice": 17.5,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 62.02
+      },
+      {
+        "description": "BEEF STRIPLOIN IRISH",
+        "quantity": 4.534,
+        "unit": "KG",
+        "unitPrice": 24.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 112.9
+      },
+      {
+        "description": "CHICKEN FILLETS",
+        "quantity": 7.742,
+        "unit": "KG",
+        "unitPrice": 8.6,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 69.08
+      },
+      {
+        "description": "PORK SAUSAGES",
+        "quantity": 5.223,
+        "unit": "KG",
+        "unitPrice": 7.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 37.61
+      },
+      {
+        "description": "CLING FILM 300M",
+        "quantity": 2,
+        "unit": "ROLL",
+        "unitPrice": 10.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 21
+      },
+      {
+        "description": "BACK RASHERS",
+        "quantity": 2.37,
+        "unit": "KG",
+        "unitPrice": 9.4,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 22.28
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 303.89,
+        "tax": 0
+      },
+      {
+        "rate": 23,
+        "base": 21,
+        "tax": 4.83
+      }
+    ],
+    "printedTotal": 329.72,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "LINE_MATH",
+    "description": "Line 3 amount off by 2.50 vs quantity × price"
+  },
+  "expected": {
+    "issueCodes": [
+      "LINE_MATH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

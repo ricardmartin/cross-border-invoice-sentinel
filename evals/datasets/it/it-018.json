@@ -1,0 +1,119 @@
+{
+  "id": "it-018",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-018.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "it-valtellina",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.2,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": "Controllato - Luca"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "SV/26/005285",
+    "issueDate": "2026-09-14",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Salumificio Valtellina S.p.A.",
+      "taxId": "07123456787",
+      "address": "Via Stelvio 9 · 23100 Sondrio (SO)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "PROSCIUTTO CRUDO STAGIONATO",
+        "quantity": 5.815,
+        "unit": "KG",
+        "unitPrice": 21.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 127.35
+      },
+      {
+        "description": "PELLICOLA ALIMENTARE 300M",
+        "quantity": 2,
+        "unit": "PZ",
+        "unitPrice": 10.8,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 21.6
+      },
+      {
+        "description": "MOZZARELLA FIOR DI LATTE",
+        "quantity": 6.123,
+        "unit": "KG",
+        "unitPrice": 9.4,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 57.56
+      },
+      {
+        "description": "BURRO DI MONTAGNA",
+        "quantity": 3.704,
+        "unit": "KG",
+        "unitPrice": 11.6,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 42.97
+      },
+      {
+        "description": "SALAME MILANO",
+        "quantity": 1.755,
+        "unit": "KG",
+        "unitPrice": 16.4,
+        "discountPct": 5,
+        "taxRate": 10,
+        "lineAmount": 27.34
+      },
+      {
+        "description": "BRESAOLA DELLA VALTELLINA IGP",
+        "quantity": 3.89,
+        "unit": "KG",
+        "unitPrice": 29.5,
+        "discountPct": 5,
+        "taxRate": 10,
+        "lineAmount": 109.02
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 100.53,
+        "tax": 4.02
+      },
+      {
+        "rate": 10,
+        "base": 263.71,
+        "tax": 26.37
+      },
+      {
+        "rate": 21,
+        "base": 21.6,
+        "tax": 4.54
+      }
+    ],
+    "printedTotal": 420.77,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "RATE_NOT_ALLOWED",
+    "description": "Line 2 billed at stale rate 21 % instead of 22 %"
+  },
+  "expected": {
+    "issueCodes": [
+      "RATE_NOT_ALLOWED"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.mastra/
+coverage/
+.env
+.env.local
+*.tsbuildinfo
+*.db
+*.db-*

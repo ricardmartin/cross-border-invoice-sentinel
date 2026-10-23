@@ -1,0 +1,104 @@
+{
+  "id": "es-056",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-056.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-huerta-navarro",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "HN-2026/0252",
+    "issueDate": "2026-10-06",
+    "currency": "EUR",
+    "issuer": {
+      "name": "José Navarro Ruiz · Huerta Navarro",
+      "taxId": "48271635V",
+      "address": "Partida de la Foia 12 · 46470 Catarroja (Valencia)"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra, S.L.",
+      "taxId": "B87123451",
+      "address": "Calle de Ponzano 41 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "Naranja de zumo",
+        "quantity": 13.3,
+        "unit": "kg",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 12.64
+      },
+      {
+        "description": "Tomate valenciano",
+        "quantity": 18.5,
+        "unit": "kg",
+        "unitPrice": 2.1,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 38.85
+      },
+      {
+        "description": "Cebolla tierna (manojo)",
+        "quantity": 6,
+        "unit": "ud",
+        "unitPrice": 1.2,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 7.2
+      },
+      {
+        "description": "Lechuga romana",
+        "quantity": 27,
+        "unit": "ud",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 22.95
+      },
+      {
+        "description": "Calabacín",
+        "quantity": 11.9,
+        "unit": "kg",
+        "unitPrice": 1.6,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 19.04
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 100.68,
+        "tax": 4.03
+      }
+    ],
+    "printedTotal": 102.7,
+    "deliveryNoteRefs": [],
+    "printedCharges": [
+      {
+        "kind": "WITHHOLDING",
+        "label": "Retención IRPF 2 %",
+        "rate": 2,
+        "base": 100.68,
+        "amount": 2.01
+      }
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

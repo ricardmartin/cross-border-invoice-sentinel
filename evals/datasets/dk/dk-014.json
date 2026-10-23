@@ -1,0 +1,100 @@
+{
+  "id": "dk-014",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-014.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-slagter",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": -1.1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Mangler 1 kasse"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "JKP-091117",
+    "issueDate": "2026-09-05",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Jysk Kød & Pålæg A/S",
+      "taxId": "DK27164935",
+      "address": "Industrivej 41 · 8600 Silkeborg"
+    },
+    "recipient": {
+      "name": "Restaurant Havnefronten ApS",
+      "taxId": "DK36271809",
+      "address": "Nyhavn 31 · 1051 København K"
+    },
+    "lines": [
+      {
+        "description": "LEVERPOSTEJ",
+        "quantity": 2.52,
+        "unit": "KG",
+        "unitPrice": 54,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 136.08
+      },
+      {
+        "description": "HUSHOLDNINGSFILM 300M",
+        "quantity": 2,
+        "unit": "RL",
+        "unitPrice": 79,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 158
+      },
+      {
+        "description": "KYLLINGEBRYST",
+        "quantity": 7.331,
+        "unit": "KG",
+        "unitPrice": 79.9,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 585.75
+      },
+      {
+        "description": "OKSEMØRBRAD",
+        "quantity": 1.919,
+        "unit": "KG",
+        "unitPrice": 289,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 554.59
+      },
+      {
+        "description": "SVINEKAM M/SVÆR",
+        "quantity": 8.021,
+        "unit": "KG",
+        "unitPrice": 64.5,
+        "discountPct": 5,
+        "taxRate": 25,
+        "lineAmount": 492.49
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 1926.91,
+        "tax": 481.73
+      }
+    ],
+    "printedTotal": 2408.64,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "LINE_MATH",
+    "description": "Line 5 amount off by 1.00 vs quantity × price"
+  },
+  "expected": {
+    "issueCodes": [
+      "LINE_MATH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

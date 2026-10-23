@@ -1,0 +1,72 @@
+{
+  "id": "pt-026",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-026.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-talho",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "PT",
+    "documentNumber": "GR 2026/4325",
+    "issueDate": "2026-09-21",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Carnes e Charcutaria Minhota, S.A.",
+      "taxId": "PT509182739",
+      "address": "Zona Industrial de Lousado, Lote 12 · 4760-469 Vila Nova de Famalicão"
+    },
+    "recipient": {
+      "name": "Restaurante Ribeira Douro, Lda.",
+      "taxId": "PT508642175",
+      "address": "Cais da Ribeira 22 · 4050-509 Porto"
+    },
+    "lines": [
+      {
+        "description": "FRANGO DO CAMPO",
+        "quantity": 3.372,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "CHOURICO DE CARNE",
+        "quantity": 1.286,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "LOMBO DE PORCO",
+        "quantity": 8.207,
+        "unit": "KG",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "pt-025"
+}

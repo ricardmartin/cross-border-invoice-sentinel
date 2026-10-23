@@ -1,0 +1,104 @@
+{
+  "id": "it-019",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-019.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "it-enoteca",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAGATO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "EDV-2026-00916",
+    "issueDate": "2026-09-12",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Enoteca Distribuzione Veneto S.r.l.",
+      "taxId": "03987654328",
+      "address": "Viale della Repubblica 88 · 31100 Treviso (TV)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "Amaro alle erbe 70cl",
+        "quantity": 2,
+        "unit": "bt",
+        "unitPrice": 14.2,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 28.4
+      },
+      {
+        "description": "Grappa di Prosecco 70cl",
+        "quantity": 1,
+        "unit": "bt",
+        "unitPrice": 18.5,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 18.5
+      },
+      {
+        "description": "Valpolicella Classico DOC 75cl",
+        "quantity": 36,
+        "unit": "bt",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 320.4
+      },
+      {
+        "description": "Birra artigianale 33cl (x24)",
+        "quantity": 5,
+        "unit": "cassa",
+        "unitPrice": 26.4,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 132
+      },
+      {
+        "description": "Prosecco DOC Treviso 75cl",
+        "quantity": 27,
+        "unit": "bt",
+        "unitPrice": 7.4,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 199.8
+      },
+      {
+        "description": "Acqua minerale 1L (x6)",
+        "quantity": 5,
+        "unit": "conf",
+        "unitPrice": 2.8,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 14
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 22,
+        "base": 713.1,
+        "tax": 156.88
+      }
+    ],
+    "printedTotal": 869.98,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "id": "de-014",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-014.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-metzgerei",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.4,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "BEZAHLT",
+    "handwrittenNote": "OK Küche"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "260117",
+    "issueDate": "2026-09-21",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Metzgerei Hofmann & Söhne GmbH",
+      "taxId": "DE812649307",
+      "address": "Schlachthofstraße 22 · 90443 Nürnberg"
+    },
+    "recipient": {
+      "name": "Wirtshaus am Viktualienmarkt GmbH",
+      "taxId": "DE273415862",
+      "address": "Frauenstraße 9 · 80469 München"
+    },
+    "lines": [
+      {
+        "description": "FRISCHHALTEFOLIE 300M",
+        "quantity": 2,
+        "unit": "RL",
+        "unitPrice": 11.5,
+        "discountPct": 5,
+        "taxRate": 19,
+        "lineAmount": 21.85
+      },
+      {
+        "description": "HAEHNCHENBRUST",
+        "quantity": 4.296,
+        "unit": "KG",
+        "unitPrice": 11.2,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 48.12
+      },
+      {
+        "description": "SCHWEINENACKEN",
+        "quantity": 7.001,
+        "unit": "KG",
+        "unitPrice": 8.4,
+        "discountPct": 5,
+        "taxRate": 7,
+        "lineAmount": 55.87
+      },
+      {
+        "description": "RINDERHUEFTE",
+        "quantity": 3.066,
+        "unit": "KG",
+        "unitPrice": 26.9,
+        "discountPct": 10,
+        "taxRate": 7,
+        "lineAmount": 74.23
+      },
+      {
+        "description": "NUERNBERGER BRATWURST",
+        "quantity": 4.685,
+        "unit": "KG",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 59.03
+      },
+      {
+        "description": "SCHINKEN GEKOCHT",
+        "quantity": 3.839,
+        "unit": "KG",
+        "unitPrice": 14.5,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 55.67
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 292.92,
+        "tax": 20.5
+      },
+      {
+        "rate": 19,
+        "base": 21.85,
+        "tax": 4.15
+      }
+    ],
+    "printedTotal": 339.42,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

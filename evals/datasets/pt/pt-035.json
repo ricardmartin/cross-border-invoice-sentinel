@@ -1,0 +1,88 @@
+{
+  "id": "pt-035",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-035.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-madeira-dist",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "RECEBIDO",
+    "handwrittenNote": "Ligar à Inês"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT DAM/4205",
+    "issueDate": "2026-09-03",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuidora Atlântica da Madeira, Lda.",
+      "taxId": "PT512749302",
+      "address": "Zona Franca Industrial, Lote 8 · 9200-047 Caniçal"
+    },
+    "recipient": {
+      "name": "Restaurante Mercado Velho, Lda.",
+      "taxId": "PT516330152",
+      "address": "Rua do Mercado 12 · 9000-050 Funchal"
+    },
+    "lines": [
+      {
+        "description": "Vinho Madeira 75cl",
+        "quantity": 8,
+        "unit": "gf",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 12,
+        "lineAmount": 71.2
+      },
+      {
+        "description": "Cerveja 33cl (x24)",
+        "quantity": 2,
+        "unit": "grade",
+        "unitPrice": 16.9,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 33.8
+      },
+      {
+        "description": "Peixe-espada preto",
+        "quantity": 6.8,
+        "unit": "kg",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 66.64
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 66.64,
+        "tax": 2.67
+      },
+      {
+        "rate": 12,
+        "base": 71.2,
+        "tax": 8.54
+      },
+      {
+        "rate": 22,
+        "base": 33.8,
+        "tax": 7.44
+      }
+    ],
+    "printedTotal": 190.29,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "730E9330-4205"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

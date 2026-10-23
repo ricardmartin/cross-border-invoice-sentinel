@@ -1,0 +1,107 @@
+{
+  "id": "gb-027",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-027.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "gb-drinks",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "TVD-26189",
+    "issueDate": "2026-10-13",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Thames Valley Drinks Wholesale Ltd",
+      "taxId": "GB904521748",
+      "address": "Unit 9, Suttons Business Park · Reading RG6 1AZ"
+    },
+    "recipient": {
+      "name": "Northern Quarter Kitchen Ltd",
+      "taxId": "GB472013970",
+      "address": "61 Thomas Street · Manchester M4 1NA"
+    },
+    "lines": [
+      {
+        "description": "House red wine 75cl",
+        "quantity": 17,
+        "unit": "btl",
+        "unitPrice": 5.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 100.3
+      },
+      {
+        "description": "Lager 330ml (x24)",
+        "quantity": 4,
+        "unit": "case",
+        "unitPrice": 26.4,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 105.6
+      },
+      {
+        "description": "Semi-skimmed milk 2L",
+        "quantity": 8,
+        "unit": "btl",
+        "unitPrice": 1.65,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 13.2
+      },
+      {
+        "description": "London dry gin 70cl",
+        "quantity": 3,
+        "unit": "btl",
+        "unitPrice": 19.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 58.5
+      },
+      {
+        "description": "Cola 330ml (x24)",
+        "quantity": 1,
+        "unit": "case",
+        "unitPrice": 13.2,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 13.2
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 13.2,
+        "tax": 0
+      },
+      {
+        "rate": 20,
+        "base": 277.6,
+        "tax": 55.52
+      }
+    ],
+    "printedTotal": 346.32,
+    "deliveryNoteRefs": [
+      "DN77351"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_SHORT",
+    "description": "\"House red wine 75cl\": invoiced 17, delivered 14"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 21.24
+  }
+}

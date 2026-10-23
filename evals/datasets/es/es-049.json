@@ -1,0 +1,100 @@
+{
+  "id": "es-049",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-049.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "es-canarias-bebidas",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "TB260343",
+    "issueDate": "2026-10-14",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuciones Teide Bebidas, S.A.",
+      "taxId": "A38741203",
+      "address": "Polígono El Mayorazgo, Parcela 9 · 38108 Santa Cruz de Tenerife"
+    },
+    "recipient": {
+      "name": "Guachinche El Lagar, S.L.",
+      "taxId": "B38420758",
+      "address": "Camino La Cruz 4 · 38300 La Orotava"
+    },
+    "lines": [
+      {
+        "description": "DETERGENTE LAVAVAJILLAS 20L",
+        "quantity": 2,
+        "unit": "GARRAFA",
+        "unitPrice": 33.5,
+        "discountPct": 10,
+        "taxRate": 7,
+        "lineAmount": 60.3
+      },
+      {
+        "description": "CAFE MOLIDO 1KG",
+        "quantity": 4,
+        "unit": "PAQ",
+        "unitPrice": 11.8,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 47.2
+      },
+      {
+        "description": "LECHE ENTERA 1L (X6)",
+        "quantity": 5,
+        "unit": "PACK",
+        "unitPrice": 5.4,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 27
+      },
+      {
+        "description": "CERVEZA DORADA 33CL (X24)",
+        "quantity": 4,
+        "unit": "CJ",
+        "unitPrice": 15.9,
+        "discountPct": 5,
+        "taxRate": 7,
+        "lineAmount": 60.42
+      },
+      {
+        "description": "REFRESCO NARANJA 33CL (X24)",
+        "quantity": 4,
+        "unit": "CJ",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 50.4
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 27,
+        "tax": 0
+      },
+      {
+        "rate": 7,
+        "base": 218.32,
+        "tax": 15.28
+      }
+    ],
+    "printedTotal": 260.6,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

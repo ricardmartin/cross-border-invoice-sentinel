@@ -1,0 +1,86 @@
+{
+  "id": "de-020",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-020.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.6,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "BEZAHLT",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "GHN8876",
+    "issueDate": "2026-10-08",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Gastro Hygiene Nord GmbH",
+      "taxId": "DE304728168",
+      "address": "Billbrookdeich 112 · 22113 Hamburg"
+    },
+    "recipient": {
+      "name": "Wirtshaus am Viktualienmarkt GmbH",
+      "taxId": "DE273415862",
+      "address": "Frauenstraße 9 · 80469 München"
+    },
+    "lines": [
+      {
+        "description": "Spülmittel Maschine 20 l",
+        "quantity": 1,
+        "unit": "Kanister",
+        "unitPrice": 36.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 36.9
+      },
+      {
+        "description": "Desinfektionsreiniger 5 l",
+        "quantity": 2,
+        "unit": "Kanister",
+        "unitPrice": 15.4,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 30.8
+      },
+      {
+        "description": "Nitrilhandschuhe M (100 Stk)",
+        "quantity": 2,
+        "unit": "Box",
+        "unitPrice": 6.2,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 12.4
+      },
+      {
+        "description": "Servietten 40x40 (1000 Stk)",
+        "quantity": 1,
+        "unit": "Karton",
+        "unitPrice": 15.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 15.9
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 19,
+        "base": 96,
+        "tax": 18.24
+      }
+    ],
+    "printedTotal": 114.24,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "gb-002",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-002.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "gb-butcher",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "YDM/055009",
+    "issueDate": "2026-09-26",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Yorkshire Dales Meat Co. Ltd",
+      "taxId": "GB638210553",
+      "address": "Leyburn Business Park · Leyburn, North Yorkshire DL8 5QA"
+    },
+    "recipient": {
+      "name": "The Anchor Dining Rooms Ltd",
+      "taxId": "GB286041557",
+      "address": "34 Bankside · London SE1 9DT"
+    },
+    "lines": [
+      {
+        "description": "CLING FILM 300M",
+        "quantity": 2,
+        "unit": "ROLL",
+        "unitPrice": 9.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 21.5
+      },
+      {
+        "description": "BEEF SIRLOIN DRY AGED",
+        "quantity": 5.061,
+        "unit": "KG",
+        "unitPrice": 28.5,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 144.24
+      },
+      {
+        "description": "BACK BACON",
+        "quantity": 4.093,
+        "unit": "KG",
+        "unitPrice": 8.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 33.56
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 177.8,
+        "tax": 0
+      },
+      {
+        "rate": 20,
+        "base": 21.5,
+        "tax": 4.3
+      }
+    ],
+    "printedTotal": 203.6,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "LINE_MATH",
+    "description": "Line 1 amount off by 2.50 vs quantity × price"
+  },
+  "expected": {
+    "issueCodes": [
+      "LINE_MATH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

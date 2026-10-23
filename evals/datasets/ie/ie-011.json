@@ -1,0 +1,114 @@
+{
+  "id": "ie-011",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-011.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "ie-drinks",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAID",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "SBD26070",
+    "issueDate": "2026-09-10",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Shannon Beverage Distributors Ltd",
+      "taxId": "IE9512376GW",
+      "address": "Smithstown Industrial Estate · Shannon, Co. Clare, V14 K2C9"
+    },
+    "recipient": {
+      "name": "Corrib Bistro Ltd",
+      "taxId": "IE4120876DH",
+      "address": "3 Quay Street · Galway, H91 C9P2"
+    },
+    "lines": [
+      {
+        "description": "Still water 500ml (x24)",
+        "quantity": 3,
+        "unit": "case",
+        "unitPrice": 7.8,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 23.4
+      },
+      {
+        "description": "Lager 33cl (x24)",
+        "quantity": 1,
+        "unit": "case",
+        "unitPrice": 32.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 32.5
+      },
+      {
+        "description": "Red wine, Rioja 75cl",
+        "quantity": 9,
+        "unit": "btl",
+        "unitPrice": 8.4,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 75.6
+      },
+      {
+        "description": "Irish whiskey 70cl",
+        "quantity": 2,
+        "unit": "btl",
+        "unitPrice": 27.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 55.8
+      },
+      {
+        "description": "Stout keg 50L",
+        "quantity": 3,
+        "unit": "keg",
+        "unitPrice": 189,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 567
+      },
+      {
+        "description": "Fruit scones (x12)",
+        "quantity": 3,
+        "unit": "tray",
+        "unitPrice": 6.9,
+        "discountPct": null,
+        "taxRate": 13.5,
+        "lineAmount": 20.7
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 13.5,
+        "base": 20.7,
+        "tax": 2.79
+      },
+      {
+        "rate": 23,
+        "base": 754.3,
+        "tax": 173.49
+      }
+    ],
+    "printedTotal": 952.18,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by 0.90"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

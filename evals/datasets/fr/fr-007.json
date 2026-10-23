@@ -1,0 +1,100 @@
+{
+  "id": "fr-007",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-007.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "fr-cave",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "CREDIT_NOTE",
+    "country": "FR",
+    "documentNumber": "CB26042",
+    "issueDate": "2026-09-30",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cave & Boissons Rhône-Alpes SAS",
+      "taxId": "FR07530192848",
+      "address": "230 avenue Jean Jaurès · 69007 Lyon"
+    },
+    "recipient": {
+      "name": "Brasserie des Halles SARL",
+      "taxId": "FR21790552137",
+      "address": "12 rue Montorgueil · 75001 Paris"
+    },
+    "lines": [
+      {
+        "description": "Champagne brut 75cl",
+        "quantity": -9,
+        "unit": "bouteille",
+        "unitPrice": 22.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": -202.5
+      },
+      {
+        "description": "Sirop de grenadine 1L",
+        "quantity": -3,
+        "unit": "bouteille",
+        "unitPrice": 3.4,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": -10.2
+      },
+      {
+        "description": "Cognac VSOP 70cl",
+        "quantity": -2,
+        "unit": "bouteille",
+        "unitPrice": 34.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": -69.8
+      },
+      {
+        "description": "Jus d'orange 1L",
+        "quantity": -7,
+        "unit": "bouteille",
+        "unitPrice": 1.95,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": -13.65
+      },
+      {
+        "description": "Vin rouge Côtes du Rhône 75cl",
+        "quantity": -23,
+        "unit": "bouteille",
+        "unitPrice": 6.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": -158.7
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": -23.85,
+        "tax": -1.31
+      },
+      {
+        "rate": 20,
+        "base": -431,
+        "tax": -86.2
+      }
+    ],
+    "printedTotal": -542.36,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

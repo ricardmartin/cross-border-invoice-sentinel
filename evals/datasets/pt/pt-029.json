@@ -1,0 +1,99 @@
+{
+  "id": "pt-029",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-029.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-limpeza",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.3,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT HT/3416",
+    "issueDate": "2026-09-08",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Higiene Total Lisboa, Unipessoal Lda.",
+      "taxId": "PT516309471",
+      "address": "Av. Infante D. Henrique 312 · 1950-421 Lisboa"
+    },
+    "recipient": {
+      "name": "Restaurante Ribeira Douro, Lda.",
+      "taxId": "PT508642175",
+      "address": "Cais da Ribeira 22 · 4050-509 Porto"
+    },
+    "lines": [
+      {
+        "description": "Lixívia 5L",
+        "quantity": 7,
+        "unit": "bidão",
+        "unitPrice": 2.95,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 20.65
+      },
+      {
+        "description": "Detergente máquina loiça 20L",
+        "quantity": 2,
+        "unit": "bidão",
+        "unitPrice": 32.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 65
+      },
+      {
+        "description": "Sal marinho 1kg",
+        "quantity": 14,
+        "unit": "pct",
+        "unitPrice": 0.45,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 6.3
+      },
+      {
+        "description": "Guardanapos papel 40x40 (x1000)",
+        "quantity": 1,
+        "unit": "cx",
+        "unitPrice": 14.2,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 14.2
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 6.3,
+        "tax": 0.38
+      },
+      {
+        "rate": 23,
+        "base": 99.85,
+        "tax": 22.97
+      }
+    ],
+    "printedTotal": 129.5,
+    "deliveryNoteRefs": [
+      "GR 2026/4377"
+    ],
+    "documentControlCode": "671DE460-3416"
+  },
+  "planted": {
+    "type": "DELIVERY_MISSING_PRODUCT",
+    "description": "\"Detergente máquina loiça 20L\" invoiced but not delivered"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 79.95
+  }
+}

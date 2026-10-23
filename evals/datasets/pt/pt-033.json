@@ -1,0 +1,97 @@
+{
+  "id": "pt-033",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-033.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-madeira-dist",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT DAM/4199",
+    "issueDate": "2026-09-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuidora Atlântica da Madeira, Lda.",
+      "taxId": "PT512749302",
+      "address": "Zona Franca Industrial, Lote 8 · 9200-047 Caniçal"
+    },
+    "recipient": {
+      "name": "Restaurante Mercado Velho, Lda.",
+      "taxId": "PT516330152",
+      "address": "Rua do Mercado 12 · 9000-050 Funchal"
+    },
+    "lines": [
+      {
+        "description": "Peixe-espada preto",
+        "quantity": 7.4,
+        "unit": "kg",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 72.52
+      },
+      {
+        "description": "Vinho Madeira 75cl",
+        "quantity": 5,
+        "unit": "gf",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 12,
+        "lineAmount": 44.5
+      },
+      {
+        "description": "Detergente máquina loiça 20L",
+        "quantity": 2,
+        "unit": "bidão",
+        "unitPrice": 31.5,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 63
+      },
+      {
+        "description": "Pão de caco",
+        "quantity": 25,
+        "unit": "un",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 21.25
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 93.77,
+        "tax": 3.75
+      },
+      {
+        "rate": 12,
+        "base": 44.5,
+        "tax": 5.34
+      },
+      {
+        "rate": 22,
+        "base": 63,
+        "tax": 13.86
+      }
+    ],
+    "printedTotal": 224.22,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "730E9330-4199"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

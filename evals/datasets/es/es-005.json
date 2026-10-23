@@ -1,0 +1,73 @@
+{
+  "id": "es-005",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-005.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-sangines",
+  "template": "ticket",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.7,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "T-77172",
+    "issueDate": "2026-09-18",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Obrador San Ginés",
+      "taxId": "50731846X",
+      "address": "C/ Arenal 11 · 28013 Madrid"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Napolitana chocolate",
+        "quantity": 14,
+        "unit": "ud",
+        "unitPrice": 1.25,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 17.5
+      },
+      {
+        "description": "Barra de pan",
+        "quantity": 44,
+        "unit": "ud",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 41.8
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 41.8,
+        "tax": 1.67
+      },
+      {
+        "rate": 10,
+        "base": 17.5,
+        "tax": 1.75
+      }
+    ],
+    "printedTotal": 62.72,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

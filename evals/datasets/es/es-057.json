@@ -1,0 +1,100 @@
+{
+  "id": "es-057",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-057.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "es-huerta-navarro",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "HN-2026/0254",
+    "issueDate": "2026-10-10",
+    "currency": "EUR",
+    "issuer": {
+      "name": "José Navarro Ruiz · Huerta Navarro",
+      "taxId": "48271635V",
+      "address": "Partida de la Foia 12 · 46470 Catarroja (Valencia)"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra, S.L.",
+      "taxId": "B87123451",
+      "address": "Calle de Ponzano 41 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "Tomate valenciano",
+        "quantity": 18.6,
+        "unit": "kg",
+        "unitPrice": 2.1,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 39.06
+      },
+      {
+        "description": "Calabacín",
+        "quantity": 11.3,
+        "unit": "kg",
+        "unitPrice": 1.6,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 18.08
+      },
+      {
+        "description": "Cebolla tierna (manojo)",
+        "quantity": 8,
+        "unit": "ud",
+        "unitPrice": 1.2,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 9.6
+      },
+      {
+        "description": "Lechuga romana",
+        "quantity": 19,
+        "unit": "ud",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 16.15
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 82.89,
+        "tax": 3.32
+      }
+    ],
+    "printedTotal": 86.05,
+    "deliveryNoteRefs": [],
+    "printedCharges": [
+      {
+        "kind": "WITHHOLDING",
+        "label": "Retención IRPF 2 %",
+        "rate": 2,
+        "base": 82.89,
+        "amount": 1.66
+      }
+    ]
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by 1.50"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "de-006",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-006.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-metzgerei",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": -1.5,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": "Lena anrufen"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "260045",
+    "issueDate": "2026-09-26",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Metzgerei Hofmann & Söhne GmbH",
+      "taxId": "DE812649307",
+      "address": "Schlachthofstraße 22 · 90443 Nürnberg"
+    },
+    "recipient": {
+      "name": "Wirtshaus am Viktualienmarkt GmbH",
+      "taxId": "DE273415862",
+      "address": "Frauenstraße 9 · 80469 München"
+    },
+    "lines": [
+      {
+        "description": "FRISCHHALTEFOLIE 300M",
+        "quantity": 2,
+        "unit": "RL",
+        "unitPrice": 11.5,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 23
+      },
+      {
+        "description": "SCHWEINENACKEN",
+        "quantity": 3.061,
+        "unit": "KG",
+        "unitPrice": 8.4,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 25.71
+      },
+      {
+        "description": "SCHINKEN GEKOCHT",
+        "quantity": 3.07,
+        "unit": "KG",
+        "unitPrice": 14.5,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 44.52
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 70.23,
+        "tax": 4.92
+      },
+      {
+        "rate": 19,
+        "base": 23,
+        "tax": 4.37
+      }
+    ],
+    "printedTotal": 105.62,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by 3.10"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

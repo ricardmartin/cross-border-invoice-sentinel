@@ -1,0 +1,97 @@
+{
+  "id": "pt-015",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-015.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-bebidas",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT DBT/26070",
+    "issueDate": "2026-09-26",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuidora de Bebidas Tejo, Lda.",
+      "taxId": "PT514283912",
+      "address": "Rua da Indústria 45 · 2690-353 Santa Iria de Azóia"
+    },
+    "recipient": {
+      "name": "Restaurante Ribeira Douro, Lda.",
+      "taxId": "PT508642175",
+      "address": "Cais da Ribeira 22 · 4050-509 Porto"
+    },
+    "lines": [
+      {
+        "description": "Cerveja 33cl (x24)",
+        "quantity": 4,
+        "unit": "grade",
+        "unitPrice": 17.8,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 71.2
+      },
+      {
+        "description": "Vinho verde 75cl",
+        "quantity": 14,
+        "unit": "gf",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 13,
+        "lineAmount": 54.6
+      },
+      {
+        "description": "Aguardente velha 70cl",
+        "quantity": 3,
+        "unit": "gf",
+        "unitPrice": 16.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 50.7
+      },
+      {
+        "description": "Refrigerante cola 33cl (x24)",
+        "quantity": 3,
+        "unit": "grade",
+        "unitPrice": 14.6,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 43.8
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 13,
+        "base": 54.6,
+        "tax": 7.1
+      },
+      {
+        "rate": 23,
+        "base": 165.7,
+        "tax": 38.11
+      }
+    ],
+    "printedTotal": 267.01,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "C61EA055-26070"
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by 1.50"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

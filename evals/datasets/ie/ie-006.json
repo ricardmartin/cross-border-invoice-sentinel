@@ -1,0 +1,86 @@
+{
+  "id": "ie-006",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-006.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "ie-butcher",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "POSTED",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "MMP/071045",
+    "issueDate": "2026-09-08",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Midland Meats & Provisions Ltd",
+      "taxId": "IE3384120KH",
+      "address": "Clonminch Industrial Estate · Tullamore, Co. Offaly, R35 F2W8"
+    },
+    "recipient": {
+      "name": "The Quay Kitchen Ltd",
+      "taxId": "IE6729034J",
+      "address": "14 Wellington Quay · Dublin 2, D02 X524"
+    },
+    "lines": [
+      {
+        "description": "BEEF STRIPLOIN IRISH",
+        "quantity": 5.8,
+        "unit": "KG",
+        "unitPrice": 24.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 144.42
+      },
+      {
+        "description": "LAMB RUMP",
+        "quantity": 2.534,
+        "unit": "KG",
+        "unitPrice": 17.5,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 44.35
+      },
+      {
+        "description": "CHICKEN FILLETS",
+        "quantity": 4.364,
+        "unit": "KG",
+        "unitPrice": 8.6,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 37.53
+      },
+      {
+        "description": "PORK SAUSAGES",
+        "quantity": 4.35,
+        "unit": "KG",
+        "unitPrice": 7.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 31.32
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 257.62,
+        "tax": 0
+      }
+    ],
+    "printedTotal": 257.62,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

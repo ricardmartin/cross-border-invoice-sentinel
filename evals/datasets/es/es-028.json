@@ -1,0 +1,87 @@
+{
+  "id": "es-028",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-028.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "es-ebro",
+  "template": "moderna",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "EB-20262381",
+    "issueDate": "2026-10-07",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuciones de Bebidas Ebro S.L.",
+      "taxId": "B50274430",
+      "address": "Av. de Cataluña 301 · 50014 Zaragoza"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "Refresco cola 20cl (24 ud)",
+        "quantity": 3,
+        "unit": "caja",
+        "unitPrice": 13.9,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 42.7
+      },
+      {
+        "description": "Zumo de naranja 1L",
+        "quantity": 17,
+        "unit": "brik",
+        "unitPrice": 1.45,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 24.65
+      },
+      {
+        "description": "Tónica premium 20cl (24 ud)",
+        "quantity": 2,
+        "unit": "caja",
+        "unitPrice": 15.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 31.2
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 24.65,
+        "tax": 2.47
+      },
+      {
+        "rate": 21,
+        "base": 73.9,
+        "tax": 15.52
+      }
+    ],
+    "printedTotal": 116.54,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "LINE_MATH",
+    "description": "Line 1 amount off by 1.00 vs quantity × price"
+  },
+  "expected": {
+    "issueCodes": [
+      "LINE_MATH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

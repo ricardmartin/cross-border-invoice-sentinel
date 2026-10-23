@@ -1,0 +1,91 @@
+{
+  "id": "dk-012",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-012.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-rengoring",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 2.9,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": "Tjekket - Mads"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "NRH-7744",
+    "issueDate": "2026-10-14",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Nordisk Rengøring & Hygiejne ApS",
+      "taxId": "DK40128565",
+      "address": "Hjulmagervej 15 · 5000 Odense C"
+    },
+    "recipient": {
+      "name": "Restaurant Havnefronten ApS",
+      "taxId": "DK36271809",
+      "address": "Nyhavn 31 · 1051 København K"
+    },
+    "lines": [
+      {
+        "description": "Nitrilhandsker M (x100)",
+        "quantity": 1,
+        "unit": "æske",
+        "unitPrice": 69,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 69
+      },
+      {
+        "description": "Groft salt 1kg",
+        "quantity": 14,
+        "unit": "pk",
+        "unitPrice": 12.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 175
+      },
+      {
+        "description": "Opvaskemiddel maskine 20L",
+        "quantity": 1,
+        "unit": "dunk",
+        "unitPrice": 389,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 389
+      },
+      {
+        "description": "Affedtning køkken 5L",
+        "quantity": 1,
+        "unit": "dunk",
+        "unitPrice": 129,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 129
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 762,
+        "tax": 190.5
+      }
+    ],
+    "printedTotal": 950.5,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by -2.00"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

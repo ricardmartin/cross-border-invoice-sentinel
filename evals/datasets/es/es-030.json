@@ -1,0 +1,100 @@
+{
+  "id": "es-030",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-030.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-sangines",
+  "template": "ticket",
+  "variant": {
+    "mode": "photo",
+    "rotation": 2.3,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "T-77497",
+    "issueDate": "2026-09-25",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Obrador San Ginés",
+      "taxId": "50731846X",
+      "address": "C/ Arenal 11 · 28013 Madrid"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Barra de pan",
+        "quantity": 14,
+        "unit": "ud",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 13.3
+      },
+      {
+        "description": "Pan de hogaza",
+        "quantity": 4,
+        "unit": "ud",
+        "unitPrice": 3.2,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 12.8
+      },
+      {
+        "description": "Napolitana chocolate",
+        "quantity": 23,
+        "unit": "ud",
+        "unitPrice": 1.25,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 28.75
+      },
+      {
+        "description": "Pan de molde",
+        "quantity": 3,
+        "unit": "ud",
+        "unitPrice": 2.45,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 7.35
+      },
+      {
+        "description": "Bizcocho casero",
+        "quantity": 2,
+        "unit": "ud",
+        "unitPrice": 6.5,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 13
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 33.45,
+        "tax": 1.34
+      },
+      {
+        "rate": 10,
+        "base": 41.75,
+        "tax": 4.18
+      }
+    ],
+    "printedTotal": 80.72,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

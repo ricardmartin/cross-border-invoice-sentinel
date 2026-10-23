@@ -1,0 +1,111 @@
+{
+  "id": "dk-029",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-029.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-rengoring",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "MODTAGET",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "NRH-7816",
+    "issueDate": "2026-10-01",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Nordisk Rengøring & Hygiejne ApS",
+      "taxId": "DK40128565",
+      "address": "Hjulmagervej 15 · 5000 Odense C"
+    },
+    "recipient": {
+      "name": "Café Åboulevard I/S",
+      "taxId": "DK31956420",
+      "address": "Åboulevard 52 · 8000 Aarhus C"
+    },
+    "lines": [
+      {
+        "description": "Opvaskemiddel maskine 20L",
+        "quantity": 3,
+        "unit": "dunk",
+        "unitPrice": 389,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 1167
+      },
+      {
+        "description": "Nitrilhandsker M (x100)",
+        "quantity": 5,
+        "unit": "æske",
+        "unitPrice": 69,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 345
+      },
+      {
+        "description": "Affedtning køkken 5L",
+        "quantity": 1,
+        "unit": "dunk",
+        "unitPrice": 129,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 129
+      },
+      {
+        "description": "Servietter 40x40 (x1000)",
+        "quantity": 4,
+        "unit": "kasse",
+        "unitPrice": 159,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 636
+      },
+      {
+        "description": "Klorin 5L",
+        "quantity": 4,
+        "unit": "dunk",
+        "unitPrice": 45,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 180
+      },
+      {
+        "description": "Groft salt 1kg",
+        "quantity": 20,
+        "unit": "pk",
+        "unitPrice": 12.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 250
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 2707,
+        "tax": 676.75
+      }
+    ],
+    "printedTotal": 3383.75,
+    "deliveryNoteRefs": [
+      "FS60377"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_MISSING_PRODUCT",
+    "description": "\"Klorin 5L\" invoiced but not delivered"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 225
+  }
+}

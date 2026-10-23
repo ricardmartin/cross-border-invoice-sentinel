@@ -1,0 +1,132 @@
+{
+  "id": "es-022",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-022.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-montes",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.6,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "FV26-000959",
+    "issueDate": "2026-10-08",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cárnicas Montes de Toledo S.A.",
+      "taxId": "A45182063",
+      "address": "Polígono Industrial Santa María de Benquerencia, C/ Río Jarama 52 · 45007 Toledo"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "CHORIZO SARTA PICANTE",
+        "quantity": 1.151,
+        "unit": "KG",
+        "unitPrice": 8.9,
+        "discountPct": 5,
+        "taxRate": 10,
+        "lineAmount": 9.73
+      },
+      {
+        "description": "POLLO CAMPERO ENTERO",
+        "quantity": 10.83,
+        "unit": "KG",
+        "unitPrice": 4.35,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 47.11
+      },
+      {
+        "description": "JAMON CEBO IBERICO LONCHEADO 100G",
+        "quantity": 21,
+        "unit": "UD",
+        "unitPrice": 6.45,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 135.45
+      },
+      {
+        "description": "TERNERA LOMO BAJO EXTRA",
+        "quantity": 4.867,
+        "unit": "KG",
+        "unitPrice": 24.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 121.19
+      },
+      {
+        "description": "SOLOMILLO CERDO IBERICO",
+        "quantity": 4.697,
+        "unit": "KG",
+        "unitPrice": 15.75,
+        "discountPct": 10,
+        "taxRate": 10,
+        "lineAmount": 66.58
+      },
+      {
+        "description": "BOLSA VACIO 30X40 (100 UD)",
+        "quantity": 3,
+        "unit": "CAJA",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 37.8
+      },
+      {
+        "description": "HAMBURGUESA VACUNO 180G",
+        "quantity": 56,
+        "unit": "UD",
+        "unitPrice": 1.38,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 77.28
+      },
+      {
+        "description": "CHULETILLA CORDERO LECHAL",
+        "quantity": 2.868,
+        "unit": "KG",
+        "unitPrice": 19.8,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 56.79
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 514.13,
+        "tax": 51.41
+      },
+      {
+        "rate": 21,
+        "base": 37.8,
+        "tax": 7.94
+      }
+    ],
+    "printedTotal": 611.28,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TAX_ID_CHECKSUM",
+    "description": "Issuer tax id A45182063 has a wrong control character (valid: A45182060)"
+  },
+  "expected": {
+    "issueCodes": [
+      "INVALID_TAX_ID"
+    ],
+    "finalStatus": "INVALID_TAX_ID"
+  }
+}

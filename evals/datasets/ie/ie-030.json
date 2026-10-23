@@ -1,0 +1,81 @@
+{
+  "id": "ie-030",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-030.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "ie-hygiene",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "photo",
+    "rotation": 1.8,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "IE",
+    "documentNumber": "DD-46377",
+    "issueDate": "2026-09-05",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Atlantic Catering Supplies Ltd",
+      "taxId": "IE8204715A",
+      "address": "Ballybrit Business Park · Galway, H91 R2T6"
+    },
+    "recipient": {
+      "name": "The Quay Kitchen Ltd",
+      "taxId": "IE6729034J",
+      "address": "14 Wellington Quay · Dublin 2, D02 X524"
+    },
+    "lines": [
+      {
+        "description": "Napkins 40x40 (x1000)",
+        "quantity": 3,
+        "unit": "case",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Plain flour 16kg",
+        "quantity": 2,
+        "unit": "sack",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Kitchen degreaser 5L",
+        "quantity": 1,
+        "unit": "drum",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Dishwasher detergent 20L",
+        "quantity": 2,
+        "unit": "drum",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "ie-029"
+}

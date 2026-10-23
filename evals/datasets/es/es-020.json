@@ -1,0 +1,91 @@
+{
+  "id": "es-020",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-020.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-sangines",
+  "template": "ticket",
+  "variant": {
+    "mode": "photo",
+    "rotation": 2.6,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "CONTABILIZADO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "T-77367",
+    "issueDate": "2026-09-26",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Obrador San Ginés",
+      "taxId": "50731846X",
+      "address": "C/ Arenal 11 · 28013 Madrid"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "Napolitana chocolate",
+        "quantity": 17,
+        "unit": "ud",
+        "unitPrice": 1.25,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 21.25
+      },
+      {
+        "description": "Barra de pan",
+        "quantity": 55,
+        "unit": "ud",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 52.25
+      },
+      {
+        "description": "Croissant mantequilla",
+        "quantity": 22,
+        "unit": "ud",
+        "unitPrice": 1.1,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 24.2
+      },
+      {
+        "description": "Pan de molde",
+        "quantity": 1,
+        "unit": "ud",
+        "unitPrice": 2.45,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 2.45
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 54.7,
+        "tax": 2.19
+      },
+      {
+        "rate": 10,
+        "base": 45.45,
+        "tax": 4.55
+      }
+    ],
+    "printedTotal": 106.89,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

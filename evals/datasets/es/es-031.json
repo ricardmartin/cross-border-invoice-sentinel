@@ -1,0 +1,113 @@
+{
+  "id": "es-031",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-031.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-turia",
+  "template": "clasica",
+  "variant": {
+    "mode": "scan",
+    "rotation": -1.1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "PAGADO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "F-2026/04131",
+    "issueDate": "2026-09-02",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola del Turia S.L.",
+      "taxId": "B46391272",
+      "address": "Mercavalencia, Nave 14 · Ctra. en Corts 231 · 46013 Valencia"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "Tomate pera",
+        "quantity": 14.9,
+        "unit": "kg",
+        "unitPrice": 1.85,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 27.57
+      },
+      {
+        "description": "Aceituna gordal",
+        "quantity": 1.4,
+        "unit": "kg",
+        "unitPrice": 5.4,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 7.56
+      },
+      {
+        "description": "Cebolla dulce",
+        "quantity": 6.3,
+        "unit": "kg",
+        "unitPrice": 1.15,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 7.25
+      },
+      {
+        "description": "Patata agria",
+        "quantity": 30.3,
+        "unit": "kg",
+        "unitPrice": 0.89,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 26.97
+      },
+      {
+        "description": "Champiñón laminado",
+        "quantity": 3,
+        "unit": "kg",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 11.7
+      },
+      {
+        "description": "Pimiento rojo",
+        "quantity": 7.3,
+        "unit": "kg",
+        "unitPrice": 2.45,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 17.89
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 91.38,
+        "tax": 3.66
+      },
+      {
+        "rate": 10,
+        "base": 7.56,
+        "tax": 0.76
+      }
+    ],
+    "printedTotal": 103.36,
+    "deliveryNoteRefs": [
+      "ALB-2603317"
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

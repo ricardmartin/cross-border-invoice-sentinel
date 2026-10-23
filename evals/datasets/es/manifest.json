@@ -1,0 +1,1404 @@
+{
+  "country": "ES",
+  "generator": "gen@2.0.0",
+  "seed": 42,
+  "generatedAt": "2026-10-18",
+  "entries": [
+    {
+      "id": "es-001",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-001.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-turia",
+      "template": "clasica",
+      "variant": {
+        "mode": "photo",
+        "rotation": 1.8,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-002",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-002.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-montes",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 5 amount off by 2.50 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "es-003",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-003.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-ebro",
+      "template": "moderna",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 7 billed at 8 % instead of 10 %"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "es-004",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-004.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-cantabrico",
+      "template": "clasica",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-005",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-005.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-sangines",
+      "template": "ticket",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.7,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-006",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-006.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-turia",
+      "template": "clasica",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.5,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-007",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-007.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-montes",
+      "template": "erp",
+      "variant": {
+        "mode": "scan",
+        "rotation": -1.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-008",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-008.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-ebro",
+      "template": "moderna",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "PAGADO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-009",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-009.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-cantabrico",
+      "template": "clasica",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Revisado - Juan"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-010",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-010.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-sangines",
+      "template": "ticket",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.9,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-011",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-011.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-turia",
+      "template": "clasica",
+      "variant": {
+        "mode": "scan",
+        "rotation": -1.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by -2.00"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "es-012",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-012.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-montes",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.5,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-013",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-013.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-ebro",
+      "template": "moderna",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 7 billed at 8 % instead of 10 %"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "es-014",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-014.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-cantabrico",
+      "template": "clasica",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-015",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-015.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-sangines",
+      "template": "ticket",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.5,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAGADO",
+        "handwrittenNote": "Falta 1 caja"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-016",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-016.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-turia",
+      "template": "clasica",
+      "variant": {
+        "mode": "photo",
+        "rotation": -2.7,
+        "noise": true,
+        "lowRes": true,
+        "stamp": "RECIBIDO",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by 3.10"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "es-017",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-017.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-montes",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Revisado - Juan"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-018",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-018.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-ebro",
+      "template": "moderna",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.5,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TAX_ID_CHECKSUM",
+        "description": "Issuer tax id B50274433 has a wrong control character (valid: B50274430)"
+      },
+      "expected": {
+        "issueCodes": [
+          "INVALID_TAX_ID"
+        ],
+        "finalStatus": "INVALID_TAX_ID"
+      }
+    },
+    {
+      "id": "es-019",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-019.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-cantabrico",
+      "template": "clasica",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "OK cocina"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-020",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-020.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-sangines",
+      "template": "ticket",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.6,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-021",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-021.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-turia",
+      "template": "clasica",
+      "variant": {
+        "mode": "photo",
+        "rotation": 1.6,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-022",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-022.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-montes",
+      "template": "erp",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.6,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TAX_ID_CHECKSUM",
+        "description": "Issuer tax id A45182063 has a wrong control character (valid: A45182060)"
+      },
+      "expected": {
+        "issueCodes": [
+          "INVALID_TAX_ID"
+        ],
+        "finalStatus": "INVALID_TAX_ID"
+      }
+    },
+    {
+      "id": "es-023",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-023.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-ebro",
+      "template": "moderna",
+      "variant": {
+        "mode": "scan",
+        "rotation": -1.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAGADO",
+        "handwrittenNote": "Llamar a Marta"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-024",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-024.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-cantabrico",
+      "template": "clasica",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-025",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-025.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-sangines",
+      "template": "ticket",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-026",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-026.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-turia",
+      "template": "clasica",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.7,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-027",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-027.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-montes",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "PAGADO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-028",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-028.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-ebro",
+      "template": "moderna",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 1 amount off by 1.00 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "es-029",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-029.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-cantabrico",
+      "template": "clasica",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-030",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-030.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-sangines",
+      "template": "ticket",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.3,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-031",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-031.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-turia",
+      "template": "clasica",
+      "variant": {
+        "mode": "scan",
+        "rotation": -1.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAGADO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "es-032",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-032.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-turia",
+      "template": "albaran",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "PAGADO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "es-031"
+    },
+    {
+      "id": "es-033",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-033.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-montes",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "es-034",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-034.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-montes",
+      "template": "albaran",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "es-033"
+    },
+    {
+      "id": "es-035",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-035.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-ebro",
+      "template": "moderna",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Pagar día 15"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "es-036",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-036.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-ebro",
+      "template": "albaran",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": "Llamar a Marta"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "es-035"
+    },
+    {
+      "id": "es-037",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-037.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-cantabrico",
+      "template": "clasica",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.7,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "es-038",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-038.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-cantabrico",
+      "template": "albaran",
+      "variant": {
+        "mode": "photo",
+        "rotation": -2.4,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "es-037"
+    },
+    {
+      "id": "es-039",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-039.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-turia",
+      "template": "clasica",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.9,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "DELIVERY_SHORT",
+        "description": "Line 1 \"Patata agria\": invoiced 15.7, delivered 10"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 5.27
+      }
+    },
+    {
+      "id": "es-040",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-040.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-turia",
+      "template": "albaran",
+      "variant": {
+        "mode": "scan",
+        "rotation": 1.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "es-039"
+    },
+    {
+      "id": "es-041",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-041.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-montes",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.8,
+        "noise": true,
+        "lowRes": true,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "DELIVERY_SHORT",
+        "description": "Line 1 \"JAMON CEBO IBERICO LONCHEADO 100G\": invoiced 26, delivered 14"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 80.88
+      }
+    },
+    {
+      "id": "es-042",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-042.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-montes",
+      "template": "albaran",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "es-041"
+    },
+    {
+      "id": "es-043",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-043.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-ebro",
+      "template": "moderna",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.3,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": "Revisado - Juan"
+      },
+      "planted": {
+        "type": "DELIVERY_MISSING_PRODUCT",
+        "description": "\"Cerveza Ambar Especial 33cl (24 ud)\" invoiced but not on the delivery note"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 126.32
+      }
+    },
+    {
+      "id": "es-044",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-044.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-ebro",
+      "template": "albaran",
+      "variant": {
+        "mode": "scan",
+        "rotation": 1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Llamar a Marta"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "es-043"
+    },
+    {
+      "id": "es-045",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-045.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-cantabrico",
+      "template": "clasica",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "FALTAN_DOCUMENTOS",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "es-046",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-046.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-canarias-frutas",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": 1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Revisado - Juan"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-047",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-047.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-canarias-bebidas",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": -2.9,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "RECIBIDO",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 2 billed at the mainland rate 4 % instead of 0 % (ES (Canarias, IGIC))"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "es-048",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-048.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-canarias-frutas",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.6,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-049",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-049.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-canarias-bebidas",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-050",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-050.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-canarias-frutas",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.4,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-051",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-051.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-canarias-bebidas",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Pagar día 15"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-052",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-052.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-ceuta-dist",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.1,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-053",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-053.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-ceuta-dist",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.8,
+        "noise": true,
+        "lowRes": true,
+        "stamp": "RECIBIDO",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 1 billed at the mainland rate 21 % instead of 8 % (ES (Ceuta, IPSI))"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "es-054",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-054.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-melilla-dist",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Llamar a Marta"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-055",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-055.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-melilla-dist",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Falta 1 caja"
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 2 billed at the mainland rate 21 % instead of 8 % (ES (Melilla, IPSI))"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "es-056",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-056.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-huerta-navarro",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-057",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-057.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-huerta-navarro",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by 1.50"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "es-058",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-058.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "es-mayorista-sur",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "es-059",
+      "country": "ES",
+      "source": "synthetic",
+      "file": "es-059.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "es-mayorista-sur",
+      "template": "erp",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.9,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "CHARGE_AMOUNT",
+        "description": "\"Recargo equivalencia 0,5 %\" printed 1.00 above rate × base"
+      },
+      "expected": {
+        "issueCodes": [
+          "CHARGE_MISMATCH",
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    }
+  ]
+}

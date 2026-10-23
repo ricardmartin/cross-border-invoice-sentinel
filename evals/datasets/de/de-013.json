@@ -1,0 +1,91 @@
+{
+  "id": "de-013",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-013.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "de-frische",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "GEBUCHT",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "RE-2026-40436",
+    "issueDate": "2026-09-30",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Frischeparadies Großmarkt Süd GmbH",
+      "taxId": "DE247183658",
+      "address": "Schäftlarnstraße 10 · 81371 München"
+    },
+    "recipient": {
+      "name": "Brauhaus Altstadt GmbH & Co. KG",
+      "taxId": "DE215903744",
+      "address": "Am Hof 18 · 50667 Köln"
+    },
+    "lines": [
+      {
+        "description": "Äpfel Elstar",
+        "quantity": 5.6,
+        "unit": "kg",
+        "unitPrice": 2.1,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 11.76
+      },
+      {
+        "description": "Spargel weiß Kl. I",
+        "quantity": 3.4,
+        "unit": "kg",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 33.32
+      },
+      {
+        "description": "Tomaten Strauch",
+        "quantity": 6.3,
+        "unit": "kg",
+        "unitPrice": 3.4,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 21.42
+      },
+      {
+        "description": "Kopfsalat",
+        "quantity": 15,
+        "unit": "Stk",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 14.25
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 80.75,
+        "tax": 5.65
+      }
+    ],
+    "printedTotal": 84.4,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by -2.00"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

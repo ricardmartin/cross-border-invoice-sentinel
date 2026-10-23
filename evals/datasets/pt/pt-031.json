@@ -1,0 +1,115 @@
+{
+  "id": "pt-031",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-031.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-madeira-dist",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": 1.2,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "RECEBIDO",
+    "handwrittenNote": "OK cozinha"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT DAM/4193",
+    "issueDate": "2026-09-07",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuidora Atlântica da Madeira, Lda.",
+      "taxId": "PT512749302",
+      "address": "Zona Franca Industrial, Lote 8 · 9200-047 Caniçal"
+    },
+    "recipient": {
+      "name": "Restaurante Mercado Velho, Lda.",
+      "taxId": "PT516330152",
+      "address": "Rua do Mercado 12 · 9000-050 Funchal"
+    },
+    "lines": [
+      {
+        "description": "Vinho Madeira 75cl",
+        "quantity": 11,
+        "unit": "gf",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 12,
+        "lineAmount": 97.9
+      },
+      {
+        "description": "Cerveja 33cl (x24)",
+        "quantity": 2,
+        "unit": "grade",
+        "unitPrice": 16.9,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 33.8
+      },
+      {
+        "description": "Banana da Madeira",
+        "quantity": 10.6,
+        "unit": "kg",
+        "unitPrice": 1.45,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 15.37
+      },
+      {
+        "description": "Detergente máquina loiça 20L",
+        "quantity": 2,
+        "unit": "bidão",
+        "unitPrice": 31.5,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 63
+      },
+      {
+        "description": "Pão de caco",
+        "quantity": 24,
+        "unit": "un",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 20.4
+      },
+      {
+        "description": "Peixe-espada preto",
+        "quantity": 3.2,
+        "unit": "kg",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 31.36
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 67.13,
+        "tax": 2.69
+      },
+      {
+        "rate": 12,
+        "base": 97.9,
+        "tax": 11.75
+      },
+      {
+        "rate": 22,
+        "base": 96.8,
+        "tax": 21.3
+      }
+    ],
+    "printedTotal": 297.57,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "730E9330-4193"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

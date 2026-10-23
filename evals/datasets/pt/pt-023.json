@@ -1,0 +1,100 @@
+{
+  "id": "pt-023",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-023.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-hortofruticola",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.6,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT 2026A/1569",
+    "issueDate": "2026-09-19",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola do Oeste, Lda.",
+      "taxId": "PT507318420",
+      "address": "MARL, Pavilhão B3 · 2660-421 São Julião do Tojal"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "Tomate chucha",
+        "quantity": 7.7,
+        "unit": "kg",
+        "unitPrice": 1.95,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 15.02
+      },
+      {
+        "description": "Cebola",
+        "quantity": 18.7,
+        "unit": "kg",
+        "unitPrice": 0.82,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 15.33
+      },
+      {
+        "description": "Coentros (molho)",
+        "quantity": 10,
+        "unit": "molho",
+        "unitPrice": 0.6,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 6
+      },
+      {
+        "description": "Laranja do Algarve",
+        "quantity": 16.3,
+        "unit": "kg",
+        "unitPrice": 1.25,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 20.38
+      },
+      {
+        "description": "Batata branca",
+        "quantity": 19.2,
+        "unit": "kg",
+        "unitPrice": 0.68,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 13.06
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 69.79,
+        "tax": 4.19
+      }
+    ],
+    "printedTotal": 73.98,
+    "deliveryNoteRefs": [
+      "GR 2026/4299"
+    ],
+    "documentControlCode": "0C08C80E-1569"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

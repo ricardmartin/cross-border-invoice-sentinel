@@ -1,0 +1,104 @@
+{
+  "id": "de-021",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-021.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-frische",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 1.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Fehlt 1 Kiste"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "RE-2026-40460",
+    "issueDate": "2026-10-05",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Frischeparadies Großmarkt Süd GmbH",
+      "taxId": "DE247183658",
+      "address": "Schäftlarnstraße 10 · 81371 München"
+    },
+    "recipient": {
+      "name": "Wirtshaus am Viktualienmarkt GmbH",
+      "taxId": "DE273415862",
+      "address": "Frauenstraße 9 · 80469 München"
+    },
+    "lines": [
+      {
+        "description": "Kartoffeln festkochend",
+        "quantity": 12.4,
+        "unit": "kg",
+        "unitPrice": 0.98,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 12.15
+      },
+      {
+        "description": "Tomaten Strauch",
+        "quantity": 8.4,
+        "unit": "kg",
+        "unitPrice": 3.4,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 28.56
+      },
+      {
+        "description": "Kopfsalat",
+        "quantity": 20,
+        "unit": "Stk",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 19
+      },
+      {
+        "description": "Äpfel Elstar",
+        "quantity": 6.5,
+        "unit": "kg",
+        "unitPrice": 2.1,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 13.65
+      },
+      {
+        "description": "Zwiebeln gelb",
+        "quantity": 13.4,
+        "unit": "kg",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 11.39
+      },
+      {
+        "description": "Spargel weiß Kl. I",
+        "quantity": 7.9,
+        "unit": "kg",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 77.42
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 162.17,
+        "tax": 11.35
+      }
+    ],
+    "printedTotal": 173.52,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

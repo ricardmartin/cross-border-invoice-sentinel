@@ -1,0 +1,115 @@
+{
+  "id": "pt-003",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-003.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-bebidas",
+  "template": "modern",
+  "variant": {
+    "mode": "photo",
+    "rotation": -2.4,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT DBT/26010",
+    "issueDate": "2026-10-07",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuidora de Bebidas Tejo, Lda.",
+      "taxId": "PT514283912",
+      "address": "Rua da Indústria 45 · 2690-353 Santa Iria de Azóia"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "Refrigerante cola 33cl (x24)",
+        "quantity": 3,
+        "unit": "grade",
+        "unitPrice": 14.6,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 43.8
+      },
+      {
+        "description": "Aguardente velha 70cl",
+        "quantity": 3,
+        "unit": "gf",
+        "unitPrice": 16.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 50.7
+      },
+      {
+        "description": "Vinho verde 75cl",
+        "quantity": 8,
+        "unit": "gf",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 13,
+        "lineAmount": 31.2
+      },
+      {
+        "description": "Água mineral 1,5L (x6)",
+        "quantity": 6,
+        "unit": "pack",
+        "unitPrice": 2.4,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 14.4
+      },
+      {
+        "description": "Vinho tinto Alentejo 75cl",
+        "quantity": 17,
+        "unit": "gf",
+        "unitPrice": 4.6,
+        "discountPct": null,
+        "taxRate": 13,
+        "lineAmount": 78.2
+      },
+      {
+        "description": "Cerveja 33cl (x24)",
+        "quantity": 6,
+        "unit": "grade",
+        "unitPrice": 17.8,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 106.8
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 14.4,
+        "tax": 0.86
+      },
+      {
+        "rate": 13,
+        "base": 109.4,
+        "tax": 14.22
+      },
+      {
+        "rate": 23,
+        "base": 201.3,
+        "tax": 46.3
+      }
+    ],
+    "printedTotal": 386.48,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "C61EA055-26010"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

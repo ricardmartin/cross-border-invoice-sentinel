@@ -1,0 +1,82 @@
+{
+  "id": "fr-004",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-004.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "fr-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Appeler Julie"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "HPA-2612",
+    "issueDate": "2026-09-11",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hygiène Pro Atlantique SARL",
+      "taxId": "FR59429183726",
+      "address": "5 rue de la Garenne · 44300 Nantes"
+    },
+    "recipient": {
+      "name": "Brasserie des Halles SARL",
+      "taxId": "FR21790552137",
+      "address": "12 rue Montorgueil · 75001 Paris"
+    },
+    "lines": [
+      {
+        "description": "Serviettes papier 40x40 (x1000)",
+        "quantity": 3,
+        "unit": "carton",
+        "unitPrice": 15.8,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 47.4
+      },
+      {
+        "description": "Détergent vaisselle machine 20L",
+        "quantity": 3,
+        "unit": "bidon",
+        "unitPrice": 34.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 104.7
+      },
+      {
+        "description": "Sel fin 1kg",
+        "quantity": 17,
+        "unit": "paquet",
+        "unitPrice": 0.55,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 9.35
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 9.35,
+        "tax": 0.51
+      },
+      {
+        "rate": 20,
+        "base": 152.1,
+        "tax": 30.42
+      }
+    ],
+    "printedTotal": 192.38,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

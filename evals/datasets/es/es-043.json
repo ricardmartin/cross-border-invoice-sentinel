@@ -1,0 +1,89 @@
+{
+  "id": "es-043",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-043.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-ebro",
+  "template": "moderna",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.3,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": "Revisado - Juan"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "EB-20262429",
+    "issueDate": "2026-09-21",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuciones de Bebidas Ebro S.L.",
+      "taxId": "B50274430",
+      "address": "Av. de Cataluña 301 · 50014 Zaragoza"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Zumo de naranja 1L",
+        "quantity": 16,
+        "unit": "brik",
+        "unitPrice": 1.45,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 23.2
+      },
+      {
+        "description": "Tónica premium 20cl (24 ud)",
+        "quantity": 1,
+        "unit": "caja",
+        "unitPrice": 15.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 15.6
+      },
+      {
+        "description": "Cerveza Ambar Especial 33cl (24 ud)",
+        "quantity": 6,
+        "unit": "caja",
+        "unitPrice": 17.4,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 104.4
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 23.2,
+        "tax": 2.32
+      },
+      {
+        "rate": 21,
+        "base": 120,
+        "tax": 25.2
+      }
+    ],
+    "printedTotal": 170.72,
+    "deliveryNoteRefs": [
+      "ALB-2603401"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_MISSING_PRODUCT",
+    "description": "\"Cerveza Ambar Especial 33cl (24 ud)\" invoiced but not on the delivery note"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 126.32
+  }
+}

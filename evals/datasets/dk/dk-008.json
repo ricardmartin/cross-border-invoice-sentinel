@@ -1,0 +1,86 @@
+{
+  "id": "dk-008",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-008.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-rengoring",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "NRH-7728",
+    "issueDate": "2026-09-01",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Nordisk Rengøring & Hygiejne ApS",
+      "taxId": "DK40128565",
+      "address": "Hjulmagervej 15 · 5000 Odense C"
+    },
+    "recipient": {
+      "name": "Restaurant Havnefronten ApS",
+      "taxId": "DK36271809",
+      "address": "Nyhavn 31 · 1051 København K"
+    },
+    "lines": [
+      {
+        "description": "Nitrilhandsker M (x100)",
+        "quantity": 1,
+        "unit": "æske",
+        "unitPrice": 69,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 69
+      },
+      {
+        "description": "Klorin 5L",
+        "quantity": 8,
+        "unit": "dunk",
+        "unitPrice": 45,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 360
+      },
+      {
+        "description": "Servietter 40x40 (x1000)",
+        "quantity": 4,
+        "unit": "kasse",
+        "unitPrice": 159,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 636
+      },
+      {
+        "description": "Opvaskemiddel maskine 20L",
+        "quantity": 3,
+        "unit": "dunk",
+        "unitPrice": 389,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 1167
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 2232,
+        "tax": 558
+      }
+    ],
+    "printedTotal": 2790,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

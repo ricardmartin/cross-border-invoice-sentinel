@@ -1,0 +1,114 @@
+{
+  "id": "fr-012",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-012.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "fr-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "HPA-2644",
+    "issueDate": "2026-09-08",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hygiène Pro Atlantique SARL",
+      "taxId": "FR66429183726",
+      "address": "5 rue de la Garenne · 44300 Nantes"
+    },
+    "recipient": {
+      "name": "Bistrot du Canal SAS",
+      "taxId": "FR14882149073",
+      "address": "45 quai de Valmy · 75010 Paris"
+    },
+    "lines": [
+      {
+        "description": "Serviettes papier 40x40 (x1000)",
+        "quantity": 3,
+        "unit": "carton",
+        "unitPrice": 15.8,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 47.4
+      },
+      {
+        "description": "Eau de Javel 5L",
+        "quantity": 3,
+        "unit": "bidon",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 11.7
+      },
+      {
+        "description": "Détergent vaisselle machine 20L",
+        "quantity": 1,
+        "unit": "bidon",
+        "unitPrice": 34.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 34.9
+      },
+      {
+        "description": "Sel fin 1kg",
+        "quantity": 19,
+        "unit": "paquet",
+        "unitPrice": 0.55,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 10.45
+      },
+      {
+        "description": "Gants nitrile taille M (x100)",
+        "quantity": 5,
+        "unit": "boîte",
+        "unitPrice": 6.4,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 32
+      },
+      {
+        "description": "Dégraissant cuisine 5L",
+        "quantity": 3,
+        "unit": "bidon",
+        "unitPrice": 12.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 37.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 10.45,
+        "tax": 0.57
+      },
+      {
+        "rate": 20,
+        "base": 163.5,
+        "tax": 32.7
+      }
+    ],
+    "printedTotal": 207.22,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TAX_ID_CHECKSUM",
+    "description": "Issuer tax id FR66429183726 has a wrong control (valid: FR59429183726)"
+  },
+  "expected": {
+    "issueCodes": [
+      "INVALID_TAX_ID"
+    ],
+    "finalStatus": "INVALID_TAX_ID"
+  }
+}

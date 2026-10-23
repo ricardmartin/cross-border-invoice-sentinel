@@ -1,0 +1,86 @@
+{
+  "id": "es-012",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-012.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-montes",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": 2.5,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "FV26-000889",
+    "issueDate": "2026-09-15",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cárnicas Montes de Toledo S.A.",
+      "taxId": "A45182060",
+      "address": "Polígono Industrial Santa María de Benquerencia, C/ Río Jarama 52 · 45007 Toledo"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "TERNERA LOMO BAJO EXTRA",
+        "quantity": 8.89,
+        "unit": "KG",
+        "unitPrice": 24.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 221.36
+      },
+      {
+        "description": "JAMON CEBO IBERICO LONCHEADO 100G",
+        "quantity": 13,
+        "unit": "UD",
+        "unitPrice": 6.45,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 83.85
+      },
+      {
+        "description": "SOLOMILLO CERDO IBERICO",
+        "quantity": 4.34,
+        "unit": "KG",
+        "unitPrice": 15.75,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 68.36
+      },
+      {
+        "description": "POLLO CAMPERO ENTERO",
+        "quantity": 8.255,
+        "unit": "KG",
+        "unitPrice": 4.35,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 35.91
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 409.48,
+        "tax": 40.95
+      }
+    ],
+    "printedTotal": 450.43,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

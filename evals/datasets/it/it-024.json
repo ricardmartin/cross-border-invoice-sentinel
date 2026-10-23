@@ -1,0 +1,81 @@
+{
+  "id": "it-024",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-024.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "it-ortofrutta",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "scan",
+    "rotation": -1.1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "PAGATO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "IT",
+    "documentNumber": "2169/D",
+    "issueDate": "2026-09-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Ortofrutta Lombarda S.r.l.",
+      "taxId": "04512387905",
+      "address": "Via Lodi 140 · 20139 Milano (MI)"
+    },
+    "recipient": {
+      "name": "Osteria del Ponte S.n.c.",
+      "taxId": "02567812348",
+      "address": "Via Garibaldi 21 · 37121 Verona"
+    },
+    "lines": [
+      {
+        "description": "Pomodori ciliegini",
+        "quantity": 10.3,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Insalata iceberg",
+        "quantity": 24,
+        "unit": "pz",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Zucchine",
+        "quantity": 12,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Limoni di Sicilia",
+        "quantity": 3.5,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "it-023"
+}

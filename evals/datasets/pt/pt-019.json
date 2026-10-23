@@ -1,0 +1,97 @@
+{
+  "id": "pt-019",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-019.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-bebidas",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT DBT/26090",
+    "issueDate": "2026-09-30",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuidora de Bebidas Tejo, Lda.",
+      "taxId": "PT514283912",
+      "address": "Rua da Indústria 45 · 2690-353 Santa Iria de Azóia"
+    },
+    "recipient": {
+      "name": "Restaurante Ribeira Douro, Lda.",
+      "taxId": "PT508642175",
+      "address": "Cais da Ribeira 22 · 4050-509 Porto"
+    },
+    "lines": [
+      {
+        "description": "Aguardente velha 70cl",
+        "quantity": 3,
+        "unit": "gf",
+        "unitPrice": 16.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 50.7
+      },
+      {
+        "description": "Vinho verde 75cl",
+        "quantity": 26,
+        "unit": "gf",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 13,
+        "lineAmount": 101.4
+      },
+      {
+        "description": "Cerveja 33cl (x24)",
+        "quantity": 3,
+        "unit": "grade",
+        "unitPrice": 17.8,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 53.4
+      },
+      {
+        "description": "Água mineral 1,5L (x6)",
+        "quantity": 6,
+        "unit": "pack",
+        "unitPrice": 2.4,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 14.4
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 14.4,
+        "tax": 0.86
+      },
+      {
+        "rate": 13,
+        "base": 101.4,
+        "tax": 13.18
+      },
+      {
+        "rate": 23,
+        "base": 104.1,
+        "tax": 23.94
+      }
+    ],
+    "printedTotal": 257.88,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "C61EA055-26090"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "pt-014",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-014.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-talho",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": 2.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Pagar dia 15"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT CM26/008191",
+    "issueDate": "2026-09-03",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Carnes e Charcutaria Minhota, S.A.",
+      "taxId": "PT509182739",
+      "address": "Zona Industrial de Lousado, Lote 12 · 4760-469 Vila Nova de Famalicão"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "CHOURICO DE CARNE",
+        "quantity": 1.215,
+        "unit": "KG",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 11.91
+      },
+      {
+        "description": "VITELA PARA BIFES",
+        "quantity": 4.3,
+        "unit": "KG",
+        "unitPrice": 14.9,
+        "discountPct": null,
+        "taxRate": 5,
+        "lineAmount": 64.07
+      },
+      {
+        "description": "FRANGO DO CAMPO",
+        "quantity": 10.111,
+        "unit": "KG",
+        "unitPrice": 4.2,
+        "discountPct": 10,
+        "taxRate": 6,
+        "lineAmount": 38.22
+      },
+      {
+        "description": "LOMBO DE PORCO",
+        "quantity": 4.846,
+        "unit": "KG",
+        "unitPrice": 6.4,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 31.01
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5,
+        "base": 64.07,
+        "tax": 3.2
+      },
+      {
+        "rate": 6,
+        "base": 81.14,
+        "tax": 4.87
+      }
+    ],
+    "printedTotal": 153.28,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "16C12A1E-8191"
+  },
+  "planted": {
+    "type": "RATE_NOT_ALLOWED",
+    "description": "Line 2 billed at stale rate 5 % instead of 6 %"
+  },
+  "expected": {
+    "issueCodes": [
+      "RATE_NOT_ALLOWED"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

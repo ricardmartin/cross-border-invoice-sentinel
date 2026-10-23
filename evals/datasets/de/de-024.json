@@ -1,0 +1,99 @@
+{
+  "id": "de-024",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-024.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-frische",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "photo",
+    "rotation": -1.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "OK Küche"
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "DE",
+    "documentNumber": "LS-26-5299",
+    "issueDate": "2026-10-01",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Frischeparadies Großmarkt Süd GmbH",
+      "taxId": "DE247183658",
+      "address": "Schäftlarnstraße 10 · 81371 München"
+    },
+    "recipient": {
+      "name": "Brauhaus Altstadt GmbH & Co. KG",
+      "taxId": "DE215903744",
+      "address": "Am Hof 18 · 50667 Köln"
+    },
+    "lines": [
+      {
+        "description": "Kartoffeln festkochend",
+        "quantity": 14.9,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Zwiebeln gelb",
+        "quantity": 15.3,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Äpfel Elstar",
+        "quantity": 4.6,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Tomaten Strauch",
+        "quantity": 11.4,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Kopfsalat",
+        "quantity": 15,
+        "unit": "Stk",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Spargel weiß Kl. I",
+        "quantity": 2,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "de-023"
+}

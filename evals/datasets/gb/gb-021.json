@@ -1,0 +1,95 @@
+{
+  "id": "gb-021",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-021.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "gb-greengrocer",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "POSTED",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "INV204060",
+    "issueDate": "2026-09-16",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Covent Garden Fresh Ltd",
+      "taxId": "GB241735866",
+      "address": "New Covent Garden Market, Nine Elms Lane · London SW8 5LL"
+    },
+    "recipient": {
+      "name": "Northern Quarter Kitchen Ltd",
+      "taxId": "GB472013970",
+      "address": "61 Thomas Street · Manchester M4 1NA"
+    },
+    "lines": [
+      {
+        "description": "Lettuce, little gem",
+        "quantity": 8,
+        "unit": "each",
+        "unitPrice": 0.55,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 4.4
+      },
+      {
+        "description": "Potatoes, Maris Piper",
+        "quantity": 31.7,
+        "unit": "kg",
+        "unitPrice": 0.78,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 24.73
+      },
+      {
+        "description": "Apples, Cox",
+        "quantity": 4.6,
+        "unit": "kg",
+        "unitPrice": 2.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 10.12
+      },
+      {
+        "description": "Onions, brown",
+        "quantity": 9.5,
+        "unit": "kg",
+        "unitPrice": 0.8,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 7.6
+      },
+      {
+        "description": "Carrots",
+        "quantity": 10.6,
+        "unit": "kg",
+        "unitPrice": 0.72,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 7.63
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 54.48,
+        "tax": 0
+      }
+    ],
+    "printedTotal": 54.48,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

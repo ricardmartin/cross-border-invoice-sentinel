@@ -1,0 +1,101 @@
+{
+  "id": "it-006",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-006.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "it-valtellina",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.8,
+    "noise": true,
+    "lowRes": true,
+    "stamp": "PAGATO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "SV/26/005225",
+    "issueDate": "2026-10-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Salumificio Valtellina S.p.A.",
+      "taxId": "07123456787",
+      "address": "Via Stelvio 9 · 23100 Sondrio (SO)"
+    },
+    "recipient": {
+      "name": "Osteria del Ponte S.n.c.",
+      "taxId": "02567812348",
+      "address": "Via Garibaldi 21 · 37121 Verona"
+    },
+    "lines": [
+      {
+        "description": "BRESAOLA DELLA VALTELLINA IGP",
+        "quantity": 2.844,
+        "unit": "KG",
+        "unitPrice": 29.5,
+        "discountPct": 5,
+        "taxRate": 10,
+        "lineAmount": 79.7
+      },
+      {
+        "description": "MOZZARELLA FIOR DI LATTE",
+        "quantity": 8.453,
+        "unit": "KG",
+        "unitPrice": 9.4,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 79.46
+      },
+      {
+        "description": "SALAME MILANO",
+        "quantity": 3.419,
+        "unit": "KG",
+        "unitPrice": 16.4,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 56.07
+      },
+      {
+        "description": "PELLICOLA ALIMENTARE 300M",
+        "quantity": 3,
+        "unit": "PZ",
+        "unitPrice": 10.8,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 32.4
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 79.46,
+        "tax": 3.18
+      },
+      {
+        "rate": 10,
+        "base": 135.77,
+        "tax": 13.58
+      },
+      {
+        "rate": 22,
+        "base": 32.4,
+        "tax": 7.13
+      }
+    ],
+    "printedTotal": 274.62,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by 3.10"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

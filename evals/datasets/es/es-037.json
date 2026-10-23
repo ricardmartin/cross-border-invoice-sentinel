@@ -1,0 +1,122 @@
+{
+  "id": "es-037",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-037.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-cantabrico",
+  "template": "clasica",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.7,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "LMC/2026/0404",
+    "issueDate": "2026-09-06",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Limpiezas y Menaje Cantábrico S.L.",
+      "taxId": "B39156088",
+      "address": "C/ Marqués de la Hermida 44 · 39009 Santander"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "Desengrasante cocina 5L",
+        "quantity": 2,
+        "unit": "garrafa",
+        "unitPrice": 11.9,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 23.8
+      },
+      {
+        "description": "Film transparente 300m",
+        "quantity": 1,
+        "unit": "rollo",
+        "unitPrice": 9.75,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 9.75
+      },
+      {
+        "description": "Abrillantador lavavajillas 10L",
+        "quantity": 2,
+        "unit": "garrafa",
+        "unitPrice": 27.35,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 54.7
+      },
+      {
+        "description": "Lejía apta uso alimentario 5L",
+        "quantity": 7,
+        "unit": "garrafa",
+        "unitPrice": 3.45,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 24.15
+      },
+      {
+        "description": "Sal fina 1kg",
+        "quantity": 7,
+        "unit": "paquete",
+        "unitPrice": 0.42,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 2.94
+      },
+      {
+        "description": "Detergente lavavajillas industrial 20L",
+        "quantity": 3,
+        "unit": "garrafa",
+        "unitPrice": 38.5,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 115.5
+      },
+      {
+        "description": "Servilleta papel 40x40 (1200 ud)",
+        "quantity": 1,
+        "unit": "caja",
+        "unitPrice": 18.2,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 18.2
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 2.94,
+        "tax": 0.29
+      },
+      {
+        "rate": 21,
+        "base": 246.1,
+        "tax": 51.68
+      }
+    ],
+    "printedTotal": 301.01,
+    "deliveryNoteRefs": [
+      "ALB-2603359"
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

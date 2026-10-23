@@ -1,0 +1,102 @@
+{
+  "id": "pt-032",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-032.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-madeira-dist",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT DAM/4196",
+    "issueDate": "2026-09-19",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuidora Atlântica da Madeira, Lda.",
+      "taxId": "PT512749302",
+      "address": "Zona Franca Industrial, Lote 8 · 9200-047 Caniçal"
+    },
+    "recipient": {
+      "name": "Restaurante Mercado Velho, Lda.",
+      "taxId": "PT516330152",
+      "address": "Rua do Mercado 12 · 9000-050 Funchal"
+    },
+    "lines": [
+      {
+        "description": "Detergente máquina loiça 20L",
+        "quantity": 3,
+        "unit": "bidão",
+        "unitPrice": 31.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 94.5
+      },
+      {
+        "description": "Vinho Madeira 75cl",
+        "quantity": 7,
+        "unit": "gf",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 12,
+        "lineAmount": 62.3
+      },
+      {
+        "description": "Banana da Madeira",
+        "quantity": 17.8,
+        "unit": "kg",
+        "unitPrice": 1.45,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 25.81
+      },
+      {
+        "description": "Peixe-espada preto",
+        "quantity": 4,
+        "unit": "kg",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 39.2
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 65.01,
+        "tax": 2.6
+      },
+      {
+        "rate": 12,
+        "base": 62.3,
+        "tax": 7.48
+      },
+      {
+        "rate": 23,
+        "base": 94.5,
+        "tax": 21.74
+      }
+    ],
+    "printedTotal": 253.63,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "730E9330-4196"
+  },
+  "planted": {
+    "type": "RATE_NOT_ALLOWED",
+    "description": "Line 1 billed at the mainland rate 23 % instead of 22 % (PT (Madeira))"
+  },
+  "expected": {
+    "issueCodes": [
+      "RATE_NOT_ALLOWED"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "runName": "8f6e78f-anthropic_claude-haiku-5-5-extract-v2",
+  "createdAt": "2026-10-21T20:01:36+02:00",
+  "config": {
+    "model": "anthropic:claude-haiku-5-5",
+    "escalation": "anthropic:claude-sonnet-5-5",
+    "maxRetries": 2,
+    "promptVersion": "local:extract-v2",
+    "smoke": false
+  },
+  "summary": {
+    "docs": 1,
+    "headline": {
+      "Documents 100 % correct (final)": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Documents 100 % correct (first read)": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Line F1": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Final status correct": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Discrepancy precision": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Discrepancy recall": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Unfair claims (false positives on clean docs)": {
+        "value": null,
+        "kind": "pct"
+      },
+      "EXTRACTION_UNCERTAIN rate": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Mean extraction attempts": {
+        "value": null,
+        "kind": "num"
+      },
+      "Escalated to stronger model": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Triage country accuracy": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Triage doc-type accuracy": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Reconciliation status correct": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Claims drafted for SUPPLIER_DISCREPANCY": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Claim amount correct": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Claim drafts passing guardrails": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Claim judge score (1-5)": {
+        "value": null,
+        "kind": "num"
+      },
+      "Claims with invented data": {
+        "value": null,
+        "kind": "pct"
+      },
+      "Cost / doc": {
+        "value": null,
+        "kind": "usd"
+      },
+      "Latency p50": {
+        "value": null,
+        "kind": "ms"
+      },
+      "Latency p95": {
+        "value": null,
+        "kind": "ms"
+      },
+      "Failed runs": {
+        "value": 1,
+        "kind": "num"
+      }
+    },
+    "headerAcc": {
+      "docType": null,
+      "documentNumber": null,
+      "issueDate": null,
+      "currency": null,
+      "issuer.name": null,
+      "issuer.taxId": null,
+      "recipient.name": null,
+      "recipient.taxId": null,
+      "printedTaxBreakdown": null,
+      "printedTotal": null
+    },
+    "lineAcc": {
+      "description": null,
+      "quantity": null,
+      "unitPrice": null,
+      "discountPct": null,
+      "taxRate": null,
+      "lineAmount": null
+    },
+    "confusion": [
+      {
+        "expected": "VALID",
+        "VALID": 0,
+        "SUPPLIER_DISCREPANCY": 0,
+        "INVALID_TAX_ID": 0,
+        "EXTRACTION_UNCERTAIN": 0
+      },
+      {
+        "expected": "SUPPLIER_DISCREPANCY",
+        "VALID": 0,
+        "SUPPLIER_DISCREPANCY": 0,
+        "INVALID_TAX_ID": 0,
+        "EXTRACTION_UNCERTAIN": 0
+      },
+      {
+        "expected": "INVALID_TAX_ID",
+        "VALID": 0,
+        "SUPPLIER_DISCREPANCY": 0,
+        "INVALID_TAX_ID": 0,
+        "EXTRACTION_UNCERTAIN": 0
+      },
+      {
+        "expected": "EXTRACTION_UNCERTAIN",
+        "VALID": 0,
+        "SUPPLIER_DISCREPANCY": 0,
+        "INVALID_TAX_ID": 0,
+        "EXTRACTION_UNCERTAIN": 0
+      }
+    ]
+  },
+  "byCountry": {
+    "PT": {
+      "docs": 1,
+      "headline": {
+        "Documents 100 % correct (final)": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Documents 100 % correct (first read)": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Line F1": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Final status correct": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Discrepancy precision": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Discrepancy recall": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Unfair claims (false positives on clean docs)": {
+          "value": null,
+          "kind": "pct"
+        },
+        "EXTRACTION_UNCERTAIN rate": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Mean extraction attempts": {
+          "value": null,
+          "kind": "num"
+        },
+        "Escalated to stronger model": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Triage country accuracy": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Triage doc-type accuracy": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Reconciliation status correct": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Claims drafted for SUPPLIER_DISCREPANCY": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Claim amount correct": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Claim drafts passing guardrails": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Claim judge score (1-5)": {
+          "value": null,
+          "kind": "num"
+        },
+        "Claims with invented data": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Cost / doc": {
+          "value": null,
+          "kind": "usd"
+        },
+        "Latency p50": {
+          "value": null,
+          "kind": "ms"
+        },
+        "Latency p95": {
+          "value": null,
+          "kind": "ms"
+        },
+        "Failed runs": {
+          "value": 1,
+          "kind": "num"
+        }
+      },
+      "headerAcc": {
+        "docType": null,
+        "documentNumber": null,
+        "issueDate": null,
+        "currency": null,
+        "issuer.name": null,
+        "issuer.taxId": null,
+        "recipient.name": null,
+        "recipient.taxId": null,
+        "printedTaxBreakdown": null,
+        "printedTotal": null
+      },
+      "lineAcc": {
+        "description": null,
+        "quantity": null,
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      "confusion": [
+        {
+          "expected": "VALID",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "SUPPLIER_DISCREPANCY",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "INVALID_TAX_ID",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "EXTRACTION_UNCERTAIN",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        }
+      ]
+    }
+  },
+  "checks": [
+    {
+      "country": "PT",
+      "metric": "Failed runs",
+      "kind": "threshold",
+      "value": 1,
+      "limit": "≤ 0",
+      "passed": false
+    },
+    {
+      "country": "PT",
+      "metric": "Line F1",
+      "kind": "regression",
+      "value": 1,
+      "limit": "≥ 95.0 % (baseline 100.0 %)",
+      "passed": true
+    }
+  ],
+  "results": [
+    {
+      "id": "pt-031",
+      "country": "PT",
+      "template": "classic",
+      "mode": "scan",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "error": "process-document failed: {\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\",\"name\":\"AI_APICallError\",\"stack\":\"AI_APICallError: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\\n    at <anonymous> (C:\\\\Users\\\\Ricard.Martin\\\\Documents\\\\cross-border-invoice-sentinel\\\\node_modules\\\\@ai-sdk\\\\provider-utils\\\\src\\\\response-handler.ts:151:16)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\\n    at async postToApi (C:\\\\Users\\\\Ricard.Martin\\\\Documents\\\\cross-border-invoice-sentinel\\\\node_modules\\\\@ai-sdk\\\\provider-utils\\\\src\\\\post-to-api.ts:118:28)\\n    at async postJsonToApi (C:\\\\Users\\\\Ricard.Martin\\\\Documents\\\\cross-border-invoice-sentinel\\\\node_modules\\\\@ai-sdk\\\\provider-utils\\\\src\\\\post-to-api.ts:31:3)\\n    at async AnthropicLanguageModel.doGenerate (C:\\\\Users\\\\Ricard.Martin\\\\Documents\\\\cross-border-invoice-sentinel\\\\node_modules\\\\@ai-sdk\\\\anthropic\\\\src\\\\anthropic-language-model.ts:1255:9)\\n    at async AISDKV7LanguageModel.doGenerate (C:\\\\Users\\\\Ricard.Martin\\\\Documents\\\\cross-border-invoice-sentinel\\\\node_modules\\\\@mastra\\\\core\\\\src\\\\llm\\\\model\\\\aisdk\\\\v7\\\\model.ts:240:20)\",\"url\":\"https://api.anthropic.com/v1/messages\",\"requestBodyValues\":{\"model\":\"claude-haiku-5-5\",\"max_tokens\":1000,\"output_config\":{\"format\":{\"type\":\"json_schema\",\"schema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"docType\":{\"enum\":[\"INVOICE\",\"DELIVERY_NOTE\",\"CREDIT_NOTE\",\"OTHER\"],\"type\":\"string\"},\"country\":{\"description\":\"ISO 3166-1 alpha-2 code of the ISSUER (supplier)\",\"type\":\"string\"},\"confidence\":{\"description\":\"0 to 1\",\"type\":\"number\"},\"signals\":{\"description\":\"Short evidence list: tax id format, currency, language, address, document title\",\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"issuerTaxId\":{\"description\":\"Issuer fiscal id as printed, without its label; null if not visible\",\"type\":[\"stri"
+    }
+  ]
+}

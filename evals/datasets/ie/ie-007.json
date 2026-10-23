@@ -1,0 +1,109 @@
+{
+  "id": "ie-007",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-007.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "ie-drinks",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "CREDIT_NOTE",
+    "country": "IE",
+    "documentNumber": "SBD26042",
+    "issueDate": "2026-10-11",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Shannon Beverage Distributors Ltd",
+      "taxId": "IE9512376GW",
+      "address": "Smithstown Industrial Estate · Shannon, Co. Clare, V14 K2C9"
+    },
+    "recipient": {
+      "name": "Corrib Bistro Ltd",
+      "taxId": "IE4120876DH",
+      "address": "3 Quay Street · Galway, H91 C9P2"
+    },
+    "lines": [
+      {
+        "description": "Still water 500ml (x24)",
+        "quantity": -3,
+        "unit": "case",
+        "unitPrice": 7.8,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": -23.4
+      },
+      {
+        "description": "Stout keg 50L",
+        "quantity": -1,
+        "unit": "keg",
+        "unitPrice": 189,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": -189
+      },
+      {
+        "description": "Red wine, Rioja 75cl",
+        "quantity": -21,
+        "unit": "btl",
+        "unitPrice": 8.4,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": -176.4
+      },
+      {
+        "description": "Lager 33cl (x24)",
+        "quantity": -1,
+        "unit": "case",
+        "unitPrice": 32.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": -32.5
+      },
+      {
+        "description": "Fruit scones (x12)",
+        "quantity": -2,
+        "unit": "tray",
+        "unitPrice": 6.9,
+        "discountPct": null,
+        "taxRate": 13.5,
+        "lineAmount": -13.8
+      },
+      {
+        "description": "Irish whiskey 70cl",
+        "quantity": -4,
+        "unit": "btl",
+        "unitPrice": 27.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": -111.6
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 13.5,
+        "base": -13.8,
+        "tax": -1.86
+      },
+      {
+        "rate": 23,
+        "base": -532.9,
+        "tax": -122.57
+      }
+    ],
+    "printedTotal": -671.13,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

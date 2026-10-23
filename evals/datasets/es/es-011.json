@@ -1,0 +1,118 @@
+{
+  "id": "es-011",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-011.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-turia",
+  "template": "clasica",
+  "variant": {
+    "mode": "scan",
+    "rotation": -1.1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "F-2026/04110",
+    "issueDate": "2026-10-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola del Turia S.L.",
+      "taxId": "B46391272",
+      "address": "Mercavalencia, Nave 14 · Ctra. en Corts 231 · 46013 Valencia"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Naranja zumo",
+        "quantity": 17.9,
+        "unit": "kg",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 17.01
+      },
+      {
+        "description": "Zanahoria",
+        "quantity": 6,
+        "unit": "kg",
+        "unitPrice": 0.79,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 4.74
+      },
+      {
+        "description": "Limón",
+        "quantity": 3.7,
+        "unit": "kg",
+        "unitPrice": 1.6,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 5.92
+      },
+      {
+        "description": "Cebolla dulce",
+        "quantity": 21.7,
+        "unit": "kg",
+        "unitPrice": 1.15,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 24.96
+      },
+      {
+        "description": "Patata agria",
+        "quantity": 26.1,
+        "unit": "kg",
+        "unitPrice": 0.89,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 23.23
+      },
+      {
+        "description": "Pimiento rojo",
+        "quantity": 3.6,
+        "unit": "kg",
+        "unitPrice": 2.45,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 8.82
+      },
+      {
+        "description": "Huevos camperos L (30 ud)",
+        "quantity": 6,
+        "unit": "bandeja",
+        "unitPrice": 6.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 41.4
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 126.08,
+        "tax": 5.04
+      }
+    ],
+    "printedTotal": 129.12,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by -2.00"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

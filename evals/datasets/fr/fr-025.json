@@ -1,0 +1,113 @@
+{
+  "id": "fr-025",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-025.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "fr-lemoine",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": -1.7,
+    "noise": true,
+    "lowRes": true,
+    "stamp": "COMPTABILISÉ",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "F26/07325",
+    "issueDate": "2026-09-20",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Boucherie Charcuterie Lemoine SAS",
+      "taxId": "FR68492837166",
+      "address": "18 rue des Abattoirs · 69007 Lyon"
+    },
+    "recipient": {
+      "name": "Bistrot du Canal SAS",
+      "taxId": "FR14882149073",
+      "address": "45 quai de Valmy · 75010 Paris"
+    },
+    "lines": [
+      {
+        "description": "SAUCISSE DE TOULOUSE",
+        "quantity": 5.743,
+        "unit": "KG",
+        "unitPrice": 9.6,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 55.13
+      },
+      {
+        "description": "JAMBON BLANC SUPERIEUR",
+        "quantity": 3.339,
+        "unit": "KG",
+        "unitPrice": 14.8,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 49.42
+      },
+      {
+        "description": "ENTRECOTE BOEUF CHAROLAIS",
+        "quantity": 6.616,
+        "unit": "KG",
+        "unitPrice": 32.9,
+        "discountPct": 10,
+        "taxRate": 5.5,
+        "lineAmount": 195.9
+      },
+      {
+        "description": "FILET DE VOLAILLE LABEL ROUGE",
+        "quantity": 6.066,
+        "unit": "KG",
+        "unitPrice": 12.4,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 75.22
+      },
+      {
+        "description": "FILM ETIRABLE 300M",
+        "quantity": 3,
+        "unit": "RLX",
+        "unitPrice": 11.9,
+        "discountPct": 5,
+        "taxRate": 20,
+        "lineAmount": 33.92
+      },
+      {
+        "description": "BAVETTE D ALOYAU",
+        "quantity": 3.67,
+        "unit": "KG",
+        "unitPrice": 21.5,
+        "discountPct": 10,
+        "taxRate": 5.5,
+        "lineAmount": 71.01
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 446.68,
+        "tax": 24.57
+      },
+      {
+        "rate": 20,
+        "base": 33.92,
+        "tax": 6.78
+      }
+    ],
+    "printedTotal": 511.95,
+    "deliveryNoteRefs": [
+      "BL-2604325"
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

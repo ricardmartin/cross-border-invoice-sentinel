@@ -1,0 +1,109 @@
+{
+  "id": "it-025",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-025.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "it-valtellina",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.6,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": "Controllato - Luca"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "SV/26/005325",
+    "issueDate": "2026-10-06",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Salumificio Valtellina S.p.A.",
+      "taxId": "07123456787",
+      "address": "Via Stelvio 9 · 23100 Sondrio (SO)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "PELLICOLA ALIMENTARE 300M",
+        "quantity": 3,
+        "unit": "PZ",
+        "unitPrice": 10.8,
+        "discountPct": 10,
+        "taxRate": 22,
+        "lineAmount": 29.16
+      },
+      {
+        "description": "PROSCIUTTO CRUDO STAGIONATO",
+        "quantity": 5.657,
+        "unit": "KG",
+        "unitPrice": 21.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 123.89
+      },
+      {
+        "description": "BURRO DI MONTAGNA",
+        "quantity": 4.713,
+        "unit": "KG",
+        "unitPrice": 11.6,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 54.67
+      },
+      {
+        "description": "MOZZARELLA FIOR DI LATTE",
+        "quantity": 6.344,
+        "unit": "KG",
+        "unitPrice": 9.4,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 59.63
+      },
+      {
+        "description": "BRESAOLA DELLA VALTELLINA IGP",
+        "quantity": 2.801,
+        "unit": "KG",
+        "unitPrice": 29.5,
+        "discountPct": 5,
+        "taxRate": 10,
+        "lineAmount": 78.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 114.3,
+        "tax": 4.57
+      },
+      {
+        "rate": 10,
+        "base": 202.39,
+        "tax": 20.24
+      },
+      {
+        "rate": 22,
+        "base": 29.16,
+        "tax": 6.42
+      }
+    ],
+    "printedTotal": 377.08,
+    "deliveryNoteRefs": [
+      "2175/D"
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

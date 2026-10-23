@@ -1,0 +1,99 @@
+{
+  "id": "dk-028",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-028.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-drikke",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.9,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Tjekket - Mads"
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "DK",
+    "documentNumber": "FS60351",
+    "issueDate": "2026-09-09",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Øresund Drikkevarer A/S",
+      "taxId": "DK33940173",
+      "address": "Amager Strandvej 120 · 2300 København S"
+    },
+    "recipient": {
+      "name": "Café Åboulevard I/S",
+      "taxId": "DK31956420",
+      "address": "Åboulevard 52 · 8000 Aarhus C"
+    },
+    "lines": [
+      {
+        "description": "Akvavit 70cl",
+        "quantity": 2,
+        "unit": "fl",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Pilsner 33cl (x30)",
+        "quantity": 4,
+        "unit": "ramme",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Danskvand 50cl (x24)",
+        "quantity": 3,
+        "unit": "kasse",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Rødvin, Côtes du Rhône 75cl",
+        "quantity": 6,
+        "unit": "fl",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Æblemost 1L",
+        "quantity": 12,
+        "unit": "fl",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Kaffebønner 1kg",
+        "quantity": 5,
+        "unit": "pose",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "dk-027"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "de-029",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-029.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.3,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "GHN8916",
+    "issueDate": "2026-09-02",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Gastro Hygiene Nord GmbH",
+      "taxId": "DE304728168",
+      "address": "Billbrookdeich 112 · 22113 Hamburg"
+    },
+    "recipient": {
+      "name": "Brauhaus Altstadt GmbH & Co. KG",
+      "taxId": "DE215903744",
+      "address": "Am Hof 18 · 50667 Köln"
+    },
+    "lines": [
+      {
+        "description": "Fettlöser Küche 5 l",
+        "quantity": 3,
+        "unit": "Kanister",
+        "unitPrice": 12.8,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 38.4
+      },
+      {
+        "description": "Desinfektionsreiniger 5 l",
+        "quantity": 3,
+        "unit": "Kanister",
+        "unitPrice": 15.4,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 46.2
+      },
+      {
+        "description": "Speisesalz 1 kg",
+        "quantity": 13,
+        "unit": "Pkg",
+        "unitPrice": 0.49,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 6.37
+      },
+      {
+        "description": "Servietten 40x40 (1000 Stk)",
+        "quantity": 3,
+        "unit": "Karton",
+        "unitPrice": 15.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 47.7
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 6.37,
+        "tax": 0.45
+      },
+      {
+        "rate": 19,
+        "base": 132.3,
+        "tax": 25.14
+      }
+    ],
+    "printedTotal": 164.26,
+    "deliveryNoteRefs": [
+      "LS-26-5377"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_MISSING_PRODUCT",
+    "description": "\"Speisesalz 1 kg\" invoiced but not delivered"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 6.82
+  }
+}

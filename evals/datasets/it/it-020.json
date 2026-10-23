@@ -1,0 +1,100 @@
+{
+  "id": "it-020",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-020.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "it-pastificio",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.1,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "PPE 348/26",
+    "issueDate": "2026-09-25",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Pastificio e Panificio Emiliano S.r.l.",
+      "taxId": "02876543105",
+      "address": "Via Emilia Est 412 · 41122 Modena (MO)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "Pane casereccio",
+        "quantity": 6.2,
+        "unit": "kg",
+        "unitPrice": 3.1,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 19.22
+      },
+      {
+        "description": "Grissini torinesi (conf.)",
+        "quantity": 5,
+        "unit": "conf",
+        "unitPrice": 2.4,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 12
+      },
+      {
+        "description": "Detersivo piatti 5L",
+        "quantity": 3,
+        "unit": "tanica",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 29.4
+      },
+      {
+        "description": "Tagliatelle fresche all’uovo",
+        "quantity": 9.1,
+        "unit": "kg",
+        "unitPrice": 6.2,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 56.42
+      },
+      {
+        "description": "Farina tipo 00",
+        "quantity": 27,
+        "unit": "kg",
+        "unitPrice": 0.98,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 26.46
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 114.1,
+        "tax": 4.56
+      },
+      {
+        "rate": 22,
+        "base": 29.4,
+        "tax": 6.47
+      }
+    ],
+    "printedTotal": 154.53,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

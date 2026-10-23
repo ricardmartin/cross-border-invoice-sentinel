@@ -1,0 +1,91 @@
+{
+  "id": "es-019",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-019.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-cantabrico",
+  "template": "clasica",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "OK cocina"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "LMC/2026/0366",
+    "issueDate": "2026-09-22",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Limpiezas y Menaje Cantábrico S.L.",
+      "taxId": "B39156088",
+      "address": "C/ Marqués de la Hermida 44 · 39009 Santander"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "Sal fina 1kg",
+        "quantity": 17,
+        "unit": "paquete",
+        "unitPrice": 0.42,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 7.14
+      },
+      {
+        "description": "Abrillantador lavavajillas 10L",
+        "quantity": 1,
+        "unit": "garrafa",
+        "unitPrice": 27.35,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 27.35
+      },
+      {
+        "description": "Desengrasante cocina 5L",
+        "quantity": 3,
+        "unit": "garrafa",
+        "unitPrice": 11.9,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 35.7
+      },
+      {
+        "description": "Film transparente 300m",
+        "quantity": 4,
+        "unit": "rollo",
+        "unitPrice": 9.75,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 39
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 7.14,
+        "tax": 0.71
+      },
+      {
+        "rate": 21,
+        "base": 102.05,
+        "tax": 21.43
+      }
+    ],
+    "printedTotal": 131.33,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

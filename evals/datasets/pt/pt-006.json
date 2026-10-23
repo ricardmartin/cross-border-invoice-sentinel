@@ -1,0 +1,87 @@
+{
+  "id": "pt-006",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-006.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-talho",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAGO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT CM26/008135",
+    "issueDate": "2026-09-12",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Carnes e Charcutaria Minhota, S.A.",
+      "taxId": "PT509182739",
+      "address": "Zona Industrial de Lousado, Lote 12 · 4760-469 Vila Nova de Famalicão"
+    },
+    "recipient": {
+      "name": "Restaurante Ribeira Douro, Lda.",
+      "taxId": "PT508642175",
+      "address": "Cais da Ribeira 22 · 4050-509 Porto"
+    },
+    "lines": [
+      {
+        "description": "PRESUNTO FATIADO",
+        "quantity": 2.379,
+        "unit": "KG",
+        "unitPrice": 18.5,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 44.01
+      },
+      {
+        "description": "VITELA PARA BIFES",
+        "quantity": 4.547,
+        "unit": "KG",
+        "unitPrice": 14.9,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 67.75
+      },
+      {
+        "description": "FRANGO DO CAMPO",
+        "quantity": 10.581,
+        "unit": "KG",
+        "unitPrice": 4.2,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 44.44
+      },
+      {
+        "description": "LOMBO DE PORCO",
+        "quantity": 6.914,
+        "unit": "KG",
+        "unitPrice": 6.4,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 44.25
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 200.45,
+        "tax": 12.03
+      }
+    ],
+    "printedTotal": 212.48,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "16C12A1E-8135"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

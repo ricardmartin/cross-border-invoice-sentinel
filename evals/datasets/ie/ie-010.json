@@ -1,0 +1,109 @@
+{
+  "id": "ie-010",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-010.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "ie-butcher",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": -2.6,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "MMP/071081",
+    "issueDate": "2026-09-04",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Midland Meats & Provisions Ltd",
+      "taxId": "IE3384120KH",
+      "address": "Clonminch Industrial Estate · Tullamore, Co. Offaly, R35 F2W8"
+    },
+    "recipient": {
+      "name": "The Quay Kitchen Ltd",
+      "taxId": "IE6729034J",
+      "address": "14 Wellington Quay · Dublin 2, D02 X524"
+    },
+    "lines": [
+      {
+        "description": "PORK SAUSAGES",
+        "quantity": 2.394,
+        "unit": "KG",
+        "unitPrice": 7.2,
+        "discountPct": 5,
+        "taxRate": 0,
+        "lineAmount": 16.37
+      },
+      {
+        "description": "BACK RASHERS",
+        "quantity": 2.406,
+        "unit": "KG",
+        "unitPrice": 9.4,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 22.62
+      },
+      {
+        "description": "LAMB RUMP",
+        "quantity": 2.304,
+        "unit": "KG",
+        "unitPrice": 17.5,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 40.32
+      },
+      {
+        "description": "BEEF STRIPLOIN IRISH",
+        "quantity": 6.979,
+        "unit": "KG",
+        "unitPrice": 24.9,
+        "discountPct": 5,
+        "taxRate": 0,
+        "lineAmount": 165.09
+      },
+      {
+        "description": "CHICKEN FILLETS",
+        "quantity": 9.632,
+        "unit": "KG",
+        "unitPrice": 8.6,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 82.84
+      },
+      {
+        "description": "CLING FILM 300M",
+        "quantity": 3,
+        "unit": "ROLL",
+        "unitPrice": 10.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 31.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 327.24,
+        "tax": 0
+      },
+      {
+        "rate": 23,
+        "base": 31.5,
+        "tax": 7.25
+      }
+    ],
+    "printedTotal": 365.99,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

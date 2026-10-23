@@ -1,0 +1,104 @@
+{
+  "id": "dk-015",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-015.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "dk-drikke",
+  "template": "modern",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Ring til Freja"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "ØD26098",
+    "issueDate": "2026-10-03",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Øresund Drikkevarer A/S",
+      "taxId": "DK33940173",
+      "address": "Amager Strandvej 120 · 2300 København S"
+    },
+    "recipient": {
+      "name": "Restaurant Havnefronten ApS",
+      "taxId": "DK36271809",
+      "address": "Nyhavn 31 · 1051 København K"
+    },
+    "lines": [
+      {
+        "description": "Akvavit 70cl",
+        "quantity": 4,
+        "unit": "fl",
+        "unitPrice": 169,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 676
+      },
+      {
+        "description": "Pilsner 33cl (x30)",
+        "quantity": 4,
+        "unit": "ramme",
+        "unitPrice": 189,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 756
+      },
+      {
+        "description": "Rødvin, Côtes du Rhône 75cl",
+        "quantity": 19,
+        "unit": "fl",
+        "unitPrice": 59,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 1121
+      },
+      {
+        "description": "Danskvand 50cl (x24)",
+        "quantity": 5,
+        "unit": "kasse",
+        "unitPrice": 96,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 480
+      },
+      {
+        "description": "Æblemost 1L",
+        "quantity": 24,
+        "unit": "fl",
+        "unitPrice": 22.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 540
+      },
+      {
+        "description": "Kaffebønner 1kg",
+        "quantity": 4,
+        "unit": "pose",
+        "unitPrice": 149,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 596
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 4169,
+        "tax": 1042.25
+      }
+    ],
+    "printedTotal": 5211.25,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

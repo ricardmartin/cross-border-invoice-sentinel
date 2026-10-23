@@ -1,0 +1,114 @@
+{
+  "id": "fr-019",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-019.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "fr-cave",
+  "template": "modern",
+  "variant": {
+    "mode": "photo",
+    "rotation": -2.5,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "CB26126",
+    "issueDate": "2026-09-26",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cave & Boissons Rhône-Alpes SAS",
+      "taxId": "FR07530192848",
+      "address": "230 avenue Jean Jaurès · 69007 Lyon"
+    },
+    "recipient": {
+      "name": "Bistrot du Canal SAS",
+      "taxId": "FR14882149073",
+      "address": "45 quai de Valmy · 75010 Paris"
+    },
+    "lines": [
+      {
+        "description": "Champagne brut 75cl",
+        "quantity": 3,
+        "unit": "bouteille",
+        "unitPrice": 22.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 67.5
+      },
+      {
+        "description": "Sirop de grenadine 1L",
+        "quantity": 5,
+        "unit": "bouteille",
+        "unitPrice": 3.4,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 17
+      },
+      {
+        "description": "Bière blonde 33cl (x24)",
+        "quantity": 3,
+        "unit": "caisse",
+        "unitPrice": 21.6,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 64.8
+      },
+      {
+        "description": "Eau minérale 1L (x6)",
+        "quantity": 5,
+        "unit": "pack",
+        "unitPrice": 3.1,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 15.5
+      },
+      {
+        "description": "Jus d'orange 1L",
+        "quantity": 6,
+        "unit": "bouteille",
+        "unitPrice": 1.95,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 11.7
+      },
+      {
+        "description": "Cognac VSOP 70cl",
+        "quantity": 3,
+        "unit": "bouteille",
+        "unitPrice": 34.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 104.7
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 44.2,
+        "tax": 2.43
+      },
+      {
+        "rate": 20,
+        "base": 237,
+        "tax": 47.4
+      }
+    ],
+    "printedTotal": 332.53,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by 1.50"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

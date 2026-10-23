@@ -1,0 +1,111 @@
+{
+  "id": "dk-027",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-027.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-drikke",
+  "template": "modern",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "MODTAGET",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "ØD26189",
+    "issueDate": "2026-09-11",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Øresund Drikkevarer A/S",
+      "taxId": "DK33940173",
+      "address": "Amager Strandvej 120 · 2300 København S"
+    },
+    "recipient": {
+      "name": "Café Åboulevard I/S",
+      "taxId": "DK31956420",
+      "address": "Åboulevard 52 · 8000 Aarhus C"
+    },
+    "lines": [
+      {
+        "description": "Akvavit 70cl",
+        "quantity": 3,
+        "unit": "fl",
+        "unitPrice": 169,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 507
+      },
+      {
+        "description": "Pilsner 33cl (x30)",
+        "quantity": 4,
+        "unit": "ramme",
+        "unitPrice": 189,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 756
+      },
+      {
+        "description": "Danskvand 50cl (x24)",
+        "quantity": 3,
+        "unit": "kasse",
+        "unitPrice": 96,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 288
+      },
+      {
+        "description": "Rødvin, Côtes du Rhône 75cl",
+        "quantity": 6,
+        "unit": "fl",
+        "unitPrice": 59,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 354
+      },
+      {
+        "description": "Æblemost 1L",
+        "quantity": 12,
+        "unit": "fl",
+        "unitPrice": 22.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 270
+      },
+      {
+        "description": "Kaffebønner 1kg",
+        "quantity": 5,
+        "unit": "pose",
+        "unitPrice": 149,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 745
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 2920,
+        "tax": 730
+      }
+    ],
+    "printedTotal": 3650,
+    "deliveryNoteRefs": [
+      "FS60351"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_SHORT",
+    "description": "\"Akvavit 70cl\": invoiced 3, delivered 2"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 211.25
+  }
+}

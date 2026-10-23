@@ -1,0 +1,104 @@
+{
+  "id": "ie-005",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-005.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "ie-greengrocer",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": 1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "INV-30412",
+    "issueDate": "2026-10-12",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Liffey Fresh Produce Ltd",
+      "taxId": "IE6431852L",
+      "address": "Unit 4, Dublin Food Market, Malahide Road · Dublin 17, D17 X2K4"
+    },
+    "recipient": {
+      "name": "Corrib Bistro Ltd",
+      "taxId": "IE4120876DH",
+      "address": "3 Quay Street · Galway, H91 C9P2"
+    },
+    "lines": [
+      {
+        "description": "Carrots",
+        "quantity": 19.8,
+        "unit": "kg",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 16.83
+      },
+      {
+        "description": "Lettuce, butterhead",
+        "quantity": 23,
+        "unit": "each",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 21.85
+      },
+      {
+        "description": "Onions, brown",
+        "quantity": 5.7,
+        "unit": "kg",
+        "unitPrice": 0.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 5.13
+      },
+      {
+        "description": "Apples, Bramley",
+        "quantity": 5.2,
+        "unit": "kg",
+        "unitPrice": 2.4,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 12.48
+      },
+      {
+        "description": "Tomatoes, vine",
+        "quantity": 9.1,
+        "unit": "kg",
+        "unitPrice": 3.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 29.12
+      },
+      {
+        "description": "Potatoes, Rooster",
+        "quantity": 39.2,
+        "unit": "kg",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 37.24
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 122.65,
+        "tax": 0
+      }
+    ],
+    "printedTotal": 122.65,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

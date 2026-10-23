@@ -1,0 +1,104 @@
+{
+  "id": "dk-021",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-021.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-gront",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.3,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Tjekket - Mads"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "52060",
+    "issueDate": "2026-10-05",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Grønttorvet Engros ApS",
+      "taxId": "DK38512749",
+      "address": "Grønttorvet 8 · 2500 Valby"
+    },
+    "recipient": {
+      "name": "Café Åboulevard I/S",
+      "taxId": "DK31956420",
+      "address": "Åboulevard 52 · 8000 Aarhus C"
+    },
+    "lines": [
+      {
+        "description": "Kartofler, nye",
+        "quantity": 39,
+        "unit": "kg",
+        "unitPrice": 9.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 370.5
+      },
+      {
+        "description": "Tomater, stilk",
+        "quantity": 9.6,
+        "unit": "kg",
+        "unitPrice": 24.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 235.2
+      },
+      {
+        "description": "Salat, iceberg",
+        "quantity": 17,
+        "unit": "stk",
+        "unitPrice": 9.95,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 169.15
+      },
+      {
+        "description": "Gulerødder",
+        "quantity": 15.2,
+        "unit": "kg",
+        "unitPrice": 7.25,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 110.2
+      },
+      {
+        "description": "Æbler, Ingrid Marie",
+        "quantity": 6.4,
+        "unit": "kg",
+        "unitPrice": 18.9,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 120.96
+      },
+      {
+        "description": "Løg, gule",
+        "quantity": 15.3,
+        "unit": "kg",
+        "unitPrice": 6.8,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 104.04
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 1110.05,
+        "tax": 277.51
+      }
+    ],
+    "printedTotal": 1387.56,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

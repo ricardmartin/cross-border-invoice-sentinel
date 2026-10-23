@@ -1,0 +1,136 @@
+{
+  "id": "es-026",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-026.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-turia",
+  "template": "clasica",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "CONTABILIZADO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "F-2026/04125",
+    "issueDate": "2026-09-14",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola del Turia S.L.",
+      "taxId": "B46391272",
+      "address": "Mercavalencia, Nave 14 · Ctra. en Corts 231 · 46013 Valencia"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Huevos camperos L (30 ud)",
+        "quantity": 6,
+        "unit": "bandeja",
+        "unitPrice": 6.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 41.4
+      },
+      {
+        "description": "Aceituna gordal",
+        "quantity": 1.1,
+        "unit": "kg",
+        "unitPrice": 5.4,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 5.94
+      },
+      {
+        "description": "Cebolla dulce",
+        "quantity": 18,
+        "unit": "kg",
+        "unitPrice": 1.15,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 20.7
+      },
+      {
+        "description": "Limón",
+        "quantity": 5.6,
+        "unit": "kg",
+        "unitPrice": 1.6,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 8.96
+      },
+      {
+        "description": "Tomate pera",
+        "quantity": 19.8,
+        "unit": "kg",
+        "unitPrice": 1.85,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 36.63
+      },
+      {
+        "description": "Lechuga romana",
+        "quantity": 12,
+        "unit": "ud",
+        "unitPrice": 0.65,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 7.8
+      },
+      {
+        "description": "Naranja zumo",
+        "quantity": 29.3,
+        "unit": "kg",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 27.84
+      },
+      {
+        "description": "Pimiento rojo",
+        "quantity": 3.8,
+        "unit": "kg",
+        "unitPrice": 2.45,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 9.31
+      },
+      {
+        "description": "Champiñón laminado",
+        "quantity": 4.8,
+        "unit": "kg",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 18.72
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 171.36,
+        "tax": 6.85
+      },
+      {
+        "rate": 10,
+        "base": 5.94,
+        "tax": 0.59
+      }
+    ],
+    "printedTotal": 184.74,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "id": "fr-009",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-009.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "fr-primeurs",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "FA-2026-010424",
+    "issueDate": "2026-09-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Primeurs du Val de Loire SARL",
+      "taxId": "FR20817263544",
+      "address": "MIN de Rungis, Bât. D4 · 94150 Rungis"
+    },
+    "recipient": {
+      "name": "Bistrot du Canal SAS",
+      "taxId": "FR14882149073",
+      "address": "45 quai de Valmy · 75010 Paris"
+    },
+    "lines": [
+      {
+        "description": "Carottes des sables",
+        "quantity": 19.7,
+        "unit": "kg",
+        "unitPrice": 1.1,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 21.67
+      },
+      {
+        "description": "Herbes fraîches (botte)",
+        "quantity": 9,
+        "unit": "botte",
+        "unitPrice": 1.2,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 10.8
+      },
+      {
+        "description": "Champignons de Paris",
+        "quantity": 4.1,
+        "unit": "kg",
+        "unitPrice": 4.3,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 17.63
+      },
+      {
+        "description": "Pommes Golden",
+        "quantity": 11.5,
+        "unit": "kg",
+        "unitPrice": 2.2,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 25.3
+      },
+      {
+        "description": "Tomates grappe",
+        "quantity": 3.5,
+        "unit": "kg",
+        "unitPrice": 2.85,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 9.98
+      },
+      {
+        "description": "Salade batavia",
+        "quantity": 24,
+        "unit": "pièce",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 22.8
+      },
+      {
+        "description": "Oignons jaunes",
+        "quantity": 10.3,
+        "unit": "kg",
+        "unitPrice": 1.05,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 10.82
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 119,
+        "tax": 6.55
+      }
+    ],
+    "printedTotal": 125.55,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

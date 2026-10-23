@@ -1,0 +1,77 @@
+{
+  "id": "de-016",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-016.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 1.9,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "GHN8860",
+    "issueDate": "2026-09-20",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Gastro Hygiene Nord GmbH",
+      "taxId": "DE304728168",
+      "address": "Billbrookdeich 112 · 22113 Hamburg"
+    },
+    "recipient": {
+      "name": "Brauhaus Altstadt GmbH & Co. KG",
+      "taxId": "DE215903744",
+      "address": "Am Hof 18 · 50667 Köln"
+    },
+    "lines": [
+      {
+        "description": "Fettlöser Küche 5 l",
+        "quantity": 1,
+        "unit": "Kanister",
+        "unitPrice": 12.8,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 12.8
+      },
+      {
+        "description": "Nitrilhandschuhe M (100 Stk)",
+        "quantity": 3,
+        "unit": "Box",
+        "unitPrice": 6.2,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 18.6
+      },
+      {
+        "description": "Spülmittel Maschine 20 l",
+        "quantity": 1,
+        "unit": "Kanister",
+        "unitPrice": 36.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 36.9
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 19,
+        "base": 68.3,
+        "tax": 12.98
+      }
+    ],
+    "printedTotal": 81.28,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "id": "es-002",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-002.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "es-montes",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "FV26-000819",
+    "issueDate": "2026-09-20",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cárnicas Montes de Toledo S.A.",
+      "taxId": "A45182060",
+      "address": "Polígono Industrial Santa María de Benquerencia, C/ Río Jarama 52 · 45007 Toledo"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "CHULETILLA CORDERO LECHAL",
+        "quantity": 4.288,
+        "unit": "KG",
+        "unitPrice": 19.8,
+        "discountPct": 10,
+        "taxRate": 10,
+        "lineAmount": 76.41
+      },
+      {
+        "description": "JAMON CEBO IBERICO LONCHEADO 100G",
+        "quantity": 19,
+        "unit": "UD",
+        "unitPrice": 6.45,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 122.55
+      },
+      {
+        "description": "BOLSA VACIO 30X40 (100 UD)",
+        "quantity": 2,
+        "unit": "CAJA",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 25.2
+      },
+      {
+        "description": "POLLO CAMPERO ENTERO",
+        "quantity": 7.707,
+        "unit": "KG",
+        "unitPrice": 4.35,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 33.53
+      },
+      {
+        "description": "SOLOMILLO CERDO IBERICO",
+        "quantity": 2.615,
+        "unit": "KG",
+        "unitPrice": 15.75,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 43.69
+      },
+      {
+        "description": "HAMBURGUESA VACUNO 180G",
+        "quantity": 38,
+        "unit": "UD",
+        "unitPrice": 1.38,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 52.44
+      },
+      {
+        "description": "CHORIZO SARTA PICANTE",
+        "quantity": 3.529,
+        "unit": "KG",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 31.41
+      },
+      {
+        "description": "TERNERA LOMO BAJO EXTRA",
+        "quantity": 8.958,
+        "unit": "KG",
+        "unitPrice": 24.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 223.05
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 583.08,
+        "tax": 58.31
+      },
+      {
+        "rate": 21,
+        "base": 25.2,
+        "tax": 5.29
+      }
+    ],
+    "printedTotal": 671.88,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "LINE_MATH",
+    "description": "Line 5 amount off by 2.50 vs quantity × price"
+  },
+  "expected": {
+    "issueCodes": [
+      "LINE_MATH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

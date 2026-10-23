@@ -1,0 +1,82 @@
+{
+  "id": "es-054",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-054.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "es-melilla-dist",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Llamar a Marta"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "SHM26378",
+    "issueDate": "2026-09-18",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Suministros Hosteleros Melilla, S.L.",
+      "taxId": "B52019379",
+      "address": "Polígono SEPES, Calle B 12 · 52006 Melilla"
+    },
+    "recipient": {
+      "name": "Casa de Comidas La Alcazaba, S.L.",
+      "taxId": "B52036183",
+      "address": "Avenida Juan Carlos I 31 · 52001 Melilla"
+    },
+    "lines": [
+      {
+        "description": "Pan de molde",
+        "quantity": 12,
+        "unit": "ud",
+        "unitPrice": 1.9,
+        "discountPct": null,
+        "taxRate": 0.5,
+        "lineAmount": 22.8
+      },
+      {
+        "description": "Leche entera 1L (x6)",
+        "quantity": 7,
+        "unit": "pack",
+        "unitPrice": 5.4,
+        "discountPct": null,
+        "taxRate": 0.5,
+        "lineAmount": 37.8
+      },
+      {
+        "description": "Cerveza 33cl (x24)",
+        "quantity": 5,
+        "unit": "caja",
+        "unitPrice": 15.9,
+        "discountPct": null,
+        "taxRate": 8,
+        "lineAmount": 79.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0.5,
+        "base": 60.6,
+        "tax": 0.3
+      },
+      {
+        "rate": 8,
+        "base": 79.5,
+        "tax": 6.36
+      }
+    ],
+    "printedTotal": 146.76,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "id": "de-025",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-025.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "de-metzgerei",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "BEZAHLT",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "260225",
+    "issueDate": "2026-09-18",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Metzgerei Hofmann & Söhne GmbH",
+      "taxId": "DE812649307",
+      "address": "Schlachthofstraße 22 · 90443 Nürnberg"
+    },
+    "recipient": {
+      "name": "Brauhaus Altstadt GmbH & Co. KG",
+      "taxId": "DE215903744",
+      "address": "Am Hof 18 · 50667 Köln"
+    },
+    "lines": [
+      {
+        "description": "SCHINKEN GEKOCHT",
+        "quantity": 1.063,
+        "unit": "KG",
+        "unitPrice": 14.5,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 15.41
+      },
+      {
+        "description": "SCHWEINENACKEN",
+        "quantity": 4.498,
+        "unit": "KG",
+        "unitPrice": 8.4,
+        "discountPct": 5,
+        "taxRate": 7,
+        "lineAmount": 35.89
+      },
+      {
+        "description": "RINDERHUEFTE",
+        "quantity": 3.445,
+        "unit": "KG",
+        "unitPrice": 26.9,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 92.67
+      },
+      {
+        "description": "FRISCHHALTEFOLIE 300M",
+        "quantity": 3,
+        "unit": "RL",
+        "unitPrice": 11.5,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 34.5
+      },
+      {
+        "description": "HAEHNCHENBRUST",
+        "quantity": 9.522,
+        "unit": "KG",
+        "unitPrice": 11.2,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 106.65
+      },
+      {
+        "description": "NUERNBERGER BRATWURST",
+        "quantity": 2.619,
+        "unit": "KG",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 33
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 283.62,
+        "tax": 19.85
+      },
+      {
+        "rate": 19,
+        "base": 34.5,
+        "tax": 6.56
+      }
+    ],
+    "printedTotal": 344.53,
+    "deliveryNoteRefs": [
+      "LS-26-5325"
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

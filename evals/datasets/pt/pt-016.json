@@ -1,0 +1,87 @@
+{
+  "id": "pt-016",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-016.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-limpeza",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "RECEBIDO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT HT/3360",
+    "issueDate": "2026-09-09",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Higiene Total Lisboa, Unipessoal Lda.",
+      "taxId": "PT516309471",
+      "address": "Av. Infante D. Henrique 312 · 1950-421 Lisboa"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "Desengordurante cozinha 5L",
+        "quantity": 3,
+        "unit": "bidão",
+        "unitPrice": 11.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 35.7
+      },
+      {
+        "description": "Luvas nitrilo M (x100)",
+        "quantity": 1,
+        "unit": "cx",
+        "unitPrice": 5.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 5.9
+      },
+      {
+        "description": "Lixívia 5L",
+        "quantity": 4,
+        "unit": "bidão",
+        "unitPrice": 2.95,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 11.8
+      },
+      {
+        "description": "Detergente máquina loiça 20L",
+        "quantity": 2,
+        "unit": "bidão",
+        "unitPrice": 32.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 65
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 23,
+        "base": 118.4,
+        "tax": 27.23
+      }
+    ],
+    "printedTotal": 145.63,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "671DE460-3360"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

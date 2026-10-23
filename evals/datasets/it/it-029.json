@@ -1,0 +1,107 @@
+{
+  "id": "it-029",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-029.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "it-pastificio",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAGATO",
+    "handwrittenNote": "Manca 1 cassa"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "PPE 368/26",
+    "issueDate": "2026-09-17",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Pastificio e Panificio Emiliano S.r.l.",
+      "taxId": "02876543105",
+      "address": "Via Emilia Est 412 · 41122 Modena (MO)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "Detersivo piatti 5L",
+        "quantity": 3,
+        "unit": "tanica",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 29.4
+      },
+      {
+        "description": "Tagliatelle fresche all’uovo",
+        "quantity": 5.4,
+        "unit": "kg",
+        "unitPrice": 6.2,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 33.48
+      },
+      {
+        "description": "Olio extravergine di oliva 5L",
+        "quantity": 1,
+        "unit": "latta",
+        "unitPrice": 44.5,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 44.5
+      },
+      {
+        "description": "Grissini torinesi (conf.)",
+        "quantity": 11,
+        "unit": "conf",
+        "unitPrice": 2.4,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 26.4
+      },
+      {
+        "description": "Farina tipo 00",
+        "quantity": 43,
+        "unit": "kg",
+        "unitPrice": 0.98,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 42.14
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 146.52,
+        "tax": 5.86
+      },
+      {
+        "rate": 22,
+        "base": 29.4,
+        "tax": 6.47
+      }
+    ],
+    "printedTotal": 188.25,
+    "deliveryNoteRefs": [
+      "2187/D"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_MISSING_PRODUCT",
+    "description": "\"Olio extravergine di oliva 5L\" invoiced but not delivered"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 46.28
+  }
+}

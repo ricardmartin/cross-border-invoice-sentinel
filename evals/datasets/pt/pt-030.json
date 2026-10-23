@@ -1,0 +1,72 @@
+{
+  "id": "pt-030",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-030.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-limpeza",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "PAGO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "PT",
+    "documentNumber": "GR 2026/4377",
+    "issueDate": "2026-09-07",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Higiene Total Lisboa, Unipessoal Lda.",
+      "taxId": "PT516309471",
+      "address": "Av. Infante D. Henrique 312 · 1950-421 Lisboa"
+    },
+    "recipient": {
+      "name": "Restaurante Ribeira Douro, Lda.",
+      "taxId": "PT508642175",
+      "address": "Cais da Ribeira 22 · 4050-509 Porto"
+    },
+    "lines": [
+      {
+        "description": "Lixívia 5L",
+        "quantity": 7,
+        "unit": "bidão",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Sal marinho 1kg",
+        "quantity": 14,
+        "unit": "pct",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Guardanapos papel 40x40 (x1000)",
+        "quantity": 1,
+        "unit": "cx",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "pt-029"
+}

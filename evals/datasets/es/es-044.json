@@ -1,0 +1,63 @@
+{
+  "id": "es-044",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-044.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-ebro",
+  "template": "albaran",
+  "variant": {
+    "mode": "scan",
+    "rotation": 1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Llamar a Marta"
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "ES",
+    "documentNumber": "ALB-2603401",
+    "issueDate": "2026-09-20",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuciones de Bebidas Ebro S.L.",
+      "taxId": "B50274430",
+      "address": "Av. de Cataluña 301 · 50014 Zaragoza"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Zumo de naranja 1L",
+        "quantity": 16,
+        "unit": "brik",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Tónica premium 20cl (24 ud)",
+        "quantity": 1,
+        "unit": "caja",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "es-043"
+}

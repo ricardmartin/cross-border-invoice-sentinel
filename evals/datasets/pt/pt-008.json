@@ -1,0 +1,78 @@
+{
+  "id": "pt-008",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-008.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-limpeza",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT HT/3328",
+    "issueDate": "2026-09-05",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Higiene Total Lisboa, Unipessoal Lda.",
+      "taxId": "PT516309471",
+      "address": "Av. Infante D. Henrique 312 · 1950-421 Lisboa"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "Guardanapos papel 40x40 (x1000)",
+        "quantity": 4,
+        "unit": "cx",
+        "unitPrice": 14.2,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 56.8
+      },
+      {
+        "description": "Desengordurante cozinha 5L",
+        "quantity": 2,
+        "unit": "bidão",
+        "unitPrice": 11.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 23.8
+      },
+      {
+        "description": "Lixívia 5L",
+        "quantity": 4,
+        "unit": "bidão",
+        "unitPrice": 2.95,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 11.8
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 23,
+        "base": 92.4,
+        "tax": 21.25
+      }
+    ],
+    "printedTotal": 113.65,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "671DE460-3328"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

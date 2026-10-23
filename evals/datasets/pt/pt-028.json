@@ -1,0 +1,90 @@
+{
+  "id": "pt-028",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-028.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-bebidas",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.1,
+    "noise": true,
+    "lowRes": true,
+    "stamp": "CONTABILIZADO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "PT",
+    "documentNumber": "GR 2026/4351",
+    "issueDate": "2026-10-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuidora de Bebidas Tejo, Lda.",
+      "taxId": "PT514283912",
+      "address": "Rua da Indústria 45 · 2690-353 Santa Iria de Azóia"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "Vinho tinto Alentejo 75cl",
+        "quantity": 24,
+        "unit": "gf",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Cerveja 33cl (x24)",
+        "quantity": 1,
+        "unit": "grade",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Água mineral 1,5L (x6)",
+        "quantity": 5,
+        "unit": "pack",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Aguardente velha 70cl",
+        "quantity": 1.5,
+        "unit": "gf",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Vinho verde 75cl",
+        "quantity": 21,
+        "unit": "gf",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "pt-027"
+}

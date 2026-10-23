@@ -1,0 +1,105 @@
+{
+  "id": "es-052",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-052.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-ceuta-dist",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.1,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "DE-756",
+    "issueDate": "2026-09-09",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Distribuciones del Estrecho, S.L.",
+      "taxId": "B51028462",
+      "address": "Polígono del Tarajal, Nave 6 · 51003 Ceuta"
+    },
+    "recipient": {
+      "name": "Restaurante El Desnarigado, S.L.",
+      "taxId": "B51041721",
+      "address": "Paseo de las Palmeras 14 · 51001 Ceuta"
+    },
+    "lines": [
+      {
+        "description": "Pechuga de pollo",
+        "quantity": 2.6,
+        "unit": "kg",
+        "unitPrice": 6.8,
+        "discountPct": null,
+        "taxRate": 2,
+        "lineAmount": 17.68
+      },
+      {
+        "description": "Cerveza 33cl (x24)",
+        "quantity": 5,
+        "unit": "caja",
+        "unitPrice": 15.9,
+        "discountPct": null,
+        "taxRate": 8,
+        "lineAmount": 79.5
+      },
+      {
+        "description": "Leche entera 1L (x6)",
+        "quantity": 3,
+        "unit": "pack",
+        "unitPrice": 5.4,
+        "discountPct": null,
+        "taxRate": 0.5,
+        "lineAmount": 16.2
+      },
+      {
+        "description": "Detergente lavavajillas 20L",
+        "quantity": 2,
+        "unit": "garrafa",
+        "unitPrice": 33.5,
+        "discountPct": null,
+        "taxRate": 8,
+        "lineAmount": 67
+      },
+      {
+        "description": "Agua mineral 1,5L (x6)",
+        "quantity": 9,
+        "unit": "pack",
+        "unitPrice": 2.6,
+        "discountPct": null,
+        "taxRate": 2,
+        "lineAmount": 23.4
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0.5,
+        "base": 16.2,
+        "tax": 0.08
+      },
+      {
+        "rate": 2,
+        "base": 41.08,
+        "tax": 0.82
+      },
+      {
+        "rate": 8,
+        "base": 146.5,
+        "tax": 11.72
+      }
+    ],
+    "printedTotal": 216.4,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

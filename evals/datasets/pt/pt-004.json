@@ -1,0 +1,88 @@
+{
+  "id": "pt-004",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-004.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-limpeza",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT HT/3312",
+    "issueDate": "2026-10-09",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Higiene Total Lisboa, Unipessoal Lda.",
+      "taxId": "PT516309471",
+      "address": "Av. Infante D. Henrique 312 · 1950-421 Lisboa"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "Detergente máquina loiça 20L",
+        "quantity": 1,
+        "unit": "bidão",
+        "unitPrice": 32.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 32.5
+      },
+      {
+        "description": "Desengordurante cozinha 5L",
+        "quantity": 3,
+        "unit": "bidão",
+        "unitPrice": 11.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 35.7
+      },
+      {
+        "description": "Sal marinho 1kg",
+        "quantity": 7,
+        "unit": "pct",
+        "unitPrice": 0.45,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 2.35
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 2.35,
+        "tax": 0.14
+      },
+      {
+        "rate": 23,
+        "base": 68.2,
+        "tax": 15.69
+      }
+    ],
+    "printedTotal": 86.38,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "671DE460-3312"
+  },
+  "planted": {
+    "type": "LINE_MATH",
+    "description": "Line 3 amount off by -0.80 vs quantity × price"
+  },
+  "expected": {
+    "issueCodes": [
+      "LINE_MATH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

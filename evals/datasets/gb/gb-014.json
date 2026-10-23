@@ -1,0 +1,91 @@
+{
+  "id": "gb-014",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-014.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "gb-butcher",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Pay on 15th"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "YDM/055117",
+    "issueDate": "2026-10-05",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Yorkshire Dales Meat Co. Ltd",
+      "taxId": "GB638210553",
+      "address": "Leyburn Business Park · Leyburn, North Yorkshire DL8 5QA"
+    },
+    "recipient": {
+      "name": "Northern Quarter Kitchen Ltd",
+      "taxId": "GB472013970",
+      "address": "61 Thomas Street · Manchester M4 1NA"
+    },
+    "lines": [
+      {
+        "description": "LAMB SHOULDER",
+        "quantity": 2.155,
+        "unit": "KG",
+        "unitPrice": 12.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 27.8
+      },
+      {
+        "description": "BACK BACON",
+        "quantity": 3.083,
+        "unit": "KG",
+        "unitPrice": 8.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 25.28
+      },
+      {
+        "description": "CUMBERLAND SAUSAGES",
+        "quantity": 4.432,
+        "unit": "KG",
+        "unitPrice": 6.8,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 30.14
+      },
+      {
+        "description": "CLING FILM 300M",
+        "quantity": 1,
+        "unit": "ROLL",
+        "unitPrice": 9.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 9.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 83.22,
+        "tax": 0
+      },
+      {
+        "rate": 20,
+        "base": 9.5,
+        "tax": 1.9
+      }
+    ],
+    "printedTotal": 94.62,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

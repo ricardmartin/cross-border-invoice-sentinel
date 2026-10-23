@@ -1,0 +1,108 @@
+{
+  "id": "de-023",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-023.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-frische",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.6,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "RE-2026-40469",
+    "issueDate": "2026-10-03",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Frischeparadies Großmarkt Süd GmbH",
+      "taxId": "DE247183658",
+      "address": "Schäftlarnstraße 10 · 81371 München"
+    },
+    "recipient": {
+      "name": "Brauhaus Altstadt GmbH & Co. KG",
+      "taxId": "DE215903744",
+      "address": "Am Hof 18 · 50667 Köln"
+    },
+    "lines": [
+      {
+        "description": "Kartoffeln festkochend",
+        "quantity": 14.9,
+        "unit": "kg",
+        "unitPrice": 0.98,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 14.6
+      },
+      {
+        "description": "Zwiebeln gelb",
+        "quantity": 15.3,
+        "unit": "kg",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 13.01
+      },
+      {
+        "description": "Äpfel Elstar",
+        "quantity": 4.6,
+        "unit": "kg",
+        "unitPrice": 2.1,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 9.66
+      },
+      {
+        "description": "Tomaten Strauch",
+        "quantity": 11.4,
+        "unit": "kg",
+        "unitPrice": 3.4,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 38.76
+      },
+      {
+        "description": "Kopfsalat",
+        "quantity": 15,
+        "unit": "Stk",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 14.25
+      },
+      {
+        "description": "Spargel weiß Kl. I",
+        "quantity": 2,
+        "unit": "kg",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 19.6
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 109.88,
+        "tax": 7.69
+      }
+    ],
+    "printedTotal": 117.57,
+    "deliveryNoteRefs": [
+      "LS-26-5299"
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

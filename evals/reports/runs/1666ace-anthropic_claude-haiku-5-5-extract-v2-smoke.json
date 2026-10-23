@@ -1,0 +1,2160 @@
+{
+  "runName": "1666ace-anthropic_claude-haiku-5-5-extract-v2-smoke",
+  "createdAt": "2026-10-19T00:44:50+02:00",
+  "config": {
+    "model": "anthropic:claude-haiku-5-5",
+    "escalation": "anthropic:claude-sonnet-5-5",
+    "maxRetries": 2,
+    "promptVersion": "local:extract-v2",
+    "smoke": true
+  },
+  "summary": {
+    "docs": 11,
+    "headline": {
+      "Documents 100 % correct (final)": {
+        "value": 0.8181818181818182,
+        "kind": "pct"
+      },
+      "Documents 100 % correct (first read)": {
+        "value": 0.8181818181818182,
+        "kind": "pct"
+      },
+      "Line F1": {
+        "value": 0.9818181818181818,
+        "kind": "pct"
+      },
+      "Final status correct": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Discrepancy precision": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Discrepancy recall": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Unfair claims (false positives on clean docs)": {
+        "value": 0,
+        "kind": "pct"
+      },
+      "EXTRACTION_UNCERTAIN rate": {
+        "value": 0,
+        "kind": "pct"
+      },
+      "Mean extraction attempts": {
+        "value": 1.5454545454545454,
+        "kind": "num"
+      },
+      "Escalated to stronger model": {
+        "value": 0,
+        "kind": "pct"
+      },
+      "Triage country accuracy": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Triage doc-type accuracy": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Reconciliation status correct": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Claims drafted for SUPPLIER_DISCREPANCY": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Claim amount correct": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Claim drafts passing guardrails": {
+        "value": 1,
+        "kind": "pct"
+      },
+      "Claim judge score (1-5)": {
+        "value": 4.75,
+        "kind": "num"
+      },
+      "Claims with invented data": {
+        "value": 0,
+        "kind": "pct"
+      },
+      "Cost / doc": {
+        "value": 0.002255745454545454,
+        "kind": "usd"
+      },
+      "Latency p50": {
+        "value": 9435,
+        "kind": "ms"
+      },
+      "Latency p95": {
+        "value": 20280,
+        "kind": "ms"
+      },
+      "Failed runs": {
+        "value": 0,
+        "kind": "num"
+      }
+    },
+    "headerAcc": {
+      "docType": 1,
+      "documentNumber": 0.9090909090909091,
+      "issueDate": 1,
+      "currency": 1,
+      "issuer.name": 1,
+      "issuer.taxId": 1,
+      "recipient.name": 1,
+      "recipient.taxId": 1,
+      "printedTaxBreakdown": 1,
+      "printedTotal": 1
+    },
+    "lineAcc": {
+      "description": 0.9818181818181818,
+      "quantity": 1,
+      "unitPrice": 1,
+      "discountPct": 1,
+      "taxRate": 1,
+      "lineAmount": 1
+    },
+    "confusion": [
+      {
+        "expected": "VALID",
+        "VALID": 4,
+        "SUPPLIER_DISCREPANCY": 0,
+        "INVALID_TAX_ID": 0,
+        "EXTRACTION_UNCERTAIN": 0
+      },
+      {
+        "expected": "SUPPLIER_DISCREPANCY",
+        "VALID": 0,
+        "SUPPLIER_DISCREPANCY": 4,
+        "INVALID_TAX_ID": 0,
+        "EXTRACTION_UNCERTAIN": 0
+      },
+      {
+        "expected": "INVALID_TAX_ID",
+        "VALID": 0,
+        "SUPPLIER_DISCREPANCY": 0,
+        "INVALID_TAX_ID": 3,
+        "EXTRACTION_UNCERTAIN": 0
+      },
+      {
+        "expected": "EXTRACTION_UNCERTAIN",
+        "VALID": 0,
+        "SUPPLIER_DISCREPANCY": 0,
+        "INVALID_TAX_ID": 0,
+        "EXTRACTION_UNCERTAIN": 0
+      }
+    ]
+  },
+  "byCountry": {
+    "ES": {
+      "docs": 5,
+      "headline": {
+        "Documents 100 % correct (final)": {
+          "value": 0.8,
+          "kind": "pct"
+        },
+        "Documents 100 % correct (first read)": {
+          "value": 0.8,
+          "kind": "pct"
+        },
+        "Line F1": {
+          "value": 0.9615384615384616,
+          "kind": "pct"
+        },
+        "Final status correct": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Discrepancy precision": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Discrepancy recall": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Unfair claims (false positives on clean docs)": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "EXTRACTION_UNCERTAIN rate": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "Mean extraction attempts": {
+          "value": 1.4,
+          "kind": "num"
+        },
+        "Escalated to stronger model": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "Triage country accuracy": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Triage doc-type accuracy": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Reconciliation status correct": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claims drafted for SUPPLIER_DISCREPANCY": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim amount correct": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim drafts passing guardrails": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim judge score (1-5)": {
+          "value": 5,
+          "kind": "num"
+        },
+        "Claims with invented data": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "Cost / doc": {
+          "value": 0.00216716,
+          "kind": "usd"
+        },
+        "Latency p50": {
+          "value": 11106,
+          "kind": "ms"
+        },
+        "Latency p95": {
+          "value": 19390,
+          "kind": "ms"
+        },
+        "Failed runs": {
+          "value": 0,
+          "kind": "num"
+        }
+      },
+      "headerAcc": {
+        "docType": 1,
+        "documentNumber": 1,
+        "issueDate": 1,
+        "currency": 1,
+        "issuer.name": 1,
+        "issuer.taxId": 1,
+        "recipient.name": 1,
+        "recipient.taxId": 1,
+        "printedTaxBreakdown": 1,
+        "printedTotal": 1
+      },
+      "lineAcc": {
+        "description": 0.9615384615384616,
+        "quantity": 1,
+        "unitPrice": 1,
+        "discountPct": 1,
+        "taxRate": 1,
+        "lineAmount": 1
+      },
+      "confusion": [
+        {
+          "expected": "VALID",
+          "VALID": 2,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "SUPPLIER_DISCREPANCY",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 2,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "INVALID_TAX_ID",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 1,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "EXTRACTION_UNCERTAIN",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        }
+      ]
+    },
+    "FR": {
+      "docs": 3,
+      "headline": {
+        "Documents 100 % correct (final)": {
+          "value": 0.6666666666666666,
+          "kind": "pct"
+        },
+        "Documents 100 % correct (first read)": {
+          "value": 0.6666666666666666,
+          "kind": "pct"
+        },
+        "Line F1": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Final status correct": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Discrepancy precision": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Discrepancy recall": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Unfair claims (false positives on clean docs)": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "EXTRACTION_UNCERTAIN rate": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "Mean extraction attempts": {
+          "value": 1.6666666666666667,
+          "kind": "num"
+        },
+        "Escalated to stronger model": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "Triage country accuracy": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Triage doc-type accuracy": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Reconciliation status correct": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Claims drafted for SUPPLIER_DISCREPANCY": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim amount correct": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim drafts passing guardrails": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim judge score (1-5)": {
+          "value": 4,
+          "kind": "num"
+        },
+        "Claims with invented data": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "Cost / doc": {
+          "value": 0.0023940333333333334,
+          "kind": "usd"
+        },
+        "Latency p50": {
+          "value": 9435,
+          "kind": "ms"
+        },
+        "Latency p95": {
+          "value": 20280,
+          "kind": "ms"
+        },
+        "Failed runs": {
+          "value": 0,
+          "kind": "num"
+        }
+      },
+      "headerAcc": {
+        "docType": 1,
+        "documentNumber": 0.6666666666666666,
+        "issueDate": 1,
+        "currency": 1,
+        "issuer.name": 1,
+        "issuer.taxId": 1,
+        "recipient.name": 1,
+        "recipient.taxId": 1,
+        "printedTaxBreakdown": 1,
+        "printedTotal": 1
+      },
+      "lineAcc": {
+        "description": 1,
+        "quantity": 1,
+        "unitPrice": 1,
+        "discountPct": 1,
+        "taxRate": 1,
+        "lineAmount": 1
+      },
+      "confusion": [
+        {
+          "expected": "VALID",
+          "VALID": 1,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "SUPPLIER_DISCREPANCY",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 1,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "INVALID_TAX_ID",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 1,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "EXTRACTION_UNCERTAIN",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        }
+      ]
+    },
+    "IT": {
+      "docs": 3,
+      "headline": {
+        "Documents 100 % correct (final)": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Documents 100 % correct (first read)": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Line F1": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Final status correct": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Discrepancy precision": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Discrepancy recall": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Unfair claims (false positives on clean docs)": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "EXTRACTION_UNCERTAIN rate": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "Mean extraction attempts": {
+          "value": 1.6666666666666667,
+          "kind": "num"
+        },
+        "Escalated to stronger model": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "Triage country accuracy": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Triage doc-type accuracy": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Reconciliation status correct": {
+          "value": null,
+          "kind": "pct"
+        },
+        "Claims drafted for SUPPLIER_DISCREPANCY": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim amount correct": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim drafts passing guardrails": {
+          "value": 1,
+          "kind": "pct"
+        },
+        "Claim judge score (1-5)": {
+          "value": 5,
+          "kind": "num"
+        },
+        "Claims with invented data": {
+          "value": 0,
+          "kind": "pct"
+        },
+        "Cost / doc": {
+          "value": 0.0022651,
+          "kind": "usd"
+        },
+        "Latency p50": {
+          "value": 8649,
+          "kind": "ms"
+        },
+        "Latency p95": {
+          "value": 15292,
+          "kind": "ms"
+        },
+        "Failed runs": {
+          "value": 0,
+          "kind": "num"
+        }
+      },
+      "headerAcc": {
+        "docType": 1,
+        "documentNumber": 1,
+        "issueDate": 1,
+        "currency": 1,
+        "issuer.name": 1,
+        "issuer.taxId": 1,
+        "recipient.name": 1,
+        "recipient.taxId": 1,
+        "printedTaxBreakdown": 1,
+        "printedTotal": 1
+      },
+      "lineAcc": {
+        "description": 1,
+        "quantity": 1,
+        "unitPrice": 1,
+        "discountPct": 1,
+        "taxRate": 1,
+        "lineAmount": 1
+      },
+      "confusion": [
+        {
+          "expected": "VALID",
+          "VALID": 1,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "SUPPLIER_DISCREPANCY",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 1,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "INVALID_TAX_ID",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 1,
+          "EXTRACTION_UNCERTAIN": 0
+        },
+        {
+          "expected": "EXTRACTION_UNCERTAIN",
+          "VALID": 0,
+          "SUPPLIER_DISCREPANCY": 0,
+          "INVALID_TAX_ID": 0,
+          "EXTRACTION_UNCERTAIN": 0
+        }
+      ]
+    }
+  },
+  "checks": [
+    {
+      "country": "ES",
+      "metric": "Final status correct",
+      "kind": "threshold",
+      "value": 1,
+      "limit": "≥ 1",
+      "passed": true
+    },
+    {
+      "country": "ES",
+      "metric": "Unfair claims (false positives on clean docs)",
+      "kind": "threshold",
+      "value": 0,
+      "limit": "≤ 0",
+      "passed": true
+    },
+    {
+      "country": "ES",
+      "metric": "Failed runs",
+      "kind": "threshold",
+      "value": 0,
+      "limit": "≤ 0",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Final status correct",
+      "kind": "threshold",
+      "value": 1,
+      "limit": "≥ 1",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Unfair claims (false positives on clean docs)",
+      "kind": "threshold",
+      "value": 0,
+      "limit": "≤ 0",
+      "passed": true
+    },
+    {
+      "country": "FR",
+      "metric": "Failed runs",
+      "kind": "threshold",
+      "value": 0,
+      "limit": "≤ 0",
+      "passed": true
+    },
+    {
+      "country": "IT",
+      "metric": "Final status correct",
+      "kind": "threshold",
+      "value": 1,
+      "limit": "≥ 1",
+      "passed": true
+    },
+    {
+      "country": "IT",
+      "metric": "Unfair claims (false positives on clean docs)",
+      "kind": "threshold",
+      "value": 0,
+      "limit": "≤ 0",
+      "passed": true
+    },
+    {
+      "country": "IT",
+      "metric": "Failed runs",
+      "kind": "threshold",
+      "value": 0,
+      "limit": "≤ 0",
+      "passed": true
+    }
+  ],
+  "results": [
+    {
+      "id": "es-001",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "photo",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F-2026/04100",
+            "got": "F-2026/04100"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-20",
+            "got": "2026-09-20"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hortofrutícola del Turia S.L.",
+            "got": "Hortofrutícola del Turia S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B46391272",
+            "got": "B46391272"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 99.29,
+                "tax": 3.97
+              },
+              {
+                "rate": 10,
+                "base": 7.02,
+                "tax": 0.7
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 99.29,
+                "tax": 3.97
+              },
+              {
+                "rate": 10,
+                "base": 7.02,
+                "tax": 0.7
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 110.98,
+            "got": 110.98
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0012922,
+      "latencyMs": 8613,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "es-011",
+      "country": "ES",
+      "template": "clasica",
+      "mode": "scan",
+      "planted": "TOTAL_OFFSET",
+      "expectedStatus": "SUPPLIER_DISCREPANCY",
+      "status": "SUPPLIER_DISCREPANCY",
+      "reason": "reads #1 and #2 agree on TOTAL_MISMATCH: the document itself does not add up",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "TOTAL_MISMATCH"
+          ],
+          "cached": true
+        },
+        {
+          "index": 2,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "TOTAL_MISMATCH"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F-2026/04110",
+            "got": "F-2026/04110"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-13",
+            "got": "2026-10-13"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hortofrutícola del Turia S.L.",
+            "got": "Hortofrutícola del Turia S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B46391272",
+            "got": "B46391272"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 126.08,
+                "tax": 5.04
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 126.08,
+                "tax": 5.04
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 129.12,
+            "got": 129.12
+          }
+        ],
+        "lines": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 7,
+            "quantity": 7,
+            "unitPrice": 7,
+            "discountPct": 7,
+            "taxRate": 7,
+            "lineAmount": 7
+          },
+          "gtLines": 7
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0029971,
+      "latencyMs": 19390,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": {
+        "mode": "llm",
+        "amount": 0,
+        "expectedAmount": 0,
+        "judge": 5,
+        "justification": "The e-mail cites invoice F-2026/04110 dated 13/10/2026 and reproduces the total discrepancy exactly (126,08 + 5,04 = 131,12 vs 129,12, Δ 2,00). Since no amount is claimed, it correctly requests a corrected invoice without inventing a figure. It is written entirely in formal, courteous Spanish with no invented data, so it is ready to send.",
+        "invented": false,
+        "approved": true,
+        "subject": "Solicitud de factura rectificada - factura F-2026/04110 de fecha 13/10/2026"
+      }
+    },
+    {
+      "id": "es-018",
+      "country": "ES",
+      "template": "moderna",
+      "mode": "scan",
+      "planted": "TAX_ID_CHECKSUM",
+      "expectedStatus": "INVALID_TAX_ID",
+      "status": "INVALID_TAX_ID",
+      "reason": "reads #1 and #2 agree: the printed issuer tax id fails its checksum",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "INVALID_TAX_ID"
+          ],
+          "cached": true
+        },
+        {
+          "index": 2,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "INVALID_TAX_ID"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "EB-20262351",
+            "got": "EB-20262351"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-21",
+            "got": "2026-09-21"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Distribuciones de Bebidas Ebro S.L.",
+            "got": "Distribuciones de Bebidas Ebro S.L."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "B50274433",
+            "got": "B50274433"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Taberna El Pósito S.L.",
+            "got": "Taberna El Pósito S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B27543107",
+            "got": "B27543107"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 56.6,
+                "tax": 5.66
+              },
+              {
+                "rate": 21,
+                "base": 278.4,
+                "tax": 58.46
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 56.6,
+                "tax": 5.66
+              },
+              {
+                "rate": 21,
+                "base": 278.4,
+                "tax": 58.46
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 399.12,
+            "got": 399.12
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0023133,
+      "latencyMs": 11106,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "es-041",
+      "country": "ES",
+      "template": "erp",
+      "mode": "photo",
+      "planted": "DELIVERY_SHORT",
+      "expectedStatus": "SUPPLIER_DISCREPANCY",
+      "status": "SUPPLIER_DISCREPANCY",
+      "reason": "billed goods not delivered (80.88 incl. VAT, confirmed by a re-read of the delivery note)",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": false,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": false,
+      "comparison": {
+        "exact": false,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "FV26-001099",
+            "got": "FV26-001099"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-24",
+            "got": "2026-09-24"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cárnicas Montes de Toledo S.A.",
+            "got": "CÁRNICAS MONTES DE TOLEDO S.A."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "A45182060",
+            "got": "A45182060"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "RESTAURANTE LA BARRA S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 10,
+                "base": 293.88,
+                "tax": 29.39
+              }
+            ],
+            "got": [
+              {
+                "rate": 10,
+                "base": 293.88,
+                "tax": 29.39
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 323.27,
+            "got": 323.27
+          }
+        ],
+        "lines": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "fieldHits": {
+            "description": 3,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": [
+          "lines[0].description: expected \"JAMON CEBO IBERICO LONCHEADO 100G\", got \"JAMON CERDO IBERICO LONCHEADO 100G\""
+        ]
+      },
+      "costUsd": 0.0029966,
+      "latencyMs": 18080,
+      "allCached": true,
+      "reconciliation": "DISCREPANCIA",
+      "expectedReconciliation": "DISCREPANCIA",
+      "claim": {
+        "mode": "llm",
+        "amount": 80.88,
+        "expectedAmount": 80.88,
+        "judge": 5,
+        "justification": "The e-mail cites invoice FV26-001099 dated 24/09/2026, names the affected line with invoiced 26 vs delivered 14, and states the exact amount of 80,88 EUR including VAT. It is in Spanish, formal and courteous, and requests a corrective invoice or credit note without adding any invented data, so it is ready to send as is.",
+        "invented": false,
+        "approved": true,
+        "subject": "Reclamación factura FV26-001099 de fecha 24/09/2026"
+      }
+    },
+    {
+      "id": "es-042",
+      "country": "ES",
+      "template": "albaran",
+      "mode": "scan",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "DELIVERY_NOTE",
+            "got": "DELIVERY_NOTE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "ALB-2603387",
+            "got": "ALB-2603387"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-23",
+            "got": "2026-09-23"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Cárnicas Montes de Toledo S.A.",
+            "got": "Cárnicas Montes de Toledo S.A."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "A45182060",
+            "got": "A45182060"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Restaurante La Barra S.L.",
+            "got": "Restaurante La Barra S.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "B87123451",
+            "got": "B87123451"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [],
+            "got": []
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": null,
+            "got": null
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0012366,
+      "latencyMs": 7559,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-001",
+      "country": "FR",
+      "template": "classic",
+      "mode": "photo",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": false,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": false,
+      "comparison": {
+        "exact": false,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": false,
+            "expected": "FA-2026-010400",
+            "got": "FA-2026-010490"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-03",
+            "got": "2026-10-03"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Primeurs du Val de Loire SARL",
+            "got": "Primeurs du Val de Loire SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR20817263544",
+            "got": "FR20817263544"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 57.69,
+                "tax": 3.17
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 57.69,
+                "tax": 3.17
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 60.86,
+            "got": 60.86
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": [
+          "documentNumber: expected \"FA-2026-010400\", got \"FA-2026-010490\""
+        ]
+      },
+      "costUsd": 0.0013993,
+      "latencyMs": 8206,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "fr-006",
+      "country": "FR",
+      "template": "erp",
+      "mode": "photo",
+      "planted": "TOTAL_OFFSET",
+      "expectedStatus": "SUPPLIER_DISCREPANCY",
+      "status": "SUPPLIER_DISCREPANCY",
+      "reason": "reads #1 and #2 agree on TOTAL_MISMATCH: the document itself does not add up",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "TOTAL_MISMATCH"
+          ],
+          "cached": true
+        },
+        {
+          "index": 2,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "TOTAL_MISMATCH"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "F26/07145",
+            "got": "F26/07145"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-15",
+            "got": "2026-10-15"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Boucherie Charcuterie Lemoine SAS",
+            "got": "BOUCHERIE CHARCUTERIE LEMOINE SAS"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR68492837166",
+            "got": "FR68492837166"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Brasserie des Halles SARL",
+            "got": "BRASSERIE DES HALLES SARL"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR21790552137",
+            "got": "FR21790552137"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 212.84,
+                "tax": 11.71
+              },
+              {
+                "rate": 20,
+                "base": 23.8,
+                "tax": 4.76
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 212.84,
+                "tax": 11.71
+              },
+              {
+                "rate": 20,
+                "base": 23.8,
+                "tax": 4.76
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 254.61,
+            "got": 254.61
+          }
+        ],
+        "lines": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 5,
+            "quantity": 5,
+            "unitPrice": 5,
+            "discountPct": 5,
+            "taxRate": 5,
+            "lineAmount": 5
+          },
+          "gtLines": 5
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0033902999999999997,
+      "latencyMs": 20280,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": {
+        "mode": "llm",
+        "amount": 1.5,
+        "expectedAmount": 1.5,
+        "judge": 4,
+        "justification": "The e-mail cites invoice F26/07145 of 15/10/2026, restates the total discrepancy (236,64 + 16,47 = 253,11 vs 254,61, a difference of 1,50) and claims exactly 1,50 EUR VAT included, all matching the facts. It is in French with a formal, courteous tone and no invented data. Minor style edits are needed: \"nous vous remercions\" appears three times and the first sentence is awkward. Offering \"un avoir\" as an alternative to a corrective invoice is a small liberty but not a factual invention.",
+        "invented": false,
+        "approved": true,
+        "subject": "Demande de facture rectificative - facture n° F26/07145 du 15/10/2026"
+      }
+    },
+    {
+      "id": "fr-012",
+      "country": "FR",
+      "template": "classic",
+      "mode": "pdf",
+      "planted": "TAX_ID_CHECKSUM",
+      "expectedStatus": "INVALID_TAX_ID",
+      "status": "INVALID_TAX_ID",
+      "reason": "reads #1 and #2 agree: the printed issuer tax id fails its checksum",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "INVALID_TAX_ID"
+          ],
+          "cached": true
+        },
+        {
+          "index": 2,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "INVALID_TAX_ID"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "HPA-2644",
+            "got": "HPA-2644"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-08",
+            "got": "2026-09-08"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Hygiène Pro Atlantique SARL",
+            "got": "Hygiène Pro Atlantique SARL"
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "FR66429183726",
+            "got": "FR66429183726"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Bistrot du Canal SAS",
+            "got": "Bistrot du Canal SAS"
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "FR14882149073",
+            "got": "FR14882149073"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 5.5,
+                "base": 10.45,
+                "tax": 0.57
+              },
+              {
+                "rate": 20,
+                "base": 163.5,
+                "tax": 32.7
+              }
+            ],
+            "got": [
+              {
+                "rate": 5.5,
+                "base": 10.45,
+                "tax": 0.57
+              },
+              {
+                "rate": 20,
+                "base": 163.5,
+                "tax": 32.7
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 207.22,
+            "got": 207.22
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0023925,
+      "latencyMs": 9435,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "it-001",
+      "country": "IT",
+      "template": "classic",
+      "mode": "pdf",
+      "planted": null,
+      "expectedStatus": "VALID",
+      "status": "VALID",
+      "reason": "All checks passed on the first read",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": true,
+          "exact": true,
+          "errors": [],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "1200/2026",
+            "got": "1200/2026"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-30",
+            "got": "2026-09-30"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Ortofrutta Lombarda S.r.l.",
+            "got": "Ortofrutta Lombarda S.r.l."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "04512387905",
+            "got": "04512387905"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Trattoria Navigli S.r.l.",
+            "got": "Trattoria Navigli S.r.l."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "09123456700",
+            "got": "09123456700"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 54.34,
+                "tax": 2.17
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 54.34,
+                "tax": 2.17
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 56.51,
+            "got": 56.51
+          }
+        ],
+        "lines": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 4,
+            "quantity": 4,
+            "unitPrice": 4,
+            "discountPct": 4,
+            "taxRate": 4,
+            "lineAmount": 4
+          },
+          "gtLines": 4
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0013670000000000002,
+      "latencyMs": 5540,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    },
+    {
+      "id": "it-002",
+      "country": "IT",
+      "template": "erp",
+      "mode": "pdf",
+      "planted": "LINE_MATH",
+      "expectedStatus": "SUPPLIER_DISCREPANCY",
+      "status": "SUPPLIER_DISCREPANCY",
+      "reason": "reads #1 and #2 agree on LINE_MATH: the document itself does not add up",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "LINE_MATH"
+          ],
+          "cached": true
+        },
+        {
+          "index": 2,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "LINE_MATH"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "SV/26/005205",
+            "got": "SV/26/005205"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-10-05",
+            "got": "2026-10-05"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Salumificio Valtellina S.p.A.",
+            "got": "SALUMIFICIO VALTELLINA S.P.A."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "07123456787",
+            "got": "07123456787"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Trattoria Navigli S.r.l.",
+            "got": "TRATTORIA NAVIGLI S.R.L."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "09123456700",
+            "got": "09123456700"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 78.58,
+                "tax": 3.14
+              },
+              {
+                "rate": 10,
+                "base": 21.94,
+                "tax": 2.19
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 78.58,
+                "tax": 3.14
+              },
+              {
+                "rate": 10,
+                "base": 21.94,
+                "tax": 2.19
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 105.85,
+            "got": 105.85
+          }
+        ],
+        "lines": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 3,
+            "quantity": 3,
+            "unitPrice": 3,
+            "discountPct": 3,
+            "taxRate": 3,
+            "lineAmount": 3
+          },
+          "gtLines": 3
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0030334999999999997,
+      "latencyMs": 15292,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": {
+        "mode": "llm",
+        "amount": 1.24,
+        "expectedAmount": 1.24,
+        "judge": 5,
+        "justification": "The e-mail cites invoice SV/26/005205 dated 05/10/2026, line 2 (MOZZARELLA FIOR DI LATTE) with the exact calculation discrepancy, and the claimed amount of 1,24 EUR VAT included. It is written entirely in Italian in a formal, courteous tone and invents no data, so it can be sent unchanged.",
+        "invented": false,
+        "approved": true,
+        "subject": "Richiesta di fattura corretta - fattura n. SV/26/005205 del 05/10/2026"
+      }
+    },
+    {
+      "id": "it-017",
+      "country": "IT",
+      "template": "classic",
+      "mode": "pdf",
+      "planted": "TAX_ID_CHECKSUM",
+      "expectedStatus": "INVALID_TAX_ID",
+      "status": "INVALID_TAX_ID",
+      "reason": "reads #1 and #2 agree: the printed issuer tax id fails its checksum",
+      "traceId": null,
+      "triageCountryOk": true,
+      "triageDocTypeOk": true,
+      "attempts": [
+        {
+          "index": 1,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "INVALID_TAX_ID"
+          ],
+          "cached": true
+        },
+        {
+          "index": 2,
+          "role": "primary",
+          "model": "anthropic:claude-haiku-5-5",
+          "passed": false,
+          "exact": true,
+          "errors": [
+            "INVALID_TAX_ID"
+          ],
+          "cached": true
+        }
+      ],
+      "firstExact": true,
+      "comparison": {
+        "exact": true,
+        "header": [
+          {
+            "field": "docType",
+            "ok": true,
+            "expected": "INVOICE",
+            "got": "INVOICE"
+          },
+          {
+            "field": "documentNumber",
+            "ok": true,
+            "expected": "1248/2026",
+            "got": "1248/2026"
+          },
+          {
+            "field": "issueDate",
+            "ok": true,
+            "expected": "2026-09-01",
+            "got": "2026-09-01"
+          },
+          {
+            "field": "currency",
+            "ok": true,
+            "expected": "EUR",
+            "got": "EUR"
+          },
+          {
+            "field": "issuer.name",
+            "ok": true,
+            "expected": "Ortofrutta Lombarda S.r.l.",
+            "got": "Ortofrutta Lombarda S.r.l."
+          },
+          {
+            "field": "issuer.taxId",
+            "ok": true,
+            "expected": "04512387908",
+            "got": "04512387908"
+          },
+          {
+            "field": "recipient.name",
+            "ok": true,
+            "expected": "Trattoria Navigli S.r.l.",
+            "got": "Trattoria Navigli S.r.l."
+          },
+          {
+            "field": "recipient.taxId",
+            "ok": true,
+            "expected": "09123456700",
+            "got": "09123456700"
+          },
+          {
+            "field": "printedTaxBreakdown",
+            "ok": true,
+            "expected": [
+              {
+                "rate": 4,
+                "base": 70.9,
+                "tax": 2.84
+              }
+            ],
+            "got": [
+              {
+                "rate": 4,
+                "base": 70.9,
+                "tax": 2.84
+              }
+            ]
+          },
+          {
+            "field": "printedTotal",
+            "ok": true,
+            "expected": 73.74,
+            "got": 73.74
+          }
+        ],
+        "lines": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "fieldHits": {
+            "description": 6,
+            "quantity": 6,
+            "unitPrice": 6,
+            "discountPct": 6,
+            "taxRate": 6,
+            "lineAmount": 6
+          },
+          "gtLines": 6
+        },
+        "mismatches": []
+      },
+      "costUsd": 0.0023948,
+      "latencyMs": 8649,
+      "allCached": true,
+      "reconciliation": null,
+      "claim": null
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "de-019",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-019.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-getraenke",
+  "template": "modern",
+  "variant": {
+    "mode": "scan",
+    "rotation": 1.1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "GRV-26126",
+    "issueDate": "2026-09-12",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Getränke Rheinland Vertriebs GmbH",
+      "taxId": "DE125937412",
+      "address": "Industriestraße 77 · 50735 Köln"
+    },
+    "recipient": {
+      "name": "Brauhaus Altstadt GmbH & Co. KG",
+      "taxId": "DE215903744",
+      "address": "Am Hof 18 · 50667 Köln"
+    },
+    "lines": [
+      {
+        "description": "Kölsch 0,33 l (Kasten 24)",
+        "quantity": 2,
+        "unit": "Kasten",
+        "unitPrice": 21.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 43.8
+      },
+      {
+        "description": "Riesling trocken 0,75 l",
+        "quantity": 13,
+        "unit": "Fl",
+        "unitPrice": 6.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 89.7
+      },
+      {
+        "description": "Mineralwasser 0,7 l (Kasten 12)",
+        "quantity": 3,
+        "unit": "Kasten",
+        "unitPrice": 7.2,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 21.6
+      },
+      {
+        "description": "Weizenbier 0,5 l (Kasten 20)",
+        "quantity": 3,
+        "unit": "Kasten",
+        "unitPrice": 19.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 59.7
+      },
+      {
+        "description": "Vollmilch 3,5 % 1 l",
+        "quantity": 15,
+        "unit": "Pkg",
+        "unitPrice": 1.15,
+        "discountPct": null,
+        "taxRate": 7,
+        "lineAmount": 17.25
+      },
+      {
+        "description": "Apfelschorle 0,5 l (Kasten 20)",
+        "quantity": 2,
+        "unit": "Kasten",
+        "unitPrice": 14.8,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 29.6
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 7,
+        "base": 17.25,
+        "tax": 1.21
+      },
+      {
+        "rate": 19,
+        "base": 244.4,
+        "tax": 46.44
+      }
+    ],
+    "printedTotal": 309.3,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

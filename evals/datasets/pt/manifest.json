@@ -1,0 +1,946 @@
+{
+  "country": "PT",
+  "generator": "gen@2.0.0",
+  "seed": 42,
+  "generatedAt": "2026-10-18",
+  "entries": [
+    {
+      "id": "pt-001",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-001.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-hortofruticola",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Pagar dia 15"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-002",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-002.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-talho",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": "Falta 1 caixa"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-003",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-003.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-bebidas",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": -2.4,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-004",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-004.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-limpeza",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 3 amount off by -0.80 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "pt-005",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-005.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-hortofruticola",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-006",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-006.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-talho",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "PAGO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-007",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-007.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-bebidas",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "RECEBIDO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-008",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-008.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-limpeza",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-009",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-009.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-hortofruticola",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.8,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by -2.00"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "pt-010",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-010.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-talho",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-011",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-011.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-bebidas",
+      "template": "modern",
+      "variant": {
+        "mode": "scan",
+        "rotation": 1.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": "Conferido - Rui"
+      },
+      "planted": {
+        "type": "TAX_ID_CHECKSUM",
+        "description": "Issuer tax id PT514283915 has a wrong control (valid: PT514283912)"
+      },
+      "expected": {
+        "issueCodes": [
+          "INVALID_TAX_ID"
+        ],
+        "finalStatus": "INVALID_TAX_ID"
+      }
+    },
+    {
+      "id": "pt-012",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-012.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-limpeza",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.3,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-013",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-013.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-hortofruticola",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.5,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Falta 1 caixa"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-014",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-014.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-talho",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": "Pagar dia 15"
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 2 billed at stale rate 5 % instead of 6 %"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "pt-015",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-015.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-bebidas",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "TOTAL_OFFSET",
+        "description": "Printed total shifted by 1.50"
+      },
+      "expected": {
+        "issueCodes": [
+          "TOTAL_MISMATCH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "pt-016",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-016.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-limpeza",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "RECEBIDO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-017",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-017.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-hortofruticola",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.9,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-018",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-018.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-talho",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": "Ligar à Inês"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-019",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-019.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-bebidas",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-020",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-020.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-limpeza",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-021",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-021.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-hortofruticola",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-022",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-022.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-talho",
+      "template": "erp",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.8,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "LINE_MATH",
+        "description": "Line 1 amount off by 2.50 vs quantity × price"
+      },
+      "expected": {
+        "issueCodes": [
+          "LINE_MATH"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "pt-023",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-023.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-hortofruticola",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.6,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "pt-024",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-024.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-hortofruticola",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "pt-023"
+    },
+    {
+      "id": "pt-025",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-025.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-talho",
+      "template": "erp",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID",
+        "reconciliation": "SIN_DISCREPANCIA",
+        "claimAmount": 0
+      }
+    },
+    {
+      "id": "pt-026",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-026.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-talho",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.8,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "pt-025"
+    },
+    {
+      "id": "pt-027",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-027.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-bebidas",
+      "template": "modern",
+      "variant": {
+        "mode": "scan",
+        "rotation": 0.3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAGO",
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "DELIVERY_SHORT",
+        "description": "\"Aguardente velha 70cl\": invoiced 2, delivered 1.5"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 10.39
+      }
+    },
+    {
+      "id": "pt-028",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-028.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-bebidas",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.1,
+        "noise": true,
+        "lowRes": true,
+        "stamp": "CONTABILIZADO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "pt-027"
+    },
+    {
+      "id": "pt-029",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-029.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-limpeza",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": -3.3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "DELIVERY_MISSING_PRODUCT",
+        "description": "\"Detergente máquina loiça 20L\" invoiced but not delivered"
+      },
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "SUPPLIER_DISCREPANCY",
+        "reconciliation": "DISCREPANCIA",
+        "claimAmount": 79.95
+      }
+    },
+    {
+      "id": "pt-030",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-030.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-limpeza",
+      "template": "delivery-note",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "PAGO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      },
+      "deliveryNoteFor": "pt-029"
+    },
+    {
+      "id": "pt-031",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-031.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-madeira-dist",
+      "template": "classic",
+      "variant": {
+        "mode": "scan",
+        "rotation": 1.2,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "RECEBIDO",
+        "handwrittenNote": "OK cozinha"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-032",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-032.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-madeira-dist",
+      "template": "classic",
+      "variant": {
+        "mode": "photo",
+        "rotation": 3.1,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 1 billed at the mainland rate 23 % instead of 22 % (PT (Madeira))"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "pt-033",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-033.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-madeira-dist",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-034",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-034.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-madeira-dist",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-035",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-035.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-madeira-dist",
+      "template": "classic",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": "RECEBIDO",
+        "handwrittenNote": "Ligar à Inês"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-036",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-036.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-acores-dist",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": 2.3,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAGO",
+        "handwrittenNote": "Ligar à Inês"
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-037",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-037.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-acores-dist",
+      "template": "modern",
+      "variant": {
+        "mode": "photo",
+        "rotation": -1.5,
+        "noise": true,
+        "lowRes": true,
+        "stamp": null,
+        "handwrittenNote": "OK cozinha"
+      },
+      "planted": {
+        "type": "RATE_NOT_ALLOWED",
+        "description": "Line 6 billed at the mainland rate 13 % instead of 9 % (PT (Açores))"
+      },
+      "expected": {
+        "issueCodes": [
+          "RATE_NOT_ALLOWED"
+        ],
+        "finalStatus": "SUPPLIER_DISCREPANCY"
+      }
+    },
+    {
+      "id": "pt-038",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-038.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-acores-dist",
+      "template": "modern",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.6,
+        "noise": true,
+        "lowRes": false,
+        "stamp": "PAGO",
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-039",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-039.pdf",
+      "mediaType": "application/pdf",
+      "supplierId": "pt-acores-dist",
+      "template": "modern",
+      "variant": {
+        "mode": "pdf",
+        "rotation": 0,
+        "noise": false,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    },
+    {
+      "id": "pt-040",
+      "country": "PT",
+      "source": "synthetic",
+      "file": "pt-040.jpg",
+      "mediaType": "image/jpeg",
+      "supplierId": "pt-acores-dist",
+      "template": "modern",
+      "variant": {
+        "mode": "scan",
+        "rotation": -0.4,
+        "noise": true,
+        "lowRes": false,
+        "stamp": null,
+        "handwrittenNote": null
+      },
+      "planted": null,
+      "expected": {
+        "issueCodes": [],
+        "finalStatus": "VALID"
+      }
+    }
+  ]
+}

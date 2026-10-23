@@ -1,0 +1,118 @@
+{
+  "id": "it-033",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-033.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "it-pastificio",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": 0.9,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "PPE 376/26",
+    "issueDate": "2026-09-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Pastificio e Panificio Emiliano S.r.l.",
+      "taxId": "02876543105",
+      "address": "Via Emilia Est 412 · 41122 Modena (MO)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "Tagliatelle fresche all’uovo",
+        "quantity": 3.9,
+        "unit": "kg",
+        "unitPrice": 6.2,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 24.18
+      },
+      {
+        "description": "Farina tipo 00",
+        "quantity": 15,
+        "unit": "kg",
+        "unitPrice": 0.98,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 14.7
+      },
+      {
+        "description": "Detersivo piatti 5L",
+        "quantity": 2,
+        "unit": "tanica",
+        "unitPrice": 9.8,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 19.6
+      },
+      {
+        "description": "Olio extravergine di oliva 5L",
+        "quantity": 1,
+        "unit": "latta",
+        "unitPrice": 44.5,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 44.5
+      },
+      {
+        "description": "Pane casereccio",
+        "quantity": 11.9,
+        "unit": "kg",
+        "unitPrice": 3.1,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 36.89
+      },
+      {
+        "description": "Grissini torinesi (conf.)",
+        "quantity": 16,
+        "unit": "conf",
+        "unitPrice": 2.4,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 38.4
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 158.67,
+        "tax": 6.35
+      },
+      {
+        "rate": 22,
+        "base": 19.6,
+        "tax": 4.31
+      }
+    ],
+    "printedTotal": 190.93,
+    "deliveryNoteRefs": [],
+    "printedCharges": [
+      {
+        "kind": "STAMP_DUTY",
+        "label": "Imposta di bollo",
+        "rate": null,
+        "base": null,
+        "amount": 2
+      }
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

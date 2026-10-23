@@ -1,0 +1,25 @@
+{
+  "name": "cross-border-invoice-sentinel",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "evals",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "npm run test -w @sentinel/core && npm run test -w @sentinel/evals",
+    "test:coverage": "npm run test:coverage -w @sentinel/core",
+    "typecheck": "npm run typecheck -w @sentinel/core && npm run typecheck -w @sentinel/evals && npm run typecheck -w @sentinel/web",
+    "gen:dataset": "npm run gen:dataset -w @sentinel/evals --",
+    "evals": "npm run evals -w @sentinel/evals --",
+    "prompts:push": "npm run prompts:push -w @sentinel/core --",
+    "evals:smoke": "npm run evals -w @sentinel/evals -- --smoke",
+    "evals:compare": "npm run evals:compare -w @sentinel/evals --",
+    "dev": "npm run dev -w @sentinel/web",
+    "build:web": "npm run build -w @sentinel/web"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}

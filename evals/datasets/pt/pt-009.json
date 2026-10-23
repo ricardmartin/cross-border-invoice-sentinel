@@ -1,0 +1,110 @@
+{
+  "id": "pt-009",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-009.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-hortofruticola",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.8,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT 2026A/1524",
+    "issueDate": "2026-10-09",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola do Oeste, Lda.",
+      "taxId": "PT507318420",
+      "address": "MARL, Pavilhão B3 · 2660-421 São Julião do Tojal"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "Batata branca",
+        "quantity": 19.8,
+        "unit": "kg",
+        "unitPrice": 0.68,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 13.46
+      },
+      {
+        "description": "Tomate chucha",
+        "quantity": 9.2,
+        "unit": "kg",
+        "unitPrice": 1.95,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 17.94
+      },
+      {
+        "description": "Cebola",
+        "quantity": 8.2,
+        "unit": "kg",
+        "unitPrice": 0.82,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 6.72
+      },
+      {
+        "description": "Alface frisada",
+        "quantity": 16,
+        "unit": "un",
+        "unitPrice": 0.75,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 12
+      },
+      {
+        "description": "Laranja do Algarve",
+        "quantity": 17,
+        "unit": "kg",
+        "unitPrice": 1.25,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 21.25
+      },
+      {
+        "description": "Coentros (molho)",
+        "quantity": 12,
+        "unit": "molho",
+        "unitPrice": 0.6,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 7.2
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 78.57,
+        "tax": 4.71
+      }
+    ],
+    "printedTotal": 81.28,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "0C08C80E-1524"
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by -2.00"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "id": "es-039",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-039.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-turia",
+  "template": "clasica",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.9,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "F-2026/04139",
+    "issueDate": "2026-09-16",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola del Turia S.L.",
+      "taxId": "B46391272",
+      "address": "Mercavalencia, Nave 14 · Ctra. en Corts 231 · 46013 Valencia"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "Patata agria",
+        "quantity": 15.7,
+        "unit": "kg",
+        "unitPrice": 0.89,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 13.97
+      },
+      {
+        "description": "Aceituna gordal",
+        "quantity": 1.5,
+        "unit": "kg",
+        "unitPrice": 5.4,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 8.1
+      },
+      {
+        "description": "Huevos camperos L (30 ud)",
+        "quantity": 1,
+        "unit": "bandeja",
+        "unitPrice": 6.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 6.9
+      },
+      {
+        "description": "Cebolla dulce",
+        "quantity": 20.4,
+        "unit": "kg",
+        "unitPrice": 1.15,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 23.46
+      },
+      {
+        "description": "Limón",
+        "quantity": 7.3,
+        "unit": "kg",
+        "unitPrice": 1.6,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 11.68
+      },
+      {
+        "description": "Champiñón laminado",
+        "quantity": 4.5,
+        "unit": "kg",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 17.55
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 73.56,
+        "tax": 2.94
+      },
+      {
+        "rate": 10,
+        "base": 8.1,
+        "tax": 0.81
+      }
+    ],
+    "printedTotal": 85.41,
+    "deliveryNoteRefs": [
+      "ALB-2603373"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_SHORT",
+    "description": "Line 1 \"Patata agria\": invoiced 15.7, delivered 10"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 5.27
+  }
+}

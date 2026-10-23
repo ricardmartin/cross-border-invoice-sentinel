@@ -1,0 +1,105 @@
+{
+  "id": "fr-006",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-006.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "fr-lemoine",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": -2.3,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Manque 1 carton"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "FR",
+    "documentNumber": "F26/07145",
+    "issueDate": "2026-10-15",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Boucherie Charcuterie Lemoine SAS",
+      "taxId": "FR68492837166",
+      "address": "18 rue des Abattoirs · 69007 Lyon"
+    },
+    "recipient": {
+      "name": "Brasserie des Halles SARL",
+      "taxId": "FR21790552137",
+      "address": "12 rue Montorgueil · 75001 Paris"
+    },
+    "lines": [
+      {
+        "description": "FILET DE VOLAILLE LABEL ROUGE",
+        "quantity": 4.092,
+        "unit": "KG",
+        "unitPrice": 12.4,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 50.74
+      },
+      {
+        "description": "FILM ETIRABLE 300M",
+        "quantity": 2,
+        "unit": "RLX",
+        "unitPrice": 11.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 23.8
+      },
+      {
+        "description": "SAUCISSE DE TOULOUSE",
+        "quantity": 3.044,
+        "unit": "KG",
+        "unitPrice": 9.6,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 29.22
+      },
+      {
+        "description": "BAVETTE D ALOYAU",
+        "quantity": 5.356,
+        "unit": "KG",
+        "unitPrice": 21.5,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 115.15
+      },
+      {
+        "description": "JAMBON BLANC SUPERIEUR",
+        "quantity": 1.198,
+        "unit": "KG",
+        "unitPrice": 14.8,
+        "discountPct": null,
+        "taxRate": 5.5,
+        "lineAmount": 17.73
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 5.5,
+        "base": 212.84,
+        "tax": 11.71
+      },
+      {
+        "rate": 20,
+        "base": 23.8,
+        "tax": 4.76
+      }
+    ],
+    "printedTotal": 254.61,
+    "deliveryNoteRefs": []
+  },
+  "planted": {
+    "type": "TOTAL_OFFSET",
+    "description": "Printed total shifted by 1.50"
+  },
+  "expected": {
+    "issueCodes": [
+      "TOTAL_MISMATCH"
+    ],
+    "finalStatus": "SUPPLIER_DISCREPANCY"
+  }
+}

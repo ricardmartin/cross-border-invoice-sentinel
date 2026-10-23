@@ -1,0 +1,87 @@
+{
+  "id": "pt-001",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-001.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "pt-hortofruticola",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Pagar dia 15"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "PT",
+    "documentNumber": "FT 2026A/1500",
+    "issueDate": "2026-10-05",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola do Oeste, Lda.",
+      "taxId": "PT507318420",
+      "address": "MARL, Pavilhão B3 · 2660-421 São Julião do Tojal"
+    },
+    "recipient": {
+      "name": "Restaurante Ribeira Douro, Lda.",
+      "taxId": "PT508642175",
+      "address": "Cais da Ribeira 22 · 4050-509 Porto"
+    },
+    "lines": [
+      {
+        "description": "Coentros (molho)",
+        "quantity": 7,
+        "unit": "molho",
+        "unitPrice": 0.6,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 4.2
+      },
+      {
+        "description": "Laranja do Algarve",
+        "quantity": 8.2,
+        "unit": "kg",
+        "unitPrice": 1.25,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 10.25
+      },
+      {
+        "description": "Cebola",
+        "quantity": 11,
+        "unit": "kg",
+        "unitPrice": 0.82,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 9.02
+      },
+      {
+        "description": "Alface frisada",
+        "quantity": 21,
+        "unit": "un",
+        "unitPrice": 0.75,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": 15.75
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": 39.22,
+        "tax": 2.35
+      }
+    ],
+    "printedTotal": 41.57,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "0C08C80E-1500"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

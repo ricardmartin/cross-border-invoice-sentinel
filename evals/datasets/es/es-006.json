@@ -1,0 +1,95 @@
+{
+  "id": "es-006",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-006.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-turia",
+  "template": "clasica",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3.5,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "CREDIT_NOTE",
+    "country": "ES",
+    "documentNumber": "R-F-2026/04105",
+    "issueDate": "2026-10-03",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola del Turia S.L.",
+      "taxId": "B46391272",
+      "address": "Mercavalencia, Nave 14 · Ctra. en Corts 231 · 46013 Valencia"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Pimiento rojo",
+        "quantity": -2.3,
+        "unit": "kg",
+        "unitPrice": 2.45,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": -5.64
+      },
+      {
+        "description": "Champiñón laminado",
+        "quantity": -3.3,
+        "unit": "kg",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": -12.87
+      },
+      {
+        "description": "Tomate pera",
+        "quantity": -7.3,
+        "unit": "kg",
+        "unitPrice": 1.85,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": -13.51
+      },
+      {
+        "description": "Zanahoria",
+        "quantity": -7.3,
+        "unit": "kg",
+        "unitPrice": 0.79,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": -5.77
+      },
+      {
+        "description": "Huevos camperos L (30 ud)",
+        "quantity": -3,
+        "unit": "bandeja",
+        "unitPrice": 6.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": -20.7
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": -58.49,
+        "tax": -2.34
+      }
+    ],
+    "printedTotal": -60.83,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

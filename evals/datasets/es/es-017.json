@@ -1,0 +1,118 @@
+{
+  "id": "es-017",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-017.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "es-montes",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Revisado - Juan"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "FV26-000924",
+    "issueDate": "2026-09-23",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Cárnicas Montes de Toledo S.A.",
+      "taxId": "A45182060",
+      "address": "Polígono Industrial Santa María de Benquerencia, C/ Río Jarama 52 · 45007 Toledo"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "JAMON CEBO IBERICO LONCHEADO 100G",
+        "quantity": 18,
+        "unit": "UD",
+        "unitPrice": 6.45,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 116.1
+      },
+      {
+        "description": "BOLSA VACIO 30X40 (100 UD)",
+        "quantity": 1,
+        "unit": "CAJA",
+        "unitPrice": 12.6,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": 12.6
+      },
+      {
+        "description": "HAMBURGUESA VACUNO 180G",
+        "quantity": 55,
+        "unit": "UD",
+        "unitPrice": 1.38,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 75.9
+      },
+      {
+        "description": "POLLO CAMPERO ENTERO",
+        "quantity": 4.518,
+        "unit": "KG",
+        "unitPrice": 4.35,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 19.65
+      },
+      {
+        "description": "CHORIZO SARTA PICANTE",
+        "quantity": 3.136,
+        "unit": "KG",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 27.91
+      },
+      {
+        "description": "CHULETILLA CORDERO LECHAL",
+        "quantity": 2.004,
+        "unit": "KG",
+        "unitPrice": 19.8,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 39.68
+      },
+      {
+        "description": "TERNERA LOMO BAJO EXTRA",
+        "quantity": 5.191,
+        "unit": "KG",
+        "unitPrice": 24.9,
+        "discountPct": 10,
+        "taxRate": 10,
+        "lineAmount": 116.33
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 10,
+        "base": 395.57,
+        "tax": 39.56
+      },
+      {
+        "rate": 21,
+        "base": 12.6,
+        "tax": 2.65
+      }
+    ],
+    "printedTotal": 450.38,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

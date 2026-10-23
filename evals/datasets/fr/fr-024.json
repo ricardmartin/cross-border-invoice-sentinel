@@ -1,0 +1,108 @@
+{
+  "id": "fr-024",
+  "country": "FR",
+  "source": "synthetic",
+  "file": "fr-024.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "fr-primeurs",
+  "template": "delivery-note",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "COMPTABILISÉ",
+    "handwrittenNote": "Manque 1 carton"
+  },
+  "groundTruth": {
+    "docType": "DELIVERY_NOTE",
+    "country": "FR",
+    "documentNumber": "BL-2604299",
+    "issueDate": "2026-09-15",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Primeurs du Val de Loire SARL",
+      "taxId": "FR20817263544",
+      "address": "MIN de Rungis, Bât. D4 · 94150 Rungis"
+    },
+    "recipient": {
+      "name": "Brasserie des Halles SARL",
+      "taxId": "FR21790552137",
+      "address": "12 rue Montorgueil · 75001 Paris"
+    },
+    "lines": [
+      {
+        "description": "Pommes Golden",
+        "quantity": 4.1,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Tomates grappe",
+        "quantity": 12.1,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Carottes des sables",
+        "quantity": 11.9,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Oignons jaunes",
+        "quantity": 13.4,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Salade batavia",
+        "quantity": 16,
+        "unit": "pièce",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Herbes fraîches (botte)",
+        "quantity": 11,
+        "unit": "botte",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      },
+      {
+        "description": "Champignons de Paris",
+        "quantity": 4.4,
+        "unit": "kg",
+        "unitPrice": null,
+        "discountPct": null,
+        "taxRate": null,
+        "lineAmount": null
+      }
+    ],
+    "printedTaxBreakdown": [],
+    "printedTotal": null,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  },
+  "deliveryNoteFor": "fr-023"
+}

@@ -1,0 +1,104 @@
+{
+  "id": "dk-010",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-010.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-slagter",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": -2.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "BOGFØRT",
+    "handwrittenNote": "Ring til Freja"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "JKP-091081",
+    "issueDate": "2026-09-30",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Jysk Kød & Pålæg A/S",
+      "taxId": "DK27164935",
+      "address": "Industrivej 41 · 8600 Silkeborg"
+    },
+    "recipient": {
+      "name": "Café Åboulevard I/S",
+      "taxId": "DK31956420",
+      "address": "Åboulevard 52 · 8000 Aarhus C"
+    },
+    "lines": [
+      {
+        "description": "LEVERPOSTEJ",
+        "quantity": 1.09,
+        "unit": "KG",
+        "unitPrice": 54,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 58.86
+      },
+      {
+        "description": "OKSEMØRBRAD",
+        "quantity": 4.209,
+        "unit": "KG",
+        "unitPrice": 289,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 1216.4
+      },
+      {
+        "description": "KYLLINGEBRYST",
+        "quantity": 7.691,
+        "unit": "KG",
+        "unitPrice": 79.9,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 614.51
+      },
+      {
+        "description": "HUSHOLDNINGSFILM 300M",
+        "quantity": 3,
+        "unit": "RL",
+        "unitPrice": 79,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 237
+      },
+      {
+        "description": "SVINEKAM M/SVÆR",
+        "quantity": 6.804,
+        "unit": "KG",
+        "unitPrice": 64.5,
+        "discountPct": 10,
+        "taxRate": 25,
+        "lineAmount": 394.97
+      },
+      {
+        "description": "RUGBRØD, SKIVESKÅRET",
+        "quantity": 6,
+        "unit": "STK",
+        "unitPrice": 18.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 111
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 2632.74,
+        "tax": 658.19
+      }
+    ],
+    "printedTotal": 3290.93,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

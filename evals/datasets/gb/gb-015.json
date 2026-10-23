@@ -1,0 +1,109 @@
+{
+  "id": "gb-015",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-015.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "gb-drinks",
+  "template": "modern",
+  "variant": {
+    "mode": "photo",
+    "rotation": 3,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "TVD-26098",
+    "issueDate": "2026-09-18",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Thames Valley Drinks Wholesale Ltd",
+      "taxId": "GB904521748",
+      "address": "Unit 9, Suttons Business Park · Reading RG6 1AZ"
+    },
+    "recipient": {
+      "name": "The Anchor Dining Rooms Ltd",
+      "taxId": "GB286041557",
+      "address": "34 Bankside · London SE1 9DT"
+    },
+    "lines": [
+      {
+        "description": "Lager 330ml (x24)",
+        "quantity": 6,
+        "unit": "case",
+        "unitPrice": 26.4,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 158.4
+      },
+      {
+        "description": "Cola 330ml (x24)",
+        "quantity": 2,
+        "unit": "case",
+        "unitPrice": 13.2,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 26.4
+      },
+      {
+        "description": "London dry gin 70cl",
+        "quantity": 2,
+        "unit": "btl",
+        "unitPrice": 19.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 39
+      },
+      {
+        "description": "IPA cask 9 gal",
+        "quantity": 3,
+        "unit": "cask",
+        "unitPrice": 118,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 354
+      },
+      {
+        "description": "House red wine 75cl",
+        "quantity": 15,
+        "unit": "btl",
+        "unitPrice": 5.9,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 88.5
+      },
+      {
+        "description": "Semi-skimmed milk 2L",
+        "quantity": 14,
+        "unit": "btl",
+        "unitPrice": 1.65,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 23.1
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 23.1,
+        "tax": 0
+      },
+      {
+        "rate": 20,
+        "base": 666.3,
+        "tax": 133.26
+      }
+    ],
+    "printedTotal": 822.66,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

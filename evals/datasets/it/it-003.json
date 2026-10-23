@@ -1,0 +1,86 @@
+{
+  "id": "it-003",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-003.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "it-enoteca",
+  "template": "modern",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.8,
+    "noise": true,
+    "lowRes": false,
+    "stamp": "PAGATO",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "EDV-2026-00884",
+    "issueDate": "2026-10-13",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Enoteca Distribuzione Veneto S.r.l.",
+      "taxId": "03987654328",
+      "address": "Viale della Repubblica 88 · 31100 Treviso (TV)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "Valpolicella Classico DOC 75cl",
+        "quantity": 22,
+        "unit": "bt",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 195.8
+      },
+      {
+        "description": "Grappa di Prosecco 70cl",
+        "quantity": 4,
+        "unit": "bt",
+        "unitPrice": 18.5,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 74
+      },
+      {
+        "description": "Acqua minerale 1L (x6)",
+        "quantity": 17,
+        "unit": "conf",
+        "unitPrice": 2.8,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 47.6
+      },
+      {
+        "description": "Amaro alle erbe 70cl",
+        "quantity": 3,
+        "unit": "bt",
+        "unitPrice": 14.2,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 42.6
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 22,
+        "base": 360,
+        "tax": 79.2
+      }
+    ],
+    "printedTotal": 439.2,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

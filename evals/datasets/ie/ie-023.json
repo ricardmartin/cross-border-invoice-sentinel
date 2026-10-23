@@ -1,0 +1,108 @@
+{
+  "id": "ie-023",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-023.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "ie-greengrocer",
+  "template": "classic",
+  "variant": {
+    "mode": "photo",
+    "rotation": -1.9,
+    "noise": true,
+    "lowRes": true,
+    "stamp": "RECEIVED",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "INV-30469",
+    "issueDate": "2026-09-08",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Liffey Fresh Produce Ltd",
+      "taxId": "IE6431852L",
+      "address": "Unit 4, Dublin Food Market, Malahide Road · Dublin 17, D17 X2K4"
+    },
+    "recipient": {
+      "name": "The Quay Kitchen Ltd",
+      "taxId": "IE6729034J",
+      "address": "14 Wellington Quay · Dublin 2, D02 X524"
+    },
+    "lines": [
+      {
+        "description": "Lettuce, butterhead",
+        "quantity": 6,
+        "unit": "each",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 5.7
+      },
+      {
+        "description": "Potatoes, Rooster",
+        "quantity": 16.3,
+        "unit": "kg",
+        "unitPrice": 0.95,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 15.49
+      },
+      {
+        "description": "Apples, Bramley",
+        "quantity": 3.9,
+        "unit": "kg",
+        "unitPrice": 2.4,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 9.36
+      },
+      {
+        "description": "Tomatoes, vine",
+        "quantity": 11.8,
+        "unit": "kg",
+        "unitPrice": 3.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 37.76
+      },
+      {
+        "description": "Onions, brown",
+        "quantity": 9.5,
+        "unit": "kg",
+        "unitPrice": 0.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 8.55
+      },
+      {
+        "description": "Carrots",
+        "quantity": 19.8,
+        "unit": "kg",
+        "unitPrice": 0.85,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 16.83
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 93.69,
+        "tax": 0
+      }
+    ],
+    "printedTotal": 93.69,
+    "deliveryNoteRefs": [
+      "DD-46299"
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

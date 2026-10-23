@@ -1,0 +1,77 @@
+{
+  "id": "de-004",
+  "country": "DE",
+  "source": "synthetic",
+  "file": "de-004.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "de-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": 1,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "OK Küche"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DE",
+    "documentNumber": "GHN8812",
+    "issueDate": "2026-10-09",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Gastro Hygiene Nord GmbH",
+      "taxId": "DE304728168",
+      "address": "Billbrookdeich 112 · 22113 Hamburg"
+    },
+    "recipient": {
+      "name": "Brauhaus Altstadt GmbH & Co. KG",
+      "taxId": "DE215903744",
+      "address": "Am Hof 18 · 50667 Köln"
+    },
+    "lines": [
+      {
+        "description": "Nitrilhandschuhe M (100 Stk)",
+        "quantity": 3,
+        "unit": "Box",
+        "unitPrice": 6.2,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 18.6
+      },
+      {
+        "description": "Servietten 40x40 (1000 Stk)",
+        "quantity": 3,
+        "unit": "Karton",
+        "unitPrice": 15.9,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 47.7
+      },
+      {
+        "description": "Desinfektionsreiniger 5 l",
+        "quantity": 4,
+        "unit": "Kanister",
+        "unitPrice": 15.4,
+        "discountPct": null,
+        "taxRate": 19,
+        "lineAmount": 61.6
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 19,
+        "base": 127.9,
+        "tax": 24.3
+      }
+    ],
+    "printedTotal": 152.2,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

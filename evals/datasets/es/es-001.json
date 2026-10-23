@@ -1,0 +1,118 @@
+{
+  "id": "es-001",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-001.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "es-turia",
+  "template": "clasica",
+  "variant": {
+    "mode": "photo",
+    "rotation": 1.8,
+    "noise": true,
+    "lowRes": true,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "ES",
+    "documentNumber": "F-2026/04100",
+    "issueDate": "2026-09-20",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola del Turia S.L.",
+      "taxId": "B46391272",
+      "address": "Mercavalencia, Nave 14 · Ctra. en Corts 231 · 46013 Valencia"
+    },
+    "recipient": {
+      "name": "Taberna El Pósito S.L.",
+      "taxId": "B27543107",
+      "address": "Plaza Mayor 3 · 45001 Toledo"
+    },
+    "lines": [
+      {
+        "description": "Champiñón laminado",
+        "quantity": 1.3,
+        "unit": "kg",
+        "unitPrice": 3.9,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 5.07
+      },
+      {
+        "description": "Pimiento rojo",
+        "quantity": 7.3,
+        "unit": "kg",
+        "unitPrice": 2.45,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 17.89
+      },
+      {
+        "description": "Patata agria",
+        "quantity": 30.4,
+        "unit": "kg",
+        "unitPrice": 0.89,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 27.06
+      },
+      {
+        "description": "Tomate pera",
+        "quantity": 15.1,
+        "unit": "kg",
+        "unitPrice": 1.85,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 27.94
+      },
+      {
+        "description": "Zanahoria",
+        "quantity": 11.4,
+        "unit": "kg",
+        "unitPrice": 0.79,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 9.01
+      },
+      {
+        "description": "Aceituna gordal",
+        "quantity": 1.3,
+        "unit": "kg",
+        "unitPrice": 5.4,
+        "discountPct": null,
+        "taxRate": 10,
+        "lineAmount": 7.02
+      },
+      {
+        "description": "Limón",
+        "quantity": 7.7,
+        "unit": "kg",
+        "unitPrice": 1.6,
+        "discountPct": null,
+        "taxRate": 4,
+        "lineAmount": 12.32
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 4,
+        "base": 99.29,
+        "tax": 3.97
+      },
+      {
+        "rate": 10,
+        "base": 7.02,
+        "tax": 0.7
+      }
+    ],
+    "printedTotal": 110.98,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

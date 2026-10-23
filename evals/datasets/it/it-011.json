@@ -1,0 +1,95 @@
+{
+  "id": "it-011",
+  "country": "IT",
+  "source": "synthetic",
+  "file": "it-011.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "it-enoteca",
+  "template": "modern",
+  "variant": {
+    "mode": "photo",
+    "rotation": -3.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": "Pagare il 15"
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IT",
+    "documentNumber": "EDV-2026-00900",
+    "issueDate": "2026-09-19",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Enoteca Distribuzione Veneto S.r.l.",
+      "taxId": "03987654328",
+      "address": "Viale della Repubblica 88 · 31100 Treviso (TV)"
+    },
+    "recipient": {
+      "name": "Trattoria Navigli S.r.l.",
+      "taxId": "09123456700",
+      "address": "Alzaia Naviglio Grande 66 · 20144 Milano"
+    },
+    "lines": [
+      {
+        "description": "Birra artigianale 33cl (x24)",
+        "quantity": 5,
+        "unit": "cassa",
+        "unitPrice": 26.4,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 132
+      },
+      {
+        "description": "Acqua minerale 1L (x6)",
+        "quantity": 8,
+        "unit": "conf",
+        "unitPrice": 2.8,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 22.4
+      },
+      {
+        "description": "Valpolicella Classico DOC 75cl",
+        "quantity": 33,
+        "unit": "bt",
+        "unitPrice": 8.9,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 293.7
+      },
+      {
+        "description": "Prosecco DOC Treviso 75cl",
+        "quantity": 25,
+        "unit": "bt",
+        "unitPrice": 7.4,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 185
+      },
+      {
+        "description": "Grappa di Prosecco 70cl",
+        "quantity": 1,
+        "unit": "bt",
+        "unitPrice": 18.5,
+        "discountPct": null,
+        "taxRate": 22,
+        "lineAmount": 18.5
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 22,
+        "base": 651.6,
+        "tax": 143.35
+      }
+    ],
+    "printedTotal": 794.95,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

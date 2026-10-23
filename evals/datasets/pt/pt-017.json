@@ -1,0 +1,87 @@
+{
+  "id": "pt-017",
+  "country": "PT",
+  "source": "synthetic",
+  "file": "pt-017.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "pt-hortofruticola",
+  "template": "classic",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.9,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "CREDIT_NOTE",
+    "country": "PT",
+    "documentNumber": "FT 2026A/1548",
+    "issueDate": "2026-09-26",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Hortofrutícola do Oeste, Lda.",
+      "taxId": "PT507318420",
+      "address": "MARL, Pavilhão B3 · 2660-421 São Julião do Tojal"
+    },
+    "recipient": {
+      "name": "Taberna do Largo, Lda.",
+      "taxId": "PT515228745",
+      "address": "Largo do Intendente 7 · 1100-285 Lisboa"
+    },
+    "lines": [
+      {
+        "description": "Cebola",
+        "quantity": -9.4,
+        "unit": "kg",
+        "unitPrice": 0.82,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": -7.71
+      },
+      {
+        "description": "Laranja do Algarve",
+        "quantity": -6.5,
+        "unit": "kg",
+        "unitPrice": 1.25,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": -8.13
+      },
+      {
+        "description": "Alface frisada",
+        "quantity": -22,
+        "unit": "un",
+        "unitPrice": 0.75,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": -16.5
+      },
+      {
+        "description": "Tomate chucha",
+        "quantity": -11,
+        "unit": "kg",
+        "unitPrice": 1.95,
+        "discountPct": null,
+        "taxRate": 6,
+        "lineAmount": -21.45
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 6,
+        "base": -53.79,
+        "tax": -3.23
+      }
+    ],
+    "printedTotal": -57.02,
+    "deliveryNoteRefs": [],
+    "documentControlCode": "6D80D3E9-1548"
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

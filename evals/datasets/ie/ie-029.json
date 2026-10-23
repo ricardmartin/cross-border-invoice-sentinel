@@ -1,0 +1,107 @@
+{
+  "id": "ie-029",
+  "country": "IE",
+  "source": "synthetic",
+  "file": "ie-029.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "ie-hygiene",
+  "template": "classic",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "IE",
+    "documentNumber": "ACS-5316",
+    "issueDate": "2026-09-08",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Atlantic Catering Supplies Ltd",
+      "taxId": "IE8204715A",
+      "address": "Ballybrit Business Park · Galway, H91 R2T6"
+    },
+    "recipient": {
+      "name": "The Quay Kitchen Ltd",
+      "taxId": "IE6729034J",
+      "address": "14 Wellington Quay · Dublin 2, D02 X524"
+    },
+    "lines": [
+      {
+        "description": "Napkins 40x40 (x1000)",
+        "quantity": 3,
+        "unit": "case",
+        "unitPrice": 16.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 49.5
+      },
+      {
+        "description": "Plain flour 16kg",
+        "quantity": 2,
+        "unit": "sack",
+        "unitPrice": 14.8,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 29.6
+      },
+      {
+        "description": "Thick bleach 5L",
+        "quantity": 6,
+        "unit": "drum",
+        "unitPrice": 4.6,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 27.6
+      },
+      {
+        "description": "Kitchen degreaser 5L",
+        "quantity": 1,
+        "unit": "drum",
+        "unitPrice": 13.9,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 13.9
+      },
+      {
+        "description": "Dishwasher detergent 20L",
+        "quantity": 2,
+        "unit": "drum",
+        "unitPrice": 41.5,
+        "discountPct": null,
+        "taxRate": 23,
+        "lineAmount": 83
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 29.6,
+        "tax": 0
+      },
+      {
+        "rate": 23,
+        "base": 174,
+        "tax": 40.02
+      }
+    ],
+    "printedTotal": 243.62,
+    "deliveryNoteRefs": [
+      "DD-46377"
+    ]
+  },
+  "planted": {
+    "type": "DELIVERY_MISSING_PRODUCT",
+    "description": "\"Thick bleach 5L\" invoiced but not delivered"
+  },
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "SUPPLIER_DISCREPANCY",
+    "reconciliation": "DISCREPANCIA",
+    "claimAmount": 33.95
+  }
+}

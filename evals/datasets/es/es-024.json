@@ -1,0 +1,77 @@
+{
+  "id": "es-024",
+  "country": "ES",
+  "source": "synthetic",
+  "file": "es-024.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "es-cantabrico",
+  "template": "clasica",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "CREDIT_NOTE",
+    "country": "ES",
+    "documentNumber": "R-LMC/2026/0376",
+    "issueDate": "2026-09-30",
+    "currency": "EUR",
+    "issuer": {
+      "name": "Limpiezas y Menaje Cantábrico S.L.",
+      "taxId": "B39156088",
+      "address": "C/ Marqués de la Hermida 44 · 39009 Santander"
+    },
+    "recipient": {
+      "name": "Restaurante La Barra S.L.",
+      "taxId": "B87123451",
+      "address": "C/ de Ponzano 38 · 28003 Madrid"
+    },
+    "lines": [
+      {
+        "description": "Film transparente 300m",
+        "quantity": -3,
+        "unit": "rollo",
+        "unitPrice": 9.75,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": -29.25
+      },
+      {
+        "description": "Desengrasante cocina 5L",
+        "quantity": -2,
+        "unit": "garrafa",
+        "unitPrice": 11.9,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": -23.8
+      },
+      {
+        "description": "Abrillantador lavavajillas 10L",
+        "quantity": -2,
+        "unit": "garrafa",
+        "unitPrice": 27.35,
+        "discountPct": null,
+        "taxRate": 21,
+        "lineAmount": -54.7
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 21,
+        "base": -107.75,
+        "tax": -22.63
+      }
+    ],
+    "printedTotal": -130.38,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

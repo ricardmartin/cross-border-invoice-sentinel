@@ -1,0 +1,86 @@
+{
+  "id": "dk-018",
+  "country": "DK",
+  "source": "synthetic",
+  "file": "dk-018.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "dk-slagter",
+  "template": "erp",
+  "variant": {
+    "mode": "photo",
+    "rotation": -1.7,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "DK",
+    "documentNumber": "JKP-091153",
+    "issueDate": "2026-09-06",
+    "currency": "DKK",
+    "issuer": {
+      "name": "Jysk Kød & Pålæg A/S",
+      "taxId": "DK27164935",
+      "address": "Industrivej 41 · 8600 Silkeborg"
+    },
+    "recipient": {
+      "name": "Restaurant Havnefronten ApS",
+      "taxId": "DK36271809",
+      "address": "Nyhavn 31 · 1051 København K"
+    },
+    "lines": [
+      {
+        "description": "OKSEMØRBRAD",
+        "quantity": 4.272,
+        "unit": "KG",
+        "unitPrice": 289,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 1234.61
+      },
+      {
+        "description": "HUSHOLDNINGSFILM 300M",
+        "quantity": 3,
+        "unit": "RL",
+        "unitPrice": 79,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 237
+      },
+      {
+        "description": "SVINEKAM M/SVÆR",
+        "quantity": 7.013,
+        "unit": "KG",
+        "unitPrice": 64.5,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 452.34
+      },
+      {
+        "description": "KYLLINGEBRYST",
+        "quantity": 7.006,
+        "unit": "KG",
+        "unitPrice": 79.9,
+        "discountPct": null,
+        "taxRate": 25,
+        "lineAmount": 559.78
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 25,
+        "base": 2483.73,
+        "tax": 620.93
+      }
+    ],
+    "printedTotal": 3104.66,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}

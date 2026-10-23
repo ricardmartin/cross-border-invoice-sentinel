@@ -1,0 +1,113 @@
+{
+  "id": "gb-025",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-025.jpg",
+  "mediaType": "image/jpeg",
+  "supplierId": "gb-butcher",
+  "template": "erp",
+  "variant": {
+    "mode": "scan",
+    "rotation": -0.5,
+    "noise": true,
+    "lowRes": false,
+    "stamp": null,
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "YDM/055225",
+    "issueDate": "2026-10-01",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Yorkshire Dales Meat Co. Ltd",
+      "taxId": "GB638210553",
+      "address": "Leyburn Business Park · Leyburn, North Yorkshire DL8 5QA"
+    },
+    "recipient": {
+      "name": "The Anchor Dining Rooms Ltd",
+      "taxId": "GB286041557",
+      "address": "34 Bankside · London SE1 9DT"
+    },
+    "lines": [
+      {
+        "description": "CLING FILM 300M",
+        "quantity": 2,
+        "unit": "ROLL",
+        "unitPrice": 9.5,
+        "discountPct": 5,
+        "taxRate": 20,
+        "lineAmount": 18.05
+      },
+      {
+        "description": "BEEF SIRLOIN DRY AGED",
+        "quantity": 7.733,
+        "unit": "KG",
+        "unitPrice": 28.5,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 220.39
+      },
+      {
+        "description": "LAMB SHOULDER",
+        "quantity": 3.912,
+        "unit": "KG",
+        "unitPrice": 12.9,
+        "discountPct": 5,
+        "taxRate": 0,
+        "lineAmount": 47.94
+      },
+      {
+        "description": "CHICKEN BREAST FILLET",
+        "quantity": 6.025,
+        "unit": "KG",
+        "unitPrice": 7.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 47.6
+      },
+      {
+        "description": "CUMBERLAND SAUSAGES",
+        "quantity": 5.333,
+        "unit": "KG",
+        "unitPrice": 6.8,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 36.26
+      },
+      {
+        "description": "BACK BACON",
+        "quantity": 2.843,
+        "unit": "KG",
+        "unitPrice": 8.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 23.31
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 375.5,
+        "tax": 0
+      },
+      {
+        "rate": 20,
+        "base": 18.05,
+        "tax": 3.61
+      }
+    ],
+    "printedTotal": 397.16,
+    "deliveryNoteRefs": [
+      "DN77325"
+    ]
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID",
+    "reconciliation": "SIN_DISCREPANCIA",
+    "claimAmount": 0
+  }
+}

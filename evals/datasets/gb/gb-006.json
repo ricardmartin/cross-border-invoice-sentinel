@@ -1,0 +1,82 @@
+{
+  "id": "gb-006",
+  "country": "GB",
+  "source": "synthetic",
+  "file": "gb-006.pdf",
+  "mediaType": "application/pdf",
+  "supplierId": "gb-butcher",
+  "template": "erp",
+  "variant": {
+    "mode": "pdf",
+    "rotation": 0,
+    "noise": false,
+    "lowRes": false,
+    "stamp": "RECEIVED",
+    "handwrittenNote": null
+  },
+  "groundTruth": {
+    "docType": "INVOICE",
+    "country": "GB",
+    "documentNumber": "YDM/055045",
+    "issueDate": "2026-09-13",
+    "currency": "GBP",
+    "issuer": {
+      "name": "Yorkshire Dales Meat Co. Ltd",
+      "taxId": "GB638210553",
+      "address": "Leyburn Business Park · Leyburn, North Yorkshire DL8 5QA"
+    },
+    "recipient": {
+      "name": "The Anchor Dining Rooms Ltd",
+      "taxId": "GB286041557",
+      "address": "34 Bankside · London SE1 9DT"
+    },
+    "lines": [
+      {
+        "description": "BACK BACON",
+        "quantity": 3.698,
+        "unit": "KG",
+        "unitPrice": 8.2,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 30.32
+      },
+      {
+        "description": "CLING FILM 300M",
+        "quantity": 2,
+        "unit": "ROLL",
+        "unitPrice": 9.5,
+        "discountPct": null,
+        "taxRate": 20,
+        "lineAmount": 19
+      },
+      {
+        "description": "LAMB SHOULDER",
+        "quantity": 4.682,
+        "unit": "KG",
+        "unitPrice": 12.9,
+        "discountPct": null,
+        "taxRate": 0,
+        "lineAmount": 60.4
+      }
+    ],
+    "printedTaxBreakdown": [
+      {
+        "rate": 0,
+        "base": 90.72,
+        "tax": 0
+      },
+      {
+        "rate": 20,
+        "base": 19,
+        "tax": 3.8
+      }
+    ],
+    "printedTotal": 113.52,
+    "deliveryNoteRefs": []
+  },
+  "planted": null,
+  "expected": {
+    "issueCodes": [],
+    "finalStatus": "VALID"
+  }
+}
