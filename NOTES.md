@@ -44,6 +44,8 @@ Numbers (2026-11-01, cached reads, `PROMPT_SOURCE=local`, Langfuse off):
 
 Found by the evals while building (good interview stories): the selector said NONE for an exact match because prices were hidden without telling it (→ `select-v2` + exact-match rule); the ERP template prints no unit, so the e2e eval missed 3 invoices that the service eval (ground-truth units) could not see (→ magnitude band ×1.5); `de-027`'s misread recipient tax id hid a restaurant-only deal (→ send the known restaurant id, not the read one).
 
+Docker (2026-11-01): CI job `compose` brings the stack up and pushes es-007 through the web app. Its first run failed safe: es-007 came out VALID with the pork line UNVERIFIED, because the contracts container (non-root) could not write the root-owned LLM cache volume, and the exception after a successful LLM answer ended the line AMBIGUOUS. Fixed: `/cache` owned by the runtime user in the image, and a failed cache write is logged, not raised. The same fail-safe that never claims on doubt is what hid the bug from the status, so the job checks the claim, not just a 200.
+
 Open: cross-language descriptions ("Sliced mushrooms" ↔ "Champiñón laminado"): mpnet-base measured 2026-11-01 and rejected (hybrid recall@5 unchanged, recall@1 worse), e5-large unmeasured; fallback eval pass with a real key. Done 2026-11-01: PR #1 CI green (Docker images, Helm lint, smoke evals with fresh calls); web shows the contract check (column "Pactado", section, verdict sentence) and the inbox flags UNVERIFIED contract lines.
 
 ## Tax regions (2026-10-21)
