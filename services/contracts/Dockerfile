@@ -11,7 +11,9 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Bake the embedding model into the image: no download at start-up, and the pod works offline.
-RUN python -c "from fastembed import TextEmbedding; TextEmbedding('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2', cache_dir='/opt/fastembed')"
+RUN python -c "from fastembed import TextEmbedding; TextEmbedding('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2', cache_dir='/opt/fastembed')"     && chmod -R a+rX /opt/fastembed
+# The model is in the image: never reach for the Hub at run time.
+ENV HF_HUB_OFFLINE=1
 
 COPY app ./app
 COPY data ./data

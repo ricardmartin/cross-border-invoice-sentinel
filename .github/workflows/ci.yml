@@ -130,6 +130,7 @@ jobs:
         if: env.ANTHROPIC_API_KEY != ''
         run: |
           curl -fsS -m 240 localhost:3000/api/process -H 'content-type: application/json' -d '{"sampleId":"es-007"}' | tee process.json
+          docker compose exec -T web cat "apps/web/.data/records/$(jq -r .id process.json).json"             | jq '{status: .result.status, reason: .result.reason, attempts: [.result.attempts[] | {model, cached}], contract: (.result.contract | {error, selectModel, llmCalls, lines: [.result.lines[]? | {invoiceLineIndex, kind, clauseId, invoiceUnitPrice, agreedUnitPrice, note}]})}'
           jq -e '.state == "awaiting_review"' process.json
           curl -fsS "localhost:3000/documents/$(jq -r .id process.json)" | grep -q 'CT-ES-01-A1#2.1'
           echo "es-007 claimed against CT-ES-01-A1#2.1"
