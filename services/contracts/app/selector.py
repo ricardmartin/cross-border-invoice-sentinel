@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import logging
 import os
 import time
 from dataclasses import dataclass, field
@@ -18,6 +19,8 @@ from pathlib import Path
 from typing import Protocol
 
 from .corpus import Chunk
+
+log = logging.getLogger(__name__)
 
 SELECT_PROMPT_VERSION = "select-v2"
 
@@ -108,8 +111,12 @@ class FileCache:
         return json.loads(p.read_text(encoding="utf8")) if p.exists() else None
 
     def set(self, key: str, value: dict) -> None:
-        self.directory.mkdir(parents=True, exist_ok=True)
-        (self.directory / f"{key}.json").write_text(json.dumps(value), encoding="utf8")
+        """A cache is an optimisation: failing to write it must not throw away an answer already paid for."""
+        try:
+            self.directory.mkdir(parents=True, exist_ok=True)
+            (self.directory / f"{key}.json").write_text(json.dumps(value), encoding="utf8")
+        except OSError as e:
+            log.warning("LLM cache not written (%s): %s", self.directory, e)
 
 
 @dataclass

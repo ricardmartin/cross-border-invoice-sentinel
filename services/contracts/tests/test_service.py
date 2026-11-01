@@ -11,7 +11,7 @@ import pytest
 from app.corpus import load_corpus, parse_contract
 from app.graph import ClauseMatcher
 from app.index import Filters, HashingEmbedder, HybridIndex
-from app.selector import LineQuery, Selection, render_request
+from app.selector import FileCache, LineQuery, Selection, render_request
 from app.text import normalize, similarity
 
 DATA = Path(__file__).resolve().parents[1] / "data" / "contracts"
@@ -190,3 +190,10 @@ def test_api_match_contract(monkeypatch):
     assert client.post("/v1/match", json={"supplierTaxId": CARNICAS, "invoiceDate": "15/09/2026", "lines": []}).status_code == 422
     main.matcher.cache_clear()
     os.environ.pop("CONTRACTS_EMBEDDER", None)
+
+
+def test_an_unwritable_cache_does_not_lose_the_answer(tmp_path, caplog):
+    blocker = tmp_path / "not-a-dir"
+    blocker.write_text("x")
+    FileCache(blocker / "llm").set("k", {"clause_id": "x"})  # mkdir fails: a file is in the way
+    assert "LLM cache not written" in caplog.text

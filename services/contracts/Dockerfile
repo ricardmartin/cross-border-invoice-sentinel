@@ -18,7 +18,8 @@ ENV HF_HUB_OFFLINE=1
 COPY app ./app
 COPY data ./data
 
-RUN useradd --uid 10001 --create-home sentinel
+# /cache is where compose mounts the LLM cache volume: a new named volume takes this directory's owner.
+RUN useradd --uid 10001 --create-home sentinel && mkdir -p /cache && chown sentinel /cache
 USER sentinel
 
 EXPOSE 8001
