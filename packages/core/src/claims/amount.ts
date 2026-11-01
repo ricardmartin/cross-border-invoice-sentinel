@@ -1,5 +1,6 @@
 import { fromCents, lineCents, pctCents, toCents } from '../money';
 import type { ExtractedDocument } from '../schemas/extracted';
+import type { ContractCheckResult } from '../schemas/contracts';
 import type { ReconciliationResult } from '../schemas/reconciliation';
 import type { ComputedTotals } from '../schemas/validated';
 
@@ -8,12 +9,14 @@ import type { ComputedTotals } from '../schemas/validated';
  *  - invoice-internal: printed total minus the total that its own lines justify
  *    (quantity × price, per-bracket VAT at the printed rates, plus the charges the
  *    validator computed from their rates);
- *  - delivery note: amount billed for goods not delivered, VAT included.
+ *  - delivery note: amount billed for goods not delivered, VAT included;
+ *  - contracts: amount billed above the agreed price, VAT included (already net of the above).
  * Negative differences (supplier under-billed) are not claimed.
  */
 export interface ClaimAmount {
   invoiceOverbilled: number;
   deliveryOverbilled: number;
+  contractOverbilled: number;
   total: number;
 }
 
@@ -21,6 +24,7 @@ export function computeClaimAmount(
   invoice: ExtractedDocument,
   reconciliation: ReconciliationResult | null,
   charges: ComputedTotals['charges'] = { surcharges: 0, stampDuty: 0, withholdings: 0 },
+  contract: ContractCheckResult | null = null,
 ): ClaimAmount {
   const byRate = new Map<number, number>();
   for (const l of invoice.lines) {
@@ -36,5 +40,11 @@ export function computeClaimAmount(
     invoiceCents = Math.max(0, Math.abs(printed - due) < Math.abs(printed - justified) ? printed - due : printed - justified);
   }
   const deliveryCents = reconciliation ? Math.max(0, toCents(reconciliation.amountAtStake)) : 0;
-  return { invoiceOverbilled: fromCents(invoiceCents), deliveryOverbilled: fromCents(deliveryCents), total: fromCents(invoiceCents + deliveryCents) };
+  const contractCents = contract ? Math.max(0, toCents(contract.amountAtStake)) : 0;
+  return {
+    invoiceOverbilled: fromCents(invoiceCents),
+    deliveryOverbilled: fromCents(deliveryCents),
+    contractOverbilled: fromCents(contractCents),
+    total: fromCents(invoiceCents + deliveryCents + contractCents),
+  };
 }

@@ -1,5 +1,6 @@
 import { anthropic } from '@ai-sdk/anthropic';
 import { google } from '@ai-sdk/google';
+import { openai } from '@ai-sdk/openai';
 
 /**
  * Model selection by configuration. A spec is "<provider>:<model id>", e.g.
@@ -7,7 +8,7 @@ import { google } from '@ai-sdk/google';
  * model is compared on the same evals.
  */
 
-export const PROVIDERS = ['anthropic', 'google'] as const;
+export const PROVIDERS = ['anthropic', 'google', 'openai'] as const;
 export type Provider = (typeof PROVIDERS)[number];
 
 export interface ModelSpec {
@@ -32,11 +33,15 @@ export function resolveModel(spec: ModelSpec) {
       return anthropic(spec.modelId);
     case 'google':
       return google(spec.modelId);
+    case 'openai':
+      return openai(spec.modelId);
   }
 }
 
 export const defaultExtractionModel = (): ModelSpec => parseModelSpec(process.env.EXTRACTION_MODEL ?? 'anthropic:claude-haiku-5-5');
 export const defaultEscalationModel = (): ModelSpec => parseModelSpec(process.env.ESCALATION_MODEL ?? 'anthropic:claude-sonnet-5-5');
+/** Another provider for when the primary is down or too slow; none by default. Needs its own eval pass before use. */
+export const defaultFallbackModel = (): ModelSpec | null => (process.env.FALLBACK_MODEL ? parseModelSpec(process.env.FALLBACK_MODEL) : null);
 
 // ---------------------------------------------------------------------------
 // Pricing (USD per 1M tokens). Anthropic list prices as of 2026-10; other

@@ -3,7 +3,10 @@
  * (triage → extraction with self-correction and cascade → validation → reconciliation → decision → claim).
  *   npm run evals -- [--country=es,fr,it|all] [--model=anthropic:claude-haiku-5-5] [--escalation=anthropic:claude-sonnet-5-5]
  *                    [--no-cascade] [--retries=2] [--limit=5] [--ids=es-001,es-002] [--concurrency=4] [--no-cache]
- *                    [--smoke] [--update-baseline]
+ *                    [--smoke] [--update-baseline] [--contracts[=http://localhost:8001]]
+ * --fallback=<provider:model> answers when the primary fails (with SIMULATE_PROVIDER_OUTAGE=<provider> for a drill).
+ * --contracts turns on the contract price check against the contracts service (services/contracts) and
+ * scores it against evals/contracts/expectations.json; without it the check is off even if CONTRACTS_URL is set.
  * Writes reports/runs/<runName>.{json,md} and reports/latest.md, then applies the gate
  * (thresholds.json + baseline.json) and exits 1 if any check fails.
  */
@@ -32,6 +35,8 @@ const flag = (name: string) => process.argv.includes(`--${name}`);
 const model = arg('model') ? core.parseModelSpec(arg('model')!) : core.defaultExtractionModel();
 const escalation = arg('escalation') ? core.parseModelSpec(arg('escalation')!) : core.defaultEscalationModel();
 const cascade = !flag('no-cascade');
+// Off unless asked: FALLBACK_MODEL in .env must not change a run compared with the baseline. Drill: SIMULATE_PROVIDER_OUTAGE=anthropic.
+const fallback = arg('fallback') ? core.parseModelSpec(arg('fallback')!) : null;
 const maxRetries = Number(arg('retries') ?? 2);
 const countryArg = (arg('country') ?? 'all').toLowerCase();
 // "all" = every dataset folder with a manifest, so a new country needs no change here.
@@ -47,8 +52,17 @@ const thresholds = loadThresholds();
 const ids = smoke ? thresholds.smoke.ids : arg('ids')?.split(',');
 const concurrency = Number(arg('concurrency') ?? 4);
 const updateBaseline = flag('update-baseline');
+const contractsUrl = flag('contracts') || arg('contracts') ? (arg('contracts') ?? process.env.CONTRACTS_URL ?? 'http://localhost:8001') : null;
+interface ContractExpectation {
+  originalStatus: FinalStatus;
+  contractAmountAtStake: number;
+  lines: { lineIndex: number; clause: string | null; kind: string; amountAtStake: number }[];
+}
+const contractExpectations: Record<string, ContractExpectation> = contractsUrl
+  ? (JSON.parse(await readFile(join(ROOT, 'contracts', 'expectations.json'), 'utf8')) as { documents: Record<string, ContractExpectation> }).documents
+  : {};
 const baseline = loadBaseline();
-if (updateBaseline && (smoke || ids || limit !== Infinity)) throw new Error('--update-baseline needs a full run (no --smoke, --ids or --limit)');
+if (updateBaseline && (smoke || ids || limit !== Infinity || contractsUrl)) throw new Error('--update-baseline needs a full run (no --smoke, --ids, --limit or --contracts)');
 
 const gitSha = (() => {
   try {
@@ -59,7 +73,7 @@ const gitSha = (() => {
 })();
 const prompt = await core.getExtractionPrompt();
 const promptTag = prompt.langfuse ? `lf${prompt.langfuse.version}` : core.EXTRACTION_PROMPT_VERSION;
-const runName = `${gitSha}-${model.key.replace(/[:/]/g, '_')}-${promptTag}${cascade ? '' : '-nocascade'}${smoke ? '-smoke' : ''}`;
+const runName = `${gitSha}-${model.key.replace(/[:/]/g, '_')}-${promptTag}${cascade ? '' : '-nocascade'}${smoke ? '-smoke' : ''}${contractsUrl ? '-contracts' : ''}${fallback ? `-fb_${fallback.key.replace(/[:/]/g, '_')}` : ''}`;
 
 // File-based LLM cache: re-running unchanged inputs costs nothing.
 if (!flag('no-cache')) {
@@ -86,10 +100,12 @@ interface DocResult {
   traceId?: string | null;
   triageCountryOk?: boolean;
   triageDocTypeOk?: boolean;
+  fallbackUsed?: boolean;
   attempts?: { index: number; role: string; model: string; blind?: boolean; passed: boolean; exact: boolean; errors: string[]; cached: boolean }[];
   firstExact?: boolean;
   comparison?: DocComparison;
   costUsd?: number | null;
+  tokens?: { input: number; output: number };
   latencyMs?: number;
   allCached?: boolean;
   reconciliation?: string | null;
@@ -104,6 +120,14 @@ interface DocResult {
     approved: boolean;
     subject: string;
   } | null;
+  contract?: {
+    expectedStake: number;
+    stake: number | null;
+    error: string | null;
+    linesOk: number;
+    lines: number;
+    mismatches: string[];
+  } | null;
 }
 
 async function loadEntries(country: string): Promise<DatasetEntry[]> {
@@ -113,15 +137,21 @@ async function loadEntries(country: string): Promise<DatasetEntry[]> {
   return entries.filter((e) => !ids || ids.includes(e.id)).slice(0, limit);
 }
 
+/** With contracts on, an invoice billed above its agreed price is a supplier discrepancy even if the document itself is clean. */
+const expectedStatusOf = (entry: DatasetEntry): FinalStatus => {
+  const c = contractExpectations[entry.id];
+  return c && c.contractAmountAtStake > 0 && entry.expected.finalStatus === 'VALID' ? 'SUPPLIER_DISCREPANCY' : entry.expected.finalStatus;
+};
+
 async function runOne(entry: DatasetEntry): Promise<DocResult> {
-  const base: DocResult = { id: entry.id, country: entry.country, template: entry.template, mode: entry.variant.mode, planted: entry.planted?.type ?? null, expectedStatus: entry.expected.finalStatus };
+  const base: DocResult = { id: entry.id, country: entry.country, template: entry.template, mode: entry.variant.mode, planted: entry.planted?.type ?? null, expectedStatus: expectedStatusOf(entry) };
   try {
     const bytes = await readFile(join(ROOT, 'datasets', entry.country.toLowerCase(), entry.file));
     const outcome = await core.processDocument(
       {
         file: { base64: bytes.toString('base64'), mediaType: entry.mediaType, name: entry.file },
         restaurantId: entry.groundTruth.recipient.taxId ?? 'eval-restaurant',
-        config: { primaryModel: model.key, escalationModel: escalation.key, maxRetries, cascade },
+        config: { primaryModel: model.key, escalationModel: escalation.key, fallbackModel: fallback?.key ?? null, maxRetries, cascade, contractsUrl },
       },
       { tags: ['eval', `eval-run:${runName}`, `fixture:${entry.id}`], metadata: { datasetItem: entry.id } },
     );
@@ -133,8 +163,10 @@ async function runOne(entry: DatasetEntry): Promise<DocResult> {
       const verdict = await judgeClaim(draft);
       core.recordScores(res.traceId ?? undefined, { claim_judge: verdict.score }, { claim_judge: verdict.justification });
       res = await core.resumeClaimReview(outcome.runId, { action: 'approve', reviewer: 'eval-bot' });
-      const expectedAmount =
+      const documentAmount =
         entry.expected.claimAmount ?? (entry.expected.finalStatus === 'SUPPLIER_DISCREPANCY' ? core.computeClaimAmount(entry.groundTruth, null, core.validateDocument(entry.groundTruth, core.getCountryPack(entry.country)).computed.charges).total : null);
+      const contractAmount = contractExpectations[entry.id]?.contractAmountAtStake ?? 0;
+      const expectedAmount = documentAmount === null && !contractAmount ? null : Math.round(((documentAmount ?? 0) + contractAmount) * 100) / 100;
       claim = {
         mode: draft.mode,
         amount: draft.amountClaimed,
@@ -162,21 +194,49 @@ async function runOne(entry: DatasetEntry): Promise<DocResult> {
       status: res.status,
       reason: res.reason,
       traceId: res.traceId,
+      fallbackUsed: res.triage.fallbackReason !== null || res.attempts.some((a) => a.fallbackReason !== null),
       triageCountryOk: res.triage.country === entry.country,
       triageDocTypeOk: res.triage.docType === entry.groundTruth.docType,
       attempts,
       firstExact: attempts[0]?.exact ?? false,
       comparison: res.document ? compareDocuments(entry.groundTruth, res.document as ExtractedDocument, pack) : undefined,
       costUsd: res.totals.costUsd,
+      tokens: { input: res.totals.usage.inputTokens, output: res.totals.usage.outputTokens },
       latencyMs: res.totals.latencyMs,
       allCached: res.triage.cached && res.attempts.every((a) => a.cached),
       reconciliation: res.reconciliation?.result.status ?? null,
       expectedReconciliation: entry.expected.reconciliation,
       claim,
+      contract: contractScore(entry, res),
     };
   } catch (e) {
     return { ...base, error: e instanceof Error ? e.message : String(e) };
   }
+}
+
+function contractScore(entry: DatasetEntry, res: ProcessDocumentResult): DocResult['contract'] {
+  const exp = contractExpectations[entry.id];
+  if (!exp) return null;
+  // Only trusted invoices are checked; the others are scored by their status alone.
+  if (!res.contract) return { expectedStake: exp.contractAmountAtStake, stake: null, error: null, linesOk: 0, lines: 0, mismatches: [] };
+  const got = res.contract.result?.lines ?? [];
+  const mismatches = exp.lines
+    .filter((l) => {
+      const g = got.find((x) => x.invoiceLineIndex === l.lineIndex);
+      return !g || g.kind !== l.kind || (l.clause !== null && g.clauseId !== l.clause);
+    })
+    .map((l) => {
+      const g = got.find((x) => x.invoiceLineIndex === l.lineIndex);
+      return `line ${l.lineIndex}: expected ${l.kind} ${l.clause ?? ''} → ${g?.kind ?? 'missing'} ${g?.clauseId ?? ''}`;
+    });
+  return {
+    expectedStake: exp.contractAmountAtStake,
+    stake: res.contract.result?.amountAtStake ?? null,
+    error: res.contract.error,
+    linesOk: exp.lines.length - mismatches.length,
+    lines: exp.lines.length,
+    mismatches,
+  };
 }
 
 async function pool<T, R>(items: T[], n: number, fn: (t: T) => Promise<R>, onDone: (r: R) => void): Promise<R[]> {
@@ -213,6 +273,9 @@ function summarize(results: DocResult[]) {
 
   const lat = ok.map((r) => r.latencyMs!);
   const costs = ok.map((r) => r.costUsd).filter((c): c is number => c !== null && c !== undefined);
+  // All LLM calls of the document (triage, reads, re-reads, claim), cached ones included: what an uncached run would use.
+  const tokens = ok.map((r) => r.tokens).filter((t): t is { input: number; output: number } => Boolean(t));
+  const meanTokens = (k: 'input' | 'output') => (tokens.length ? tokens.reduce((a, t) => a + t[k], 0) / tokens.length : null);
   const attempts = ok.map((r) => r.attempts!.length);
   const claims = ok.filter((r) => r.claim);
   const withRec = ok.filter((r) => r.expectedReconciliation);
@@ -227,6 +290,7 @@ function summarize(results: DocResult[]) {
     'Unfair claims (false positives on clean docs)': { value: ratio(clean.filter((r) => POSITIVE.includes(r.status!)).length, clean.length), kind: 'pct' },
     'EXTRACTION_UNCERTAIN rate': { value: ratio(ok.filter((r) => r.status === 'EXTRACTION_UNCERTAIN').length, ok.length), kind: 'pct' },
     'Mean extraction attempts': { value: attempts.length ? attempts.reduce((a, b) => a + b, 0) / attempts.length : null, kind: 'num' },
+    ...(fallback ? { 'Answered by fallback model': { value: ratio(ok.filter((r) => r.fallbackUsed).length, ok.length), kind: 'pct' as const } } : {}),
     'Escalated to stronger model': { value: ratio(ok.filter((r) => r.attempts!.some((a) => a.role === 'escalation')).length, ok.length), kind: 'pct' },
     'Triage country accuracy': { value: ratio(ok.filter((r) => r.triageCountryOk).length, ok.length), kind: 'pct' },
     'Triage doc-type accuracy': { value: ratio(ok.filter((r) => r.triageDocTypeOk).length, ok.length), kind: 'pct' },
@@ -239,6 +303,9 @@ function summarize(results: DocResult[]) {
     'Claim drafts passing guardrails': { value: ratio(claims.filter((r) => r.claim!.mode === 'llm').length, claims.length), kind: 'pct' },
     'Claim judge score (1-5)': { value: claims.length ? claims.reduce((s, r) => s + r.claim!.judge, 0) / claims.length : null, kind: 'num' },
     'Claims with invented data': { value: ratio(claims.filter((r) => r.claim!.invented).length, claims.length), kind: 'pct' },
+    ...(contractsUrl ? contractMetrics(ok) : {}),
+    'Tokens / doc (input)': { value: meanTokens('input'), kind: 'num' },
+    'Tokens / doc (output)': { value: meanTokens('output'), kind: 'num' },
     'Cost / doc': { value: costs.length ? costs.reduce((a, b) => a + b, 0) / costs.length : null, kind: 'usd' },
     'Latency p50': { value: percentile(lat, 50), kind: 'ms' },
     'Latency p95': { value: percentile(lat, 95), kind: 'ms' },
@@ -254,6 +321,20 @@ function summarize(results: DocResult[]) {
   return { docs: results.length, headline, headerAcc, lineAcc, confusion };
 }
 
+function contractMetrics(ok: DocResult[]): Record<string, Metric> {
+  const checked = ok.filter((r) => r.contract && r.contract.lines > 0);
+  const expectedOver = ok.filter((r) => (r.contract?.expectedStake ?? 0) > 0);
+  const flagged = checked.filter((r) => (r.contract!.stake ?? 0) > 0);
+  return {
+    'Contract-checked invoices': { value: checked.length, kind: 'num' },
+    'Contract line outcomes correct': { value: ratio(checked.reduce((s, r) => s + r.contract!.linesOk, 0), checked.reduce((s, r) => s + r.contract!.lines, 0)), kind: 'pct' },
+    'Contract overcharge recall': { value: ratio(expectedOver.filter((r) => (r.contract?.stake ?? 0) > 0).length, expectedOver.length), kind: 'pct' },
+    'Contract overcharge precision': { value: ratio(flagged.filter((r) => r.contract!.expectedStake > 0).length, flagged.length), kind: 'pct' },
+    'Contract amount correct': { value: ratio(flagged.filter((r) => Math.abs(r.contract!.stake! - r.contract!.expectedStake) <= 0.011).length, flagged.length), kind: 'pct' },
+    'Contract service errors': { value: ok.filter((r) => r.contract?.error).length, kind: 'num' },
+  };
+}
+
 const fmt = (m: Metric) =>
   m.value === null ? '—' : m.kind === 'pct' ? `${(m.value * 100).toFixed(1)} %` : m.kind === 'usd' ? `$${m.value.toFixed(5)}` : m.kind === 'ms' ? `${Math.round(m.value)} ms` : m.value.toFixed(2);
 
@@ -263,7 +344,7 @@ function markdown(results: DocResult[], s: ReturnType<typeof summarize>, byCount
   return [
     `# Eval run \`${runName}\``,
     '',
-    `Primary \`${model.key}\` · escalation ${cascade ? `\`${escalation.key}\`` : 'off'} · retries ${maxRetries} · prompt \`${prompt.version}\` · ${countries.join(', ').toUpperCase()} · ${s.docs} docs · ${new Date().toISOString()}`,
+    `${contractsUrl ? `Contracts check on (\`${contractsUrl}\`) · ` : ''}Primary \`${model.key}\` · escalation ${cascade ? `\`${escalation.key}\`` : 'off'} · retries ${maxRetries} · prompt \`${prompt.version}\` · ${countries.join(', ').toUpperCase()} · ${s.docs} docs · ${new Date().toISOString()}`,
     '',
     '## Headline',
     '',
@@ -320,7 +401,9 @@ function markdown(results: DocResult[], s: ReturnType<typeof summarize>, byCount
           r.status !== r.expectedStatus ||
           (r.comparison && !r.comparison.exact) ||
           (r.attempts?.length ?? 0) > 1 ||
-          (r.expectedReconciliation !== undefined && r.reconciliation !== r.expectedReconciliation),
+          (r.expectedReconciliation !== undefined && r.reconciliation !== r.expectedReconciliation) ||
+          (r.contract?.mismatches.length ?? 0) > 0 ||
+          (r.contract?.expectedStake ?? 0) > 0,
       )
       .flatMap((r) => [
         `- **${r.id}** (${r.template}, ${r.mode}${r.planted ? `, planted ${r.planted}` : ''}) expected ${r.expectedStatus} → **${r.status ?? 'ERROR'}**${r.error ? `: ${r.error}` : ` — ${r.reason}`}${
@@ -328,6 +411,9 @@ function markdown(results: DocResult[], s: ReturnType<typeof summarize>, byCount
         }${r.traceId ? ` · trace \`${r.traceId}\`` : ''}`,
         ...(r.attempts ?? []).map((a) => `  - #${a.index} ${a.role}${a.blind ? ' (blind)' : ''} ${a.model}:${a.passed ? 'pass' : a.errors.join(', ')}${a.exact ? ' · exact' : ''}`),
         ...(r.comparison?.mismatches.slice(0, 4).map((m) => `  - ≠ ${m}`) ?? []),
+        ...(r.contract && (r.contract.expectedStake > 0 || r.contract.mismatches.length)
+          ? [`  - contract: at stake ${r.contract.stake?.toFixed(2) ?? '—'} (expected ${r.contract.expectedStake.toFixed(2)})${r.contract.error ? ` · error ${r.contract.error}` : ''}`, ...r.contract.mismatches.map((m) => `  - ≠ ${m}`)]
+          : []),
       ]),
     '',
   ].join('\n');
@@ -337,6 +423,12 @@ const metricValues = (s: ReturnType<typeof summarize>): Metrics => Object.fromEn
 
 async function main() {
   const entries = (await Promise.all(countries.map(loadEntries))).flat();
+  if (contractsUrl) {
+    const health = await fetch(`${contractsUrl}/healthz`).then((r) => r.json()).catch((e: unknown) => {
+      throw new Error(`contracts service not reachable at ${contractsUrl} (${e instanceof Error ? e.message : e}). Start it: cd services/contracts && uvicorn app.main:app --port 8001`);
+    });
+    console.log(`  contracts service: ${JSON.stringify(health)}`);
+  }
   console.log(`▶ ${runName} — ${entries.length} docs (${countries.join(', ').toUpperCase()}) — prompt ${prompt.version} — Langfuse ${core.isLangfuseConfigured() ? 'on' : 'off'}`);
   const lf = core.getLangfuseClient();
   if (lf) await syncDatasets(lf, entries);
@@ -368,7 +460,7 @@ async function main() {
 
   await mkdir(join(ROOT, 'reports', 'runs'), { recursive: true });
   const md = markdown(results, summary, byCountry, checks);
-  const config = { model: model.key, escalation: cascade ? escalation.key : null, maxRetries, promptVersion: prompt.version, smoke };
+  const config = { model: model.key, escalation: cascade ? escalation.key : null, fallback: fallback?.key ?? null, maxRetries, promptVersion: prompt.version, smoke, contractsUrl };
   await writeFile(join(ROOT, 'reports', 'runs', `${runName}.json`), JSON.stringify({ runName, createdAt: new Date().toISOString(), config, summary, byCountry, checks, results }, null, 2));
   await writeFile(join(ROOT, 'reports', 'runs', `${runName}.md`), md);
   await writeFile(join(ROOT, 'reports', 'latest.md'), md);

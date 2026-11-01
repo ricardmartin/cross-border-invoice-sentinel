@@ -16,6 +16,7 @@ const TICKS = {
   two: { glyph: '²', className: 'text-info text-[11px] align-[2px]' },
   sum: { glyph: 'Σ', className: 'text-muted-foreground text-[11px]' },
   alb: { glyph: 'A', className: 'text-foreground text-[11px]' },
+  ctr: { glyph: 'C', className: 'text-foreground text-[11px]' },
   doubt: { glyph: '?', className: 'text-info' },
 } as const;
 

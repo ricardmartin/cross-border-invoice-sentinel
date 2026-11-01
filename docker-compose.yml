@@ -1,0 +1,41 @@
+# Local stack: web app + contracts service. Keys come from .env (ANTHROPIC_API_KEY, optional LANGFUSE_*).
+#   docker compose up --build                       web on http://localhost:3000, contracts on :8001
+#   docker compose run --rm evals -- --contracts    full eval suite against the contracts service (costs money uncached)
+services:
+  contracts:
+    build: { context: services/contracts, target: base }
+    env_file: [.env]
+    environment:
+      CONTRACT_SELECT_MODEL: ${CONTRACT_SELECT_MODEL:-anthropic:claude-haiku-5-5}
+      CONTRACTS_LLM_CACHE: /cache/llm
+    volumes: [contracts-cache:/cache]
+    ports: ["8001:8001"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/healthz', timeout=4)"]
+      interval: 10s
+      retries: 12
+
+  web:
+    build: { context: ., target: web }
+    env_file: [.env]
+    environment:
+      CONTRACTS_URL: http://contracts:8001
+    volumes: [web-data:/repo/apps/web/.data]
+    ports: ["3000:3000"]
+    depends_on:
+      contracts: { condition: service_healthy }
+
+  evals:
+    build: { context: ., target: evals }
+    profiles: [evals]
+    env_file: [.env]
+    environment:
+      CONTRACTS_URL: http://contracts:8001
+    volumes:
+      - ./evals/reports:/repo/evals/reports # reports and the LLM cache stay on the host
+    depends_on:
+      contracts: { condition: service_healthy }
+
+volumes:
+  contracts-cache:
+  web-data:

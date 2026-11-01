@@ -1,6 +1,6 @@
-# Eval run `24ccf06-anthropic_claude-haiku-5-5-extract-v3`
+# Eval run `6d6685a-anthropic_claude-haiku-5-5-extract-v3`
 
-Primary `anthropic:claude-haiku-5-5` · escalation `anthropic:claude-sonnet-5-5` · retries 2 · prompt `local:extract-v3` · DE, DK, ES, FR, GB, IE, IT, PT · 282 docs · 2026-10-21T22:29:21.609Z
+Primary `anthropic:claude-haiku-5-5` · escalation `anthropic:claude-sonnet-5-5` · retries 2 · prompt `local:extract-v3` · DE, DK, ES, FR, GB, IE, IT, PT · 282 docs · 2026-11-01T19:29:30.948Z
 
 ## Headline
 
@@ -24,6 +24,8 @@ Primary `anthropic:claude-haiku-5-5` · escalation `anthropic:claude-sonnet-5-5`
 | Claim drafts passing guardrails | 100.0 % |
 | Claim judge score (1-5) | 4.76 |
 | Claims with invented data | 0.0 % |
+| Tokens / doc (input) | 9115.35 |
+| Tokens / doc (output) | 2086.05 |
 | Cost / doc | $0.00195 |
 | Latency p50 | 7950 ms |
 | Latency p95 | 20833 ms |
@@ -51,6 +53,8 @@ Primary `anthropic:claude-haiku-5-5` · escalation `anthropic:claude-sonnet-5-5`
 | Claim drafts passing guardrails | 100.0 % | 100.0 % | 100.0 % | 100.0 % | 100.0 % | 100.0 % | 100.0 % | 100.0 % | 100.0 % / 100.0 % / 100.0 % / 100.0 % / 100.0 % / 100.0 % / 100.0 % / 100.0 % |
 | Claim judge score (1-5) | 4.71 | 4.71 | 4.71 | 4.71 | 5.00 | 4.86 | 4.75 | 4.67 | 4.71 / 4.71 / 4.71 / 4.71 / 5.00 / 4.86 / 4.75 / 4.67 |
 | Claims with invented data | 0.0 % | 0.0 % | 0.0 % | 0.0 % | 0.0 % | 0.0 % | 0.0 % | 0.0 % | 0.0 % / 0.0 % / 0.0 % / 0.0 % / 0.0 % / 0.0 % / 0.0 % / 0.0 % |
+| Tokens / doc (input) | 8475.30 | 8864.47 | 9574.25 | 8824.17 | 9363.67 | 8847.17 | 9199.79 | 9270.33 | — / — / — / — / — / — / — / — |
+| Tokens / doc (output) | 2108.00 | 2074.33 | 2192.71 | 2122.37 | 1788.47 | 1958.77 | 2122.88 | 2182.05 | — / — / — / — / — / — / — / — |
 | Cost / doc | $0.00190 | $0.00192 | $0.00205 | $0.00194 | $0.00183 | $0.00186 | $0.00198 | $0.00202 | $0.00190 / $0.00192 / $0.00205 / $0.00194 / $0.00183 / $0.00186 / $0.00198 / $0.00202 |
 | Latency p50 | 8307 ms | 7992 ms | 7811 ms | 8582 ms | 7042 ms | 7776 ms | 7525 ms | 7641 ms | 8307 ms / 7992 ms / 7811 ms / 8582 ms / 7042 ms / 7776 ms / 7525 ms / 7641 ms |
 | Latency p95 | 18948 ms | 20672 ms | 23805 ms | 20277 ms | 17304 ms | 16164 ms | 26135 ms | 23604 ms | 18948 ms / 20672 ms / 23805 ms / 20277 ms / 17304 ms / 16164 ms / 26135 ms / 23604 ms |

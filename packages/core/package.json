@@ -16,6 +16,7 @@
   "dependencies": {
     "@ai-sdk/anthropic": "^4.0.82",
     "@ai-sdk/google": "^4.0.99",
+    "@ai-sdk/openai": "4.0.96",
     "@langfuse/client": "^5.14.0",
     "@mastra/core": "^1.78.0",
     "@mastra/langfuse": "^1.6.1",

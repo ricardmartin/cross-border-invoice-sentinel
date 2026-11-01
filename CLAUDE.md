@@ -24,7 +24,7 @@ Supplier invoices and delivery notes for restaurants, any country: an LLM transc
 ## Versioning (cache keys and traces depend on it)
 
 - Change a pack's rules or prompt context → bump that pack's `version`.
-- Change extraction instructions or message layout → bump `EXTRACTION_PROMPT_VERSION`. Claim prompt → `CLAIM_PROMPT_VERSION`. Triage → `TRIAGE_PROMPT_VERSION`.
+- Change extraction instructions or message layout → bump `EXTRACTION_PROMPT_VERSION`. Claim prompt → `CLAIM_PROMPT_VERSION`. Triage → `TRIAGE_PROMPT_VERSION`. Contract clause selector (`services/contracts/app/selector.py`) → `SELECT_PROMPT_VERSION`.
 - After changing the extraction instructions, run `npm run prompts:push`: with Langfuse keys set, the app and evals use the `production` prompt from Langfuse, so a stale copy there silently runs the old prompt. Rerun it to confirm it says "already matches local".
 
 ## Workflow
@@ -36,6 +36,8 @@ Supplier invoices and delivery notes for restaurants, any country: an LLM transc
   - evals cost money: prefer `npm run evals -- --ids=<id>,<id>`; full run ≈ $0.2 uncached with Haiku; never run `--model=anthropic:claude-sonnet-5-5` or `--no-cache` without asking
   - use `PROMPT_SOURCE=local` when comparing with `evals/baseline.json`
 - Invoices are reconciled against delivery notes processed earlier: when running `--ids`, include the delivery note (`deliveryNoteFor` in its dataset JSON).
+- Contracts service (`services/contracts`, Python): `.venv/Scripts/python -m pytest -q` (no LLM), `.venv/Scripts/python evals/run_eval.py` (≈ $0.01 uncached). Contracts and their labels are generated: edit `scripts/build_contracts.py`, rerun it, never hand-edit `data/contracts`. The service returns clauses and agreed prices only; price comparison and amounts stay in the core (`contracts/check.ts`).
+- `npm run evals -- --contracts` needs the service on :8001; scores against `evals/contracts/expectations.json`. Never pass `--update-baseline` with it.
 - Do not edit `evals/datasets/es/es-001`…`es-030` or commit regenerated dataset binaries unless the dataset really changed.
 - `--update-baseline` rewrites `baseline.json` with only the countries in that run: do a full run or merge by hand.
 - Git identity in this repo: `ricardmartin <ricardmartin.dev@gmail.com>`. Branch before committing; commit only when asked.

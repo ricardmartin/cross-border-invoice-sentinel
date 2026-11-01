@@ -6,6 +6,7 @@ import { cached, cacheKey } from '../llmCache';
 import { CLAIM_PROMPT_VERSION, ClaimEmailSchema, getClaimAgent } from '../mastra/agents/claimAgent';
 import { costUsd, type ModelSpec } from '../models';
 import type { ExtractedDocument } from '../schemas/extracted';
+import type { ContractCheckResult } from '../schemas/contracts';
 import type { ReconciliationResult } from '../schemas/reconciliation';
 import type { ValidationReport } from '../schemas/validated';
 import { computeClaimAmount } from './amount';
@@ -20,6 +21,8 @@ export const ClaimFactsSchema = z.object({
   invoiceDate: z.string(),
   documentIssues: z.array(z.string()),
   deliveryIssues: z.array(z.string()),
+  /** Lines billed above the agreed contract price, citing the clause. Only present when there are some, so earlier claims keep their cache keys. */
+  contractIssues: z.array(z.string()).optional(),
   amountClaimed: z.string().nullable(),
   amountClaimedValue: z.number(),
   /** The claimed amount is gross (net difference + VAT), unlike the net figures in documentIssues. */
@@ -45,9 +48,22 @@ export const ClaimDraftSchema = z.object({
 export type ClaimDraft = z.infer<typeof ClaimDraftSchema>;
 
 /** Everything the e-mail may say, decided in code. */
-export function buildClaimFacts(doc: ExtractedDocument, report: ValidationReport, reconciliation: ReconciliationResult | null, pack: CountryPack): ClaimFacts {
+export function buildClaimFacts(
+  doc: ExtractedDocument,
+  report: ValidationReport,
+  reconciliation: ReconciliationResult | null,
+  pack: CountryPack,
+  contract: ContractCheckResult | null = null,
+): ClaimFacts {
   const money = (n: number) => `${pack.formatAmount(n)} ${doc.currency}`;
-  const amount = computeClaimAmount(doc, reconciliation, report.computed.charges);
+  const amount = computeClaimAmount(doc, reconciliation, report.computed.charges, contract);
+  const contractIssues = (contract?.lines ?? [])
+    .filter((l) => l.kind === 'ABOVE_CONTRACT' && l.amountAtStake > 0)
+    .map((l) => {
+      const line = doc.lines[l.invoiceLineIndex]!;
+      const [contractId, clause] = l.clauseId!.split('#');
+      return `"${line.description}": invoiced at ${money(l.invoiceUnitPrice!)}, agreed price ${money(l.agreedUnitPrice!)} (contract ${contractId}, clause ${clause}) (${money(l.amountAtStake)} incl. VAT)`;
+    });
   const deliveryIssues = (reconciliation?.lines ?? [])
     .filter((l) => l.kind === 'QUANTITY_DIFF' || l.kind === 'PRICE_DIFF' || l.kind === 'MISSING_IN_DELIVERY_NOTE')
     .map((l) => {
@@ -66,6 +82,7 @@ export function buildClaimFacts(doc: ExtractedDocument, report: ValidationReport
     invoiceDate: `${d}/${m}/${y}`,
     documentIssues: report.issues.filter((i) => i.severity === 'error').map((i) => i.message),
     deliveryIssues,
+    ...(contractIssues.length ? { contractIssues } : {}),
     amountClaimed: amount.total > 0 ? money(amount.total) : null,
     amountClaimedValue: amount.total,
     amountIncludesVat: amount.total > 0,
@@ -75,7 +92,7 @@ export function buildClaimFacts(doc: ExtractedDocument, report: ValidationReport
 
 /** Deterministic fallback (Spanish house template) when the LLM draft fails its guardrails. */
 function templateEmail(f: ClaimFacts) {
-  const issues = [...f.documentIssues, ...f.deliveryIssues].map((i) => `- ${i}`).join('\n');
+  const issues = [...f.documentIssues, ...f.deliveryIssues, ...(f.contractIssues ?? [])].map((i) => `- ${i}`).join('\n');
   return {
     subject: `Reclamación factura ${f.invoiceNumber} (${f.invoiceDate})`,
     body: `Estimados señores de ${f.supplier}:\n\nAl revisar su factura ${f.invoiceNumber} de fecha ${f.invoiceDate} hemos detectado lo siguiente:\n\n${issues}\n\n${

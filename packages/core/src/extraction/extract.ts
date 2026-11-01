@@ -7,6 +7,7 @@ import type { CountryPack } from '../countries/types';
 import { cached, cacheKey } from '../llmCache';
 import { getExtractionAgent } from '../mastra/agents/extractionAgent';
 import { costUsd, type ModelSpec, type TokenUsage } from '../models';
+import { callWithFallback } from '../resilience';
 import { getExtractionPrompt, type ResolvedPrompt } from '../observability/langfuse';
 import { ExtractedDocumentSchema, type ExtractedDocument } from '../schemas/extracted';
 
@@ -74,6 +75,8 @@ export interface ExtractOptions {
   file: DocumentFile;
   pack: CountryPack;
   model: ModelSpec;
+  /** Another provider's model, used when `model` times out or is down (see resilience.ts). */
+  fallback?: ModelSpec | null;
   /** Concrete validator errors from the previous attempt (self-correction). */
   feedback?: string;
   previous?: ExtractedDocument;
@@ -95,9 +98,11 @@ export interface ExtractionResult {
   usage: TokenUsage;
   costUsd: number | null;
   latencyMs: number;
+  /** The model that actually answered (the fallback when the primary failed). */
   model: string;
   promptVersion: string;
   cached: boolean;
+  fallbackReason: string | null;
 }
 
 function buildMessage({ file, pack, feedback, previous }: ExtractOptions) {
@@ -123,16 +128,18 @@ export const fileHash = (file: DocumentFile) => createHash('sha256').update(file
 
 export async function extractDocument(opts: ExtractOptions): Promise<ExtractionResult> {
   const prompt = opts.prompt ?? (await getExtractionPrompt());
-  const key = cacheKey('extract', fileHash(opts.file), opts.model.key, prompt.version, opts.pack.code, opts.pack.version, opts.feedback, JSON.stringify(opts.previous ?? null), ...(opts.sample ? [`sample:${opts.sample}`] : []));
+  const keyFor = (m: ModelSpec) =>
+    cacheKey('extract', fileHash(opts.file), m.key, prompt.version, opts.pack.code, opts.pack.version, opts.feedback, JSON.stringify(opts.previous ?? null), ...(opts.sample ? [`sample:${opts.sample}`] : []));
 
-  const { value, hit } = await cached(key, async () => {
-    const agent = getExtractionAgent(opts.model);
+  const call = await callWithFallback(opts.model, opts.fallback ?? null, (model, abortSignal) => cached(keyFor(model), async () => {
+    const agent = getExtractionAgent(model);
     const started = performance.now();
     // No temperature: current Claude models reject non-default sampling parameters.
     const result = await agent.generate([buildMessage(opts)], {
       instructions: prompt.text,
       structuredOutput: { schema: ExtractionOutputSchema },
       modelSettings: { maxOutputTokens: 8000 },
+      abortSignal,
       tracingContext: opts.tracingContext,
       tracingOptions: prompt.langfuse ? buildTracingOptions(withLangfusePrompt(prompt.langfuse)) : undefined,
     });
@@ -149,11 +156,11 @@ export async function extractDocument(opts: ExtractOptions): Promise<ExtractionR
       document: (strict.success ? strict.data : raw) as ExtractedDocument,
       schemaErrors: strict.success ? [] : strict.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`),
       usage,
-      costUsd: costUsd(opts.model, usage),
+      costUsd: costUsd(model, usage),
       latencyMs,
-      model: opts.model.key,
+      model: model.key,
       promptVersion: prompt.version,
     };
-  });
-  return { ...value, cached: hit };
+  }));
+  return { ...call.value.value, cached: call.value.hit, fallbackReason: call.fallbackReason };
 }

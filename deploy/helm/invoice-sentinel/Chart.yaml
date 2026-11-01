@@ -1,0 +1,6 @@
+apiVersion: v2
+name: invoice-sentinel
+description: Invoice Sentinel web app and contracts service (RAG + LangGraph)
+type: application
+version: 0.1.0
+appVersion: "2.0.0"
