@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-web
+  labels: {{- include "sentinel.labels" . | nindent 4 }}
+    app.kubernetes.io/name: web
+spec:
+  replicas: {{ .Values.web.replicas }}
+  strategy: { type: Recreate } # one writer on the LibSQL volume
+  selector:
+    matchLabels: { app.kubernetes.io/name: web, app.kubernetes.io/instance: {{ .Release.Name }} }
+  template:
+    metadata:
+      labels: { app.kubernetes.io/name: web, app.kubernetes.io/instance: {{ .Release.Name }} }
+    spec:
+      securityContext: { runAsNonRoot: true, runAsUser: 10001, fsGroup: 10001 }
+      containers:
+        - name: web
+          image: {{ include "sentinel.image" (dict "root" . "name" "invoice-sentinel-web") }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports: [{ name: http, containerPort: {{ .Values.web.port }} }]
+          env:
+            - { name: CONTRACTS_URL, value: "http://{{ .Release.Name }}-contracts:{{ .Values.contracts.port }}" }
+            - { name: EXTRACTION_MODEL, value: {{ .Values.models.extraction | quote }} }
+            - { name: ESCALATION_MODEL, value: {{ .Values.models.escalation | quote }} }
+            {{- if .Values.models.fallback }}
+            - { name: FALLBACK_MODEL, value: {{ .Values.models.fallback | quote }} }
+            {{- end }}
+            - { name: LANGFUSE_BASE_URL, value: {{ .Values.langfuse.baseUrl | quote }} }
+          envFrom:
+            - secretRef: { name: {{ .Values.existingSecret }} }
+          readinessProbe:
+            httpGet: { path: /, port: http }
+            initialDelaySeconds: 15
+            periodSeconds: 15
+          resources: {{- toYaml .Values.web.resources | nindent 12 }}
+          volumeMounts: [{ name: data, mountPath: /repo/apps/web/.data }]
+      volumes:
+        - name: data
+          persistentVolumeClaim: { claimName: {{ .Release.Name }}-web-data }
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ .Release.Name }}-web-data
+  labels: {{- include "sentinel.labels" . | nindent 4 }}
+spec:
+  accessModes: [ReadWriteOnce]
+  {{- if .Values.web.persistence.storageClass }}
+  storageClassName: {{ .Values.web.persistence.storageClass }}
+  {{- end }}
+  resources: { requests: { storage: {{ .Values.web.persistence.size }} } }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-web
+  labels: {{- include "sentinel.labels" . | nindent 4 }}
+spec:
+  selector: { app.kubernetes.io/name: web, app.kubernetes.io/instance: {{ .Release.Name }} }
+  ports: [{ name: http, port: 80, targetPort: http }]
+{{- if .Values.ingress.enabled }}
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-web
+  labels: {{- include "sentinel.labels" . | nindent 4 }}
+spec:
+  {{- if .Values.ingress.className }}
+  ingressClassName: {{ .Values.ingress.className }}
+  {{- end }}
+  rules:
+    - host: {{ .Values.ingress.host }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend: { service: { name: {{ .Release.Name }}-web, port: { name: http } } }
+{{- end }}

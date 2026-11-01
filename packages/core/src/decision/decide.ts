@@ -1,3 +1,4 @@
+import type { ContractCheckResult } from '../schemas/contracts';
 import type { FinalStatus } from '../schemas/status';
 import type { IssueCode, ValidationReport } from '../schemas/validated';
 
@@ -127,4 +128,26 @@ export function decideFinalStatus(attempts: AttemptSummary[], stop: Extract<Next
     return { status: 'INVALID_TAX_ID', reason: `${agreed}: the printed issuer tax id fails its checksum` };
   }
   return { status: 'SUPPLIER_DISCREPANCY', reason: `${agreed} on ${codes.join(', ')}: the document itself does not add up` };
+}
+
+/**
+ * Contract prices on top of the document/delivery decision. Only an invoice we already trust
+ * (VALID or SUPPLIER_DISCREPANCY) is affected; billing above a settled clause makes it a
+ * supplier discrepancy. Unsettled clauses never claim: they are named in the reason for a person.
+ */
+export function applyContractCheck(decision: Decision, contract: ContractCheckResult | null, contractError: string | null = null): Decision {
+  if (decision.status !== 'VALID' && decision.status !== 'SUPPLIER_DISCREPANCY') return decision;
+  let { status, reason } = decision;
+  if (contractError) return { status, reason: `${reason}; contract prices not checked (${contractError})` };
+  if (!contract) return decision;
+
+  const above = contract.lines.filter((l) => l.kind === 'ABOVE_CONTRACT' && l.amountAtStake > 0);
+  if (above.length && contract.amountAtStake > 0) {
+    const clauses = [...new Set(above.map((l) => l.clauseId))].join(', ');
+    reason = `${status === 'SUPPLIER_DISCREPANCY' ? `${reason}; ` : ''}billed above the agreed contract price (${contract.amountAtStake.toFixed(2)} incl. VAT; ${clauses})`;
+    status = 'SUPPLIER_DISCREPANCY';
+  }
+  const unverified = contract.lines.filter((l) => l.kind === 'UNVERIFIED');
+  if (unverified.length) reason += `; contract price not verified for line(s) ${unverified.map((l) => l.invoiceLineIndex + 1).join(', ')}: needs human review`;
+  return { status, reason };
 }

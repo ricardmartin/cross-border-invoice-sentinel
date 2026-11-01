@@ -3,14 +3,17 @@ import { createStep, createWorkflow } from '@mastra/core/workflows';
 import { z } from 'zod';
 import { ClaimDraftSchema, buildClaimFacts, draftClaim } from '../../claims/draft';
 import { sendClaim } from '../../claims/outbox';
+import { checkContractPrices } from '../../contracts/check';
+import { getContractLookup } from '../../contracts/client';
 import { getCountryPack } from '../../countries/registry';
-import { decideFinalStatus, nextAction, type AttemptSummary, type NextAction } from '../../decision/decide';
+import { applyContractCheck, decideFinalStatus, nextAction, type AttemptSummary, type NextAction } from '../../decision/decide';
 import { getDeliveryNoteRepository, type DeliveryNoteRecord } from '../../delivery/repository';
 import { extractDocument, StoredExtractionSchema } from '../../extraction/extract';
 import { triageDocument } from '../../extraction/triage';
-import { defaultEscalationModel, defaultExtractionModel, parseModelSpec } from '../../models';
+import { defaultEscalationModel, defaultExtractionModel, defaultFallbackModel, parseModelSpec } from '../../models';
 import { getExtractionPrompt, recordScores } from '../../observability/langfuse';
 import { reconcile, reconciliationSignature } from '../../reconciliation/reconcile';
+import { ContractCheckResultSchema } from '../../schemas/contracts';
 import { TriageResultSchema, type ExtractedDocument } from '../../schemas/extracted';
 import { ReconciliationResultSchema } from '../../schemas/reconciliation';
 import { FinalStatusSchema } from '../../schemas/status';
@@ -32,9 +35,13 @@ export const ProcessDocumentInputSchema = z.object({
     .object({
       primaryModel: z.string().optional(),
       escalationModel: z.string().optional(),
+      /** Other-provider model used when the primary or escalation model fails; null for none. Defaults to FALLBACK_MODEL. */
+      fallbackModel: z.string().nullable().optional(),
       claimModel: z.string().optional(),
       maxRetries: z.number().int().min(0).max(5).optional(),
       cascade: z.boolean().optional(),
+      /** Contracts service base URL; null turns the contract price check off. Defaults to CONTRACTS_URL. */
+      contractsUrl: z.string().nullable().optional(),
     })
     .optional(),
 });
@@ -43,15 +50,20 @@ export type ProcessDocumentInput = z.infer<typeof ProcessDocumentInputSchema>;
 const ResolvedConfigSchema = z.object({
   primaryModel: z.string(),
   escalationModel: z.string(),
+  fallbackModel: z.string().nullable().default(null),
   claimModel: z.string(),
   maxRetries: z.number(),
   cascade: z.boolean(),
+  /** Absent in runs suspended before the contract check existed. */
+  contractsUrl: z.string().nullable().default(null),
 });
 
 const AttemptSchema = z.object({
   index: z.number(),
   role: z.enum(['primary', 'escalation']),
   model: z.string(),
+  /** Set when the fallback model answered because the configured one failed. */
+  fallbackReason: z.string().nullable().default(null),
   promptVersion: z.string(),
   /** Saw the previous attempt and the validator's errors. */
   withFeedback: z.boolean(),
@@ -72,7 +84,12 @@ const StopSchema = z.object({
   agreeingAttempts: z.tuple([z.number(), z.number()]).optional(),
 });
 
-const TriageStepResultSchema = TriageResultSchema.extend({ supported: z.boolean(), cached: z.boolean() }).merge(CallSchema);
+const TriageStepResultSchema = TriageResultSchema.extend({
+  supported: z.boolean(),
+  cached: z.boolean(),
+  model: z.string().optional(),
+  fallbackReason: z.string().nullable().default(null),
+}).merge(CallSchema);
 
 const LoopStateSchema = z.object({
   file: ProcessDocumentInputSchema.shape.file,
@@ -91,6 +108,17 @@ export const ReconciliationOutcomeSchema = z.object({
   firstRead: ReconciliationResultSchema.nullable(),
   /** References found only by a near match on the number (the invoice's reference was probably misread). */
   nearMatches: z.array(z.object({ referenced: z.string(), matched: z.string() })).default([]),
+});
+
+export const ContractOutcomeSchema = z.object({
+  result: ContractCheckResultSchema.nullable(),
+  /** The service failed or timed out: the invoice is decided without the contract check. */
+  error: z.string().nullable(),
+  requestId: z.string().nullable(),
+  selectModel: z.string().nullable(),
+  promptVersion: z.string().nullable(),
+  llmCalls: z.number(),
+  latencyMs: z.number(),
 });
 
 const ClaimReviewSchema = z.object({
@@ -115,6 +143,7 @@ export const ProcessDocumentResultSchema = z.object({
   report: ValidationReportSchema.nullable(),
   attempts: z.array(AttemptSchema),
   reconciliation: ReconciliationOutcomeSchema.nullable(),
+  contract: ContractOutcomeSchema.nullable().default(null),
   deliveryNoteSaved: z.boolean(),
   claim: z.object({ draft: ClaimDraftSchema, review: ClaimReviewSchema.nullable() }).nullable(),
   config: ResolvedConfigSchema,
@@ -170,11 +199,14 @@ function annotateTrace(span: AnySpan | undefined, result: ProcessDocumentResult)
       docType: result.triage.docType,
       model: result.config.primaryModel,
       escalated: result.attempts.some((a) => a.role === 'escalation'),
+      fallbackUsed: result.triage.fallbackReason !== null || result.attempts.some((a) => a.fallbackReason !== null),
       promptVersion: last?.promptVersion ?? null,
       countryPackVersion: result.packVersion,
       finalStatus: result.status,
       extractionAttempts: result.attempts.length,
       reconciliation: result.reconciliation?.result.status ?? null,
+      contractAmountAtStake: result.contract?.result?.amountAtStake ?? null,
+      contractError: result.contract?.error ?? null,
       costUsd: result.totals.costUsd,
     },
   });
@@ -210,12 +242,16 @@ const triageStep = createStep({
     const config = {
       primaryModel: inputData.config?.primaryModel ?? defaultExtractionModel().key,
       escalationModel: inputData.config?.escalationModel ?? defaultEscalationModel().key,
+      fallbackModel: inputData.config?.fallbackModel !== undefined ? inputData.config.fallbackModel : (defaultFallbackModel()?.key ?? null),
       claimModel: inputData.config?.claimModel ?? process.env.CLAIM_MODEL ?? inputData.config?.primaryModel ?? defaultExtractionModel().key,
       maxRetries: inputData.config?.maxRetries ?? 2,
       cascade: inputData.config?.cascade ?? true,
+      contractsUrl: inputData.config?.contractsUrl !== undefined ? inputData.config.contractsUrl : (process.env.CONTRACTS_URL ?? null),
     };
-    const call = await triageDocument({ file: inputData.file, model: parseModelSpec(config.primaryModel), tracingContext });
-    const triage = { ...call.triage, usage: call.usage, costUsd: call.costUsd, latencyMs: call.latencyMs, cached: call.cached };
+    const fallback = config.fallbackModel ? parseModelSpec(config.fallbackModel) : null;
+    const call = await triageDocument({ file: inputData.file, model: parseModelSpec(config.primaryModel), fallback, tracingContext });
+    const triage = { ...call.triage, usage: call.usage, costUsd: call.costUsd, latencyMs: call.latencyMs, cached: call.cached, model: call.model, fallbackReason: call.fallbackReason };
+    if (call.fallbackReason) tracingContext?.currentSpan?.update({ metadata: { model: call.model, fallbackReason: call.fallbackReason } });
     tracingContext?.currentSpan?.update({ output: { ...call.triage, issuerTaxId: call.issuerTaxId } });
 
     if (!triage.supported || triage.docType === 'OTHER') {
@@ -231,6 +267,7 @@ const triageStep = createStep({
         report: null,
         attempts: [],
         reconciliation: null,
+        contract: null,
         deliveryNoteSaved: false,
         claim: null,
         config,
@@ -273,13 +310,16 @@ const extractionAttemptStep = createStep({
       feedback,
       previous: previous?.document as ExtractedDocument | undefined,
       sample: blind ? index : undefined,
+      fallback: inputData.config.fallbackModel ? parseModelSpec(inputData.config.fallbackModel) : null,
       tracingContext,
     });
+    if (res.fallbackReason) tracingContext?.currentSpan?.update({ metadata: { answeredBy: res.model, fallbackReason: res.fallbackReason } });
     const report = validateDocument(res.document, pack);
     const attempt: Attempt = {
       index,
       role: action.role,
-      model: model.key,
+      model: res.model,
+      fallbackReason: res.fallbackReason,
       promptVersion: res.promptVersion,
       withFeedback: Boolean(feedback),
       blind,
@@ -397,10 +437,63 @@ const reconciliationStep = createStep({
   },
 });
 
+const ContractCheckedStateSchema = ReconciledStateSchema.extend({ contract: ContractOutcomeSchema.nullable() });
+
+const contractCheckStep = createStep({
+  id: 'contract-check',
+  description:
+    'Trusted invoices only: the contracts service (RAG + LangGraph) says which clause applies to each line; prices are compared here, in cents.',
+  inputSchema: ReconciledStateSchema,
+  outputSchema: ContractCheckedStateSchema,
+  execute: async ({ inputData, tracingContext }) => {
+    const doc = inputData.attempts.at(-1)!.document as ExtractedDocument;
+    const trusted = inputData.stop?.reason === 'passed' || inputData.stop?.reason === 'confirmed';
+    const lookup = getContractLookup(inputData.config.contractsUrl);
+    if (!lookup || doc.docType !== 'INVOICE' || !trusted || !doc.issuer.taxId) return { ...inputData, contract: null };
+
+    const started = performance.now();
+    const outcome = { result: null, error: null, requestId: null, selectModel: null, promptVersion: null, llmCalls: 0, latencyMs: 0 };
+    try {
+      const res = await lookup.match(doc, inputData.restaurantId);
+      const llm = res.lines.filter((l) => l.llmCalls > 0);
+      const costs = llm.map((l) => l.costUsd);
+      const contract = {
+        ...outcome,
+        result: checkContractPrices(doc, res.lines, inputData.reconciliation?.result ?? null),
+        requestId: res.requestId,
+        selectModel: res.selectModel,
+        promptVersion: res.promptVersion,
+        llmCalls: res.lines.reduce((s, l) => s + l.llmCalls, 0),
+        latencyMs: Math.round(performance.now() - started),
+      };
+      tracingContext?.currentSpan?.update({
+        metadata: { requestId: res.requestId, selectModel: res.selectModel, llmCalls: contract.llmCalls },
+        output: { amountAtStake: contract.result.amountAtStake, lines: contract.result.lines.map((l) => `${l.invoiceLineIndex}:${l.kind}${l.clauseId ? ` ${l.clauseId}` : ''}`) },
+      });
+      const extraCalls = llm.length
+        ? [
+            ...inputData.extraCalls,
+            {
+              purpose: 'contract-clause-selection',
+              usage: { inputTokens: llm.reduce((s, l) => s + l.inputTokens, 0), outputTokens: llm.reduce((s, l) => s + l.outputTokens, 0) },
+              costUsd: costs.some((c) => c === null) ? null : costs.reduce<number>((s, c) => s + c!, 0),
+              latencyMs: contract.latencyMs,
+            },
+          ]
+        : inputData.extraCalls;
+      return { ...inputData, extraCalls, contract };
+    } catch (e) {
+      const error = e instanceof Error ? e.message.slice(0, 300) : String(e);
+      tracingContext?.currentSpan?.update({ output: { error } });
+      return { ...inputData, contract: { ...outcome, error, latencyMs: Math.round(performance.now() - started) } };
+    }
+  },
+});
+
 const decisionStep = createStep({
   id: 'decision',
-  description: 'VALID / EXTRACTION_UNCERTAIN / SUPPLIER_DISCREPANCY / INVALID_TAX_ID from the attempts and the reconciliation.',
-  inputSchema: ReconciledStateSchema,
+  description: 'VALID / EXTRACTION_UNCERTAIN / SUPPLIER_DISCREPANCY / INVALID_TAX_ID from the attempts, the reconciliation and the contract check.',
+  inputSchema: ContractCheckedStateSchema,
   outputSchema: ProcessDocumentResultSchema,
   execute: async ({ inputData, tracingContext }) => {
     let { status, reason } = decideFinalStatus(summaries(inputData.attempts), inputData.stop!);
@@ -420,6 +513,7 @@ const decisionStep = createStep({
         reason += `; delivery note matched by a near number (${rec.nearMatches.map((m) => `invoice reads "${m.referenced}" → "${m.matched}"`).join(', ')})`;
       }
     }
+    if (inputData.contract) ({ status, reason } = applyContractCheck({ status, reason }, inputData.contract.result, inputData.contract.error));
     const pack = getCountryPack(inputData.triage.country);
     const result: ProcessDocumentResult = {
       status,
@@ -433,6 +527,7 @@ const decisionStep = createStep({
       report: inputData.report,
       attempts: inputData.attempts,
       reconciliation: inputData.reconciliation,
+      contract: inputData.contract,
       deliveryNoteSaved: inputData.deliveryNoteSaved,
       claim: null,
       config: inputData.config,
@@ -453,7 +548,7 @@ const claimDraftStep = createStep({
   execute: async ({ inputData, tracingContext }) => {
     if (inputData.status !== 'SUPPLIER_DISCREPANCY' || !inputData.document || !inputData.report) return inputData;
     const pack = getCountryPack(inputData.country);
-    const facts = buildClaimFacts(inputData.document as ExtractedDocument, inputData.report, inputData.reconciliation?.result ?? null, pack);
+    const facts = buildClaimFacts(inputData.document as ExtractedDocument, inputData.report, inputData.reconciliation?.result ?? null, pack, inputData.contract?.result ?? null);
     const draft = await draftClaim({ facts, model: parseModelSpec(inputData.config.claimModel), tracingContext });
     tracingContext?.currentSpan?.update({ output: { subject: draft.subject, mode: draft.mode, amountClaimed: draft.amountClaimed } });
     const result = {
@@ -515,7 +610,7 @@ const humanReviewStep = createStep({
 
 export const processDocumentWorkflow = createWorkflow({
   id: 'process-document',
-  description: 'Triage → extraction with self-correction and model cascade → validation → reconciliation → decision → claim draft → human review.',
+  description: 'Triage → extraction with self-correction and model cascade → validation → reconciliation → contract check → decision → claim draft → human review.',
   inputSchema: ProcessDocumentInputSchema,
   outputSchema: ProcessDocumentResultSchema,
 })
@@ -523,6 +618,7 @@ export const processDocumentWorkflow = createWorkflow({
   .dountil(extractionAttemptStep, async ({ inputData }) => inputData.stop !== null)
   .then(validationStep)
   .then(reconciliationStep)
+  .then(contractCheckStep)
   .then(decisionStep)
   .then(claimDraftStep)
   .then(humanReviewStep)

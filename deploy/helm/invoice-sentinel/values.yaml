@@ -1,0 +1,43 @@
+# Images are built from ./Dockerfile (target web) and ./services/contracts/Dockerfile (target base).
+image:
+  registry: ghcr.io/ricardmartin
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# API keys are never in values: create the secret first, e.g.
+#   kubectl create secret generic invoice-sentinel-keys --from-literal=ANTHROPIC_API_KEY=... \
+#     --from-literal=LANGFUSE_PUBLIC_KEY=... --from-literal=LANGFUSE_SECRET_KEY=...
+existingSecret: invoice-sentinel-keys
+
+# Model choice is configuration, not code ("provider:model").
+models:
+  extraction: anthropic:claude-haiku-5-5
+  escalation: anthropic:claude-sonnet-5-5
+  fallback: ""            # e.g. openai:<model>, only after its own eval run
+  contractSelect: anthropic:claude-haiku-5-5
+
+langfuse:
+  baseUrl: https://cloud.langfuse.com
+
+web:
+  replicas: 1             # the LibSQL store is a file on the volume: one writer
+  port: 3000
+  persistence:
+    size: 2Gi
+    storageClass: ""
+  resources:
+    requests: { cpu: 250m, memory: 512Mi }
+    limits: { memory: 1Gi }
+
+contracts:
+  replicas: 2             # stateless; checkpoints are per pod and only for debugging
+  port: 8001
+  timeoutSeconds: 20      # per LLM call; the core gives up on the whole request after CONTRACTS_TIMEOUT_MS
+  resources:
+    requests: { cpu: 250m, memory: 768Mi }
+    limits: { memory: 1536Mi }
+
+ingress:
+  enabled: false
+  className: ""
+  host: sentinel.example.com

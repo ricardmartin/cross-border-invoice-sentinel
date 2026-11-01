@@ -106,14 +106,14 @@ describe('reconcile', () => {
 
 describe('claim amount and facts', () => {
   it('claims what the printed total exceeds the lines it is built from', () => {
-    expect(computeClaimAmount({ ...validEsInvoice(), printedTotal: 292.01 }, null)).toEqual({ invoiceOverbilled: 1.5, deliveryOverbilled: 0, total: 1.5 });
+    expect(computeClaimAmount({ ...validEsInvoice(), printedTotal: 292.01 }, null)).toEqual({ invoiceOverbilled: 1.5, deliveryOverbilled: 0, contractOverbilled: 0, total: 1.5 });
     expect(computeClaimAmount({ ...validEsInvoice(), printedTotal: 289.01 }, null).total).toBe(0); // under-billed: nothing to claim
   });
 
   it('adds delivery shortfalls', () => {
     const inv = validEsInvoice();
     const r = reconcile(inv, [{ number: 'ALB-4512', document: deliveryNote(inv, (d) => (d.lines[1]!.quantity = 18)) }]);
-    expect(computeClaimAmount(inv, r)).toEqual({ invoiceOverbilled: 0, deliveryOverbilled: 2.5, total: 2.5 });
+    expect(computeClaimAmount(inv, r)).toEqual({ invoiceOverbilled: 0, deliveryOverbilled: 2.5, contractOverbilled: 0, total: 2.5 });
   });
 
   it('builds facts with local formats and guards the draft', () => {

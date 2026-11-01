@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-contracts
+  labels: {{- include "sentinel.labels" . | nindent 4 }}
+    app.kubernetes.io/name: contracts
+spec:
+  replicas: {{ .Values.contracts.replicas }}
+  selector:
+    matchLabels: { app.kubernetes.io/name: contracts, app.kubernetes.io/instance: {{ .Release.Name }} }
+  template:
+    metadata:
+      labels: { app.kubernetes.io/name: contracts, app.kubernetes.io/instance: {{ .Release.Name }} }
+    spec:
+      securityContext: { runAsNonRoot: true, runAsUser: 10001 }
+      containers:
+        - name: contracts
+          image: {{ include "sentinel.image" (dict "root" . "name" "invoice-sentinel-contracts") }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports: [{ name: http, containerPort: {{ .Values.contracts.port }} }]
+          env:
+            - { name: CONTRACT_SELECT_MODEL, value: {{ .Values.models.contractSelect | quote }} }
+            - { name: CONTRACT_SELECT_TIMEOUT_S, value: {{ .Values.contracts.timeoutSeconds | quote }} }
+            - name: ANTHROPIC_API_KEY
+              valueFrom: { secretKeyRef: { name: {{ .Values.existingSecret }}, key: ANTHROPIC_API_KEY } }
+          readinessProbe:
+            httpGet: { path: /healthz, port: http }
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: { path: /healthz, port: http }
+            initialDelaySeconds: 30
+            periodSeconds: 30
+          resources: {{- toYaml .Values.contracts.resources | nindent 12 }}
+          securityContext: { allowPrivilegeEscalation: false }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-contracts
+  labels: {{- include "sentinel.labels" . | nindent 4 }}
+spec:
+  selector: { app.kubernetes.io/name: contracts, app.kubernetes.io/instance: {{ .Release.Name }} }
+  ports: [{ name: http, port: {{ .Values.contracts.port }}, targetPort: http }]

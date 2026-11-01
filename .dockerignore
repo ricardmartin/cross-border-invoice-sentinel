@@ -1,0 +1,10 @@
+node_modules
+**/node_modules
+.git
+.env
+**/.next
+apps/web/.data
+evals/reports/cache
+services
+*.db
+*.db-*
