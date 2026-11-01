@@ -206,6 +206,8 @@ The first failure became a rule: **a read that passes only after feedback must b
 
 Restaurants negotiate prices. An invoice can add up perfectly and still bill 15.75 for a product whose price went down to 14.90 last month. Checking that needs the contracts: a retrieval problem (which clause, in which contract, in force on which date, for which restaurant) and a judgement call when several clauses could apply.
 
+![es-007 in the web app: the invoice adds up, but one line is billed above the price agreed in an addendum. The claim cites contract and clause; the amount is computed in cents and waits for approval](docs/v2-contract-claim.png)
+
 ### Workflow or agent?
 
 Most of the path is fixed, so most of it is code. The contracts service runs one LangGraph graph per invoice line ([graph.py](services/contracts/app/graph.py)):
@@ -277,6 +279,8 @@ Contracts service alone ([report](services/contracts/evals/reports/latest.md), 1
 
 Dataset lines are easy for retrieval (descriptions match the contract wording), so the adversarial row is the useful one: hybrid beats either half alone.
 
+A 4× larger embedder (multilingual mpnet-base) was measured and rejected: its vector half improves on the adversarial set (recall@5 77.8 → 88.9 %), but hybrid recall@5 stays at 88.9 % and hybrid recall@1 drops (77.8 → 66.7 %), for twice the indexing time. Swap it with `CONTRACTS_EMBED_MODEL` / `--embed-model`.
+
 ### What the evals found while building it
 
 - **The selector prompt answered NONE for an exact match.** "Cola 330ml (x24)" went to the LLM because "Lager 330ml (x24)" shares half its words. The model answered NONE because "the price is not stated in any candidate text": the prices were hidden on purpose, and the prompt did not say so. Fix: `select-v2` says prices are removed deliberately, and a unique exact match is decided by a rule. LLM calls went from 5.1 % to 2.3 % of lines.
@@ -301,6 +305,6 @@ Dataset lines are easy for retrieval (descriptions match the contract wording), 
 - The remaining errors are in fields no validator checks (document numbers on receipt photos, descriptions).
 - "Exact" field matching allows ±0.01 per number, so a one-cent misread counts as correct there; the claim-amount metric still catches it.
 - The outbox does not send e-mail; approved claims are recorded, not delivered.
-- Contracts are synthetic and generated from the invoices, so dataset descriptions match the contract wording; the adversarial set is small (12 cases). "Sliced mushrooms" for "Champiñón laminado" is not retrieved by the small multilingual MiniLM model (fails safe as no contract); a larger embedder (e5-large) is the next thing to measure.
-- An `UNVERIFIED` contract line is named in the reason of a `VALID` document, but nothing queues it for review yet.
+- Contracts are synthetic and generated from the invoices, so dataset descriptions match the contract wording; the adversarial set is small (12 cases). "Sliced mushrooms" for "Champiñón laminado" is not retrieved (fails safe as no contract); mpnet-base did not help hybrid retrieval, e5-large is still unmeasured.
+- An `UNVERIFIED` contract line raises no claim; the inbox flags the document and moves it up the queue, next to uncertain reads.
 - The provider fallback has not had its own eval pass (no second-provider key here).

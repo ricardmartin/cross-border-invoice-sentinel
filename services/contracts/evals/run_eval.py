@@ -1,7 +1,7 @@
 """
 Contracts service evals.
 
-    python evals/run_eval.py [--retrieval-only] [--limit=N] [--embedder=hashing]
+    python evals/run_eval.py [--retrieval-only] [--limit=N] [--embedder=hashing] [--embed-model=<fastembed model>]
 
 1. Retrieval (no LLM): recall@1, recall@5 and MRR of the applicable clause, for BM25, vector and
    hybrid, with and without the supplier/restaurant metadata filter.
@@ -82,7 +82,7 @@ def main() -> None:
     adversarial = json.loads((ROOT / "evals" / "adversarial.json").read_text(encoding="utf8"))
     if arg("limit"):
         cases = cases[: int(arg("limit"))]
-    embedder = HashingEmbedder() if arg("embedder") == "hashing" else FastEmbedder()
+    embedder = HashingEmbedder() if arg("embedder") == "hashing" else FastEmbedder(arg("embed-model"))
     t0 = time.perf_counter()
     index = HybridIndex(load_corpus(ROOT / "data" / "contracts"), embedder)
     print(f"▶ {len(index.chunks)} chunks indexed with {embedder.name} in {time.perf_counter() - t0:.1f}s; {len(cases)} line cases + {len(adversarial)} adversarial")

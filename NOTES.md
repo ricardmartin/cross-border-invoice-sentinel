@@ -44,7 +44,7 @@ Numbers (2026-11-01, cached reads, `PROMPT_SOURCE=local`, Langfuse off):
 
 Found by the evals while building (good interview stories): the selector said NONE for an exact match because prices were hidden without telling it (→ `select-v2` + exact-match rule); the ERP template prints no unit, so the e2e eval missed 3 invoices that the service eval (ground-truth units) could not see (→ magnitude band ×1.5); `de-027`'s misread recipient tax id hid a restaurant-only deal (→ send the known restaurant id, not the read one).
 
-Open: `UNVERIFIED` lines are only named in the reason (no review queue); a bigger embedder for cross-language descriptions ("Sliced mushrooms" ↔ "Champiñón laminado"); fallback eval pass with a real key; push the branch so CI exercises Docker/Helm.
+Open: cross-language descriptions ("Sliced mushrooms" ↔ "Champiñón laminado"): mpnet-base measured 2026-11-01 and rejected (hybrid recall@5 unchanged, recall@1 worse), e5-large unmeasured; fallback eval pass with a real key. Done 2026-11-01: PR #1 CI green (Docker images, Helm lint, smoke evals with fresh calls); web shows the contract check (column "Pactado", section, verdict sentence) and the inbox flags UNVERIFIED contract lines.
 
 ## Tax regions (2026-10-21)
 

@@ -37,6 +37,10 @@ export default async function DocumentPage({ params }: { params: Promise<{ id: s
   const lineIssues = new Map<number, string[]>();
   for (const i of issues) if (i.lineIndex !== null) lineIssues.set(i.lineIndex, [...(lineIssues.get(i.lineIndex) ?? []), i.message]);
   const recLines = new Map((r.reconciliation?.result.lines ?? []).filter((l) => l.invoiceLineIndex !== null).map((l) => [l.invoiceLineIndex!, l]));
+  const contract = r.contract?.result ?? null;
+  const ctrLines = new Map((contract?.lines ?? []).map((l) => [l.invoiceLineIndex, l]));
+  const ctrAbove = (contract?.lines ?? []).filter((l) => l.kind === 'ABOVE_CONTRACT' && l.amountAtStake > 0);
+  const ctrUnverified = (contract?.lines ?? []).filter((l) => l.kind === 'UNVERIFIED');
   const computedLines = new Map((r.report?.computed.lines ?? []).map((l) => [l.index, l.expectedAmount]));
   const rates = [...new Set([...(r.report?.computed.brackets ?? []).map((b) => b.rate), ...(doc?.printedTaxBreakdown ?? []).map((b) => b.rate)])].sort((a, b) => a - b);
   const differs = (a: number | null | undefined, b: number | null | undefined) => a !== null && a !== undefined && b !== null && b !== undefined && Math.abs(a - b) > 0.02;
@@ -45,7 +49,7 @@ export default async function DocumentPage({ params }: { params: Promise<{ id: s
 
   // A printed figure only earns the "two reads" mark when the verdict really rests on two agreeing reads.
   const twoReads = r.attempts.length >= 2 && (r.status === 'SUPPLIER_DISCREPANCY' || r.status === 'INVALID_TAX_ID');
-  const legend: TickKind[] = ['ok', 'no', 'sum', ...(twoReads ? (['two'] as const) : []), ...(r.reconciliation ? (['alb'] as const) : []), ...(r.status === 'EXTRACTION_UNCERTAIN' ? (['doubt'] as const) : [])];
+  const legend: TickKind[] = ['ok', 'no', 'sum', ...(twoReads ? (['two'] as const) : []), ...(r.reconciliation ? (['alb'] as const) : []), ...(contract ? (['ctr'] as const) : []), ...(r.status === 'EXTRACTION_UNCERTAIN' ? (['doubt'] as const) : [])];
   const totalDelta = r.report && doc && differs(r.report.computed.total, doc.printedTotal) ? r.report.delta : null;
 
   return (
@@ -145,6 +149,12 @@ export default async function DocumentPage({ params }: { params: Promise<{ id: s
                       <TH className="px-0" aria-label={t.ticks.legend} />
                     </>
                   )}
+                  {contract && (
+                    <>
+                      <TH className="text-right">{d.agreed}</TH>
+                      <TH className="px-0" aria-label={t.ticks.legend} />
+                    </>
+                  )}
                 </tr>
               </THead>
               <TBody>
@@ -153,7 +163,10 @@ export default async function DocumentPage({ params }: { params: Promise<{ id: s
                   const recIssue = rec && rec.kind !== 'MATCH';
                   const expected = computedLines.get(i);
                   const lineCheck = check(expected, l.lineAmount);
-                  const flagged = lineIssues.has(i) || recIssue || lineCheck === 'no';
+                  const ctr = ctrLines.get(i);
+                  const ctrIssue = ctr?.kind === 'ABOVE_CONTRACT' && ctr.amountAtStake > 0;
+                  const ctrNote = ctrIssue ? d.aboveContract(num(ctr.agreedUnitPrice), ctr.clauseId ?? '') : ctr?.kind === 'UNVERIFIED' ? d.contractUnverified : null;
+                  const flagged = lineIssues.has(i) || recIssue || lineCheck === 'no' || ctrIssue;
                   const recNote = !recIssue
                     ? null
                     : rec.kind === 'MISSING_IN_DELIVERY_NOTE'
@@ -167,11 +180,12 @@ export default async function DocumentPage({ params }: { params: Promise<{ id: s
                         <span className="block" title={l.description}>
                           {l.description}
                         </span>
-                        {[...(lineIssues.get(i) ?? []), ...(recNote ? [recNote] : [])].map((m) => (
+                        {[...(lineIssues.get(i) ?? []), ...(recNote ? [recNote] : []), ...(ctrIssue && ctrNote ? [ctrNote] : [])].map((m) => (
                           <span key={m} className="flex items-center gap-1.5 text-xs font-semibold text-danger">
                             ⊗ {m}
                           </span>
                         ))}
+                        {!ctrIssue && ctrNote && <span className="flex items-center gap-1.5 text-xs text-info">? {ctrNote}</span>}
                         {flagged && (
                           <span className="mt-0.5 inline-block">
                             <MarkRef n={marks.byLine.get(i) ?? [...marks.byIssue].find(([k]) => issues[k]?.lineIndex === i)?.[1]} />
@@ -197,6 +211,16 @@ export default async function DocumentPage({ params }: { params: Promise<{ id: s
                             {rec ? (rec.kind === 'MISSING_IN_DELIVERY_NOTE' ? d.notDelivered : qty(rec.deliveredQuantity ?? 0)) : '—'}
                           </TD>
                           <TK>{rec && <Ticks kinds={['alb', recIssue ? 'no' : 'ok']} />}</TK>
+                        </>
+                      )}
+                      {contract && (
+                        <>
+                          <TD className={cn('text-right whitespace-nowrap', ctrIssue && 'font-bold text-danger')} title={ctr?.clauseId ?? undefined}>
+                            {num(ctr?.agreedUnitPrice)}
+                          </TD>
+                          <TK>
+                            {ctr && ctr.kind !== 'NO_CONTRACT' && <Ticks kinds={['ctr', ctr.kind === 'UNVERIFIED' ? 'doubt' : ctrIssue ? 'no' : 'ok']} />}
+                          </TK>
                         </>
                       )}
                     </TR>
@@ -316,6 +340,36 @@ export default async function DocumentPage({ params }: { params: Promise<{ id: s
           </section>
         )}
 
+        {r.contract && (
+          <section aria-labelledby="contrato">
+            <SectionHead id="contrato" note={d.contractNote(modelName(r.contract.selectModel ?? 'LLM'))}>
+              {d.contractTitle}
+            </SectionHead>
+            {r.contract.error || !contract ? (
+              <p className="border-t border-rule pt-2 text-muted-foreground">
+                <Tick kind="doubt" /> {d.contractError(r.contract.error ?? '—')}
+              </p>
+            ) : (
+              <dl className="grid gap-x-6 gap-y-1 border-t border-rule pt-2 sm:grid-cols-[auto_1fr]">
+                <dt className="text-muted-foreground">{d.result}</dt>
+                <dd className={cn('font-semibold', ctrAbove.length > 0 && 'text-danger', !ctrAbove.length && ctrUnverified.length > 0 && 'text-info')}>
+                  {d.contractResult(ctrAbove.length, ctrUnverified.length)}
+                </dd>
+                <dt className="text-muted-foreground">{d.clauses}</dt>
+                <dd className="font-mono break-words">{[...new Set(contract.lines.map((l) => l.clauseId).filter(Boolean))].join(', ') || '—'}</dd>
+                {contract.amountAtStake > 0 && (
+                  <>
+                    <dt className="text-muted-foreground">{d.atStake}</dt>
+                    <dd className="font-semibold">
+                      {num(contract.amountAtStake)} {currency} <span className="font-normal text-muted-foreground">{d.vatIncluded}</span>
+                    </dd>
+                  </>
+                )}
+              </dl>
+            )}
+          </section>
+        )}
+
         <section aria-labelledby="validacion">
           <SectionHead
             id="validacion"
@@ -402,7 +456,7 @@ export default async function DocumentPage({ params }: { params: Promise<{ id: s
                 {r.extraCalls.map((c, k) => (
                   <li key={`x${k}`} className="flex flex-wrap items-baseline gap-x-2 border-b border-rule py-1">
                     <span className="font-mono">+</span>
-                    <span>{c.purpose === 'claim-draft' ? d.claimDraft : c.purpose === 'delivery-note-verification' ? d.noteReread : c.purpose}</span>
+                    <span>{c.purpose === 'claim-draft' ? d.claimDraft : c.purpose === 'delivery-note-verification' ? d.noteReread : c.purpose === 'contract-clause-selection' ? d.contractSelect : c.purpose}</span>
                     <span className="ml-auto text-muted-foreground">
                       {secs(c.latencyMs)}
                       {c.costUsd !== null ? ` · ${usd(c.costUsd)}` : ''}

@@ -12,8 +12,11 @@ import { cn } from '@/lib/utils';
 
 export const dynamic = 'force-dynamic';
 
-/** Work-queue order: claims waiting for a decision, then reads a person must check, then the rest. */
-const priority = (r: DocumentRecord) => (r.state === 'awaiting_review' ? 0 : r.result.status === 'EXTRACTION_UNCERTAIN' ? 1 : 2);
+/** A contract clause the service could not settle: no claim was raised for it, so a person looks. */
+const contractToReview = (r: DocumentRecord) => (r.result.contract?.result?.lines ?? []).some((l) => l.kind === 'UNVERIFIED');
+
+/** Work-queue order: claims waiting for a decision, then reads or contract prices a person must check, then the rest. */
+const priority = (r: DocumentRecord) => (r.state === 'awaiting_review' ? 0 : r.result.status === 'EXTRACTION_UNCERTAIN' || contractToReview(r) ? 1 : 2);
 
 function total(r: DocumentRecord) {
   const d = r.result.document;
@@ -37,6 +40,7 @@ export default async function InboxPage() {
   const queue = [...records].sort((a, b) => priority(a) - priority(b) || b.createdAt.localeCompare(a.createdAt));
   const pending = records.filter((r) => r.state === 'awaiting_review').length;
   const doubtful = records.filter((r) => r.result.status === 'EXTRACTION_UNCERTAIN').length;
+  const contractReview = records.filter(contractToReview).length;
 
   return (
     <div className="grid grid-cols-[minmax(0,1fr)] gap-x-8 gap-y-6 px-4 py-5 sm:px-6 lg:grid-cols-[minmax(0,1fr)_380px]">
@@ -56,6 +60,7 @@ export default async function InboxPage() {
               </>
             )}
             {doubtful > 0 && ` · ${t.inbox.doubtful(doubtful)}`}
+            {contractReview > 0 && ` · ${t.inbox.contractReview(contractReview)}`}
           </p>
         </div>
 
@@ -93,6 +98,7 @@ export default async function InboxPage() {
                         {t.docType[r.result.triage.docType]} {d?.documentNumber ?? ''}
                         {r.source.kind === 'sample' ? ` · ${t.common.sample(r.source.sampleId)}` : ''}
                       </span>
+                      {contractToReview(r) && <span className="block truncate text-xs text-info">? {t.inbox.contractFlag}</span>}
                     </TD>
                     <TD>
                       <Country code={r.result.country} />

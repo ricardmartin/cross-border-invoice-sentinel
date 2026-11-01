@@ -22,6 +22,7 @@ from .text import normalize, tokens
 
 Mode = Literal["hybrid", "bm25", "vector"]
 RRF_K = 60
+DEFAULT_EMBED_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
 
 class Embedder(Protocol):
@@ -33,9 +34,10 @@ class Embedder(Protocol):
 class FastEmbedder:
     """Multilingual MiniLM (ONNX, CPU). Texts are folded first: the model is case-sensitive ("TOMATE PERA" ≠ "Tomate pera")."""
 
-    def __init__(self, model: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", cache_dir: str | None = None):
+    def __init__(self, model: str | None = None, cache_dir: str | None = None):
         from fastembed import TextEmbedding
 
+        model = model or os.environ.get("CONTRACTS_EMBED_MODEL", DEFAULT_EMBED_MODEL)
         self.name = model
         self._model = TextEmbedding(model, cache_dir=cache_dir or os.environ.get("FASTEMBED_CACHE", str(Path(__file__).resolve().parents[1] / ".cache" / "fastembed")))
 

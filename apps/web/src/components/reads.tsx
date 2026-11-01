@@ -36,6 +36,8 @@ export function ReadTrail({ r, t }: { r: ProcessDocumentResult; t: Dict }) {
   else if (attempts.at(-2)?.report.passed) why = tr.unverified(attempts.at(-2)!.index);
   else why = tr.exhausted(attempts.length);
   const delivery = r.reconciliation?.result.status === 'DISCREPANCIA' ? tr.delivery(t.doc.verify[r.reconciliation.verification] ?? '') : null;
+  const above = (r.contract?.result?.lines ?? []).filter((l) => l.kind === 'ABOVE_CONTRACT' && l.amountAtStake > 0);
+  const contract = above.length ? tr.contract(above.length, [...new Set(above.map((l) => l.clauseId))].join(', ')) : null;
 
   return (
     <section aria-labelledby="lecturas">
@@ -87,6 +89,7 @@ export function ReadTrail({ r, t }: { r: ProcessDocumentResult; t: Dict }) {
       <p className="mt-2 max-w-3xl text-[13px]">
         {why}
         {delivery && <> {delivery}</>}
+        {contract && <> {contract}</>}
       </p>
     </section>
   );
