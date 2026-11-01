@@ -103,3 +103,39 @@ jobs:
       - uses: azure/setup-helm@v4
       - run: helm lint deploy/helm/invoice-sentinel
       - run: helm template sentinel deploy/helm/invoice-sentinel --set models.fallback=openai:example --set ingress.enabled=true > /dev/null
+
+  compose:
+    name: Stack up (docker compose) + end-to-end smoke
+    needs: images
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: .env for the containers (Langfuse off, local prompt)
+        run: printf 'ANTHROPIC_API_KEY=%s\nLANGFUSE_PUBLIC_KEY=\nLANGFUSE_SECRET_KEY=\nPROMPT_SOURCE=local\n' "$ANTHROPIC_API_KEY" > .env
+      - name: docker compose up (waits for the contracts healthcheck)
+        run: docker compose up -d --build --wait --wait-timeout 300
+      - name: Contracts service answers from outside the container
+        run: |
+          curl -fsS localhost:8001/healthz
+          # Before the addendum: one strong lexical match, decided by rule (no LLM).
+          curl -fsS localhost:8001/v1/match -H 'content-type: application/json' \
+            -d '{"supplierTaxId":"A45182060","restaurantTaxId":"B27543107","invoiceDate":"2026-09-15","lines":[{"index":0,"description":"SOLOMILLO CERDO IBERICO","unit":"KG"}]}' \
+            | tee match.json
+          jq -e '.lines[0].outcome == "MATCHED" and .lines[0].clause.id == "CT-ES-01#3.7" and .lines[0].clause.price.amount == 15.75 and .lines[0].decidedBy == "rule"' match.json
+      - name: Web app is up
+        run: for i in $(seq 1 30); do curl -fsS -o /dev/null localhost:3000/ && exit 0; sleep 2; done; exit 1
+      - name: es-007 through the web app, contracts over the compose network
+        if: env.ANTHROPIC_API_KEY != ''
+        run: |
+          curl -fsS -m 240 localhost:3000/api/process -H 'content-type: application/json' -d '{"sampleId":"es-007"}' | tee process.json
+          jq -e '.state == "awaiting_review"' process.json
+          curl -fsS "localhost:3000/documents/$(jq -r .id process.json)" | grep -q 'CT-ES-01-A1#2.1'
+          echo "es-007 claimed against CT-ES-01-A1#2.1"
+      - name: Container logs
+        if: failure()
+        run: docker compose logs --no-color --tail 200
+      - name: docker compose down
+        if: always()
+        run: docker compose down -v
