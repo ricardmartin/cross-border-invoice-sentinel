@@ -105,6 +105,7 @@ interface DocResult {
   firstExact?: boolean;
   comparison?: DocComparison;
   costUsd?: number | null;
+  tokens?: { input: number; output: number };
   latencyMs?: number;
   allCached?: boolean;
   reconciliation?: string | null;
@@ -200,6 +201,7 @@ async function runOne(entry: DatasetEntry): Promise<DocResult> {
       firstExact: attempts[0]?.exact ?? false,
       comparison: res.document ? compareDocuments(entry.groundTruth, res.document as ExtractedDocument, pack) : undefined,
       costUsd: res.totals.costUsd,
+      tokens: { input: res.totals.usage.inputTokens, output: res.totals.usage.outputTokens },
       latencyMs: res.totals.latencyMs,
       allCached: res.triage.cached && res.attempts.every((a) => a.cached),
       reconciliation: res.reconciliation?.result.status ?? null,
@@ -271,6 +273,9 @@ function summarize(results: DocResult[]) {
 
   const lat = ok.map((r) => r.latencyMs!);
   const costs = ok.map((r) => r.costUsd).filter((c): c is number => c !== null && c !== undefined);
+  // All LLM calls of the document (triage, reads, re-reads, claim), cached ones included: what an uncached run would use.
+  const tokens = ok.map((r) => r.tokens).filter((t): t is { input: number; output: number } => Boolean(t));
+  const meanTokens = (k: 'input' | 'output') => (tokens.length ? tokens.reduce((a, t) => a + t[k], 0) / tokens.length : null);
   const attempts = ok.map((r) => r.attempts!.length);
   const claims = ok.filter((r) => r.claim);
   const withRec = ok.filter((r) => r.expectedReconciliation);
@@ -299,6 +304,8 @@ function summarize(results: DocResult[]) {
     'Claim judge score (1-5)': { value: claims.length ? claims.reduce((s, r) => s + r.claim!.judge, 0) / claims.length : null, kind: 'num' },
     'Claims with invented data': { value: ratio(claims.filter((r) => r.claim!.invented).length, claims.length), kind: 'pct' },
     ...(contractsUrl ? contractMetrics(ok) : {}),
+    'Tokens / doc (input)': { value: meanTokens('input'), kind: 'num' },
+    'Tokens / doc (output)': { value: meanTokens('output'), kind: 'num' },
     'Cost / doc': { value: costs.length ? costs.reduce((a, b) => a + b, 0) / costs.length : null, kind: 'usd' },
     'Latency p50': { value: percentile(lat, 50), kind: 'ms' },
     'Latency p95': { value: percentile(lat, 95), kind: 'ms' },
